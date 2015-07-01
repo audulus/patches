@@ -14,6 +14,26 @@ The *Scale Quantizer* snaps pitches (in 1/oct units) to the nearest tone in a sc
 
 The *Unison* creates four voices from one according to a *Spread* control. When   spread is 0, all four channels are equal to the input. Increasing spread increases the difference between the voices. Typically, you'll feed a pitch signal in 1/oct units to the input.
 
-## Bidirectional Seq16
+## JDRaoul/Bidirectional Seq16
 
-![Bidirectional Seq16 Screenshot](Bidirectional Seq16.png)
+![Bidirectional Seq16 Screenshot](JDRaoul/Bidirectional Seq16.png)
+
+## JDRaoul/Envelope Filter
+
+![Envelope Filter Screenshot](JDRaoul/Envelope Filter.png)
+
+## JDRaoul/FM
+
+![FM Screenshot](JDRaoul/FM.png)
+
+## JDRaoul/Clock
+
+![Clock Screenshot](JDRaoul/Clock.png)
+
+## JDRaoul/Euclidean Sequencer
+
+![Clock Screenshot](JDRaoul/Euclidean Sequencer.png)
+
+## JDRaoul/Pulse Divider
+
+![Clock Screenshot](JDRaoul/Pulse Divider.png)
