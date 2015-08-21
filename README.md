@@ -8,6 +8,12 @@ A repository of patches for Audulus 3.0.
 
 The *Scale Quantizer* snaps pitches (in 1/oct units) to the nearest tone in a scale. The scale is determined by the 12 toggle buttons. The image above is a C blues scale.
 
+## Cartesian Sequencer
+
+![Cartesian Sequencer Screenshot](Cartesian Sequencer.png)
+
+The *Cartesian Sequencer* is a generalization of a 16-step sequencer, with steps arranged in a 4x4 grid. It has two clock inputs, xclk and yclk, which advance the current step horizontally and vertically.
+
 ## Unison
 
 ![Unison Screenshot](Unison.png)
