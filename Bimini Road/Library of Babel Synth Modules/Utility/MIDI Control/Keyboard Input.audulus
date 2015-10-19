@@ -1,0 +1,129 @@
+{
+    "version": 1,
+    "patch": {
+        "id": "16688892-866d-443d-ad46-f9d2c606ea43",
+        "pan": {
+            "x": -0.0,
+            "y": -0.0
+        },
+        "zoom": 3.6188480854034426,
+        "nodes": [
+            {
+                "type": "Patch",
+                "id": "a78625d7-a400-4720-9324-bb908223799b",
+                "position": {
+                    "x": -29.5,
+                    "y": -10.5
+                },
+                "subPatch": {
+                    "id": "9f838e23-bb1a-4d4d-9cc6-5f2a5c23041d",
+                    "pan": {
+                        "x": 61.73106384277344,
+                        "y": 44.50318908691406
+                    },
+                    "zoom": 2.3738911151885988,
+                    "nodes": [
+                        {
+                            "type": "Keyboard",
+                            "id": "508cca72-ee7b-493c-96a1-5186872e07d7",
+                            "position": {
+                                "x": -154.77734375,
+                                "y": -20.29296875
+                            },
+                            "mode": "Legato"
+                        },
+                        {
+                            "type": "Text",
+                            "id": "d4e9082f-7b6a-4a3f-8167-e4d33d34e0dd",
+                            "position": {
+                                "x": -117.70620727539063,
+                                "y": 92.24486541748047
+                            },
+                            "exposedPosition": {
+                                "x": 0.0,
+                                "y": 90.0
+                            },
+                            "text": "Keyboard"
+                        },
+                        {
+                            "type": "Output",
+                            "id": "28023d48-9c1c-4cdf-b8a5-ea465bedc210",
+                            "position": {
+                                "x": -0.2698020935058594,
+                                "y": 14.47170639038086
+                            },
+                            "name": "Gate",
+                            "exposedPosition": {
+                                "x": 50.0,
+                                "y": -35.0
+                            }
+                        },
+                        {
+                            "type": "Output",
+                            "id": "e98f41ee-6337-49b4-a84c-e66ad9637854",
+                            "position": {
+                                "x": 0.9703178405761719,
+                                "y": -26.982440948486329
+                            },
+                            "name": "Hz",
+                            "exposedPosition": {
+                                "x": 50.0,
+                                "y": -65.0
+                            }
+                        }
+                    ],
+                    "wires": [
+                        {
+                            "from": "508cca72-ee7b-493c-96a1-5186872e07d7",
+                            "output": 1,
+                            "to": "28023d48-9c1c-4cdf-b8a5-ea465bedc210",
+                            "input": 0
+                        },
+                        {
+                            "from": "508cca72-ee7b-493c-96a1-5186872e07d7",
+                            "output": 0,
+                            "to": "e98f41ee-6337-49b4-a84c-e66ad9637854",
+                            "input": 0
+                        }
+                    ]
+                }
+            }
+        ],
+        "wires": []
+    },
+    "history": {
+        "states": [
+            {
+                "id": "fa8f21cd-cad9-4b4a-b392-c23a0bedba46",
+                "parent": "2a278a3b-5356-424e-932a-b161369bcba9",
+                "undo": {
+                    "type": "RemoveNode",
+                    "node": "a78625d7-a400-4720-9324-bb908223799b"
+                }
+            },
+            {
+                "id": "2a278a3b-5356-424e-932a-b161369bcba9",
+                "parent": "94b258cc-247c-40ab-86cb-6ec3eb3be25d",
+                "undo": {
+                    "type": "SetNodePosition",
+                    "position": {
+                        "x": -470.0425720214844,
+                        "y": -147.53274536132813
+                    },
+                    "node": "a78625d7-a400-4720-9324-bb908223799b"
+                }
+            },
+            {
+                "id": "94b258cc-247c-40ab-86cb-6ec3eb3be25d"
+            }
+        ],
+        "current": "94b258cc-247c-40ab-86cb-6ec3eb3be25d"
+    },
+    "undoStack": {
+        "stack": [
+            "fa8f21cd-cad9-4b4a-b392-c23a0bedba46",
+            "94b258cc-247c-40ab-86cb-6ec3eb3be25d"
+        ],
+        "current": 1
+    }
+}

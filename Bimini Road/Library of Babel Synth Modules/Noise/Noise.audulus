@@ -1,0 +1,133 @@
+{
+    "version": 1,
+    "patch": {
+        "id": "29fd07e6-947a-4669-a4d3-5318a2f0b839",
+        "pan": {
+            "x": -0.0,
+            "y": -0.0
+        },
+        "zoom": 3.6188480854034426,
+        "nodes": [
+            {
+                "type": "Patch",
+                "id": "8dc0456d-bfac-41aa-9794-2ae6e74b59e1",
+                "position": {
+                    "x": 22.5,
+                    "y": 39.5
+                },
+                "subPatch": {
+                    "id": "49feb10a-0006-4e6f-8e2b-9e12314370aa",
+                    "pan": {
+                        "x": 47.38970947265625,
+                        "y": 63.470741271972659
+                    },
+                    "zoom": 1.1664997339248658,
+                    "nodes": [
+                        {
+                            "type": "Noise",
+                            "id": "dce08a4d-dc38-49f8-8e8f-b09698c0e313",
+                            "position": {
+                                "x": -126.90048217773438,
+                                "y": -4.085315704345703
+                            }
+                        },
+                        {
+                            "type": "Knob",
+                            "id": "1ec573d5-064b-47fb-b5be-bf005241677d",
+                            "position": {
+                                "x": -216.70245361328126,
+                                "y": 16.938072204589845
+                            },
+                            "name": "LPF",
+                            "knob": {
+                                "value": 0.4779697358608246,
+                                "min": 0.0,
+                                "max": 1.0
+                            },
+                            "exposedPosition": {
+                                "x": -25.0,
+                                "y": 0.0
+                            }
+                        },
+                        {
+                            "type": "Output",
+                            "id": "7e734f62-d583-4a6a-961a-c39a9210e730",
+                            "position": {
+                                "x": -1.3625030517578126,
+                                "y": -8.936637878417969
+                            },
+                            "name": "Out",
+                            "exposedPosition": {
+                                "x": -10.0,
+                                "y": -115.0
+                            }
+                        },
+                        {
+                            "type": "Text",
+                            "id": "6931363c-08e3-4a8d-a732-258557f8c87d",
+                            "position": {
+                                "x": -65.08731079101563,
+                                "y": 124.14810180664063
+                            },
+                            "exposedPosition": {
+                                "x": -40.0,
+                                "y": 40.0
+                            },
+                            "text": "Noise"
+                        }
+                    ],
+                    "wires": [
+                        {
+                            "from": "1ec573d5-064b-47fb-b5be-bf005241677d",
+                            "output": 0,
+                            "to": "dce08a4d-dc38-49f8-8e8f-b09698c0e313",
+                            "input": 0
+                        },
+                        {
+                            "from": "dce08a4d-dc38-49f8-8e8f-b09698c0e313",
+                            "output": 0,
+                            "to": "7e734f62-d583-4a6a-961a-c39a9210e730",
+                            "input": 0
+                        }
+                    ]
+                }
+            }
+        ],
+        "wires": []
+    },
+    "history": {
+        "states": [
+            {
+                "id": "07bf9aaa-bb15-4857-9492-572f6cf1fd09",
+                "parent": "81b122a3-3af0-4cba-94ca-c033f2eacea8",
+                "undo": {
+                    "type": "RemoveNode",
+                    "node": "8dc0456d-bfac-41aa-9794-2ae6e74b59e1"
+                }
+            },
+            {
+                "id": "81b122a3-3af0-4cba-94ca-c033f2eacea8",
+                "parent": "f2448426-3ce5-46cc-b264-8ac1d20abeba",
+                "undo": {
+                    "type": "SetNodePosition",
+                    "position": {
+                        "x": 6.022270202636719,
+                        "y": -298.2176513671875
+                    },
+                    "node": "8dc0456d-bfac-41aa-9794-2ae6e74b59e1"
+                }
+            },
+            {
+                "id": "f2448426-3ce5-46cc-b264-8ac1d20abeba"
+            }
+        ],
+        "current": "f2448426-3ce5-46cc-b264-8ac1d20abeba"
+    },
+    "undoStack": {
+        "stack": [
+            "07bf9aaa-bb15-4857-9492-572f6cf1fd09",
+            "f2448426-3ce5-46cc-b264-8ac1d20abeba"
+        ],
+        "current": 1
+    }
+}

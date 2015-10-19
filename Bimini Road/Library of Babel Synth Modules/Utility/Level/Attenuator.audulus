@@ -1,0 +1,157 @@
+{
+    "version": 1,
+    "patch": {
+        "id": "426854f7-6ffe-40ab-a9c8-65f3ee292335",
+        "pan": {
+            "x": -0.0,
+            "y": -0.0
+        },
+        "zoom": 3.6188480854034426,
+        "nodes": [
+            {
+                "type": "Patch",
+                "id": "bc714c6c-9475-43b9-94db-523b573e656e",
+                "position": {
+                    "x": -10.0,
+                    "y": 19.5
+                },
+                "subPatch": {
+                    "id": "17acc2ee-22a1-49b1-ade4-891b5428145f",
+                    "pan": {
+                        "x": -49.864871978759769,
+                        "y": -19.12000274658203
+                    },
+                    "zoom": 1.360864281654358,
+                    "nodes": [
+                        {
+                            "type": "Input",
+                            "id": "3a65a6d3-14e8-4e8d-8a4d-5a7f344ad1d6",
+                            "position": {
+                                "x": -25.776996612548829,
+                                "y": -64.15250396728516
+                            },
+                            "name": "In",
+                            "exposedPosition": {
+                                "x": -25.0,
+                                "y": -95.0
+                            }
+                        },
+                        {
+                            "type": "Output",
+                            "id": "9cf105f6-6083-47d4-a601-bb481c6c4cb0",
+                            "position": {
+                                "x": 210.8525848388672,
+                                "y": -64.58612060546875
+                            },
+                            "name": "Out",
+                            "exposedPosition": {
+                                "x": 45.0,
+                                "y": -95.0
+                            }
+                        },
+                        {
+                            "type": "Knob",
+                            "id": "a80ee6f1-653b-45cc-a508-290bbf4e7046",
+                            "position": {
+                                "x": 62.4453125,
+                                "y": 51.78125
+                            },
+                            "name": "Level",
+                            "knob": {
+                                "value": 0.5,
+                                "min": 0.0,
+                                "max": 1.0
+                            },
+                            "exposedPosition": {
+                                "x": 10.0,
+                                "y": 15.0
+                            }
+                        },
+                        {
+                            "type": "Level",
+                            "id": "2d65b9ef-ab8e-4af8-9429-b3348985a232",
+                            "position": {
+                                "x": 78.83016967773438,
+                                "y": -64.37187194824219
+                            },
+                            "level": {
+                                "value": 0.5,
+                                "min": 0.0,
+                                "max": 1.0
+                            }
+                        },
+                        {
+                            "type": "Text",
+                            "id": "3d6ca4c3-70d2-4583-8ed2-9bf88c52d2ef",
+                            "position": {
+                                "x": 47.26426315307617,
+                                "y": 122.59858703613281
+                            },
+                            "exposedPosition": {
+                                "x": -20.0,
+                                "y": 60.0
+                            },
+                            "text": "Attenuator"
+                        }
+                    ],
+                    "wires": [
+                        {
+                            "from": "2d65b9ef-ab8e-4af8-9429-b3348985a232",
+                            "output": 0,
+                            "to": "9cf105f6-6083-47d4-a601-bb481c6c4cb0",
+                            "input": 0
+                        },
+                        {
+                            "from": "3a65a6d3-14e8-4e8d-8a4d-5a7f344ad1d6",
+                            "output": 0,
+                            "to": "2d65b9ef-ab8e-4af8-9429-b3348985a232",
+                            "input": 0
+                        },
+                        {
+                            "from": "a80ee6f1-653b-45cc-a508-290bbf4e7046",
+                            "output": 0,
+                            "to": "2d65b9ef-ab8e-4af8-9429-b3348985a232",
+                            "input": 1
+                        }
+                    ]
+                }
+            }
+        ],
+        "wires": []
+    },
+    "history": {
+        "states": [
+            {
+                "id": "0830d19c-ce6e-42c4-be29-3853ce1ac1eb",
+                "parent": "73024d8f-2ae5-4965-a055-54b695f9dbf2",
+                "undo": {
+                    "type": "RemoveNode",
+                    "node": "bc714c6c-9475-43b9-94db-523b573e656e"
+                }
+            },
+            {
+                "id": "73024d8f-2ae5-4965-a055-54b695f9dbf2",
+                "parent": "4029bbc9-a742-491d-965b-b3c1200dc146",
+                "undo": {
+                    "type": "SetNodePosition",
+                    "position": {
+                        "x": 464.536376953125,
+                        "y": -120.321533203125
+                    },
+                    "node": "bc714c6c-9475-43b9-94db-523b573e656e"
+                }
+            },
+            {
+                "id": "4029bbc9-a742-491d-965b-b3c1200dc146"
+            }
+        ],
+        "current": "4029bbc9-a742-491d-965b-b3c1200dc146"
+    },
+    "undoStack": {
+        "stack": [
+            "0830d19c-ce6e-42c4-be29-3853ce1ac1eb",
+            "4029bbc9-a742-491d-965b-b3c1200dc146"
+        ],
+        "current": 1
+    }
+}

@@ -1,0 +1,248 @@
+{
+    "version": 1,
+    "patch": {
+        "id": "c8c28859-5a5a-4f33-a378-237bcad4fe47",
+        "pan": {
+            "x": -0.0000152587890625,
+            "y": -0.00000762939453125
+        },
+        "zoom": 3.5265307426452638,
+        "nodes": [
+            {
+                "type": "Patch",
+                "id": "4e1f20b8-4c84-4a33-abc4-123a56be0992",
+                "position": {
+                    "x": -84.5,
+                    "y": -28.0
+                },
+                "subPatch": {
+                    "id": "cf0aed66-3f9e-4a06-8d8a-e9367613f1df",
+                    "pan": {
+                        "x": 57.79986572265625,
+                        "y": 21.99144744873047
+                    },
+                    "zoom": 1.7555922269821168,
+                    "nodes": [
+                        {
+                            "type": "Filter",
+                            "id": "6dc3dd7e-cf43-4d95-a542-21428a329700",
+                            "position": {
+                                "x": -92.40199279785156,
+                                "y": -55.09925842285156
+                            },
+                            "exposedPosition": {
+                                "x": -5.0,
+                                "y": 20.0
+                            },
+                            "f": 76.05252838134766,
+                            "res": 0.057553865015506747
+                        },
+                        {
+                            "type": "Output",
+                            "id": "43446d7e-c7c1-46a3-9afa-86cee9519bfc",
+                            "position": {
+                                "x": 148.01016235351563,
+                                "y": -17.523820877075197
+                            },
+                            "name": "Out",
+                            "exposedPosition": {
+                                "x": 170.0,
+                                "y": -50.0
+                            }
+                        },
+                        {
+                            "type": "Input",
+                            "id": "f6a9ad41-2814-4b64-8faf-aaf89b7783cd",
+                            "position": {
+                                "x": -208.35704040527345,
+                                "y": 24.99138641357422
+                            },
+                            "name": "Resonance",
+                            "exposedPosition": {
+                                "x": 0.0,
+                                "y": -25.0
+                            }
+                        },
+                        {
+                            "type": "Input",
+                            "id": "20252529-bea7-495e-bfce-ab6ce17730a1",
+                            "position": {
+                                "x": -402.7141418457031,
+                                "y": -38.88275146484375
+                            },
+                            "name": "Hz",
+                            "exposedPosition": {
+                                "x": 0.0,
+                                "y": 0.0
+                            }
+                        },
+                        {
+                            "type": "Input",
+                            "id": "52613124-90ad-4f78-b29f-54a7353bfdae",
+                            "position": {
+                                "x": -196.35501098632813,
+                                "y": -57.40019989013672
+                            },
+                            "name": "In",
+                            "exposedPosition": {
+                                "x": 0.0,
+                                "y": -50.0
+                            }
+                        },
+                        {
+                            "type": "Text",
+                            "id": "3bb38750-23e7-4152-9dbe-6e2658710f40",
+                            "position": {
+                                "x": 2.93398380279541,
+                                "y": 97.46260070800781
+                            },
+                            "exposedPosition": {
+                                "x": -10.0,
+                                "y": 110.0
+                            },
+                            "text": "Low Pass Filter"
+                        },
+                        {
+                            "type": "Add",
+                            "id": "697bbafe-f2f9-48d9-b337-31cb3050d3d3",
+                            "position": {
+                                "x": -253.37530517578126,
+                                "y": 3.6799774169921877
+                            }
+                        },
+                        {
+                            "type": "Knob",
+                            "id": "ebccede3-82c6-42f2-aac9-16c3debe7773",
+                            "position": {
+                                "x": -393.1097106933594,
+                                "y": 63.23383331298828
+                            },
+                            "name": "Frequency",
+                            "knob": {
+                                "value": 754.2327270507813,
+                                "min": 0.0,
+                                "max": 20000.0
+                            },
+                            "exposedPosition": {
+                                "x": 150.0,
+                                "y": 70.0
+                            }
+                        },
+                        {
+                            "type": "Knob",
+                            "id": "9c1c5690-5d6a-479e-835a-8e08dac9f9f7",
+                            "position": {
+                                "x": -395.0085754394531,
+                                "y": 156.55007934570313
+                            },
+                            "name": "Resonance",
+                            "knob": {
+                                "value": 0.21546925604343415,
+                                "min": 0.0,
+                                "max": 1.0
+                            },
+                            "exposedPosition": {
+                                "x": 150.0,
+                                "y": 5.0
+                            }
+                        },
+                        {
+                            "type": "Add",
+                            "id": "0510be57-9cde-4cb6-a376-08af6ba3dd9f",
+                            "position": {
+                                "x": -110.41130828857422,
+                                "y": 133.99435424804688
+                            }
+                        }
+                    ],
+                    "wires": [
+                        {
+                            "from": "52613124-90ad-4f78-b29f-54a7353bfdae",
+                            "output": 0,
+                            "to": "6dc3dd7e-cf43-4d95-a542-21428a329700",
+                            "input": 0
+                        },
+                        {
+                            "from": "697bbafe-f2f9-48d9-b337-31cb3050d3d3",
+                            "output": 0,
+                            "to": "6dc3dd7e-cf43-4d95-a542-21428a329700",
+                            "input": 1
+                        },
+                        {
+                            "from": "0510be57-9cde-4cb6-a376-08af6ba3dd9f",
+                            "output": 0,
+                            "to": "6dc3dd7e-cf43-4d95-a542-21428a329700",
+                            "input": 2
+                        },
+                        {
+                            "from": "6dc3dd7e-cf43-4d95-a542-21428a329700",
+                            "output": 0,
+                            "to": "43446d7e-c7c1-46a3-9afa-86cee9519bfc",
+                            "input": 0
+                        },
+                        {
+                            "from": "ebccede3-82c6-42f2-aac9-16c3debe7773",
+                            "output": 0,
+                            "to": "697bbafe-f2f9-48d9-b337-31cb3050d3d3",
+                            "input": 0
+                        },
+                        {
+                            "from": "20252529-bea7-495e-bfce-ab6ce17730a1",
+                            "output": 0,
+                            "to": "697bbafe-f2f9-48d9-b337-31cb3050d3d3",
+                            "input": 1
+                        },
+                        {
+                            "from": "9c1c5690-5d6a-479e-835a-8e08dac9f9f7",
+                            "output": 0,
+                            "to": "0510be57-9cde-4cb6-a376-08af6ba3dd9f",
+                            "input": 0
+                        },
+                        {
+                            "from": "f6a9ad41-2814-4b64-8faf-aaf89b7783cd",
+                            "output": 0,
+                            "to": "0510be57-9cde-4cb6-a376-08af6ba3dd9f",
+                            "input": 1
+                        }
+                    ]
+                }
+            }
+        ],
+        "wires": []
+    },
+    "history": {
+        "states": [
+            {
+                "id": "fe00ef06-f897-437b-ae78-00cb52bc3e59",
+                "parent": "d9af163b-c58b-46cb-a65a-ba9f8776c9e2",
+                "undo": {
+                    "type": "RemoveNode",
+                    "node": "4e1f20b8-4c84-4a33-abc4-123a56be0992"
+                }
+            },
+            {
+                "id": "d9af163b-c58b-46cb-a65a-ba9f8776c9e2",
+                "parent": "0a6c7eba-728e-4911-ba5f-667c99332415",
+                "undo": {
+                    "type": "SetNodePosition",
+                    "position": {
+                        "x": -315.65533447265627,
+                        "y": 670.8025512695313
+                    },
+                    "node": "4e1f20b8-4c84-4a33-abc4-123a56be0992"
+                }
+            },
+            {
+                "id": "0a6c7eba-728e-4911-ba5f-667c99332415"
+            }
+        ],
+        "current": "0a6c7eba-728e-4911-ba5f-667c99332415"
+    },
+    "undoStack": {
+        "stack": [
+            "fe00ef06-f897-437b-ae78-00cb52bc3e59",
+            "0a6c7eba-728e-4911-ba5f-667c99332415"
+        ],
+        "current": 1
+    }
+}
