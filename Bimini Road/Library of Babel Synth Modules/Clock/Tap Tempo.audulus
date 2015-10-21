@@ -94,7 +94,7 @@
                                 "x": 97.53631591796875,
                                 "y": -115.25626373291016
                             },
-                            "expr": "x-3"
+                            "expr": "x-pi"
                         },
                         {
                             "type": "Light",
@@ -128,7 +128,7 @@
                                 "x": -292.3142395019531,
                                 "y": -138.8189697265625
                             },
-                            "text": "The phasor drives the LED as an tempo indicator.  It needs the x-3 expression to bring its amplitude within a useable range"
+                            "text": "The phasor drives the LED as an tempo indicator.  It needs the x-pi expression to bring its amplitude within a useable range"
                         }
                     ],
                     "wires": [
@@ -1985,7 +1985,7 @@
                         "id": "2871af63-e980-492e-b8a6-290fb9df4f43",
                         "position": {
                             "x": 17.964439392089845,
-                            "y": 217.88255310058598
+                            "y": 217.882553100586
                         }
                     }
                 }
@@ -2846,10 +2846,76 @@
                 }
             },
             {
-                "id": "10d49060-71fd-4edb-ab1c-5f87aa6768e1"
+                "id": "10d49060-71fd-4edb-ab1c-5f87aa6768e1",
+                "parent": "0aaa2af7-0566-42f5-85c8-46390720e2ee",
+                "undo": {
+                    "type": "SetNodePosition",
+                    "position": {
+                        "x": 31.900741577148439,
+                        "y": 259.52490234375
+                    },
+                    "node": "81aa85be-b73e-4f86-907b-a7a6e8b22921"
+                }
+            },
+            {
+                "id": "0aaa2af7-0566-42f5-85c8-46390720e2ee",
+                "parent": "a845e89a-6f3f-4734-ab21-e26c162a3596",
+                "undo": {
+                    "type": "SetNodeState",
+                    "node": "71dd9042-ac64-4e9c-9544-03f55a0a4006",
+                    "state": {
+                        "type": "Expr",
+                        "id": "71dd9042-ac64-4e9c-9544-03f55a0a4006",
+                        "position": {
+                            "x": 97.53631591796875,
+                            "y": -115.25626373291016
+                        },
+                        "expr": "x-3"
+                    }
+                }
+            },
+            {
+                "id": "a845e89a-6f3f-4734-ab21-e26c162a3596",
+                "parent": "fd92321b-8360-4da7-8fc0-7a770470289e",
+                "undo": {
+                    "type": "Connect",
+                    "from": "f49dac91-0820-42ba-be08-6587e9f57836",
+                    "output": 0,
+                    "to": "71dd9042-ac64-4e9c-9544-03f55a0a4006",
+                    "input": 0
+                }
+            },
+            {
+                "id": "fd92321b-8360-4da7-8fc0-7a770470289e",
+                "parent": "d194d732-2bae-4f62-a0cd-063fdaf892c9",
+                "undo": {
+                    "type": "Disconnect",
+                    "node": "71dd9042-ac64-4e9c-9544-03f55a0a4006",
+                    "input": 0
+                }
+            },
+            {
+                "id": "d194d732-2bae-4f62-a0cd-063fdaf892c9",
+                "parent": "08681f74-fbf0-49c3-8408-ec9768d4ea34",
+                "undo": {
+                    "type": "SetNodeState",
+                    "node": "a53410b7-443f-4d82-9d1d-d812a8030452",
+                    "state": {
+                        "type": "Text",
+                        "id": "a53410b7-443f-4d82-9d1d-d812a8030452",
+                        "position": {
+                            "x": -292.3142395019531,
+                            "y": -138.8189697265625
+                        },
+                        "text": "The phasor drives the LED as an tempo indicator.  It needs the x-3 expression to bring its amplitude within a useable range"
+                    }
+                }
+            },
+            {
+                "id": "08681f74-fbf0-49c3-8408-ec9768d4ea34"
             }
         ],
-        "current": "10d49060-71fd-4edb-ab1c-5f87aa6768e1"
+        "current": "08681f74-fbf0-49c3-8408-ec9768d4ea34"
     },
     "undoStack": {
         "stack": [
@@ -2996,8 +3062,11 @@
             "1e2d751d-5268-4740-9cb6-eef92365edb3",
             "1e52f3de-c173-460d-8b17-5e04b3b8a9e4",
             "15ecdd6c-465a-438b-8cc9-4e627c8df691",
-            "10d49060-71fd-4edb-ab1c-5f87aa6768e1"
+            "10d49060-71fd-4edb-ab1c-5f87aa6768e1",
+            "0aaa2af7-0566-42f5-85c8-46390720e2ee",
+            "d194d732-2bae-4f62-a0cd-063fdaf892c9",
+            "08681f74-fbf0-49c3-8408-ec9768d4ea34"
         ],
-        "current": 143
+        "current": 146
     }
 }
