@@ -18,10 +18,10 @@
                 "subPatch": {
                     "id": "56262f70-510a-45f3-a3ad-f99db8fd8347",
                     "pan": {
-                        "x": -209.724853515625,
-                        "y": -353.18243408203127
+                        "x": -191.02206420898438,
+                        "y": -412.5130920410156
                     },
-                    "zoom": 0.9311944246292114,
+                    "zoom": 1.8056150674819947,
                     "nodes": [
                         {
                             "type": "Output",
@@ -109,7 +109,7 @@
                             },
                             "name": "L/R",
                             "knob": {
-                                "value": 0.0,
+                                "value": 0.4992620050907135,
                                 "min": 0.0,
                                 "max": 1.0
                             },
@@ -2084,10 +2084,42 @@
                 }
             },
             {
-                "id": "973c252b-1c31-49b3-bc59-66a59c2728b9"
+                "id": "973c252b-1c31-49b3-bc59-66a59c2728b9",
+                "parent": "52031bd6-926e-4a86-b77e-75c6caa5948f",
+                "undo": {
+                    "type": "SetKnobValue",
+                    "node": "ff153e34-3127-4d75-8db9-396ac78b9c54",
+                    "knob": 1,
+                    "value": 0.0
+                }
+            },
+            {
+                "id": "52031bd6-926e-4a86-b77e-75c6caa5948f",
+                "parent": "276fa8b8-2fad-4be4-98cf-645ec9b7729a",
+                "undo": {
+                    "type": "SetKnobValue",
+                    "node": "ff153e34-3127-4d75-8db9-396ac78b9c54",
+                    "knob": 1,
+                    "value": 0.4922492206096649
+                }
+            },
+            {
+                "id": "276fa8b8-2fad-4be4-98cf-645ec9b7729a",
+                "parent": "b04c29b0-9ce2-40d8-acc8-d9b5db2e54da",
+                "undo": {
+                    "type": "SetNodePosition",
+                    "position": {
+                        "x": -60.118934631347659,
+                        "y": 149.145751953125
+                    },
+                    "node": "ff153e34-3127-4d75-8db9-396ac78b9c54"
+                }
+            },
+            {
+                "id": "b04c29b0-9ce2-40d8-acc8-d9b5db2e54da"
             }
         ],
-        "current": "973c252b-1c31-49b3-bc59-66a59c2728b9"
+        "current": "b04c29b0-9ce2-40d8-acc8-d9b5db2e54da"
     },
     "undoStack": {
         "stack": [
@@ -2169,8 +2201,11 @@
             "e3b95a06-f194-452a-aa13-96ce1de7c7a7",
             "7fc17bab-1794-4fcf-a3cb-4876c5239b26",
             "db3277d5-5f85-49ae-bdef-ff520c321cd6",
-            "973c252b-1c31-49b3-bc59-66a59c2728b9"
+            "973c252b-1c31-49b3-bc59-66a59c2728b9",
+            "52031bd6-926e-4a86-b77e-75c6caa5948f",
+            "276fa8b8-2fad-4be4-98cf-645ec9b7729a",
+            "b04c29b0-9ce2-40d8-acc8-d9b5db2e54da"
         ],
-        "current": 78
+        "current": 81
     }
 }
