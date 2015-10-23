@@ -1,7 +1,9 @@
 {
-    "author": "Jody Golick",
-    "tags": ["sequencer"],
     "version": 1,
+    "author": "Jody Golick",
+    "tags": [
+        "sequencer"
+    ],
     "patch": {
         "id": "b629b846-52d4-4f05-a100-b127f00fa5a6",
         "pan": {
@@ -20,10 +22,10 @@
                 "subPatch": {
                     "id": "a5ecdfd7-5d65-44ab-a19c-254b5630cb41",
                     "pan": {
-                        "x": -14.536972045898438,
-                        "y": -82.21368408203125
+                        "x": -129.3177490234375,
+                        "y": 347.7684326171875
                     },
-                    "zoom": 0.23961426317691804,
+                    "zoom": 0.7280842661857605,
                     "nodes": [
                         {
                             "type": "Patch",
@@ -35,10 +37,10 @@
                             "subPatch": {
                                 "id": "3c5627bf-c8f0-47b0-ac50-6c83126861ea",
                                 "pan": {
-                                    "x": 333.9827880859375,
-                                    "y": -84.94404602050781
+                                    "x": 66.82321166992188,
+                                    "y": -329.4075012207031
                                 },
-                                "zoom": 1.4246349334716797,
+                                "zoom": 0.6286969780921936,
                                 "nodes": [
                                     {
                                         "type": "Expr",
@@ -135,10 +137,10 @@
                                         "subPatch": {
                                             "id": "e5d59676-08fc-44c1-b7fe-15f36e6e8712",
                                             "pan": {
-                                                "x": 65.85456085205078,
-                                                "y": 83.00334167480469
+                                                "x": 128.23370361328126,
+                                                "y": 2.210601806640625
                                             },
-                                            "zoom": 2.082240104675293,
+                                            "zoom": 1.2974680662155152,
                                             "nodes": [
                                                 {
                                                     "type": "Sample & Hold",
@@ -652,8 +654,8 @@
                                         "type": "Input",
                                         "id": "353d624c-4bff-4168-a63a-3e72993b3554",
                                         "position": {
-                                            "x": -619.59765625,
-                                            "y": -38.56671142578125
+                                            "x": -766.2086181640625,
+                                            "y": -10.228683471679688
                                         },
                                         "name": "clock",
                                         "exposedPosition": {
@@ -678,8 +680,8 @@
                                         "type": "Input",
                                         "id": "e3670785-e75c-4d4e-bc3e-503752773978",
                                         "position": {
-                                            "x": -608.694580078125,
-                                            "y": 82.87245178222656
+                                            "x": -755.3055419921875,
+                                            "y": 111.21047973632813
                                         },
                                         "name": "reset",
                                         "exposedPosition": {
@@ -2343,15 +2345,118 @@
     "history": {
         "states": [
             {
-                "id": "c6dfc14f-6593-413a-955a-96d7c8770bf3"
+                "id": "c6dfc14f-6593-413a-955a-96d7c8770bf3",
+                "parent": "72c68a7c-387e-48dd-9ff2-06a445fa93c3",
+                "undo": {
+                    "type": "SetNodePosition",
+                    "position": {
+                        "x": -565.6442260742188,
+                        "y": -864.4815063476563
+                    },
+                    "node": "3edc2344-e4b9-42b5-beed-147fdb941a91"
+                }
+            },
+            {
+                "id": "72c68a7c-387e-48dd-9ff2-06a445fa93c3",
+                "parent": "dacb2709-a8cf-4934-bbf0-803fa2f8d4d6",
+                "undo": {
+                    "type": "SetNodePosition",
+                    "position": {
+                        "x": 313.12933349609377,
+                        "y": -287.53948974609377
+                    },
+                    "node": "ae2ca879-003c-449f-9aa6-0b8ad2b8be00"
+                }
+            },
+            {
+                "id": "dacb2709-a8cf-4934-bbf0-803fa2f8d4d6",
+                "parent": "de0864fa-bf34-40be-971c-c2d61eb269ff",
+                "undo": {
+                    "type": "SetNodePosition",
+                    "position": {
+                        "x": -478.7236328125,
+                        "y": 91.12637329101563
+                    },
+                    "node": "93e441a2-a8f2-4a84-ae82-a1b1be10a284"
+                }
+            },
+            {
+                "id": "de0864fa-bf34-40be-971c-c2d61eb269ff",
+                "parent": "f03ebdcd-b39d-40d0-a72d-313958911db9",
+                "undo": {
+                    "type": "SetNodePosition",
+                    "position": {
+                        "x": -619.59765625,
+                        "y": -38.56671142578125
+                    },
+                    "node": "353d624c-4bff-4168-a63a-3e72993b3554"
+                }
+            },
+            {
+                "id": "f03ebdcd-b39d-40d0-a72d-313958911db9",
+                "parent": "7d8898a5-d1b5-4cad-822e-85b1523ce986",
+                "undo": {
+                    "type": "SetNodePosition",
+                    "position": {
+                        "x": -608.694580078125,
+                        "y": 82.87245178222656
+                    },
+                    "node": "e3670785-e75c-4d4e-bc3e-503752773978"
+                }
+            },
+            {
+                "id": "7d8898a5-d1b5-4cad-822e-85b1523ce986",
+                "parent": "60948f02-554e-4838-905e-42370723f588",
+                "undo": {
+                    "type": "SetNodePosition",
+                    "position": {
+                        "x": -565.6442260742188,
+                        "y": -864.4815063476563
+                    },
+                    "node": "3edc2344-e4b9-42b5-beed-147fdb941a91"
+                }
+            },
+            {
+                "id": "60948f02-554e-4838-905e-42370723f588",
+                "parent": "684edd62-7394-4ab6-b0f9-8e0f9e3b68d2",
+                "undo": {
+                    "type": "SetNodePosition",
+                    "position": {
+                        "x": -565.6442260742188,
+                        "y": -864.4815063476563
+                    },
+                    "node": "3edc2344-e4b9-42b5-beed-147fdb941a91"
+                }
+            },
+            {
+                "id": "684edd62-7394-4ab6-b0f9-8e0f9e3b68d2",
+                "parent": "950b6c1c-a08c-426c-b085-1f9285ed1cbc",
+                "undo": {
+                    "type": "SetNodePosition",
+                    "position": {
+                        "x": 313.12933349609377,
+                        "y": -287.53948974609377
+                    },
+                    "node": "ae2ca879-003c-449f-9aa6-0b8ad2b8be00"
+                }
+            },
+            {
+                "id": "950b6c1c-a08c-426c-b085-1f9285ed1cbc"
             }
         ],
-        "current": "c6dfc14f-6593-413a-955a-96d7c8770bf3"
+        "current": "950b6c1c-a08c-426c-b085-1f9285ed1cbc"
     },
     "undoStack": {
         "stack": [
-            "c6dfc14f-6593-413a-955a-96d7c8770bf3"
+            "c6dfc14f-6593-413a-955a-96d7c8770bf3",
+            "72c68a7c-387e-48dd-9ff2-06a445fa93c3",
+            "dacb2709-a8cf-4934-bbf0-803fa2f8d4d6",
+            "de0864fa-bf34-40be-971c-c2d61eb269ff",
+            "7d8898a5-d1b5-4cad-822e-85b1523ce986",
+            "60948f02-554e-4838-905e-42370723f588",
+            "684edd62-7394-4ab6-b0f9-8e0f9e3b68d2",
+            "950b6c1c-a08c-426c-b085-1f9285ed1cbc"
         ],
-        "current": 0
+        "current": 7
     }
 }

@@ -4,9 +4,9 @@
         "id": "0d44e0c7-b4ac-4048-a5b6-a87d891942ee",
         "pan": {
             "x": -0.0,
-            "y": -0.0
+            "y": 0.0081939697265625
         },
-        "zoom": 3.6188480854034426,
+        "zoom": 3.6191587448120119,
         "nodes": [
             {
                 "type": "Patch",
@@ -18,10 +18,10 @@
                 "subPatch": {
                     "id": "ab6d8e2d-c4cc-4b90-b7de-69f11ad91ded",
                     "pan": {
-                        "x": -980.4110107421875,
-                        "y": 603.3523559570313
+                        "x": -54.4022216796875,
+                        "y": 558.5753784179688
                     },
-                    "zoom": 1.5273869037628174,
+                    "zoom": 0.3303360342979431,
                     "nodes": [
                         {
                             "type": "Trigger",
@@ -657,7 +657,7 @@
                                 "x": -150.0,
                                 "y": 115.0
                             },
-                            "text": "Scale Quantizer"
+                            "text": "Microtonal Quantizer"
                         }
                     ],
                     "wires": [
@@ -1128,16 +1128,51 @@
                 }
             },
             {
-                "id": "5842380f-3732-421c-98ef-1cbc8cfed4be"
+                "id": "5842380f-3732-421c-98ef-1cbc8cfed4be",
+                "parent": "abc811fd-5e55-4ecc-a506-b4f12cbdcf2b",
+                "undo": {
+                    "type": "SetNodePosition",
+                    "position": {
+                        "x": 50.0,
+                        "y": -35.500003814697269
+                    },
+                    "node": "98ccb156-49a0-42a9-bbbe-12c2b71ced20"
+                }
+            },
+            {
+                "id": "abc811fd-5e55-4ecc-a506-b4f12cbdcf2b",
+                "parent": "c999194d-cb25-4971-b2d9-ff89c390f206",
+                "undo": {
+                    "type": "SetNodeState",
+                    "node": "51ebdae9-75a9-41c5-a1b9-b99bcbad2960",
+                    "state": {
+                        "type": "Text",
+                        "id": "51ebdae9-75a9-41c5-a1b9-b99bcbad2960",
+                        "position": {
+                            "x": -446.7295837402344,
+                            "y": 109.1435317993164
+                        },
+                        "exposedPosition": {
+                            "x": -150.0,
+                            "y": 115.0
+                        },
+                        "text": "Scale Quantizer"
+                    }
+                }
+            },
+            {
+                "id": "c999194d-cb25-4971-b2d9-ff89c390f206"
             }
         ],
-        "current": "5842380f-3732-421c-98ef-1cbc8cfed4be"
+        "current": "c999194d-cb25-4971-b2d9-ff89c390f206"
     },
     "undoStack": {
         "stack": [
             "1fa30041-83a7-40f5-959b-0acdcd061751",
-            "5842380f-3732-421c-98ef-1cbc8cfed4be"
+            "5842380f-3732-421c-98ef-1cbc8cfed4be",
+            "abc811fd-5e55-4ecc-a506-b4f12cbdcf2b",
+            "c999194d-cb25-4971-b2d9-ff89c390f206"
         ],
-        "current": 1
+        "current": 3
     }
 }

@@ -10676,7 +10676,7 @@
                             },
                             "name": "Turn Me",
                             "knob": {
-                                "value": 0.5,
+                                "value": 2.080687999725342,
                                 "min": 0.5,
                                 "max": 2.4000000953674318
                             },
@@ -15541,15 +15541,50 @@
     "history": {
         "states": [
             {
-                "id": "afb385c4-b340-461c-8c36-450f9e67d738"
+                "id": "afb385c4-b340-461c-8c36-450f9e67d738",
+                "parent": "6a639d66-ecb0-4f9d-b5f0-19665466b756",
+                "undo": {
+                    "type": "SetNodePosition",
+                    "position": {
+                        "x": 90.3946304321289,
+                        "y": 338.4523010253906
+                    },
+                    "node": "2902d56c-de33-452f-ae43-a6b2c648a6f3"
+                }
+            },
+            {
+                "id": "6a639d66-ecb0-4f9d-b5f0-19665466b756",
+                "parent": "a683961a-b01f-4908-8043-2559fc4a39b0",
+                "undo": {
+                    "type": "SetKnobValue",
+                    "node": "2902d56c-de33-452f-ae43-a6b2c648a6f3",
+                    "knob": 0,
+                    "value": 0.0
+                }
+            },
+            {
+                "id": "a683961a-b01f-4908-8043-2559fc4a39b0",
+                "parent": "dbeced97-2fdf-49e2-8b04-171bbf1c3649",
+                "undo": {
+                    "type": "SetKnobValue",
+                    "node": "2902d56c-de33-452f-ae43-a6b2c648a6f3",
+                    "knob": 0,
+                    "value": 0.41597050428390505
+                }
+            },
+            {
+                "id": "dbeced97-2fdf-49e2-8b04-171bbf1c3649"
             }
         ],
-        "current": "afb385c4-b340-461c-8c36-450f9e67d738"
+        "current": "dbeced97-2fdf-49e2-8b04-171bbf1c3649"
     },
     "undoStack": {
         "stack": [
-            "afb385c4-b340-461c-8c36-450f9e67d738"
+            "afb385c4-b340-461c-8c36-450f9e67d738",
+            "6a639d66-ecb0-4f9d-b5f0-19665466b756",
+            "a683961a-b01f-4908-8043-2559fc4a39b0",
+            "dbeced97-2fdf-49e2-8b04-171bbf1c3649"
         ],
-        "current": 0
+        "current": 3
     }
 }
