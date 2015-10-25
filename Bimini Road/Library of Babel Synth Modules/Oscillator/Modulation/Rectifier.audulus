@@ -1,0 +1,431 @@
+{
+    "version": 1,
+    "patch": {
+        "id": "c5c9a331-671b-4d76-b9d4-0b19f1ab57de",
+        "pan": {
+            "x": 28.22279167175293,
+            "y": -200.11190795898438
+        },
+        "zoom": 3.2001466751098635,
+        "nodes": [
+            {
+                "type": "Patch",
+                "id": "f35cb638-5d41-44f9-a650-4ad92f09a1a9",
+                "position": {
+                    "x": 21.777210235595704,
+                    "y": 87.11688232421875
+                },
+                "subPatch": {
+                    "id": "00450191-31a1-4551-a7cf-b472cc6524ea",
+                    "pan": {
+                        "x": -8.366348266601563,
+                        "y": -60.916259765625
+                    },
+                    "zoom": 0.6095910668373108,
+                    "nodes": [
+                        {
+                            "type": "Text",
+                            "id": "83a42f0c-8c96-4bb8-a241-6c0117565302",
+                            "position": {
+                                "x": 308.0693359375,
+                                "y": -326.5220642089844
+                            },
+                            "text": "Shift Pos->Neg"
+                        },
+                        {
+                            "type": "Waveform",
+                            "id": "ec4f0561-c57f-476b-969a-25601522a7d5",
+                            "position": {
+                                "x": 190.5021209716797,
+                                "y": -492.3575439453125
+                            }
+                        },
+                        {
+                            "type": "Text",
+                            "id": "ab5d04f0-aee5-432d-84a8-bc872c4e0b3d",
+                            "position": {
+                                "x": 308.7957763671875,
+                                "y": -144.51971435546876
+                            },
+                            "text": "Shift Neg->Pos"
+                        },
+                        {
+                            "type": "Waveform",
+                            "id": "6c80bfd3-d1bf-4124-9a0c-2b6df148a544",
+                            "position": {
+                                "x": 187.18959045410157,
+                                "y": -127.05136108398438
+                            }
+                        },
+                        {
+                            "type": "Waveform",
+                            "id": "e42c58b9-a5ee-4253-a93b-fe99ff7a2a86",
+                            "position": {
+                                "x": 183.67848205566407,
+                                "y": 53.92781066894531
+                            }
+                        },
+                        {
+                            "type": "Expr",
+                            "id": "bd22e9ce-42d0-4353-b0d9-87fd6417aba7",
+                            "position": {
+                                "x": -235.1179656982422,
+                                "y": -117.03611755371094
+                            },
+                            "expr": "(x<0?x:x-.5)*2"
+                        },
+                        {
+                            "type": "Expr",
+                            "id": "3f6e015d-0e2d-408f-b2a9-899462c57ca4",
+                            "position": {
+                                "x": -221.87255859375,
+                                "y": -31.907196044921876
+                            },
+                            "expr": "(x<0?x:-x)*2"
+                        },
+                        {
+                            "type": "Waveform",
+                            "id": "97544d05-5ac2-4b1b-a776-f7e837372d34",
+                            "position": {
+                                "x": 186.41786193847657,
+                                "y": -307.61651611328127
+                            }
+                        },
+                        {
+                            "type": "Text",
+                            "id": "ea59025e-04db-4b4a-ad11-7e7a9b0cba67",
+                            "position": {
+                                "x": 303.677978515625,
+                                "y": 36.32772445678711
+                            },
+                            "text": "Full-Wave Negative"
+                        },
+                        {
+                            "type": "Expr",
+                            "id": "07ad4587-8bcb-4e18-adf0-05a1775746e4",
+                            "position": {
+                                "x": -235.12669372558595,
+                                "y": -74.07025146484375
+                            },
+                            "expr": "(x<0?x+.5:x)*2"
+                        },
+                        {
+                            "type": "Expr",
+                            "id": "4f80275a-4226-4703-8818-726baafeb81a",
+                            "position": {
+                                "x": -221.06008911132813,
+                                "y": 10.768997192382813
+                            },
+                            "expr": "(x<0?-x:x)*2"
+                        },
+                        {
+                            "type": "Expr",
+                            "id": "c4c06e2c-eebe-4a25-8a0c-dc6e54c9a336",
+                            "position": {
+                                "x": -247.4261016845703,
+                                "y": 53.46418762207031
+                            },
+                            "expr": "clamp(x,-.5,0)*2"
+                        },
+                        {
+                            "type": "Expr",
+                            "id": "1a75409c-ac47-4a17-9101-38de101f507e",
+                            "position": {
+                                "x": -412.573486328125,
+                                "y": 4.2883758544921879
+                            },
+                            "expr": "x-.5"
+                        },
+                        {
+                            "type": "Text",
+                            "id": "fde53bce-413c-421f-934f-4807aec58cb2",
+                            "position": {
+                                "x": 300.1668701171875,
+                                "y": 219.82763671875
+                            },
+                            "text": "Full-Wave Positive"
+                        },
+                        {
+                            "type": "Text",
+                            "id": "d7a9c0ce-2f37-49c9-b5b0-0f5897330151",
+                            "position": {
+                                "x": 292.8070068359375,
+                                "y": 404.6454772949219
+                            },
+                            "text": "Half-Wave Negative"
+                        },
+                        {
+                            "type": "Waveform",
+                            "id": "2c96168e-c364-4d0f-b688-71675fafd52e",
+                            "position": {
+                                "x": 183.8711395263672,
+                                "y": 237.65003967285157
+                            }
+                        },
+                        {
+                            "type": "Waveform",
+                            "id": "b46ed528-4db8-4cab-b0c7-66ac2c9e961e",
+                            "position": {
+                                "x": 185.8693389892578,
+                                "y": 422.860595703125
+                            }
+                        },
+                        {
+                            "type": "Expr",
+                            "id": "445e6737-a8d8-4701-a42c-c881fe332559",
+                            "position": {
+                                "x": -238.74600219726563,
+                                "y": 95.16541290283203
+                            },
+                            "expr": "clamp(x,0,.5)*2"
+                        },
+                        {
+                            "type": "Text",
+                            "id": "a5bbf6a8-c192-4c09-8124-78361f93bbec",
+                            "position": {
+                                "x": 293.651123046875,
+                                "y": 589.0817260742188
+                            },
+                            "text": "Half-Wave Positive"
+                        },
+                        {
+                            "type": "Input",
+                            "id": "10d27496-af49-48d0-b939-eb878026f89d",
+                            "position": {
+                                "x": -521.22607421875,
+                                "y": 2.8618392944335939
+                            },
+                            "name": "In",
+                            "exposedPosition": {
+                                "x": -105.0,
+                                "y": 25.0
+                            }
+                        },
+                        {
+                            "type": "Output",
+                            "id": "5be4298a-1594-4311-9a1a-1acff9492d5c",
+                            "position": {
+                                "x": -20.571823120117189,
+                                "y": 95.82949829101563
+                            },
+                            "name": "1/2+",
+                            "exposedPosition": {
+                                "x": 5.0,
+                                "y": 150.0
+                            }
+                        },
+                        {
+                            "type": "Output",
+                            "id": "909e284b-5898-4cd1-a99b-a193b8991390",
+                            "position": {
+                                "x": -20.092254638671876,
+                                "y": 53.12342071533203
+                            },
+                            "name": "1/2-",
+                            "exposedPosition": {
+                                "x": 5.0,
+                                "y": 125.0
+                            }
+                        },
+                        {
+                            "type": "Output",
+                            "id": "1ea0f501-33eb-4b34-97b6-7d6a1bf4ef76",
+                            "position": {
+                                "x": -19.452144622802736,
+                                "y": 11.59735107421875
+                            },
+                            "name": "Full+",
+                            "exposedPosition": {
+                                "x": 5.0,
+                                "y": 100.0
+                            }
+                        },
+                        {
+                            "type": "Output",
+                            "id": "85806848-9f62-4148-88e5-bd1053a4893f",
+                            "position": {
+                                "x": -18.972576141357423,
+                                "y": -31.108726501464845
+                            },
+                            "name": "Full-",
+                            "exposedPosition": {
+                                "x": 5.0,
+                                "y": 75.0
+                            }
+                        },
+                        {
+                            "type": "Output",
+                            "id": "5650d592-0494-4442-9dcd-07fb421b0176",
+                            "position": {
+                                "x": -17.764183044433595,
+                                "y": -71.63027954101563
+                            },
+                            "name": "Shift N-P",
+                            "exposedPosition": {
+                                "x": 5.0,
+                                "y": 50.0
+                            }
+                        },
+                        {
+                            "type": "Output",
+                            "id": "6c930009-b245-4d1f-b3c1-ffd1f39a9fd7",
+                            "position": {
+                                "x": -17.28461456298828,
+                                "y": -114.33635711669922
+                            },
+                            "name": "Shift P-N",
+                            "exposedPosition": {
+                                "x": 5.0,
+                                "y": 25.0
+                            }
+                        },
+                        {
+                            "type": "Text",
+                            "id": "5a6b95f7-d4b4-4fd2-8c19-1d13e60df737",
+                            "position": {
+                                "x": -161.7582550048828,
+                                "y": 181.6536865234375
+                            },
+                            "exposedPosition": {
+                                "x": -115.0,
+                                "y": 205.0
+                            },
+                            "text": "Rectifier"
+                        }
+                    ],
+                    "wires": [
+                        {
+                            "from": "bd22e9ce-42d0-4353-b0d9-87fd6417aba7",
+                            "output": 0,
+                            "to": "ec4f0561-c57f-476b-969a-25601522a7d5",
+                            "input": 0
+                        },
+                        {
+                            "from": "3f6e015d-0e2d-408f-b2a9-899462c57ca4",
+                            "output": 0,
+                            "to": "6c80bfd3-d1bf-4124-9a0c-2b6df148a544",
+                            "input": 0
+                        },
+                        {
+                            "from": "4f80275a-4226-4703-8818-726baafeb81a",
+                            "output": 0,
+                            "to": "e42c58b9-a5ee-4253-a93b-fe99ff7a2a86",
+                            "input": 0
+                        },
+                        {
+                            "from": "1a75409c-ac47-4a17-9101-38de101f507e",
+                            "output": 0,
+                            "to": "bd22e9ce-42d0-4353-b0d9-87fd6417aba7",
+                            "input": 0
+                        },
+                        {
+                            "from": "1a75409c-ac47-4a17-9101-38de101f507e",
+                            "output": 0,
+                            "to": "3f6e015d-0e2d-408f-b2a9-899462c57ca4",
+                            "input": 0
+                        },
+                        {
+                            "from": "07ad4587-8bcb-4e18-adf0-05a1775746e4",
+                            "output": 0,
+                            "to": "97544d05-5ac2-4b1b-a776-f7e837372d34",
+                            "input": 0
+                        },
+                        {
+                            "from": "1a75409c-ac47-4a17-9101-38de101f507e",
+                            "output": 0,
+                            "to": "07ad4587-8bcb-4e18-adf0-05a1775746e4",
+                            "input": 0
+                        },
+                        {
+                            "from": "1a75409c-ac47-4a17-9101-38de101f507e",
+                            "output": 0,
+                            "to": "4f80275a-4226-4703-8818-726baafeb81a",
+                            "input": 0
+                        },
+                        {
+                            "from": "1a75409c-ac47-4a17-9101-38de101f507e",
+                            "output": 0,
+                            "to": "c4c06e2c-eebe-4a25-8a0c-dc6e54c9a336",
+                            "input": 0
+                        },
+                        {
+                            "from": "10d27496-af49-48d0-b939-eb878026f89d",
+                            "output": 0,
+                            "to": "1a75409c-ac47-4a17-9101-38de101f507e",
+                            "input": 0
+                        },
+                        {
+                            "from": "c4c06e2c-eebe-4a25-8a0c-dc6e54c9a336",
+                            "output": 0,
+                            "to": "2c96168e-c364-4d0f-b688-71675fafd52e",
+                            "input": 0
+                        },
+                        {
+                            "from": "445e6737-a8d8-4701-a42c-c881fe332559",
+                            "output": 0,
+                            "to": "b46ed528-4db8-4cab-b0c7-66ac2c9e961e",
+                            "input": 0
+                        },
+                        {
+                            "from": "1a75409c-ac47-4a17-9101-38de101f507e",
+                            "output": 0,
+                            "to": "445e6737-a8d8-4701-a42c-c881fe332559",
+                            "input": 0
+                        },
+                        {
+                            "from": "445e6737-a8d8-4701-a42c-c881fe332559",
+                            "output": 0,
+                            "to": "5be4298a-1594-4311-9a1a-1acff9492d5c",
+                            "input": 0
+                        },
+                        {
+                            "from": "c4c06e2c-eebe-4a25-8a0c-dc6e54c9a336",
+                            "output": 0,
+                            "to": "909e284b-5898-4cd1-a99b-a193b8991390",
+                            "input": 0
+                        },
+                        {
+                            "from": "4f80275a-4226-4703-8818-726baafeb81a",
+                            "output": 0,
+                            "to": "1ea0f501-33eb-4b34-97b6-7d6a1bf4ef76",
+                            "input": 0
+                        },
+                        {
+                            "from": "3f6e015d-0e2d-408f-b2a9-899462c57ca4",
+                            "output": 0,
+                            "to": "85806848-9f62-4148-88e5-bd1053a4893f",
+                            "input": 0
+                        },
+                        {
+                            "from": "07ad4587-8bcb-4e18-adf0-05a1775746e4",
+                            "output": 0,
+                            "to": "5650d592-0494-4442-9dcd-07fb421b0176",
+                            "input": 0
+                        },
+                        {
+                            "from": "bd22e9ce-42d0-4353-b0d9-87fd6417aba7",
+                            "output": 0,
+                            "to": "6c930009-b245-4d1f-b3c1-ffd1f39a9fd7",
+                            "input": 0
+                        }
+                    ]
+                }
+            }
+        ],
+        "wires": []
+    },
+    "history": {
+        "states": [
+            {
+                "id": "886ad572-ef64-4e8e-9a28-ea6e294028c3"
+            }
+        ],
+        "current": "886ad572-ef64-4e8e-9a28-ea6e294028c3"
+    },
+    "undoStack": {
+        "stack": [
+            "886ad572-ef64-4e8e-9a28-ea6e294028c3"
+        ],
+        "current": 0
+    }
+}
