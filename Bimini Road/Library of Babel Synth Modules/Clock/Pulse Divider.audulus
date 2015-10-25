@@ -1,0 +1,306 @@
+{
+    "version": 1,
+    "author": "Jody Golick",
+    "tags": [
+        "clock"
+    ],
+    "patch": {
+        "id": "ed2ff7bb-99ef-463e-8d27-debb862f36c0",
+        "pan": {
+            "x": -341.546875,
+            "y": 275.6744689941406
+        },
+        "zoom": 3.5266835689544679,
+        "nodes": [
+            {
+                "type": "Patch",
+                "id": "b1d96a40-2ae4-497b-b993-a7c8fc144b9c",
+                "position": {
+                    "x": 349.046875,
+                    "y": -318.67022705078127
+                },
+                "subPatch": {
+                    "id": "18d6a977-03fa-4dd6-8f7b-6918c3b2ea62",
+                    "pan": {
+                        "x": -54.28643798828125,
+                        "y": 16.504898071289064
+                    },
+                    "zoom": 1.174425482749939,
+                    "nodes": [
+                        {
+                            "type": "Sample & Hold",
+                            "id": "b7579de0-d0a1-4e82-b095-957ee542ee44",
+                            "position": {
+                                "x": 107.33580780029297,
+                                "y": 15.070426940917969
+                            }
+                        },
+                        {
+                            "type": "Input",
+                            "id": "8661ab16-828e-401f-a101-d165791cda50",
+                            "position": {
+                                "x": 14.222858428955079,
+                                "y": 44.62364196777344
+                            },
+                            "name": "Trig",
+                            "exposedPosition": {
+                                "x": -45.0,
+                                "y": -35.0
+                            }
+                        },
+                        {
+                            "type": "Expr",
+                            "id": "7eeb71dc-eefa-4513-a586-3c730b72197d",
+                            "position": {
+                                "x": 89.33758544921875,
+                                "y": -69.25591278076172
+                            },
+                            "expr": "(count < maxi) * (count+1)"
+                        },
+                        {
+                            "type": "Knob",
+                            "id": "3e36b666-ff91-47f9-abed-382c4549e498",
+                            "position": {
+                                "x": -298.07562255859377,
+                                "y": -17.68199920654297
+                            },
+                            "name": "/x",
+                            "knob": {
+                                "value": 32.0,
+                                "min": 2.0,
+                                "max": 64.0
+                            },
+                            "exposedPosition": {
+                                "x": -35.0,
+                                "y": 85.0
+                            }
+                        },
+                        {
+                            "type": "Expr",
+                            "id": "9e5dbb90-3acb-4503-a2aa-233fec4a9ffc",
+                            "position": {
+                                "x": -220.48480224609376,
+                                "y": -37.75463104248047
+                            },
+                            "expr": "floor(x)"
+                        },
+                        {
+                            "type": "Value",
+                            "id": "7661b137-9c11-49e0-bd8b-e80f29c01c77",
+                            "position": {
+                                "x": -117.1403579711914,
+                                "y": -86.85924530029297
+                            },
+                            "exposedPosition": {
+                                "x": -40.0,
+                                "y": 40.0
+                            }
+                        },
+                        {
+                            "type": "Knob",
+                            "id": "fc2664f2-3f2a-4e8c-b90a-58f9394ac2fe",
+                            "position": {
+                                "x": -214.14114379882813,
+                                "y": -166.05177307128907
+                            },
+                            "name": "Width",
+                            "knob": {
+                                "value": 0.5,
+                                "min": 0.009999999776482582,
+                                "max": 1.0
+                            },
+                            "exposedPosition": {
+                                "x": 15.0,
+                                "y": 85.0
+                            }
+                        },
+                        {
+                            "type": "Expr",
+                            "id": "6bd5b953-e1cb-48cd-bb44-7e113e6192d6",
+                            "position": {
+                                "x": 11.729644775390625,
+                                "y": -246.9114227294922
+                            },
+                            "expr": "x>(maxi*width)"
+                        },
+                        {
+                            "type": "Output",
+                            "id": "0b03c1bc-68ca-44b5-92e6-b9dd74a9dc87",
+                            "position": {
+                                "x": 236.9683837890625,
+                                "y": -217.03639221191407
+                            },
+                            "name": "Out",
+                            "exposedPosition": {
+                                "x": 30.0,
+                                "y": -35.0
+                            }
+                        },
+                        {
+                            "type": "Text",
+                            "id": "f3b2d60b-cbc6-4092-9bed-0866760c58f7",
+                            "position": {
+                                "x": -69.48028564453125,
+                                "y": 197.91876220703126
+                            },
+                            "exposedPosition": {
+                                "x": -45.0,
+                                "y": 125.0
+                            },
+                            "text": "Pulse Divider"
+                        },
+                        {
+                            "type": "Expr",
+                            "id": "ee36d796-f752-448a-b65a-6fb493357458",
+                            "position": {
+                                "x": -68.86941528320313,
+                                "y": -38.189247131347659
+                            },
+                            "expr": "x-1"
+                        },
+                        {
+                            "type": "RGBLight",
+                            "id": "13ec652e-282b-4a10-a5f7-ab192aee9b05",
+                            "position": {
+                                "x": 366.64849853515627,
+                                "y": -169.671630859375
+                            },
+                            "exposedPosition": {
+                                "x": 30.0,
+                                "y": -15.0
+                            }
+                        },
+                        {
+                            "type": "Expr",
+                            "id": "d5dd7288-54d9-49c9-bf64-cf15c071c9bc",
+                            "position": {
+                                "x": -118.27035522460938,
+                                "y": -186.9114227294922
+                            },
+                            "expr": "1-x"
+                        },
+                        {
+                            "type": "Text",
+                            "id": "3b140aac-38ef-494f-bd95-58fce2befbdb",
+                            "position": {
+                                "x": -156.215087890625,
+                                "y": 159.05323791503907
+                            },
+                            "text": "Designed by JDRaoul Arranged by Bimini Road"
+                        },
+                        {
+                            "type": "Expr",
+                            "id": "00fa356b-3065-48c0-b4a2-8b81dab8d829",
+                            "position": {
+                                "x": 236.64849853515626,
+                                "y": -169.671630859375
+                            },
+                            "expr": ".4"
+                        }
+                    ],
+                    "wires": [
+                        {
+                            "from": "7eeb71dc-eefa-4513-a586-3c730b72197d",
+                            "output": 0,
+                            "to": "b7579de0-d0a1-4e82-b095-957ee542ee44",
+                            "input": 0
+                        },
+                        {
+                            "from": "8661ab16-828e-401f-a101-d165791cda50",
+                            "output": 0,
+                            "to": "b7579de0-d0a1-4e82-b095-957ee542ee44",
+                            "input": 1
+                        },
+                        {
+                            "from": "b7579de0-d0a1-4e82-b095-957ee542ee44",
+                            "output": 0,
+                            "to": "7eeb71dc-eefa-4513-a586-3c730b72197d",
+                            "input": 0
+                        },
+                        {
+                            "from": "ee36d796-f752-448a-b65a-6fb493357458",
+                            "output": 0,
+                            "to": "7eeb71dc-eefa-4513-a586-3c730b72197d",
+                            "input": 1
+                        },
+                        {
+                            "from": "3e36b666-ff91-47f9-abed-382c4549e498",
+                            "output": 0,
+                            "to": "9e5dbb90-3acb-4503-a2aa-233fec4a9ffc",
+                            "input": 0
+                        },
+                        {
+                            "from": "9e5dbb90-3acb-4503-a2aa-233fec4a9ffc",
+                            "output": 0,
+                            "to": "7661b137-9c11-49e0-bd8b-e80f29c01c77",
+                            "input": 0
+                        },
+                        {
+                            "from": "b7579de0-d0a1-4e82-b095-957ee542ee44",
+                            "output": 0,
+                            "to": "6bd5b953-e1cb-48cd-bb44-7e113e6192d6",
+                            "input": 0
+                        },
+                        {
+                            "from": "ee36d796-f752-448a-b65a-6fb493357458",
+                            "output": 0,
+                            "to": "6bd5b953-e1cb-48cd-bb44-7e113e6192d6",
+                            "input": 1
+                        },
+                        {
+                            "from": "d5dd7288-54d9-49c9-bf64-cf15c071c9bc",
+                            "output": 0,
+                            "to": "6bd5b953-e1cb-48cd-bb44-7e113e6192d6",
+                            "input": 2
+                        },
+                        {
+                            "from": "6bd5b953-e1cb-48cd-bb44-7e113e6192d6",
+                            "output": 0,
+                            "to": "0b03c1bc-68ca-44b5-92e6-b9dd74a9dc87",
+                            "input": 0
+                        },
+                        {
+                            "from": "9e5dbb90-3acb-4503-a2aa-233fec4a9ffc",
+                            "output": 0,
+                            "to": "ee36d796-f752-448a-b65a-6fb493357458",
+                            "input": 0
+                        },
+                        {
+                            "from": "6bd5b953-e1cb-48cd-bb44-7e113e6192d6",
+                            "output": 0,
+                            "to": "13ec652e-282b-4a10-a5f7-ab192aee9b05",
+                            "input": 0
+                        },
+                        {
+                            "from": "00fa356b-3065-48c0-b4a2-8b81dab8d829",
+                            "output": 0,
+                            "to": "13ec652e-282b-4a10-a5f7-ab192aee9b05",
+                            "input": 2
+                        },
+                        {
+                            "from": "fc2664f2-3f2a-4e8c-b90a-58f9394ac2fe",
+                            "output": 0,
+                            "to": "d5dd7288-54d9-49c9-bf64-cf15c071c9bc",
+                            "input": 0
+                        }
+                    ]
+                }
+            }
+        ],
+        "wires": []
+    },
+    "history": {
+        "states": [
+            {
+                "id": "38826920-5343-48b0-84b6-ed9768928373"
+            }
+        ],
+        "current": "38826920-5343-48b0-84b6-ed9768928373"
+    },
+    "undoStack": {
+        "stack": [
+            "38826920-5343-48b0-84b6-ed9768928373"
+        ],
+        "current": 0
+    }
+}
