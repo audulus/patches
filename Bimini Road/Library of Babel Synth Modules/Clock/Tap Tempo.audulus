@@ -4,24 +4,24 @@
         "id": "99f933f4-fb6b-4f2a-86fa-f158ad76be87",
         "pan": {
             "x": -16.900741577148439,
-            "y": -247.52066040039063
+            "y": -257.885986328125
         },
-        "zoom": 3.5266833305358888,
+        "zoom": 3.438856601715088,
         "nodes": [
             {
                 "type": "Patch",
                 "id": "81aa85be-b73e-4f86-907b-a7a6e8b22921",
                 "position": {
                     "x": 31.900741577148439,
-                    "y": 259.52490234375
+                    "y": 267.3874816894531
                 },
                 "subPatch": {
                     "id": "1416ca16-aca3-4e14-b3ce-22343512eff9",
                     "pan": {
-                        "x": -91.70216369628906,
-                        "y": 1.46417236328125
+                        "x": -41.23016357421875,
+                        "y": -29.571685791015626
                     },
-                    "zoom": 1.1670666933059693,
+                    "zoom": 1.4384467601776124,
                     "nodes": [
                         {
                             "type": "ZeroCross",
@@ -70,8 +70,8 @@
                                 "y": 75.95466613769531
                             },
                             "exposedPosition": {
-                                "x": -30.0,
-                                "y": 30.0
+                                "x": -35.0,
+                                "y": -35.0
                             }
                         },
                         {
@@ -112,23 +112,64 @@
                             "type": "Text",
                             "id": "d9328800-3aeb-42a4-a230-cae0e7074439",
                             "position": {
-                                "x": -19.5390625,
-                                "y": 135.890625
+                                "x": 23.005504608154298,
+                                "y": 223.2892303466797
                             },
                             "exposedPosition": {
                                 "x": -45.0,
-                                "y": 70.0
+                                "y": 75.0
                             },
-                            "text": "Tap Tempo"
+                            "text": "Tap Tempo",
+                            "width": 86.45098876953125
                         },
                         {
                             "type": "Text",
-                            "id": "a53410b7-443f-4d82-9d1d-d812a8030452",
+                            "id": "beb81b90-3102-4111-89c7-a807c6da118d",
                             "position": {
-                                "x": -292.3142395019531,
-                                "y": -138.8189697265625
+                                "x": 64.8965835571289,
+                                "y": 98.83779907226563
                             },
-                            "text": "The phasor drives the LED as an tempo indicator.  It needs the x-pi expression to bring its amplitude within a useable range"
+                            "exposedPosition": {
+                                "x": -5.0,
+                                "y": -35.0
+                            },
+                            "text": "Hz",
+                            "width": 86.45098876953125
+                        },
+                        {
+                            "type": "Expr",
+                            "id": "a4fcb9e6-e0e1-455e-9d84-3b0b7f0c2f85",
+                            "position": {
+                                "x": -53.65025329589844,
+                                "y": 118.16859436035156
+                            },
+                            "expr": "(floor(x*100))*.01*60"
+                        },
+                        {
+                            "type": "Value",
+                            "id": "4856af12-e776-4795-b9cb-7270e257adb9",
+                            "position": {
+                                "x": -29.122905731201173,
+                                "y": 160.32003784179688
+                            },
+                            "exposedPosition": {
+                                "x": -35.0,
+                                "y": 45.0
+                            }
+                        },
+                        {
+                            "type": "Text",
+                            "id": "04ac0177-78c4-4e7e-a49f-8db101c4b170",
+                            "position": {
+                                "x": 67.55335235595703,
+                                "y": 181.94131469726563
+                            },
+                            "exposedPosition": {
+                                "x": -25.0,
+                                "y": 30.0
+                            },
+                            "text": "BPM",
+                            "width": 86.45098876953125
                         }
                     ],
                     "wires": [
@@ -173,6 +214,18 @@
                             "output": 0,
                             "to": "27f5d6b2-98e6-4192-abe0-ca32e2594ead",
                             "input": 0
+                        },
+                        {
+                            "from": "ee6a8861-6e34-4cff-a943-e8fac87ccf84",
+                            "output": 0,
+                            "to": "a4fcb9e6-e0e1-455e-9d84-3b0b7f0c2f85",
+                            "input": 0
+                        },
+                        {
+                            "from": "a4fcb9e6-e0e1-455e-9d84-3b0b7f0c2f85",
+                            "output": 0,
+                            "to": "4856af12-e776-4795-b9cb-7270e257adb9",
+                            "input": 0
                         }
                     ]
                 }
@@ -183,14 +236,14 @@
     "history": {
         "states": [
             {
-                "id": "085755f3-e5fd-4cb6-8e35-e0d25978dc19"
+                "id": "cda2733f-9115-4f38-92b5-b77fc3392869"
             }
         ],
-        "current": "085755f3-e5fd-4cb6-8e35-e0d25978dc19"
+        "current": "cda2733f-9115-4f38-92b5-b77fc3392869"
     },
     "undoStack": {
         "stack": [
-            "085755f3-e5fd-4cb6-8e35-e0d25978dc19"
+            "cda2733f-9115-4f38-92b5-b77fc3392869"
         ],
         "current": 0
     }
