@@ -1,0 +1,288 @@
+{
+    "version": 1,
+    "patch": {
+        "id": "54ab3cd5-3841-4457-9a84-807cae9a5516",
+        "pan": {
+            "x": -174.9874725341797,
+            "y": 84.8304443359375
+        },
+        "zoom": 4.83582067489624,
+        "nodes": [
+            {
+                "type": "Patch",
+                "id": "4f0b52b6-70f8-4f9b-b0ad-0b696efa8adb",
+                "position": {
+                    "x": 174.9874725341797,
+                    "y": -165.3304443359375
+                },
+                "subPatch": {
+                    "id": "33141047-0ba8-4766-a98c-2fe1dd4dcf68",
+                    "pan": {
+                        "x": -297.3567810058594,
+                        "y": -8.495697021484375
+                    },
+                    "zoom": 1.0262998342514039,
+                    "nodes": [
+                        {
+                            "type": "Output",
+                            "id": "b4eb6c2a-65fe-4534-94b4-5efa978438ba",
+                            "position": {
+                                "x": 640.6832885742188,
+                                "y": -119.27354431152344
+                            },
+                            "name": "Out",
+                            "exposedPosition": {
+                                "x": 50.0,
+                                "y": 0.0
+                            }
+                        },
+                        {
+                            "type": "Crossfade",
+                            "id": "22fb787a-8601-42bd-a8d3-b143a4b6fb91",
+                            "position": {
+                                "x": 490.88958740234377,
+                                "y": -120.51948547363281
+                            }
+                        },
+                        {
+                            "type": "Sample & Hold",
+                            "id": "6a99f263-3f88-4d14-b85c-61d7d3d6cfb5",
+                            "position": {
+                                "x": 302.18157958984377,
+                                "y": -89.62188720703125
+                            }
+                        },
+                        {
+                            "type": "Input",
+                            "id": "1c63c353-44ca-4a71-a72b-107142a07543",
+                            "position": {
+                                "x": 187.79112243652345,
+                                "y": -119.2215576171875
+                            },
+                            "name": "In",
+                            "exposedPosition": {
+                                "x": -50.0,
+                                "y": 0.0
+                            }
+                        },
+                        {
+                            "type": "Knob",
+                            "id": "d1ab1c29-6923-4a6d-b8a0-e74fc06f87f8",
+                            "position": {
+                                "x": 394.84112548828127,
+                                "y": 67.62348937988281
+                            },
+                            "name": "Mix",
+                            "knob": {
+                                "value": 1.0,
+                                "min": 0.0,
+                                "max": 1.0
+                            },
+                            "exposedPosition": {
+                                "x": 0.0,
+                                "y": 60.0
+                            }
+                        },
+                        {
+                            "type": "Expr",
+                            "id": "c82914b4-56b8-4f93-9619-a0718dc636fe",
+                            "position": {
+                                "x": -126.74882507324219,
+                                "y": -68.32923126220703
+                            },
+                            "expr": "1"
+                        },
+                        {
+                            "type": "Expr",
+                            "id": "d96681ea-5288-4956-8a76-80af6bf2e16f",
+                            "position": {
+                                "x": -225.15689086914063,
+                                "y": -20.02973175048828
+                            },
+                            "expr": "(1-r)*11024"
+                        },
+                        {
+                            "type": "Knob",
+                            "id": "c4e60520-b78b-4784-bc75-5d3b1cd5b181",
+                            "position": {
+                                "x": -432.99993896484377,
+                                "y": -41.894493103027347
+                            },
+                            "name": "Sample Rate",
+                            "knob": {
+                                "value": 1.0,
+                                "min": 0.0,
+                                "max": 1.0
+                            },
+                            "exposedPosition": {
+                                "x": 0.0,
+                                "y": 125.0
+                            }
+                        },
+                        {
+                            "type": "Expr",
+                            "id": "7f28749d-dc13-41af-bedc-53957291343a",
+                            "position": {
+                                "x": -454.88861083984377,
+                                "y": 7.844917297363281
+                            },
+                            "expr": "0.0"
+                        },
+                        {
+                            "type": "Range",
+                            "id": "b963c058-df97-4eb3-a9d3-f7f3116e3c1c",
+                            "position": {
+                                "x": -350.8648681640625,
+                                "y": -20.205955505371095
+                            }
+                        },
+                        {
+                            "type": "Expr",
+                            "id": "415b274d-3b89-474d-bad8-eaefb78bb6d5",
+                            "position": {
+                                "x": -469.624755859375,
+                                "y": 51.856849670410159
+                            },
+                            "expr": "0.993"
+                        },
+                        {
+                            "type": "Text",
+                            "id": "e3351ed8-b626-4dbf-9d10-6490f58ceb1b",
+                            "position": {
+                                "x": -17.611343383789064,
+                                "y": 206.4454803466797
+                            },
+                            "exposedPosition": {
+                                "x": -60.0,
+                                "y": 165.0
+                            },
+                            "text": "Afta8 :: Rate Redux",
+                            "width": 256.0
+                        },
+                        {
+                            "type": "Phasor",
+                            "id": "12c79d4c-156f-45b9-81d0-318ff6c5ffcc",
+                            "position": {
+                                "x": -37.65357971191406,
+                                "y": -18.868980407714845
+                            }
+                        },
+                        {
+                            "type": "Expr",
+                            "id": "1dfd24c5-d764-4f47-9045-6e3e9a52ecf6",
+                            "position": {
+                                "x": 122.13998413085938,
+                                "y": -61.67070770263672
+                            },
+                            "expr": "(x+1)/2"
+                        },
+                        {
+                            "type": "Expr",
+                            "id": "202ac5f8-8a80-4483-99e7-05d91d6d560f",
+                            "position": {
+                                "x": 121.80316162109375,
+                                "y": -18.937461853027345
+                            },
+                            "expr": "x<pi?1:-1"
+                        }
+                    ],
+                    "wires": [
+                        {
+                            "from": "22fb787a-8601-42bd-a8d3-b143a4b6fb91",
+                            "output": 0,
+                            "to": "b4eb6c2a-65fe-4534-94b4-5efa978438ba",
+                            "input": 0
+                        },
+                        {
+                            "from": "1c63c353-44ca-4a71-a72b-107142a07543",
+                            "output": 0,
+                            "to": "22fb787a-8601-42bd-a8d3-b143a4b6fb91",
+                            "input": 0
+                        },
+                        {
+                            "from": "6a99f263-3f88-4d14-b85c-61d7d3d6cfb5",
+                            "output": 0,
+                            "to": "22fb787a-8601-42bd-a8d3-b143a4b6fb91",
+                            "input": 1
+                        },
+                        {
+                            "from": "d1ab1c29-6923-4a6d-b8a0-e74fc06f87f8",
+                            "output": 0,
+                            "to": "22fb787a-8601-42bd-a8d3-b143a4b6fb91",
+                            "input": 2
+                        },
+                        {
+                            "from": "1c63c353-44ca-4a71-a72b-107142a07543",
+                            "output": 0,
+                            "to": "6a99f263-3f88-4d14-b85c-61d7d3d6cfb5",
+                            "input": 0
+                        },
+                        {
+                            "from": "1dfd24c5-d764-4f47-9045-6e3e9a52ecf6",
+                            "output": 0,
+                            "to": "6a99f263-3f88-4d14-b85c-61d7d3d6cfb5",
+                            "input": 1
+                        },
+                        {
+                            "from": "b963c058-df97-4eb3-a9d3-f7f3116e3c1c",
+                            "output": 0,
+                            "to": "d96681ea-5288-4956-8a76-80af6bf2e16f",
+                            "input": 0
+                        },
+                        {
+                            "from": "c4e60520-b78b-4784-bc75-5d3b1cd5b181",
+                            "output": 0,
+                            "to": "b963c058-df97-4eb3-a9d3-f7f3116e3c1c",
+                            "input": 0
+                        },
+                        {
+                            "from": "7f28749d-dc13-41af-bedc-53957291343a",
+                            "output": 0,
+                            "to": "b963c058-df97-4eb3-a9d3-f7f3116e3c1c",
+                            "input": 1
+                        },
+                        {
+                            "from": "415b274d-3b89-474d-bad8-eaefb78bb6d5",
+                            "output": 0,
+                            "to": "b963c058-df97-4eb3-a9d3-f7f3116e3c1c",
+                            "input": 2
+                        },
+                        {
+                            "from": "d96681ea-5288-4956-8a76-80af6bf2e16f",
+                            "output": 0,
+                            "to": "12c79d4c-156f-45b9-81d0-318ff6c5ffcc",
+                            "input": 0
+                        },
+                        {
+                            "from": "202ac5f8-8a80-4483-99e7-05d91d6d560f",
+                            "output": 0,
+                            "to": "1dfd24c5-d764-4f47-9045-6e3e9a52ecf6",
+                            "input": 0
+                        },
+                        {
+                            "from": "12c79d4c-156f-45b9-81d0-318ff6c5ffcc",
+                            "output": 0,
+                            "to": "202ac5f8-8a80-4483-99e7-05d91d6d560f",
+                            "input": 0
+                        }
+                    ]
+                }
+            }
+        ],
+        "wires": []
+    },
+    "history": {
+        "states": [
+            {
+                "id": "2b82baf2-7ab1-4a3d-892f-7d627b1703b3"
+            }
+        ],
+        "current": "2b82baf2-7ab1-4a3d-892f-7d627b1703b3"
+    },
+    "undoStack": {
+        "stack": [
+            "2b82baf2-7ab1-4a3d-892f-7d627b1703b3"
+        ],
+        "current": 0
+    }
+}
