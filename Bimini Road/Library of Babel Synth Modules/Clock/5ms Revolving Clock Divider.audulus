@@ -4,13 +4,14 @@
     "tags": [
         "Clock"
     ],
+    "description": "This module takes an incoming clock signal and routes it to 8 outputs.  If no Count Clock or Revolve input is applied, the clock signal is pulse-divided by the output number.  Out 1 then is (Clock Hz/1), Output 2 is (Clock Hz/2), …, and Out 8 is (Clock Hz/8).  A blue light turns on when the signal is high.  You’ll notice that for every 8 clock pulses from output 1, you’ll get one pulse from output 8.  \n\nWhen a clock signal is applied to the Count Clock input, an internal counter counts from 0-7 up or up/down (depending on your selection), and internally switches the output routing as if you were shifting where the output jacks were being routed to.  With a Count of 1, Output 1 becomes Output 8, Output 2 becomes Output 1, etc.  With a Count of 2, Output 1 becomes Output 7, Output 2 becomes Output 8, Output 3 becomes Output 1, etc.  \n\nA red light indicates which output is passing the undivided clock signal.  This light may change to purple if it syncs with the blue high output indicator.\n\nLike Count, Revolve also switches the order of inputs, but it can do so in whatever order you’d like.  Attach a knob or sequencer for direct control.  The Revolve(x) control is an internal multiplier for the revolve signal.  If a triangle wave counts up and down, that triangle wave with Revolve(2) would count up twice, then down twice.",
     "patch": {
         "id": "80daa2cd-8b0a-47c8-b3b8-258e7ef48da1",
         "pan": {
             "x": 77.83186340332031,
-            "y": -61.35810852050781
+            "y": -61.361839294433597
         },
-        "zoom": 4.836081504821777,
+        "zoom": 3.438863515853882,
         "nodes": [
             {
                 "type": "Patch",
