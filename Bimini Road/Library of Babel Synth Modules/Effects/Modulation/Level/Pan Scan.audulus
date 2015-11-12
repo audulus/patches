@@ -5,13 +5,14 @@
         "Amp",
         "Modulation"
     ],
+    "description": "This is an autopanner.  It will swap the left and right signals back and forth according to either the internal LFO (Int) or an external modulation signal (Mod).  The Hz of the internal LFO can be adjusted with the Speed knob.",
     "patch": {
         "id": "f9431fad-d79f-4259-afcd-96f0687b1673",
         "pan": {
-            "x": 81.01692199707031,
-            "y": -287.0550231933594
+            "x": 80.86307525634766,
+            "y": -287.06158447265627
         },
-        "zoom": 4.836136817932129,
+        "zoom": 3.4388062953948976,
         "nodes": [
             {
                 "type": "Patch",
@@ -454,15 +455,28 @@
     "history": {
         "states": [
             {
-                "id": "a1332699-8988-477d-8273-8f0e03c2dcd2"
+                "id": "a1332699-8988-477d-8273-8f0e03c2dcd2",
+                "parent": "d4570397-3b33-406c-b24a-9f4d3cf14a8e",
+                "undo": {
+                    "type": "SetNodePosition",
+                    "position": {
+                        "x": -76.01692199707031,
+                        "y": 226.56163024902345
+                    },
+                    "node": "802d5917-a27c-4f11-9432-22bcee657da7"
+                }
+            },
+            {
+                "id": "d4570397-3b33-406c-b24a-9f4d3cf14a8e"
             }
         ],
-        "current": "a1332699-8988-477d-8273-8f0e03c2dcd2"
+        "current": "d4570397-3b33-406c-b24a-9f4d3cf14a8e"
     },
     "undoStack": {
         "stack": [
-            "a1332699-8988-477d-8273-8f0e03c2dcd2"
+            "a1332699-8988-477d-8273-8f0e03c2dcd2",
+            "d4570397-3b33-406c-b24a-9f4d3cf14a8e"
         ],
-        "current": 0
+        "current": 1
     }
 }
