@@ -4,20 +4,21 @@
     "tags": [
         "Clock"
     ],
+    "description": "The Touch Feedback Clock allows you to quickly and naturally dial in rhythmic clock sequences, and warp them with the Loop Time knob.  \n\nIt works by attaching a trigger to a delay node with the feedback turned all the way up.  If the loop time is set too low, or the delays pile up enough so that they start to smear together, you may end up with an “always on” clock signal that will need to be reset.\n\nThe Reset button clears the delays, but it takes the length of the Loop Time to clear them out - that’s why there is a Wait/Ready light above it.  When Ready is lit, you’re clear to enter a new input. \n\nReally interesting things happen when you start tap a sequence, pull the loop time down, then expand the loop time again.",
     "patch": {
         "id": "c7d6a7ae-d326-4f93-8d3e-0ad765adee5d",
         "pan": {
-            "x": -171.82867431640626,
-            "y": -302.334716796875
+            "x": -768.019287109375,
+            "y": -238.23895263671876
         },
-        "zoom": 5.089005947113037,
+        "zoom": 2.880000114440918,
         "nodes": [
             {
                 "type": "Patch",
                 "id": "364fd0d7-c037-4e9e-a7fb-b98312febd2d",
                 "position": {
-                    "x": 36.82867431640625,
-                    "y": 231.83473205566407
+                    "x": 633.019287109375,
+                    "y": 167.74415588378907
                 },
                 "subPatch": {
                     "id": "133993a1-9fcf-47c2-a724-c9ababd87017",
@@ -205,7 +206,7 @@
                             },
                             "name": "Loop Time",
                             "knob": {
-                                "value": 2.0,
+                                "value": 0.0,
                                 "min": 0.0,
                                 "max": 2.0
                             },
@@ -357,14 +358,14 @@
     "history": {
         "states": [
             {
-                "id": "f753a285-f8d9-43d0-8ef0-284a8e835aed"
+                "id": "f07a5c65-fade-4afb-a0ec-b9fd1e319ee7"
             }
         ],
-        "current": "f753a285-f8d9-43d0-8ef0-284a8e835aed"
+        "current": "f07a5c65-fade-4afb-a0ec-b9fd1e319ee7"
     },
     "undoStack": {
         "stack": [
-            "f753a285-f8d9-43d0-8ef0-284a8e835aed"
+            "f07a5c65-fade-4afb-a0ec-b9fd1e319ee7"
         ],
         "current": 0
     }
