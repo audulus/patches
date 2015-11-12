@@ -17,12 +17,16 @@ Like Count, Revolve also switches the order of inputs, but it can do so in whate
 ## Clock
 ![Clock](./Clock/Clock.png)
 
+The clock outputs a pulse.  The higher the Hz value, the faster the pulse.  You can turn it on and off with the button.
 
+Inputs on modules designed to accept a clock pulse are labelled “Clock.”  
+
+The Sync input can be used to synchronize multiple clock sources to a master clock.  The master clock’s Output feeds into the slave clocks’ Sync input.  Every time the master clock pulses, it resets the slave clocks.
 
 ## Divided Clock
 ![Divided Clock](./Clock/Divided Clock.png)
 
-
+This is a clock and a pulse divider packaged together for convenience.  There’s an On/Off button, a Hz control for the clock speed, a divide by x knob, and a pulse width control.  The Clock Output is the undivided clock signal, and the /x Output is the clock Hz divided by the value set by the /x knob.  The sync input allows this clock to be slaved to a master clock.
 
 ## Pulse Divider
 ![Pulse Divider](./Clock/Pulse Divider.png)
@@ -32,32 +36,53 @@ Like Count, Revolve also switches the order of inputs, but it can do so in whate
 ## Tap Tempo
 ![Tap Tempo](./Clock/Tap Tempo.png)
 
-
+The tap tempo infers the time between two button presses and outputs that time as a static value in Hz.  You can use it to add a tap tempo control for delays, clocks, tremolos, etc.
 
 ## Touch Feedback Clock
 ![Touch Feedback Clock](./Clock/Touch Feedback Clock.png)
 
+The Touch Feedback Clock allows you to quickly and naturally dial in rhythmic clock sequences, and warp them with the Loop Time knob.  
 
+It works by attaching a trigger to a delay node with the feedback turned all the way up.  If the loop time is set too low, or the delays pile up enough so that they start to smear together, you may end up with an “always on” clock signal that will need to be reset.
+
+The Reset button clears the delays, but it takes the length of the Loop Time to clear them out - that’s why there is a Wait/Ready light above it.  When Ready is lit, you’re clear to enter a new input. 
+
+Really interesting things happen when you start tap a sequence, pull the loop time down, then expand the loop time again.
 
 ## Bitcrusher
 ![Bitcrusher](./Effects/Distortion/Bitcrusher.png)
 
+This Bitcrusher represents one two ways to “crush” a wave to add digital distortion.
+
+This method uses resolution reduction by reducing the precision of the 32-bit floating point input.
+
+The Crush knob decreases resolution as its value is increased.  The Mix knob mixes the dry and wet signals 
+together.
 
 
 ## Distortion
 ![Distortion](./Effects/Distortion/Distortion.png)
 
+This is a repackaging of the distortion node as a module.  For more info, see the Audulus node documentation.
 
+The trim knob decreases the Output level.
 
 ## Ms. Torsion Distortion
 ![Ms. Torsion Distortion](./Effects/Distortion/Ms. Torsion Distortion.png)
 
+This is a simple distortion with 4 variables.  
 
+- Crush is a dry/wet mix knob.
+- Gnash raises the cutoff point of the LPF on the distortion.
+- Bite increases the Q value of the LFP curve
+- Grind shifts the distortion an octave up.
 
 ## Rate Reduction
 ![Rate Reduction](./Effects/Distortion/Rate Reduction.png)
 
+Sample Rate Reduction is a type of digital distortion, usually found working in concert with a Bitcrusher.
 
+This method reduces the sample rate on an input from the default 44.1k (or your host’s sample rate) to a lower sample rate.
 
 ## Wavefolder
 ![Wavefolder](./Effects/Distortion/Wavefolder.png)
@@ -72,22 +97,28 @@ Like Count, Revolve also switches the order of inputs, but it can do so in whate
 ## Pitch Shift
 ![Pitch Shift](./Effects/Modulation/Frequency/Pitch Shift.png)
 
-
+This is a repackaging of the pitch shift node as a module.  For more info, see the Audulus node documentation.
 
 ## Ring Modulator
 ![Ring Modulator](./Effects/Modulation/Frequency/Ring Modulator.png)
 
+Ring modulation multiplies a signal (Input) with a carrier signal (Mod Input).  In most pedal-based ring modulators, the carrier is a sine wave, but this design allows you to plug in whatever signal you’d like.
 
+The Depth knob controls the amount of modulated signal mixed back in with the original dry signal.
+
+The Trim knob controls the output level.
 
 ## Unison
 ![Unison](./Effects/Modulation/Frequency/Unison.png)
 
+Unison takes an input signal and turns it into a 4-channel polyphonic signal with 1 unaffected channel and 3 detuned channels.  The Spread knob controls how detuned the 3 channels are.
 
+Its output is polyphonic, as indicated by the /P.  All modules in a signal chain after this module will run in polyphonic mode.
 
 ## Pan Scan
 ![Pan Scan](./Effects/Modulation/Level/Pan Scan.png)
 
-
+This is an autopanner.  It will swap the left and right signals back and forth according to either the internal LFO (Int) or an external modulation signal (Mod).  The Hz of the internal LFO can be adjusted with the Speed knob.
 
 ## Tremolo
 ![Tremolo](./Effects/Modulation/Level/Tremolo.png)
