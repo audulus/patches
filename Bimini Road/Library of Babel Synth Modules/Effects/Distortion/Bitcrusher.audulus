@@ -1,19 +1,24 @@
 {
     "version": 1,
+    "author": "Afta8",
+    "tags": [
+        "Distortion"
+    ],
+    "description": "This Bitcrusher represents one two ways to “crush” a wave to add digital distortion.\n\nThis method uses resolution reduction by reducing the precision of the 32-bit floating point input.\n\nThe Crush knob decreases resolution as its value is increased.  The Mix knob mixes the dry and wet signals \ntogether.\n",
     "patch": {
         "id": "7892764a-5ce9-40a8-9972-7795d7ab2105",
         "pan": {
-            "x": -35.41666793823242,
-            "y": -75.49478912353516
+            "x": -35.0,
+            "y": -75.5
         },
-        "zoom": 4.836071968078613,
+        "zoom": 3.4388058185577394,
         "nodes": [
             {
                 "type": "Patch",
                 "id": "c0230db2-fb11-4c2e-ad84-54fade55c654",
                 "position": {
                     "x": 0.0,
-                    "y": 0.0
+                    "y": 0.000003814697265625
                 },
                 "subPatch": {
                     "id": "5c738c0a-8e0b-4492-ab4d-d3d4da116ab0",
@@ -207,15 +212,28 @@
     "history": {
         "states": [
             {
-                "id": "7bc327e2-4b6d-427c-976e-ecd46cce6e82"
+                "id": "7bc327e2-4b6d-427c-976e-ecd46cce6e82",
+                "parent": "5986ca79-a80c-415a-8306-01f2ec0908ff",
+                "undo": {
+                    "type": "SetNodePosition",
+                    "position": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "node": "c0230db2-fb11-4c2e-ad84-54fade55c654"
+                }
+            },
+            {
+                "id": "5986ca79-a80c-415a-8306-01f2ec0908ff"
             }
         ],
-        "current": "7bc327e2-4b6d-427c-976e-ecd46cce6e82"
+        "current": "5986ca79-a80c-415a-8306-01f2ec0908ff"
     },
     "undoStack": {
         "stack": [
-            "7bc327e2-4b6d-427c-976e-ecd46cce6e82"
+            "7bc327e2-4b6d-427c-976e-ecd46cce6e82",
+            "5986ca79-a80c-415a-8306-01f2ec0908ff"
         ],
-        "current": 0
+        "current": 1
     }
 }
