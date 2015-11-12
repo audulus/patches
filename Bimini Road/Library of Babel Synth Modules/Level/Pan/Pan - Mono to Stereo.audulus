@@ -4,13 +4,14 @@
     "tags": [
         "Pan"
     ],
+    "description": "Allows you to adjust the perceived location of a sound left or right within the stereo field.\n\nIt is essentially an inverted crossfade node.",
     "patch": {
         "id": "14df16f4-ba22-4a01-a5d1-adf2af05df17",
         "pan": {
-            "x": 40.118934631347659,
-            "y": -204.642822265625
+            "x": 41.62845230102539,
+            "y": -209.94740295410157
         },
-        "zoom": 4.835961818695068,
+        "zoom": 4.0,
         "nodes": [
             {
                 "type": "Patch",
@@ -186,15 +187,28 @@
     "history": {
         "states": [
             {
-                "id": "074f9fe6-c73e-4737-a1ba-2ab1dd3fe70d"
+                "id": "074f9fe6-c73e-4737-a1ba-2ab1dd3fe70d",
+                "parent": "0c6159fe-36e0-4a14-9417-b59b2cff9e45",
+                "undo": {
+                    "type": "SetNodePosition",
+                    "position": {
+                        "x": -60.118934631347659,
+                        "y": 149.145751953125
+                    },
+                    "node": "ff153e34-3127-4d75-8db9-396ac78b9c54"
+                }
+            },
+            {
+                "id": "0c6159fe-36e0-4a14-9417-b59b2cff9e45"
             }
         ],
-        "current": "074f9fe6-c73e-4737-a1ba-2ab1dd3fe70d"
+        "current": "0c6159fe-36e0-4a14-9417-b59b2cff9e45"
     },
     "undoStack": {
         "stack": [
-            "074f9fe6-c73e-4737-a1ba-2ab1dd3fe70d"
+            "074f9fe6-c73e-4737-a1ba-2ab1dd3fe70d",
+            "0c6159fe-36e0-4a14-9417-b59b2cff9e45"
         ],
-        "current": 0
+        "current": 1
     }
 }
