@@ -1,0 +1,189 @@
+{
+    "version": 1,
+    "author": "Bimini Road",
+    "tags": [
+        "Via"
+    ],
+    "description": "This is a Frequency Plotter via - it displays the frequency changes of the signal throughput over time with a waveform meter.  A knob is provided as a zoom in/out control.\n\nVias are connection tabs that are useful for prototyping and clarifying connections in very large patches or designs.\n\nThey are good for prototyping because you can use a knob to tune a patch and then easily swap it for a value expression - effectively using it as an internal trim pot.\n\nThey are good for clarifying connections because they can route one node’s output across a patch and then hook up to, say, a mux node, rather than having 8 long connections run all the way across the patch adding visual clutter.\n",
+    "patch": {
+        "id": "21988e47-a595-4fc7-9fee-84c2eb6bc679",
+        "pan": {
+            "x": -95.00973510742188,
+            "y": -43.99590301513672
+        },
+        "zoom": 2.8356924057006838,
+        "nodes": [
+            {
+                "type": "Patch",
+                "id": "a4ee26b5-af06-4d6e-a676-8388798b3e7e",
+                "position": {
+                    "x": -22.490262985229493,
+                    "y": -0.00409698486328125
+                },
+                "subPatch": {
+                    "id": "ca4bc506-54d0-4131-b83e-e92020914529",
+                    "pan": {
+                        "x": -312.2664794921875,
+                        "y": -310.33282470703127
+                    },
+                    "zoom": 1.014404296875,
+                    "nodes": [
+                        {
+                            "type": "Input",
+                            "id": "0107e6ae-32f1-4d08-a347-a6c303d36689",
+                            "position": {
+                                "x": -138.01345825195313,
+                                "y": -29.970726013183595
+                            },
+                            "name": "",
+                            "exposedPosition": {
+                                "x": -25.0,
+                                "y": -10.0
+                            }
+                        },
+                        {
+                            "type": "Output",
+                            "id": "e7c84f00-8e60-4e7f-911c-719299be5d5b",
+                            "position": {
+                                "x": -43.023704528808597,
+                                "y": -28.490507125854493
+                            },
+                            "name": "",
+                            "exposedPosition": {
+                                "x": 255.0,
+                                "y": -10.0
+                            }
+                        },
+                        {
+                            "type": "ZeroCross",
+                            "id": "d2334936-232a-4ae6-97c1-5c297d0df047",
+                            "position": {
+                                "x": -99.45233917236328,
+                                "y": 54.74932861328125
+                            }
+                        },
+                        {
+                            "type": "Level",
+                            "id": "bbf1de94-de4d-4901-bc96-1ddff09b7200",
+                            "position": {
+                                "x": 333.30108642578127,
+                                "y": 78.9336166381836
+                            },
+                            "level": {
+                                "value": 0.5,
+                                "min": 0.0,
+                                "max": 1.0
+                            }
+                        },
+                        {
+                            "type": "Waveform",
+                            "id": "aa5e80c6-7a08-4b07-bc9d-08cd8fc6b321",
+                            "position": {
+                                "x": 469.7757568359375,
+                                "y": 26.8602294921875
+                            },
+                            "exposedPosition": {
+                                "x": -35.0,
+                                "y": -20.0
+                            }
+                        },
+                        {
+                            "type": "Knob",
+                            "id": "4590d168-d72d-445f-84f3-dccf9e2e466d",
+                            "position": {
+                                "x": 16.14893341064453,
+                                "y": 204.43247985839845
+                            },
+                            "name": "",
+                            "knob": {
+                                "value": 0.5,
+                                "min": 0.0,
+                                "max": 1.0
+                            },
+                            "exposedPosition": {
+                                "x": 250.0,
+                                "y": 85.0
+                            }
+                        },
+                        {
+                            "type": "Text",
+                            "id": "2a88258b-5095-431c-ae77-c1e17f9e6aed",
+                            "position": {
+                                "x": -43.52314376831055,
+                                "y": 117.53804016113281
+                            },
+                            "exposedPosition": {
+                                "x": -30.0,
+                                "y": 100.0
+                            },
+                            "text": "Hz",
+                            "width": 256.0
+                        },
+                        {
+                            "type": "Expr",
+                            "id": "1e915a04-2c13-49d7-aef0-8e9f6f680213",
+                            "position": {
+                                "x": 46.67670440673828,
+                                "y": 53.394927978515628
+                            },
+                            "expr": "ZeroCross-1"
+                        }
+                    ],
+                    "wires": [
+                        {
+                            "from": "0107e6ae-32f1-4d08-a347-a6c303d36689",
+                            "output": 0,
+                            "to": "e7c84f00-8e60-4e7f-911c-719299be5d5b",
+                            "input": 0
+                        },
+                        {
+                            "from": "0107e6ae-32f1-4d08-a347-a6c303d36689",
+                            "output": 0,
+                            "to": "d2334936-232a-4ae6-97c1-5c297d0df047",
+                            "input": 0
+                        },
+                        {
+                            "from": "1e915a04-2c13-49d7-aef0-8e9f6f680213",
+                            "output": 0,
+                            "to": "bbf1de94-de4d-4901-bc96-1ddff09b7200",
+                            "input": 0
+                        },
+                        {
+                            "from": "4590d168-d72d-445f-84f3-dccf9e2e466d",
+                            "output": 0,
+                            "to": "bbf1de94-de4d-4901-bc96-1ddff09b7200",
+                            "input": 1
+                        },
+                        {
+                            "from": "bbf1de94-de4d-4901-bc96-1ddff09b7200",
+                            "output": 0,
+                            "to": "aa5e80c6-7a08-4b07-bc9d-08cd8fc6b321",
+                            "input": 0
+                        },
+                        {
+                            "from": "d2334936-232a-4ae6-97c1-5c297d0df047",
+                            "output": 0,
+                            "to": "1e915a04-2c13-49d7-aef0-8e9f6f680213",
+                            "input": 0
+                        }
+                    ]
+                }
+            }
+        ],
+        "wires": []
+    },
+    "history": {
+        "states": [
+            {
+                "id": "a039d5b3-7ece-4fd0-aebc-5812d304caf9"
+            }
+        ],
+        "current": "a039d5b3-7ece-4fd0-aebc-5812d304caf9"
+    },
+    "undoStack": {
+        "stack": [
+            "a039d5b3-7ece-4fd0-aebc-5812d304caf9"
+        ],
+        "current": 0
+    }
+}
