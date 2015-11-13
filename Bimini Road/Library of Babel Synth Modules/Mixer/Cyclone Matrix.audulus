@@ -5,14 +5,14 @@
         "Mixer",
         "Matrix"
     ],
-    "description": "\n",
+    "description": "The Cyclone Matrix is first and foremost a matrix mixer.  There are 8 inputs and 7 outputs.  Why only 7?  Because at least two inputs have to be added together.\n\nIt may look strange because it is not a square field, but it does not need to be square because Input 1 + Input 8 is the same as Input 8 + Input 1.  The inputs ascend left to right from 1-8, and the outputs are arranged 1-7 again, from left to right.\n\nThe bottom left button adds Input 1 (to the left) and Input 2 (above) and sends the sum to output 1 (below).\n\nThe next column over has two buttons, and they add input 3 (above) to input 2 (left) or input 1 (left bottom).  The pattern continues this way up through input 8.\n\nThat’s the mixer part - this is the Cyclone part: The spin input is the “Revolve” input from the 5ms Revolving Clock Divider applied to a matrix mixer.  It simulates rearranging the inputs of the mixer.  As such, the inputs get added differently to one another from step to step.  To spin completely, the Spin input needs a cycling signal of at least 0-7.",
     "patch": {
         "id": "2fa6f9a8-c363-4cda-9bb3-a359001eab60",
         "pan": {
             "x": -62.5,
-            "y": 44.50203323364258
+            "y": 44.50617218017578
         },
-        "zoom": 3.459124803543091,
+        "zoom": 2.4598944187164308,
         "nodes": [
             {
                 "type": "Patch",
@@ -2747,14 +2747,14 @@
     "history": {
         "states": [
             {
-                "id": "388e80c2-c6e3-46a7-9a7f-85690c23ee1b"
+                "id": "3bf35e75-097e-467b-8f33-5e4d7b1019ba"
             }
         ],
-        "current": "388e80c2-c6e3-46a7-9a7f-85690c23ee1b"
+        "current": "3bf35e75-097e-467b-8f33-5e4d7b1019ba"
     },
     "undoStack": {
         "stack": [
-            "388e80c2-c6e3-46a7-9a7f-85690c23ee1b"
+            "3bf35e75-097e-467b-8f33-5e4d7b1019ba"
         ],
         "current": 0
     }
