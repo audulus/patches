@@ -2,15 +2,16 @@
     "version": 1,
     "author": "Jody Golick",
     "tags": [
-        "Sample-and-Hold"
+        "SampleAndHold"
     ],
+    "description": "This is a bank of four 1-shot sample & hold nodes with adjustable decay times.\n\nTry routing it to step value knobs on a running sequencer - great way to add variety to a repeating sequence with just a tap.\n\nTo make the module count down from one instead of up, invert the output (multiply it by -1), add that product to 1, and send that sum to a knob or control input.  \n\nTo add different curves to the decay over time, use log or exponential functions.  \n\nTo turn it into a kind of decaying modulating saw wave, feed it through a delay node.  Add a slew limiter to that and you can round off the transitions.\n\nNote: When you think about Audulus as a live iOS performance centerpiece or companion, consider how much you can do with just one decaying or increasing value to an entire modular patch with just one tap on your screen.  Now multiply that by four, and that’s what this module can do for you.",
     "patch": {
         "id": "dec85383-09ba-494b-8b63-8db72847ad46",
         "pan": {
             "x": 87.04740905761719,
-            "y": -189.01324462890626
+            "y": -189.01283264160157
         },
-        "zoom": 4.9595465660095219,
+        "zoom": 2.972903251647949,
         "nodes": [
             {
                 "type": "Patch",
@@ -36,7 +37,7 @@
                             },
                             "exposedPosition": {
                                 "x": 165.0,
-                                "y": -20.0
+                                "y": -35.0
                             }
                         },
                         {
@@ -304,7 +305,7 @@
                             },
                             "exposedPosition": {
                                 "x": 175.0,
-                                "y": -20.0
+                                "y": -35.0
                             }
                         },
                         {
@@ -341,7 +342,7 @@
                             },
                             "exposedPosition": {
                                 "x": 195.0,
-                                "y": -20.0
+                                "y": -35.0
                             }
                         },
                         {
@@ -560,7 +561,7 @@
                             },
                             "exposedPosition": {
                                 "x": 185.0,
-                                "y": -20.0
+                                "y": -35.0
                             }
                         }
                     ],
@@ -862,14 +863,14 @@
     "history": {
         "states": [
             {
-                "id": "170d3fc4-5cfb-45fd-8e1f-9832a7742833"
+                "id": "57ef5d18-e030-4b5e-92b6-181efabb7e71"
             }
         ],
-        "current": "170d3fc4-5cfb-45fd-8e1f-9832a7742833"
+        "current": "57ef5d18-e030-4b5e-92b6-181efabb7e71"
     },
     "undoStack": {
         "stack": [
-            "170d3fc4-5cfb-45fd-8e1f-9832a7742833"
+            "57ef5d18-e030-4b5e-92b6-181efabb7e71"
         ],
         "current": 0
     }
