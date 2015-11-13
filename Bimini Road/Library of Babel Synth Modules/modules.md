@@ -123,107 +123,129 @@ This is an autopanner.  It will swap the left and right signals back and forth a
 ## Tremolo
 ![Tremolo](./Effects/Modulation/Level/Tremolo.png)
 
+Tremolo is an amplitude modulation effect.  For this module to function, you need to plug in an LFO shape of your choice.
 
+The Bottom knob adds a static value to the LFO, translating the LFO upwards and preventing it from turning the signal all the way down.
+
+The Depth knob is a mix of the dry/wet signals.
 
 ## Reverb (Mono to Stereo)
 ![Reverb (Mono to Stereo)](./Effects/Reverb/Reverb (Mono to Stereo).png)
 
-
+This is a repackaging of the Reverb node as a module.  For more info, see the Audulus node documentation.
 
 ## Reverb (Stereo to Stereo)
 ![Reverb (Stereo to Stereo)](./Effects/Reverb/Reverb (Stereo to Stereo).png)
 
-
+This is a repackaging of 2 Reverb nodes as a module.  For more info, see the Audulus node documentation.
 
 ## Envelope Generator
 ![Envelope Generator](./Envelope Generator/Envelope Generator.png)
 
-
+This is a repackaging of the envelope node as a module.  For more info, see the Audulus node documentation.
 
 ## High:Low Pass Filter
 ![High:Low Pass Filter](./Filter/Filter/High:Low Pass Filter.png)
 
-
+This is a switchable High Pass/Low Pass filter module with resonance control.
 
 ## Attenuator
 ![Attenuator](./Level/Attenuators/Attenuator.png)
 
-
+This is a repackaging of the level node as a module.  For more info, see the Audulus node documentation.
 
 ## Crossfader
 ![Crossfader](./Level/Attenuators/Crossfader.png)
 
+This is a repackaging of the crossfade node as a module.  For more info, see the Audulus node documentation.
 
+For convenience, a switch has been added.  The switch will only work properly if the A/B knob is turned all the way down.
 
 ## Mapper
 ![Mapper](./Level/Attenuators/Mapper.png)
 
-
+This is a repackaging of the Mapper node as a module.  For more info, see the Audulus node documentation.
 
 ## Range
 ![Range](./Level/Attenuators/Range.png)
 
-
+This is a repackaging of the range node as a module.  For more info, see the Audulus node documentation.
 
 ## Scaler
 ![Scaler](./Level/Attenuators/Scaler.png)
 
+The scaler takes a 0-1 input and scales it between two values set by the knobs directly above.  The top knob sets the maximum value for the knob on the right.  
 
+For example, the default setting would take a 0-1 input and turn it into a 0-10,000 output.  If you adjusted the left knob to 100, the output would now range between 100-10,000 without clipping.
 
 ## Slew Limiter
 ![Slew Limiter](./Level/Attenuators/Slew Limiter.png)
 
+This slew limiter resists changes from a high to low state.  It does not resist changes from a low to a high state.  Thus, an trigger impulse fed to the Input, with a high slew amount, would look like an instantaneous rise and a slow fall.
 
+Usually you will find a slew limiter between a control source like a keyboard or sequencer and an oscillator in order to add glide or portamento.
 
 ## Spline
 ![Spline](./Level/Attenuators/Spline.png)
 
-
+This is a repackaging of the spline node as a module.  For more info, see the Audulus node documentation.
 
 ## Master Output (L:R Meters)
 ![Master Output (L:R Meters)](./Level/Master Output/Master Output (L:R Meters).png)
 
+This is a repackaging of the speaker node as a module.  For more info, see the Audulus node documentation.
 
+Meters have been added for convenience.
 
 ## Pan - Mono to Stereo
 ![Pan - Mono to Stereo](./Level/Pan/Pan - Mono to Stereo.png)
 
+Allows you to adjust the perceived location of a sound left or right within the stereo field.
 
+It is essentially an inverted crossfade node.
 
 ## Invert
 ![Invert](./Math/Arithmetic/Invert.png)
 
+Multiplies the incoming signal by -1.  
 
+Four channels are available for convenience.
 
 ## Multiply
 ![Multiply](./Math/Arithmetic/Multiply.png)
 
+Multiplies two inputs to create one output.  To divide a signal, multiply it by a number that is greater than 0 and less than 1.
 
+Four channels are available for convenience.
 
 ## Sum
 ![Sum](./Math/Arithmetic/Sum.png)
 
+Adds two inputs to create one output.  To subtract, add a negative signal.
 
+Four channels are available for convenience.
 
 ## Count Up
 ![Count Up](./Math/Count/Count Up.png)
 
-
+This module counts up to a maximum number defined by the Max knob plus the value applied to the Max input.  The speed of counting is determined by a clock signal.
 
 ## Count Up:Down
 ![Count Up:Down](./Math/Count/Count Up:Down.png)
 
-
+This module counts up to and then down from a maximum number defined by the Max knob plus the value applied to the Max input.  The speed of counting is determined by a clock signal.
 
 ## Comparator
 ![Comparator](./Math/Logic/Comparator.png)
 
-
+The comparator outputs a 1 if input A is greater than or equal to input B.
 
 ## 1:0 Trigger
 ![1:0 Trigger](./Math/Probability/1:0 Trigger.png)
 
+The 1/0 Probability Trigger is a biased coin flipper whose output is set to 1 or 0 every time a trigger pulse is applied at the Trig input.  It is biased by the Probability fader which can favor either 1 (on) or 0 (off).  For a true coin-flipper, set the knob to 0.5.
 
+A truly essential module for humanizing things like drum patterns.
 
 ## Either:Or Switch
 ![Either:Or Switch](./Math/Probability/Either:Or Switch.png)
@@ -233,88 +255,111 @@ This is an autopanner.  It will swap the left and right signals back and forth a
 ## Either:Or Trigger
 ![Either:Or Trigger](./Math/Probability/Either:Or Trigger.png)
 
+The Either/Or Probability Trigger is a biased coin flipper whose that sends a 1 to either the A or B output every time a trigger pulse is applied at the Trig input.  It is biased by the Probability fader which can favor either the A or B output to send the 1 signal to.  For a true coin-flipper, set the knob to 0.5.
 
+A truly essential module for humanizing things like drum patterns.
 
 ## e
 ![e](./Math/Special Numbers/e.png)
 
-
+This is a convenient package of most of the functions you’d want to accomplish using the special number e.
 
 ## Golden Ratio
 ![Golden Ratio](./Math/Special Numbers/Golden Ratio.png)
 
-
+This is a convenient package of most of the functions you’d want to accomplish using the special number phi, i.e., the Golden Ratio.
 
 ## Pi
 ![Pi](./Math/Special Numbers/Pi.png)
 
-
+This is a convenient package of most of the functions you’d want to accomplish using the special number pi.
 
 ## Fibonacci Sequence
 ![Fibonacci Sequence](./Math/Special Sequences/Fibonacci Sequence.png)
 
-
+This is a purpose-built count up module tuned to output the Fibonacci sequence.  The n+1 value advances the sequence one number at a time, up to the n value set by the n Max knob plus the n Max mod input.  To count up automatically, apply a clock signal to the clock input.
 
 ## Pentatopic Number Sequence
 ![Pentatopic Number Sequence](./Math/Special Sequences/Pentatopic Number Sequence.png)
 
-
+This is a purpose-built count up module tuned to output the pentatopic number sequence.  The n+1 value advances the sequence one number at a time, up to the n value set by the n Max knob plus the n Max mod input.  To count up automatically, apply a clock signal to the clock input.
 
 ## Tetrahedral Number Sequence
 ![Tetrahedral Number Sequence](./Math/Special Sequences/Tetrahedral Number Sequence.png)
 
-
+This is a purpose-built count up module tuned to output the tetrahedral number sequence.  The n+1 value advances the sequence one number at a time, up to the n value set by the n Max knob plus the n Max mod input.  To count up automatically, apply a clock signal to the clock input.
 
 ## Triangular Number Sequence
 ![Triangular Number Sequence](./Math/Special Sequences/Triangular Number Sequence.png)
 
-
+This is a purpose-built count up module tuned to output the triangluar number sequence.  The n+1 value advances the sequence one number at a time, up to the n value set by the n Max knob plus the n Max mod input.  To count up automatically, apply a clock signal to the clock input.
 
 ## 4x1 Mixer
 ![4x1 Mixer](./Mixer/4x1 Mixer.png)
 
+This is a repackaging of the mixer node as a module.  For more info, see the Audulus node documentation.
 
+The trim knob decreases the output level.
 
 ## Cyclone Matrix
 ![Cyclone Matrix](./Mixer/Cyclone Matrix.png)
 
+The Cyclone Matrix is first and foremost a matrix mixer.  There are 8 inputs and 7 outputs.  Why only 7?  Because at least two inputs have to be added together.
 
+It may look strange because it is not a square field, but it does not need to be square because Input 1 + Input 8 is the same as Input 8 + Input 1.  The inputs ascend left to right from 1-8, and the outputs are arranged 1-7 again, from left to right.
 
+The bottom left button adds Input 1 (to the left) and Input 2 (above) and sends the sum to output 1 (below).
+
+The next column over has two buttons, and they add input 3 (above) to input 2 (left) or input 1 (left bottom).  The pattern continues this way up through input 8.
+
+That’s the mixer part - this is the Cyclone part: The spin input is the “Revolve” input from the 5ms Revolving Clock Divider applied to a matrix mixer.  It simulates rearranging the inputs of the mixer.  As such, the inputs get added differently to one another from step to step.  To spin completely, the Spin input needs a cycling signal of at least 0-7.
 
 ## White Noise
 ![White Noise](./Noise/White Noise.png)
 
-
+This is a repackaging of the noise node as a module.  For more info, see the Audulus node documentation.
 
 ## Crossfade Oscillator
 ![Crossfade Oscillator](./Oscillator/Audio/Crossfade Oscillator.png)
 
+The Modulating wave crossfades between Wave A and Wave B. Each of these 3 waves  (Mod, A, B) can be sawtooth, triangle, sinusoidal or square. Square waves have variable pulse widths (PWSA, PWSB). The x knob multiplies the frequency of the modulating wave.
 
+Note: This oscillator is not anti-aliased.  Any oscillator created with phasor nodes does not have built-in anti-aliasing like the oscillator node does.  This isn’t a good or bad thing - just something to be aware of when using it or designing your own oscillators.
 
 ## Organ Oscillator
 ![Organ Oscillator](./Oscillator/Audio/Organ Oscillator.png)
 
+This additive oscillator is ripped straight from the pages of Sound on Sound’s Synth Secrets series, which was in turn ripped straight from a Hammond Organ.  Though it obviously doesn’t function the same way (Hammonds use rotating metal fan blades for its oscillators), it has the same harmonics as a Hammond does - instead of drawbars, they are knobs (though the meters to the right give a similar “drawbar” feedback).  
 
+Attach an envelope and a Leslie simulator and you’ve got a Hammond organ clone.
 
 ## Oscillator
 ![Oscillator](./Oscillator/Audio/Oscillator.png)
 
+This is a repackaging of the oscillator node as a module.  For more info, see the Audulus node documentation.
 
+This module is tuned to accept the 1/Oct standard - the output of the Scale Quantizer.
 
 ## Sum Noise Add Synth
 ![Sum Noise Add Synth](./Oscillator/Audio/Sum Noise Add Synth.png)
 
+This is a complete, fully-voiced 4 oscillator additive synthesizer.
 
+This module is tuned to accept the 1/Oct standard - the output of the Scale Quantizer.
 
 ## Rectifier
 ![Rectifier](./Oscillator/Modulation/Rectifier.png)
 
+Rectification is a way of turning an AC signal (-1 to 1) into a DC signal (+/- 0 to 1).  If you don’t know what rectification does, rather than reading a description of it, just plug a Sine LFO into the input and attach waveform meters to the outputs.
 
+For clarification: Shift N-P/P-N means “Shift negative values to positive values/vice versa.”  This is an unusual type of rectification that you probably wouldn’t see used in electronics.
 
 ## Rectifying LFO
 ![Rectifying LFO](./Oscillator/Modulation/Rectifying LFO.png)
 
+This LFO has 5 waveshapes (Saw, Sine, Square, Triangle, and Reverse Ramp) and their corresponding rectified outputs (leaving out rectifications that duplicate other wave shapes).  It is intentionally left unlabelled to encourage exploration, and because it looks cooler that way.
 
+The 5 inputs are sync inputs for each LFO.
 
 ## Reverse Saw LFO
 ![Reverse Saw LFO](./Oscillator/Modulation/Reverse Saw LFO.png)
