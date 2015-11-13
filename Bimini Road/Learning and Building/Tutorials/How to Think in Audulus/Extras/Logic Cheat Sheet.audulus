@@ -3,10 +3,10 @@
     "patch": {
         "id": "0bcf842b-db7f-4f09-922b-d196b2463940",
         "pan": {
-            "x": -64.3444595336914,
-            "y": 428.78045654296877
+            "x": -600.5445556640625,
+            "y": 510.55755615234377
         },
-        "zoom": 1.0398138761520386,
+        "zoom": 0.4526852071285248,
         "nodes": [
             {
                 "type": "Expr",
@@ -345,15 +345,6 @@
                 "width": 256.0
             },
             {
-                "type": "Expr",
-                "id": "576f5c9b-23bb-4fb4-8337-76a651052154",
-                "position": {
-                    "x": -180.37326049804688,
-                    "y": -789.3765869140625
-                },
-                "expr": "(A>=1)*(B>=1)"
-            },
-            {
                 "type": "Text",
                 "id": "7a27a12b-aad9-409c-9594-4d711f81f372",
                 "position": {
@@ -513,8 +504,8 @@
                 "type": "Text",
                 "id": "99e49222-22d1-47a4-8f39-3a85f2d853fc",
                 "position": {
-                    "x": 53.45305633544922,
-                    "y": -570.1514282226563
+                    "x": 53.75830841064453,
+                    "y": -552.3484497070313
                 },
                 "text": "Note: these semantics only hold true within Audulus with these expressions -",
                 "width": 256.0
@@ -523,8 +514,8 @@
                 "type": "Text",
                 "id": "f4ac61a4-e73f-44d8-8d07-fe6e40cbdcc5",
                 "position": {
-                    "x": 52.43389129638672,
-                    "y": -604.999267578125
+                    "x": 52.73914337158203,
+                    "y": -587.1962890625
                 },
                 "text": "These gates can work differently than their real counterparts because they ",
                 "width": 256.0
@@ -533,8 +524,8 @@
                 "type": "Text",
                 "id": "822a114f-5d6f-4429-af18-f927ae51949b",
                 "position": {
-                    "x": 52.936195373535159,
-                    "y": -639.7249145507813
+                    "x": 53.24144744873047,
+                    "y": -621.9219360351563
                 },
                 "text": "can accept negative input rather than just a low or high signal.  Their truth tables, however, do match up.",
                 "width": 256.0
@@ -591,10 +582,10 @@
                 "type": "Text",
                 "id": "b9dfb0f8-2b1a-4ad5-a760-b067902688ad",
                 "position": {
-                    "x": 52.58795928955078,
-                    "y": -672.1813354492188
+                    "x": 51.404762268066409,
+                    "y": -665.8880615234375
                 },
-                "text": "If you find a more elegant expression, please let me know and I will update it.",
+                "text": "This is just one way for them to work - there are different expressions that can function as gate but with different thresholds.  These fit my purposes, but feel free to design your own.",
                 "width": 256.0
             },
             {
@@ -1164,6 +1155,15 @@
                 },
                 "text": "Created by Bimini Road with help from JDRaoul.  Version 1.0  10/23/2015",
                 "width": 256.0
+            },
+            {
+                "type": "Expr",
+                "id": "576f5c9b-23bb-4fb4-8337-76a651052154",
+                "position": {
+                    "x": -180.37326049804688,
+                    "y": -789.3765869140625
+                },
+                "expr": "(A>=1)*(B>=1)"
             }
         ],
         "wires": [
@@ -1412,67 +1412,15 @@
     "history": {
         "states": [
             {
-                "id": "a5ad0a57-3b50-4669-8441-fe6ea9037cd0",
-                "parent": "c8fe29a9-50e0-4fa1-b337-346e00ddc461",
-                "undo": {
-                    "type": "SetNodePosition",
-                    "position": {
-                        "x": -156.3832550048828,
-                        "y": -231.2841033935547
-                    },
-                    "node": "662cf74d-99c1-40b1-9bab-4b9777fc80bf"
-                }
-            },
-            {
-                "id": "c8fe29a9-50e0-4fa1-b337-346e00ddc461",
-                "parent": "137dd5d6-d3d6-48a4-be78-f9a726f2b182",
-                "undo": {
-                    "type": "SetNodePosition",
-                    "position": {
-                        "x": -156.3832550048828,
-                        "y": -231.2841033935547
-                    },
-                    "node": "662cf74d-99c1-40b1-9bab-4b9777fc80bf"
-                }
-            },
-            {
-                "id": "137dd5d6-d3d6-48a4-be78-f9a726f2b182",
-                "parent": "044b53ea-c9ef-48e8-b314-a5a94aecf2ff",
-                "undo": {
-                    "type": "SetNodePosition",
-                    "position": {
-                        "x": -156.3832550048828,
-                        "y": -231.2841033935547
-                    },
-                    "node": "662cf74d-99c1-40b1-9bab-4b9777fc80bf"
-                }
-            },
-            {
-                "id": "044b53ea-c9ef-48e8-b314-a5a94aecf2ff",
-                "parent": "6d6241de-d394-4a01-b0c4-bdb66621b9d9",
-                "undo": {
-                    "type": "SetNodePosition",
-                    "position": {
-                        "x": -156.3832550048828,
-                        "y": -231.2841033935547
-                    },
-                    "node": "662cf74d-99c1-40b1-9bab-4b9777fc80bf"
-                }
-            },
-            {
-                "id": "6d6241de-d394-4a01-b0c4-bdb66621b9d9"
+                "id": "ecf861b8-fe7a-4078-b20c-2a92a82d7ad8"
             }
         ],
-        "current": "6d6241de-d394-4a01-b0c4-bdb66621b9d9"
+        "current": "ecf861b8-fe7a-4078-b20c-2a92a82d7ad8"
     },
     "undoStack": {
         "stack": [
-            "a5ad0a57-3b50-4669-8441-fe6ea9037cd0",
-            "c8fe29a9-50e0-4fa1-b337-346e00ddc461",
-            "137dd5d6-d3d6-48a4-be78-f9a726f2b182",
-            "044b53ea-c9ef-48e8-b314-a5a94aecf2ff",
-            "6d6241de-d394-4a01-b0c4-bdb66621b9d9"
+            "ecf861b8-fe7a-4078-b20c-2a92a82d7ad8"
         ],
-        "current": 4
+        "current": 0
     }
 }
