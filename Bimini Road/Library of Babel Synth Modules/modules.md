@@ -1,7 +1,7 @@
 ## All Modules
 ![All Modules](./All Modules.png)
 
-
+This is all of the modules in one place!
 
 ## 5ms Revolving Clock Divider
 ![5ms Revolving Clock Divider](./Clock/5ms Revolving Clock Divider.png)
@@ -31,7 +31,7 @@ This is a clock and a pulse divider packaged together for convenience.  There’
 ## Pulse Divider
 ![Pulse Divider](./Clock/Pulse Divider.png)
 
-
+A pulse divider takes a clock input and divides its frequency according to the /x knob.  The width knob controls the pulse width of the divided signal.
 
 ## Tap Tempo
 ![Tap Tempo](./Clock/Tap Tempo.png)
@@ -250,7 +250,9 @@ A truly essential module for humanizing things like drum patterns.
 ## Either:Or Switch
 ![Either:Or Switch](./Math/Probability/Either:Or Switch.png)
 
+The Either/Or Probability Switch is a biased coin flipper whose that sends input A or B to the output every time a trigger pulse is applied at the Trig input.  It is biased by the Probability fader which can favor either the A or B output to send the 1 signal to.  For a true coin-flipper, set the knob to 0.5.
 
+A truly essential module for humanizing things like drum patterns.
 
 ## Either:Or Trigger
 ![Either:Or Trigger](./Math/Probability/Either:Or Trigger.png)
@@ -364,115 +366,290 @@ The 5 inputs are sync inputs for each LFO.
 ## Reverse Saw LFO
 ![Reverse Saw LFO](./Oscillator/Modulation/Reverse Saw LFO.png)
 
+This LFO outputs a reverse saw wave between 0-1.  The Trim knob lowers the maximum value of the LFO (e.g., set half way, its range is 0-0.5).
 
+LFOs in this library are set operate from 0 to 1 (DC) by default instead of -1 to 1 (AC) because a majority of functions in Audulus are tuned to work between 0 and 1.  
+
+To create an AC signal, multiply the LFO output by 2 and subtract 1.
 
 ## Saw LFO
 ![Saw LFO](./Oscillator/Modulation/Saw LFO.png)
 
+This LFO outputs a saw wave between 0-1.  The Trim knob lowers the maximum value of the LFO (e.g., set half way, its range is 0-0.5).
 
+LFOs in this library are set operate from 0 to 1 (DC) by default instead of -1 to 1 (AC) because a majority of functions in Audulus are tuned to work between 0 and 1.  
+
+To create an AC signal, multiply the LFO output by 2 and subtract 1.
 
 ## Sine LFO
 ![Sine LFO](./Oscillator/Modulation/Sine LFO.png)
 
+This LFO outputs a sine wave between 0-1.  The Trim knob lowers the maximum value of the LFO (e.g., set half way, its range is 0-0.5).
 
+LFOs in this library are set operate from 0 to 1 (DC) by default instead of -1 to 1 (AC) because a majority of functions in Audulus are tuned to work between 0 and 1.  
+
+To create an AC signal, multiply the LFO output by 2 and subtract 1.
 
 ## Square LFO
 ![Square LFO](./Oscillator/Modulation/Square LFO.png)
 
+This LFO outputs a square wave between 0-1.  The Trim knob lowers the maximum value of the LFO (e.g., set half way, its range is 0-0.5).
 
+LFOs in this library are set operate from 0 to 1 (DC) by default instead of -1 to 1 (AC) because a majority of functions in Audulus are tuned to work between 0 and 1.  
+
+To create an AC signal, multiply the LFO output by 2 and subtract 1.
 
 ## The Longest Time LFO
 ![The Longest Time LFO](./Oscillator/Modulation/The Longest Time LFO.png)
 
+This is a very slow sinusoidal LFO built to control installation pieces.
 
+NOTE: The LFO currently will only go down to 1 day per cycle, but this will be fixed in a later version.
 
 ## Triangle LFO
 ![Triangle LFO](./Oscillator/Modulation/Triangle LFO.png)
 
+This LFO outputs a triangle wave between 0-1.  The Trim knob lowers the maximum value of the LFO (e.g., set half way, its range is 0-0.5).
 
+LFOs in this library are set operate from 0 to 1 (DC) by default instead of -1 to 1 (AC) because a majority of functions in Audulus are tuned to work between 0 and 1.  
+
+To create an AC signal, multiply the LFO output by 2 and subtract 1.
 
 ## 1-Shot Bank
 ![1-Shot Bank](./Sample & Hold/1-Shot Bank.png)
 
+This is a bank of four 1-shot sample & hold nodes with adjustable decay times.
 
+Try routing it to step value knobs on a running sequencer - great way to add variety to a repeating sequence with just a tap.
+
+To make the module count down from one instead of up, invert the output (multiply it by -1), add that product to 1, and send that sum to a knob or control input.  
+
+To add different curves to the decay over time, use log or exponential functions.  
+
+To turn it into a kind of decaying modulating saw wave, feed it through a delay node.  Add a slew limiter to that and you can round off the transitions.
+
+Note: When you think about Audulus as a live iOS performance centerpiece or companion, consider how much you can do with just one decaying or increasing value to an entire modular patch with just one tap on your screen.  Now multiply that by four, and that’s what this module can do for you.
 
 ## Sample & Hold
 ![Sample & Hold](./Sample & Hold/Sample & Hold.png)
 
+This is a repackaging of the sample & hold node as a module.  For more info, see the Audulus node documentation.
 
+A One Shot button is added for convenience, and the module can also be pinged at the Trigger input.
 
 ## Bass-ic Sequencer
 ![Bass-ic Sequencer](./Sequencer/Bass-ic Sequencer.png)
 
+The Bass-ic Sequencer is your average, everyday, all-purpose step sequencer.  It’s meant to be a go-to for your driving bass line needs.
 
+The sequencer advances a step for every pulse it receives at the Clock input.
+
+Each numbered knob controls the value of a step, and is reflected in the meters to their right.  If you set the range beyond 0-1, the meters will not function correctly - this is ok, and will give you greater octave range, but it’s just an inherent limitation of this simple design.
+
+The maximum number of steps can be changed with the Steps knob.  If you set the Steps knob’s maximum beyond 8, it will wrap around (e.g., a max of 12 with run through 1-8, then 1-4, then 1-8, then 1-4, and so on).
+
+The current step is highlighted by the red light, and the max step is illuminated by the blue light.
+
+It is tuned to be run through the scale quantizer module before being plugged into an oscillator.  
+
+Tip: For evolving, never-repeating lines, attach separate LFOs with different shapes to each step knob and tune some LFOs to go fast and others to go slow.
 
 ## Euclidean Sequencer
 ![Euclidean Sequencer](./Sequencer/Euclidean Sequencer.png)
 
+This sequencer uses an algorithm to generate patterns.  Feed it a clock signal and it will produce recallable patterns that are perfect for quickly dialing in a great sounding drum pattern.  Just use one sequencer per piece (snare, bass, hat, etc), and experiment with different settings for each.
 
+There isn’t enough space here for a full discussion on how the algorithm itself does what it does, so if you’re interested in learning more, look up Godfried Toussaint’s paper on Euclidean rhythms, freely available on the internet.
 
 ## The Warpeggiator
 ![The Warpeggiator](./Sequencer/The Warpeggiator.png)
 
+The Warpeggiator is a quadraphonic arpeggiator that goes way beyond fixed patterns and note orders.  It uses the first four keypresses during any one gate signal to set the values of steps on a sequencer.  Why is this cool?  Because if you have your keyboard in latch mode, you can press a chord, let it go, and then change the bass notes while the top 2 notes stay where they are.  Perfect for keyboardist multi-taskers.
 
+The pattern control lets you determine which note in a chord will change first on a new input, so you could tweak it and then keep the bass notes the same while changing the high notes.
+
+The Feedback knob adjusts the amount of the Warpeggiator gets fed back into switching the pattern control.  It takes a nice driving melody into an alternate dimension in an instant.
+
+The Warpeggiator is in its native habitat when paired with the Touch Feedback Clock.  Set the TFC to something weird and experiment with the directionality of the Warpeggiator’s sequence with the forwards/backwards/pendulum knob (marked >/</><).
+
+The Warpeggiator can be synced at the Reset input.  Try feeding it a slow pulse with the TFC going nuts on the clock input - you’ll thank me later.
+
+Why is it only quadrophonic?  Well, the idea is that you hold a 4 note chord with your left hand, and your right hand is then free to play a melody over it (with another keyboard node set to full polyphony and through a different oscillator chain).
 
 ## Demultiplexer
 ![Demultiplexer](./Switching/Demultiplexer.png)
 
+This is a repackaging of the demux node as a module.  For more info, see the Audulus node documentation.
 
+A button has been added to switch between the Select knob and the Mod input for control.
 
 ## Momentary Close
 ![Momentary Close](./Switching/Momentary Close.png)
 
-
+This module is a bank of 4 momentary close switches.  It can be used to temporarily break a connection while pressing a button.
 
 ## Mometary Open
 ![Mometary Open](./Switching/Mometary Open.png)
 
-
+This module is a bank of 4 momentary open switches.  It can be used to temporarily make a connection while pressing a button.
 
 ## Multiplexer
 ![Multiplexer](./Switching/Multiplexer.png)
 
+This is a repackaging of the mux node as a module.  For more info, see the Audulus node documentation.
 
+A button has been added to switch between the Select knob and the Mod input for control.
 
 ## Toggle Mute
 ![Toggle Mute](./Switching/Toggle Mute.png)
 
-
+This module is a bank of 4 toggle mute switches.  It can be used to switch and hold a connection open or closed.
 
 ## DAW Time
 ![DAW Time](./Utility/DAW/DAW Time.png)
 
-
+This is a repackaging of the DAW node as a module.  For more info, see the Audulus node documentation.
 
 ## Keyboard Input (1:oct)
 ![Keyboard Input (1:oct)](./Utility/MIDI Control/Keyboard Input (1:oct).png)
 
+This is a repackaging of the keyboard and pitch bend nodes as a module.  For more info, see the Audulus node documentation.
 
+Included for convenience is a separate slewed output.  
+
+Both frequency outputs on this module are tuned to 1/oct, which the scale quantizer expects to see.  Using the scale quantizer to ignore out of key notes is a quick and easy way to prevent stray taps on iPhone or iPad (or wrong notes on a small midi keyboard).
 
 ## Keyboard Input (Hz)
 ![Keyboard Input (Hz)](./Utility/MIDI Control/Keyboard Input (Hz).png)
 
+This is a repackaging of the keyboard and pitch bend nodes as a module.  For more info, see the Audulus node documentation.
 
+Included for convenience is a separate slewed output.  
 
 ## Quantizer
 ![Quantizer](./Utility/Quantizer/Quantizer.png)
 
+The quantizer accepts a 1/oct input and forces it to conform to a scale.  Notes do not get turned off, but rather are forced to conform to the scale you’ve inputted.
+
+Do not underestimate this module.  It can be used to tweak running sequences on the fly or instantly change the key of a song (by using two quantizers with different settings between a synced mux/demux combination).
+
+## Frequency Plotter Via
+![Frequency Plotter Via](./Utility/Vias/Frequency Plotter Via.png)
+
+This is a Frequency Plotter via - it displays the frequency changes of the signal throughput over time with a waveform meter.  A knob is provided as a zoom in/out control.
+
+Vias are connection tabs that are useful for prototyping and clarifying connections in very large patches or designs.
+
+They are good for prototyping because you can use a knob to tune a patch and then easily swap it for a value expression - effectively using it as an internal trim pot.
+
+They are good for clarifying connections because they can route one node’s output across a patch and then hook up to, say, a mux node, rather than having 8 long connections run all the way across the patch adding visual clutter.
 
 
 ## Lit Via
 ![Lit Via](./Utility/Vias/Lit Via.png)
 
+This is a via with a light indicator.
+
+Vias are connection tabs that are useful for prototyping and clarifying connections in very large patches or designs.
+
+They are good for prototyping because you can use a knob to tune a patch and then easily swap it for a value expression - effectively using it as an internal trim pot.
+
+They are good for clarifying connections because they can route one node’s output across a patch and then hook up to, say, a mux node, rather than having 8 long connections run all the way across the patch adding visual clutter.
 
 
 ## Metered Via
 ![Metered Via](./Utility/Vias/Metered Via.png)
 
+This is a via with a meter indicator.
+
+Vias are connection tabs that are useful for prototyping and clarifying connections in very large patches or designs.
+
+They are good for prototyping because you can use a knob to tune a patch and then easily swap it for a value expression - effectively using it as an internal trim pot.
+
+They are good for clarifying connections because they can route one node’s output across a patch and then hook up to, say, a mux node, rather than having 8 long connections run all the way across the patch adding visual clutter.
 
 
-## Via
-![Via](./Utility/Vias/Via.png)
+## Pulse Light Via
+![Pulse Light Via](./Utility/Vias/Pulse Light Via.png)
 
+This is a pulse light via.  Use it to indicate the relative strength of a signal over time.  A knob is provided as a scale control for the brightness.
+
+Vias are connection tabs that are useful for prototyping and clarifying connections in very large patches or designs.
+
+They are good for prototyping because you can use a knob to tune a patch and then easily swap it for a value expression - effectively using it as an internal trim pot.
+
+They are good for clarifying connections because they can route one node’s output across a patch and then hook up to, say, a mux node, rather than having 8 long connections run all the way across the patch adding visual clutter.
+
+
+## Text Via
+![Text Via](./Utility/Vias/Text Via.png)
+
+This is a text via.  Use it to name a connection.
+
+Vias are connection tabs that are useful for prototyping and clarifying connections in very large patches or designs.
+
+They are good for prototyping because you can use a knob to tune a patch and then easily swap it for a value expression - effectively using it as an internal trim pot.
+
+They are good for clarifying connections because they can route one node’s output across a patch and then hook up to, say, a mux node, rather than having 8 long connections run all the way across the patch adding visual clutter.
+
+
+## Timer Via
+![Timer Via](./Utility/Vias/Timer Via.png)
+
+This is a timer via - it displays the time since last ping of its throughput.
+
+Vias are connection tabs that are useful for prototyping and clarifying connections in very large patches or designs.
+
+They are good for prototyping because you can use a knob to tune a patch and then easily swap it for a value expression - effectively using it as an internal trim pot.
+
+They are good for clarifying connections because they can route one node’s output across a patch and then hook up to, say, a mux node, rather than having 8 long connections run all the way across the patch adding visual clutter.
+
+
+## Value Via
+![Value Via](./Utility/Vias/Value Via.png)
+
+This is a value via.  Use it to display the value of its throughput.
+
+Vias are connection tabs that are useful for prototyping and clarifying connections in very large patches or designs.
+
+They are good for prototyping because you can use a knob to tune a patch and then easily swap it for a value expression - effectively using it as an internal trim pot.
+
+They are good for clarifying connections because they can route one node’s output across a patch and then hook up to, say, a mux node, rather than having 8 long connections run all the way across the patch adding visual clutter.
+
+
+## Via Tab
+![Via Tab](./Utility/Vias/Via Tab.png)
+
+This is a via tab.  Use it in finished designs where you want to prevent accidental movement.
+
+Vias are connection tabs that are useful for prototyping and clarifying connections in very large patches or designs.
+
+They are good for prototyping because you can use a knob to tune a patch and then easily swap it for a value expression - effectively using it as an internal trim pot.
+
+They are good for clarifying connections because they can route one node’s output across a patch and then hook up to, say, a mux node, rather than having 8 long connections run all the way across the patch adding visual clutter.
+
+
+## Waveform Via
+![Waveform Via](./Utility/Vias/Waveform Via.png)
+
+This is a waveform via.  Use it to display the waveform of its throughput.  A knob is provided as a zoom in/out control.
+
+Vias are connection tabs that are useful for prototyping and clarifying connections in very large patches or designs.
+
+They are good for prototyping because you can use a knob to tune a patch and then easily swap it for a value expression - effectively using it as an internal trim pot.
+
+They are good for clarifying connections because they can route one node’s output across a patch and then hook up to, say, a mux node, rather than having 8 long connections run all the way across the patch adding visual clutter.
+
+
+## ZeroCross Via
+![ZeroCross Via](./Utility/Vias/ZeroCross Via.png)
+
+This is a ZeroCross via - it displays the frequency of the signal throughput over time.
+
+Vias are connection tabs that are useful for prototyping and clarifying connections in very large patches or designs.
+
+They are good for prototyping because you can use a knob to tune a patch and then easily swap it for a value expression - effectively using it as an internal trim pot.
+
+They are good for clarifying connections because they can route one node’s output across a patch and then hook up to, say, a mux node, rather than having 8 long connections run all the way across the patch adding visual clutter.
 
 

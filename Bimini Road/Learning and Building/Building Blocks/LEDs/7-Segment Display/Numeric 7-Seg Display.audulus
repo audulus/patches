@@ -1,12 +1,17 @@
 {
     "version": 1,
+    "author": "JDRaoul",
+    "tags": [
+        "BuildingBlocks"
+    ],
+    "description": "Turn the knob to cycle through 0-9.",
     "patch": {
         "id": "9f223512-784e-4a2b-9e7e-5eb2c7578d69",
         "pan": {
-            "x": -3.89752197265625,
+            "x": 19.28814697265625,
             "y": 22.68475341796875
         },
-        "zoom": 0.40991178154945376,
+        "zoom": 0.40162819623947146,
         "nodes": [
             {
                 "type": "RGBLight",
@@ -1233,29 +1238,6 @@
                 }
             },
             {
-                "type": "Input",
-                "id": "c5608888-7737-433a-a401-544159052c26",
-                "position": {
-                    "x": -1120.2467041015625,
-                    "y": -240.99734497070313
-                },
-                "name": "Input",
-                "exposedPosition": {
-                    "x": 5.0,
-                    "y": -35.0
-                }
-            },
-            {
-                "type": "Text",
-                "id": "4591f61a-79f0-4a06-b2a7-02fc2f7eee85",
-                "position": {
-                    "x": -755.431640625,
-                    "y": 462.9967346191406
-                },
-                "text": "Designed by JDRaoul Arranged by Bimini Road",
-                "width": 256.0
-            },
-            {
                 "type": "Expr",
                 "id": "14ccc297-4f32-4e12-b2d0-26c326876abb",
                 "position": {
@@ -1279,6 +1261,24 @@
                 "position": {
                     "x": -681.767333984375,
                     "y": -242.173583984375
+                }
+            },
+            {
+                "type": "Knob",
+                "id": "713193ad-c825-4b6b-bcc7-f273b1ad5c37",
+                "position": {
+                    "x": -1123.701416015625,
+                    "y": -223.08245849609376
+                },
+                "name": "Number",
+                "knob": {
+                    "value": 0.0,
+                    "min": 0.0,
+                    "max": 9.0
+                },
+                "exposedPosition": {
+                    "x": 0.0,
+                    "y": 0.0
                 }
             }
         ],
@@ -1506,7 +1506,7 @@
                 "input": 1
             },
             {
-                "from": "c5608888-7737-433a-a401-544159052c26",
+                "from": "713193ad-c825-4b6b-bcc7-f273b1ad5c37",
                 "output": 0,
                 "to": "7b97c77e-cf05-4b3f-9b85-6bc703b0e761",
                 "input": 0
@@ -1828,14 +1828,14 @@
     "history": {
         "states": [
             {
-                "id": "311ad494-b5ab-444f-9075-0a342378b653"
+                "id": "074621c3-41da-4e89-8572-214196f0b01c"
             }
         ],
-        "current": "311ad494-b5ab-444f-9075-0a342378b653"
+        "current": "074621c3-41da-4e89-8572-214196f0b01c"
     },
     "undoStack": {
         "stack": [
-            "311ad494-b5ab-444f-9075-0a342378b653"
+            "074621c3-41da-4e89-8572-214196f0b01c"
         ],
         "current": 0
     }
