@@ -1,0 +1,158 @@
+{
+    "version": 1,
+    "author": "Bimini Road",
+    "tags": [
+        "Via"
+    ],
+    "description": "This is a pulse light via.  Use it to indicate the relative strength of a signal over time.  A knob is provided as a scale control for the brightness.\n\nVias are connection tabs that are useful for prototyping and clarifying connections in very large patches or designs.\n\nThey are good for prototyping because you can use a knob to tune a patch and then easily swap it for a value expression - effectively using it as an internal trim pot.\n\nThey are good for clarifying connections because they can route one node’s output across a patch and then hook up to, say, a mux node, rather than having 8 long connections run all the way across the patch adding visual clutter.\n",
+    "patch": {
+        "id": "21988e47-a595-4fc7-9fee-84c2eb6bc679",
+        "pan": {
+            "x": -58.09275436401367,
+            "y": -24.85964584350586
+        },
+        "zoom": 2.5357723236083986,
+        "nodes": [
+            {
+                "type": "Patch",
+                "id": "a4ee26b5-af06-4d6e-a676-8388798b3e7e",
+                "position": {
+                    "x": 0.0,
+                    "y": 0.0
+                },
+                "subPatch": {
+                    "id": "ca4bc506-54d0-4131-b83e-e92020914529",
+                    "pan": {
+                        "x": 101.78933715820313,
+                        "y": 67.8060302734375
+                    },
+                    "zoom": 1.3128607273101807,
+                    "nodes": [
+                        {
+                            "type": "Input",
+                            "id": "0107e6ae-32f1-4d08-a347-a6c303d36689",
+                            "position": {
+                                "x": -138.01345825195313,
+                                "y": -29.970726013183595
+                            },
+                            "name": "",
+                            "exposedPosition": {
+                                "x": -15.0,
+                                "y": -65.0
+                            }
+                        },
+                        {
+                            "type": "Output",
+                            "id": "e7c84f00-8e60-4e7f-911c-719299be5d5b",
+                            "position": {
+                                "x": -43.023704528808597,
+                                "y": -28.490507125854493
+                            },
+                            "name": "",
+                            "exposedPosition": {
+                                "x": 15.0,
+                                "y": -65.0
+                            }
+                        },
+                        {
+                            "type": "RGBLight",
+                            "id": "ac5d9522-daaf-4bfe-87cd-719f2055c7e8",
+                            "position": {
+                                "x": -35.43855285644531,
+                                "y": 31.512466430664064
+                            },
+                            "exposedPosition": {
+                                "x": 0.0,
+                                "y": 5.0
+                            }
+                        },
+                        {
+                            "type": "Knob",
+                            "id": "3dafcb72-9841-4f37-a847-96243412e281",
+                            "position": {
+                                "x": -255.24717712402345,
+                                "y": 167.272216796875
+                            },
+                            "name": "",
+                            "knob": {
+                                "value": 0.5,
+                                "min": 0.0,
+                                "max": 1.0
+                            },
+                            "exposedPosition": {
+                                "x": 0.0,
+                                "y": -30.0
+                            }
+                        },
+                        {
+                            "type": "Level",
+                            "id": "3bb1aa25-3075-4561-94b5-2629dca33bab",
+                            "position": {
+                                "x": -174.74249267578126,
+                                "y": 64.08631134033203
+                            },
+                            "level": {
+                                "value": 0.5,
+                                "min": 0.0,
+                                "max": 1.0
+                            }
+                        }
+                    ],
+                    "wires": [
+                        {
+                            "from": "0107e6ae-32f1-4d08-a347-a6c303d36689",
+                            "output": 0,
+                            "to": "e7c84f00-8e60-4e7f-911c-719299be5d5b",
+                            "input": 0
+                        },
+                        {
+                            "from": "3bb1aa25-3075-4561-94b5-2629dca33bab",
+                            "output": 0,
+                            "to": "ac5d9522-daaf-4bfe-87cd-719f2055c7e8",
+                            "input": 0
+                        },
+                        {
+                            "from": "3bb1aa25-3075-4561-94b5-2629dca33bab",
+                            "output": 0,
+                            "to": "ac5d9522-daaf-4bfe-87cd-719f2055c7e8",
+                            "input": 1
+                        },
+                        {
+                            "from": "3bb1aa25-3075-4561-94b5-2629dca33bab",
+                            "output": 0,
+                            "to": "ac5d9522-daaf-4bfe-87cd-719f2055c7e8",
+                            "input": 2
+                        },
+                        {
+                            "from": "0107e6ae-32f1-4d08-a347-a6c303d36689",
+                            "output": 0,
+                            "to": "3bb1aa25-3075-4561-94b5-2629dca33bab",
+                            "input": 0
+                        },
+                        {
+                            "from": "3dafcb72-9841-4f37-a847-96243412e281",
+                            "output": 0,
+                            "to": "3bb1aa25-3075-4561-94b5-2629dca33bab",
+                            "input": 1
+                        }
+                    ]
+                }
+            }
+        ],
+        "wires": []
+    },
+    "history": {
+        "states": [
+            {
+                "id": "f93dc1ec-8b5c-49f8-8a48-7625efedfc5d"
+            }
+        ],
+        "current": "f93dc1ec-8b5c-49f8-8a48-7625efedfc5d"
+    },
+    "undoStack": {
+        "stack": [
+            "f93dc1ec-8b5c-49f8-8a48-7625efedfc5d"
+        ],
+        "current": 0
+    }
+}
