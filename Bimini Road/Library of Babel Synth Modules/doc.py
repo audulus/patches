@@ -3,6 +3,8 @@
 import json
 import os
 
+print "Updating modules.md"
+
 f = open('modules.md', 'w')
 
 def get_description(path):
@@ -27,3 +29,6 @@ for root, dirs, files in os.walk("."):
       name, ext = os.path.splitext(file)
       if ext == ".audulus":
         get_description(root + '/' + file)
+
+
+print "done!"
