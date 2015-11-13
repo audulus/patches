@@ -4,7 +4,7 @@
     "tags": [
         "LFO"
     ],
-    "description": "This LFO outputs a Reverse Saw shape.\n\nThe trim knob decreases the output level.",
+    "description": "This LFO outputs a Reverse Saw shape between 0-1.  The Trim knob lowers the maximum value of the LFO (e.g., set half way, its range is 0-0.5).\n\nLFOs in this library are set to 0 to 1 (DC) by default instead of -1 to 1 (AC) because a majority of functions in Audulus are tuned to work between 0 and 1.  To create an AC signal, multiply the LFO output by 2 and subtract 1.",
     "patch": {
         "id": "03e22a3b-0396-4cc9-a17c-7bf6b2e5e53c",
         "pan": {
