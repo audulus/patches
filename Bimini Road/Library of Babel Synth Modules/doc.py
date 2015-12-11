@@ -15,7 +15,10 @@ def get_description(path):
 
   f.write("## " + name + "\n")
 
-  f.write("![" + name + "](" + png + ")\n\n")
+  url = "./img/" + png
+  url = url.replace(" ", "%20")
+
+  f.write("![" + name + "](" + url + ")\n\n")
 
   if "description" in j:
      f.write(j["description"].encode('utf8'))
