@@ -1,0 +1,227 @@
+{
+    "version": 1,
+    "author": "Bimini Road",
+    "tags": [
+        "BuildingBlocks"
+    ],
+    "description": "This block uses a Zero Cross node to count the time between 2 pulses.\n\n3 Outputs are provided:\n\nZero Cross: Send this to a clock or LFO Hz input.\nHz: Connected value meter to display Hz info rounded to the nearest hundredth.\nBPM: Connected value meter to display BPM value.  This is for display purposes only - cannot connect this to a clock (use Zero Cross or Hz).",
+    "patch": {
+        "id": "40690dcf-150c-4715-b524-359b6bd493fc",
+        "pan": {
+            "x": -2.1714630126953127,
+            "y": 12.594032287597657
+        },
+        "zoom": 4.714351654052734,
+        "nodes": [
+            {
+                "type": "Trigger",
+                "id": "81ed321c-12d4-44e6-8ff7-4060cd0a905a",
+                "position": {
+                    "x": -181.0987091064453,
+                    "y": -13.618414878845215
+                },
+                "toggle": false,
+                "state": false,
+                "midiNote": -1
+            },
+            {
+                "type": "Patch",
+                "id": "47c3ff17-71b8-4c57-acb2-d7527f92f7b8",
+                "position": {
+                    "x": 50.405155181884769,
+                    "y": 166.62924194335938
+                },
+                "subPatch": {
+                    "id": "35e3dd9d-acdd-4809-ab5d-8360018549cd",
+                    "pan": {
+                        "x": 17.908218383789064,
+                        "y": -61.625755310058597
+                    },
+                    "zoom": 3.775212287902832,
+                    "nodes": [
+                        {
+                            "type": "Output",
+                            "id": "de45a12a-db62-4583-9bcf-72712dd19592",
+                            "position": {
+                                "x": -12.784797668457032,
+                                "y": -3.607563018798828
+                            },
+                            "name": "Zero Cross",
+                            "exposedPosition": {
+                                "x": 10.0,
+                                "y": -160.0
+                            }
+                        },
+                        {
+                            "type": "ZeroCross",
+                            "id": "6e3149d4-18f7-425d-961d-aee5df694866",
+                            "position": {
+                                "x": -152.908447265625,
+                                "y": -4.038440704345703
+                            }
+                        },
+                        {
+                            "type": "Expr",
+                            "id": "f626cbe1-50a3-44de-b620-99d67f78ad9f",
+                            "position": {
+                                "x": -151.75973510742188,
+                                "y": 45.530086517333987
+                            },
+                            "expr": "(floor(x*100))*.01"
+                        },
+                        {
+                            "type": "Expr",
+                            "id": "517f0799-91b9-45ed-a866-b109cb6ed825",
+                            "position": {
+                                "x": -151.66375732421876,
+                                "y": 88.68901062011719
+                            },
+                            "expr": "floor(x*60)"
+                        },
+                        {
+                            "type": "Output",
+                            "id": "97d07333-ed3a-479d-9381-b79fc47a11a1",
+                            "position": {
+                                "x": 103.953125,
+                                "y": 88.1953125
+                            },
+                            "name": "BPM",
+                            "exposedPosition": {
+                                "x": 10.0,
+                                "y": -200.0
+                            }
+                        },
+                        {
+                            "type": "Output",
+                            "id": "ee032661-9a60-4b09-ae24-38d43b49c69b",
+                            "position": {
+                                "x": 105.51171875,
+                                "y": 46.375
+                            },
+                            "name": "Hz",
+                            "exposedPosition": {
+                                "x": 10.0,
+                                "y": -180.0
+                            }
+                        },
+                        {
+                            "type": "Input",
+                            "id": "0f6e0ca5-262a-4d99-be5c-e57aec960e72",
+                            "position": {
+                                "x": -246.76953125,
+                                "y": -5.4375
+                            },
+                            "name": "",
+                            "exposedPosition": {
+                                "x": -85.0,
+                                "y": -160.0
+                            }
+                        }
+                    ],
+                    "wires": [
+                        {
+                            "from": "6e3149d4-18f7-425d-961d-aee5df694866",
+                            "output": 0,
+                            "to": "de45a12a-db62-4583-9bcf-72712dd19592",
+                            "input": 0
+                        },
+                        {
+                            "from": "0f6e0ca5-262a-4d99-be5c-e57aec960e72",
+                            "output": 0,
+                            "to": "6e3149d4-18f7-425d-961d-aee5df694866",
+                            "input": 0
+                        },
+                        {
+                            "from": "6e3149d4-18f7-425d-961d-aee5df694866",
+                            "output": 0,
+                            "to": "f626cbe1-50a3-44de-b620-99d67f78ad9f",
+                            "input": 0
+                        },
+                        {
+                            "from": "6e3149d4-18f7-425d-961d-aee5df694866",
+                            "output": 0,
+                            "to": "517f0799-91b9-45ed-a866-b109cb6ed825",
+                            "input": 0
+                        },
+                        {
+                            "from": "517f0799-91b9-45ed-a866-b109cb6ed825",
+                            "output": 0,
+                            "to": "97d07333-ed3a-479d-9381-b79fc47a11a1",
+                            "input": 0
+                        },
+                        {
+                            "from": "f626cbe1-50a3-44de-b620-99d67f78ad9f",
+                            "output": 0,
+                            "to": "ee032661-9a60-4b09-ae24-38d43b49c69b",
+                            "input": 0
+                        }
+                    ]
+                }
+            },
+            {
+                "type": "Value",
+                "id": "3388119c-307b-4884-a9a1-8e9f5c4a05a1",
+                "position": {
+                    "x": 86.19161224365235,
+                    "y": 12.525613784790039
+                }
+            },
+            {
+                "type": "Value",
+                "id": "acc8af89-5c4a-4c5e-8b80-ca09d2459948",
+                "position": {
+                    "x": 86.11308288574219,
+                    "y": -33.18936538696289
+                }
+            },
+            {
+                "type": "Value",
+                "id": "dc5b246c-214b-4164-bfe7-438723b4b24b",
+                "position": {
+                    "x": 86.93583679199219,
+                    "y": -77.71367645263672
+                }
+            }
+        ],
+        "wires": [
+            {
+                "from": "81ed321c-12d4-44e6-8ff7-4060cd0a905a",
+                "output": 0,
+                "to": "47c3ff17-71b8-4c57-acb2-d7527f92f7b8",
+                "input": 0
+            },
+            {
+                "from": "47c3ff17-71b8-4c57-acb2-d7527f92f7b8",
+                "output": 0,
+                "to": "3388119c-307b-4884-a9a1-8e9f5c4a05a1",
+                "input": 0
+            },
+            {
+                "from": "47c3ff17-71b8-4c57-acb2-d7527f92f7b8",
+                "output": 2,
+                "to": "acc8af89-5c4a-4c5e-8b80-ca09d2459948",
+                "input": 0
+            },
+            {
+                "from": "47c3ff17-71b8-4c57-acb2-d7527f92f7b8",
+                "output": 1,
+                "to": "dc5b246c-214b-4164-bfe7-438723b4b24b",
+                "input": 0
+            }
+        ]
+    },
+    "history": {
+        "states": [
+            {
+                "id": "038e3bd1-f347-4c68-96e8-08c1a79e16f1"
+            }
+        ],
+        "current": "038e3bd1-f347-4c68-96e8-08c1a79e16f1"
+    },
+    "undoStack": {
+        "stack": [
+            "038e3bd1-f347-4c68-96e8-08c1a79e16f1"
+        ],
+        "current": 0
+    }
+}

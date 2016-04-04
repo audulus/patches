@@ -1,0 +1,394 @@
+{
+    "version": 1,
+    "author": "PLU Collective",
+    "tags": [
+        "debug",
+        "meter"
+    ],
+    "description": "A minimized module for safely and conveniently exploring waves during patch making. View and hear waves as well as controls to adjust volume and turn them off or on. Includes a built in speaker.",
+    "patch": {
+        "id": "fc4722f4-16f1-4095-8ac3-7c5f844b4c3b",
+        "pan": {
+            "x": -278.0892028808594,
+            "y": -22.89471435546875
+        },
+        "zoom": 1.2020354270935059,
+        "nodes": [
+            {
+                "type": "Patch",
+                "id": "339e4603-4661-4e15-84f3-d2255e8b0ec3",
+                "position": {
+                    "x": 45.00208282470703,
+                    "y": 110.02880859375
+                },
+                "subPatch": {
+                    "id": "57ab2ac0-5b77-4188-9971-bc9ab85b94c0",
+                    "pan": {
+                        "x": -220.65740966796876,
+                        "y": -30.831405639648439
+                    },
+                    "zoom": 1.1302869319915772,
+                    "nodes": [
+                        {
+                            "type": "Knob",
+                            "id": "cd64d106-4395-4bf0-ba97-a3c8f5aed798",
+                            "position": {
+                                "x": 165.6377716064453,
+                                "y": 75.25537109375
+                            },
+                            "name": "Spkr VOL",
+                            "knob": {
+                                "value": 0.0,
+                                "min": 0.0,
+                                "max": 1.0
+                            },
+                            "exposedPosition": {
+                                "x": 50.0,
+                                "y": -20.0
+                            }
+                        },
+                        {
+                            "type": "Input",
+                            "id": "7368f447-04c9-4e11-b38b-fe813a0c937f",
+                            "position": {
+                                "x": -20.253097534179689,
+                                "y": -59.35283660888672
+                            },
+                            "name": "IN",
+                            "exposedPosition": {
+                                "x": -15.0,
+                                "y": -115.0
+                            }
+                        },
+                        {
+                            "type": "Output",
+                            "id": "f16e3f50-1925-474f-af83-1b1953511819",
+                            "position": {
+                                "x": 520.8204345703125,
+                                "y": 60.30813217163086
+                            },
+                            "name": "OUT",
+                            "exposedPosition": {
+                                "x": 260.0,
+                                "y": -115.0
+                            }
+                        },
+                        {
+                            "type": "Waveform",
+                            "id": "29ebe974-18e3-4eba-9576-32a1bb59c688",
+                            "position": {
+                                "x": 246.21954345703126,
+                                "y": 111.80029296875
+                            },
+                            "exposedPosition": {
+                                "x": -25.0,
+                                "y": -130.0
+                            }
+                        },
+                        {
+                            "type": "Mult",
+                            "id": "0db9701c-d4f8-4f58-9d8c-97f3a4f3cf81",
+                            "position": {
+                                "x": 111.12263488769531,
+                                "y": -19.586841583251954
+                            }
+                        },
+                        {
+                            "type": "Level",
+                            "id": "060c926f-ef96-4532-b14f-7c06ca2ba4fa",
+                            "position": {
+                                "x": 161.43641662597657,
+                                "y": -40.62394714355469
+                            },
+                            "level": {
+                                "value": 0.5,
+                                "min": 0.0,
+                                "max": 1.0
+                            }
+                        },
+                        {
+                            "type": "Trigger",
+                            "id": "5b895395-2d38-4835-a073-cbf3eae51450",
+                            "position": {
+                                "x": -55.31623840332031,
+                                "y": -9.704940795898438
+                            },
+                            "exposedPosition": {
+                                "x": -5.0,
+                                "y": -20.0
+                            },
+                            "toggle": true,
+                            "state": false
+                        },
+                        {
+                            "type": "Trigger",
+                            "id": "2256b642-2485-41f9-ac24-e1a73c3585f0",
+                            "position": {
+                                "x": 356.50848388671877,
+                                "y": 17.732595443725587
+                            },
+                            "exposedPosition": {
+                                "x": 175.0,
+                                "y": -20.0
+                            },
+                            "toggle": true,
+                            "state": false
+                        },
+                        {
+                            "type": "Trigger",
+                            "id": "6bd1ed49-9590-4cdd-8088-a01e42e26d29",
+                            "position": {
+                                "x": 246.49893188476563,
+                                "y": -85.02427673339844
+                            },
+                            "exposedPosition": {
+                                "x": 110.0,
+                                "y": -20.0
+                            },
+                            "toggle": true,
+                            "state": false
+                        },
+                        {
+                            "type": "Speaker",
+                            "id": "0e607936-bcd8-4450-b479-c2a97dbfaffa",
+                            "position": {
+                                "x": 423.1031494140625,
+                                "y": -57.40631866455078
+                            }
+                        },
+                        {
+                            "type": "Level",
+                            "id": "1676a889-220c-4018-b1f4-c36e93ba542c",
+                            "position": {
+                                "x": 395.99163818359377,
+                                "y": 60.936222076416019
+                            },
+                            "level": {
+                                "value": 0.5,
+                                "min": 0.0,
+                                "max": 1.0
+                            }
+                        },
+                        {
+                            "type": "Level",
+                            "id": "bb32724f-99d8-492c-96d5-7432c9514b5a",
+                            "position": {
+                                "x": 287.6407470703125,
+                                "y": -41.646549224853519
+                            },
+                            "level": {
+                                "value": 0.5,
+                                "min": 0.0,
+                                "max": 1.0
+                            }
+                        },
+                        {
+                            "type": "Text",
+                            "id": "09291097-22bd-4cf3-a74a-5beeda1a1196",
+                            "position": {
+                                "x": -12.420719146728516,
+                                "y": 51.82048034667969
+                            },
+                            "exposedPosition": {
+                                "x": -30.0,
+                                "y": -50.0
+                            },
+                            "text": "POWER",
+                            "width": 63.20277404785156
+                        },
+                        {
+                            "type": "Text",
+                            "id": "ef933d3f-b512-46da-9dce-af99463b663c",
+                            "position": {
+                                "x": 280.04888916015627,
+                                "y": -104.26788330078125
+                            },
+                            "exposedPosition": {
+                                "x": 90.0,
+                                "y": -50.0
+                            },
+                            "text": "Spkr Pwr",
+                            "width": 76.26345825195313
+                        },
+                        {
+                            "type": "Text",
+                            "id": "a496b330-8057-4cbd-aa30-bf1ddaea280b",
+                            "position": {
+                                "x": 492.58251953125,
+                                "y": 34.8961181640625
+                            },
+                            "exposedPosition": {
+                                "x": 155.0,
+                                "y": -50.0
+                            },
+                            "text": "Out Pwr",
+                            "width": 66.87384033203125
+                        },
+                        {
+                            "type": "Text",
+                            "id": "7a44967a-d29d-41d5-a904-d56d88e6deba",
+                            "position": {
+                                "x": 109.51817321777344,
+                                "y": 235.6320343017578
+                            },
+                            "text": "A module for monitoring your patch as you build it. Controls for switching off all input signals (POWER), speaker output, and output from the module.",
+                            "width": 136.42596435546876
+                        },
+                        {
+                            "type": "Text",
+                            "id": "e5d0bcae-27b7-416d-9f17-8dc0dd3ea16d",
+                            "position": {
+                                "x": 377.3345031738281,
+                                "y": 284.9571838378906
+                            },
+                            "exposedPosition": {
+                                "x": 80.0,
+                                "y": -120.0
+                            },
+                            "text": "WAV Monitor",
+                            "width": 100.53286743164063
+                        }
+                    ],
+                    "wires": [
+                        {
+                            "from": "1676a889-220c-4018-b1f4-c36e93ba542c",
+                            "output": 0,
+                            "to": "f16e3f50-1925-474f-af83-1b1953511819",
+                            "input": 0
+                        },
+                        {
+                            "from": "060c926f-ef96-4532-b14f-7c06ca2ba4fa",
+                            "output": 0,
+                            "to": "29ebe974-18e3-4eba-9576-32a1bb59c688",
+                            "input": 0
+                        },
+                        {
+                            "from": "5b895395-2d38-4835-a073-cbf3eae51450",
+                            "output": 0,
+                            "to": "0db9701c-d4f8-4f58-9d8c-97f3a4f3cf81",
+                            "input": 0
+                        },
+                        {
+                            "from": "7368f447-04c9-4e11-b38b-fe813a0c937f",
+                            "output": 0,
+                            "to": "0db9701c-d4f8-4f58-9d8c-97f3a4f3cf81",
+                            "input": 1
+                        },
+                        {
+                            "from": "0db9701c-d4f8-4f58-9d8c-97f3a4f3cf81",
+                            "output": 0,
+                            "to": "060c926f-ef96-4532-b14f-7c06ca2ba4fa",
+                            "input": 0
+                        },
+                        {
+                            "from": "cd64d106-4395-4bf0-ba97-a3c8f5aed798",
+                            "output": 0,
+                            "to": "060c926f-ef96-4532-b14f-7c06ca2ba4fa",
+                            "input": 1
+                        },
+                        {
+                            "from": "bb32724f-99d8-492c-96d5-7432c9514b5a",
+                            "output": 0,
+                            "to": "0e607936-bcd8-4450-b479-c2a97dbfaffa",
+                            "input": 0
+                        },
+                        {
+                            "from": "bb32724f-99d8-492c-96d5-7432c9514b5a",
+                            "output": 0,
+                            "to": "0e607936-bcd8-4450-b479-c2a97dbfaffa",
+                            "input": 1
+                        },
+                        {
+                            "from": "060c926f-ef96-4532-b14f-7c06ca2ba4fa",
+                            "output": 0,
+                            "to": "1676a889-220c-4018-b1f4-c36e93ba542c",
+                            "input": 0
+                        },
+                        {
+                            "from": "2256b642-2485-41f9-ac24-e1a73c3585f0",
+                            "output": 0,
+                            "to": "1676a889-220c-4018-b1f4-c36e93ba542c",
+                            "input": 1
+                        },
+                        {
+                            "from": "060c926f-ef96-4532-b14f-7c06ca2ba4fa",
+                            "output": 0,
+                            "to": "bb32724f-99d8-492c-96d5-7432c9514b5a",
+                            "input": 0
+                        },
+                        {
+                            "from": "6bd1ed49-9590-4cdd-8088-a01e42e26d29",
+                            "output": 0,
+                            "to": "bb32724f-99d8-492c-96d5-7432c9514b5a",
+                            "input": 1
+                        }
+                    ]
+                }
+            },
+            {
+                "type": "Noise",
+                "id": "9482795d-4ccb-40e9-b490-b21ca5348554",
+                "position": {
+                    "x": -100.87207794189453,
+                    "y": -20.697689056396486
+                }
+            },
+            {
+                "type": "Waveform",
+                "id": "bc9c5436-6fd2-4b7d-acf1-5567ee0153d7",
+                "position": {
+                    "x": 338.9984130859375,
+                    "y": -29.4761962890625
+                }
+            },
+            {
+                "type": "Text",
+                "id": "f1f72ad5-e795-4075-97ad-65d20986313a",
+                "position": {
+                    "x": 105.6102294921875,
+                    "y": 203.09300231933595
+                },
+                "text": "WAV Monitor",
+                "width": 93.80802154541016
+            },
+            {
+                "type": "Text",
+                "id": "b137856b-56d0-4ce9-8204-f8674a14cdfb",
+                "position": {
+                    "x": 37.821983337402347,
+                    "y": 175.1228485107422
+                },
+                "text": "A module for monitoring your patch as you build it. Controls for switching off all input signals (PANIC!), speaker output, and output from the module.",
+                "width": 265.6898193359375
+            }
+        ],
+        "wires": [
+            {
+                "from": "9482795d-4ccb-40e9-b490-b21ca5348554",
+                "output": 0,
+                "to": "339e4603-4661-4e15-84f3-d2255e8b0ec3",
+                "input": 1
+            },
+            {
+                "from": "339e4603-4661-4e15-84f3-d2255e8b0ec3",
+                "output": 0,
+                "to": "bc9c5436-6fd2-4b7d-acf1-5567ee0153d7",
+                "input": 0
+            }
+        ]
+    },
+    "history": {
+        "states": [
+            {
+                "id": "93bbb767-0ff0-4e56-af95-00bb01883c31"
+            }
+        ],
+        "current": "93bbb767-0ff0-4e56-af95-00bb01883c31"
+    },
+    "undoStack": {
+        "stack": [
+            "93bbb767-0ff0-4e56-af95-00bb01883c31"
+        ],
+        "current": 0
+    }
+}

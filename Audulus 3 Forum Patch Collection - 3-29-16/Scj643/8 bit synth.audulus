@@ -1,0 +1,260 @@
+{
+    "version": 1,
+    "author": "scj643",
+    "tags": [
+        "8bit"
+    ],
+    "description": "This module takes poly and a velocity input and mixes a triangle and square wave.",
+    "patch": {
+        "id": "76e7aefb-c8d6-4b67-98c1-799b3be2a7ae",
+        "pan": {
+            "x": -436.5250549316406,
+            "y": -7.310829162597656
+        },
+        "zoom": 1.4858789443969727,
+        "nodes": [
+            {
+                "type": "Patch",
+                "id": "26ca617c-e41e-4ffe-a6cf-7ada4d4e4812",
+                "position": {
+                    "x": 492.0239562988281,
+                    "y": 47.747867584228519
+                },
+                "subPatch": {
+                    "id": "acb8a231-0abc-412f-93ba-216311822979",
+                    "pan": {
+                        "x": -206.4388885498047,
+                        "y": -332.1195068359375
+                    },
+                    "zoom": 2.0,
+                    "nodes": [
+                        {
+                            "type": "Output",
+                            "id": "a101dc7f-2ec5-4513-b53d-44d55c53e62e",
+                            "position": {
+                                "x": 536.37109375,
+                                "y": -137.15785217285157
+                            },
+                            "name": "output",
+                            "exposedPosition": {
+                                "x": 85.0,
+                                "y": 40.0
+                            }
+                        },
+                        {
+                            "type": "Input",
+                            "id": "7d58c82d-4dc2-40e3-823a-291190976bd5",
+                            "position": {
+                                "x": -260.6285095214844,
+                                "y": 57.74664306640625
+                            },
+                            "name": "Hz",
+                            "exposedPosition": {
+                                "x": -250.0,
+                                "y": -5.0
+                            }
+                        },
+                        {
+                            "type": "Text",
+                            "id": "31f00512-0a75-41d6-a2a6-2a58aedb6f6e",
+                            "position": {
+                                "x": -536.37109375,
+                                "y": -297.18548583984377
+                            },
+                            "text": "Note the input for the velocity of midi is too loud typically",
+                            "width": 256.0
+                        },
+                        {
+                            "type": "Input",
+                            "id": "f3900f62-714a-4811-8e09-b3a5d2b4c3ff",
+                            "position": {
+                                "x": -329.1446838378906,
+                                "y": -148.497802734375
+                            },
+                            "name": "Velocity",
+                            "exposedPosition": {
+                                "x": -250.0,
+                                "y": 100.0
+                            }
+                        },
+                        {
+                            "type": "Knob",
+                            "id": "2040fd56-788b-48f9-8169-0d5f0ebee528",
+                            "position": {
+                                "x": -397.7135925292969,
+                                "y": -228.1734619140625
+                            },
+                            "name": "Velocity reduction",
+                            "knob": {
+                                "value": 0.15197446942329408,
+                                "min": 0.0,
+                                "max": 1.0
+                            },
+                            "exposedPosition": {
+                                "x": -205.0,
+                                "y": 60.0
+                            }
+                        },
+                        {
+                            "type": "Knob",
+                            "id": "7231474d-704c-4586-9ba1-f49070e82971",
+                            "position": {
+                                "x": 101.07206726074219,
+                                "y": 339.7535400390625
+                            },
+                            "name": "Balance",
+                            "knob": {
+                                "value": 1.6488056182861329,
+                                "min": 0.0,
+                                "max": 2.0
+                            },
+                            "exposedPosition": {
+                                "x": -70.0,
+                                "y": 60.0
+                            }
+                        },
+                        {
+                            "type": "Mult",
+                            "id": "b31d0ece-c3f9-4bed-b744-917e34b9716f",
+                            "position": {
+                                "x": -184.48861694335938,
+                                "y": -200.16494750976563
+                            }
+                        },
+                        {
+                            "type": "Osc",
+                            "id": "34bde94d-37c5-4065-a979-6e46eb3d1cf6",
+                            "position": {
+                                "x": 66.95323944091797,
+                                "y": 0.5636672973632813
+                            },
+                            "wave": 2
+                        },
+                        {
+                            "type": "Osc",
+                            "id": "56161bf2-4104-48db-90d2-e5b3778d8927",
+                            "position": {
+                                "x": 50.67761993408203,
+                                "y": -169.21737670898438
+                            },
+                            "wave": 1
+                        },
+                        {
+                            "type": "Crossfade",
+                            "id": "685df736-a4f7-4527-a308-e827e49651b7",
+                            "position": {
+                                "x": 288.5267028808594,
+                                "y": 125.10678100585938
+                            }
+                        },
+                        {
+                            "type": "Text",
+                            "id": "d57cd4cc-fb40-48ce-8a41-0bf95e60a84a",
+                            "position": {
+                                "x": -6.3970947265625,
+                                "y": 336.5180358886719
+                            },
+                            "exposedPosition": {
+                                "x": -145.0,
+                                "y": 25.0
+                            },
+                            "text": "Triangle",
+                            "width": 256.0
+                        },
+                        {
+                            "type": "Text",
+                            "id": "58d830e4-ccef-418b-bc85-6119d23e265b",
+                            "position": {
+                                "x": 187.6136016845703,
+                                "y": 332.11956787109377
+                            },
+                            "exposedPosition": {
+                                "x": -40.0,
+                                "y": 25.0
+                            },
+                            "text": "Square",
+                            "width": 256.0
+                        }
+                    ],
+                    "wires": [
+                        {
+                            "from": "685df736-a4f7-4527-a308-e827e49651b7",
+                            "output": 0,
+                            "to": "a101dc7f-2ec5-4513-b53d-44d55c53e62e",
+                            "input": 0
+                        },
+                        {
+                            "from": "f3900f62-714a-4811-8e09-b3a5d2b4c3ff",
+                            "output": 0,
+                            "to": "b31d0ece-c3f9-4bed-b744-917e34b9716f",
+                            "input": 0
+                        },
+                        {
+                            "from": "2040fd56-788b-48f9-8169-0d5f0ebee528",
+                            "output": 0,
+                            "to": "b31d0ece-c3f9-4bed-b744-917e34b9716f",
+                            "input": 1
+                        },
+                        {
+                            "from": "7d58c82d-4dc2-40e3-823a-291190976bd5",
+                            "output": 0,
+                            "to": "34bde94d-37c5-4065-a979-6e46eb3d1cf6",
+                            "input": 0
+                        },
+                        {
+                            "from": "b31d0ece-c3f9-4bed-b744-917e34b9716f",
+                            "output": 0,
+                            "to": "34bde94d-37c5-4065-a979-6e46eb3d1cf6",
+                            "input": 1
+                        },
+                        {
+                            "from": "7d58c82d-4dc2-40e3-823a-291190976bd5",
+                            "output": 0,
+                            "to": "56161bf2-4104-48db-90d2-e5b3778d8927",
+                            "input": 0
+                        },
+                        {
+                            "from": "b31d0ece-c3f9-4bed-b744-917e34b9716f",
+                            "output": 0,
+                            "to": "56161bf2-4104-48db-90d2-e5b3778d8927",
+                            "input": 1
+                        },
+                        {
+                            "from": "34bde94d-37c5-4065-a979-6e46eb3d1cf6",
+                            "output": 0,
+                            "to": "685df736-a4f7-4527-a308-e827e49651b7",
+                            "input": 0
+                        },
+                        {
+                            "from": "56161bf2-4104-48db-90d2-e5b3778d8927",
+                            "output": 0,
+                            "to": "685df736-a4f7-4527-a308-e827e49651b7",
+                            "input": 1
+                        },
+                        {
+                            "from": "7231474d-704c-4586-9ba1-f49070e82971",
+                            "output": 0,
+                            "to": "685df736-a4f7-4527-a308-e827e49651b7",
+                            "input": 2
+                        }
+                    ]
+                }
+            }
+        ],
+        "wires": []
+    },
+    "history": {
+        "states": [
+            {
+                "id": "6286d2d0-fe12-4acd-ba61-673006dc6d55"
+            }
+        ],
+        "current": "6286d2d0-fe12-4acd-ba61-673006dc6d55"
+    },
+    "undoStack": {
+        "stack": [
+            "6286d2d0-fe12-4acd-ba61-673006dc6d55"
+        ],
+        "current": 0
+    }
+}

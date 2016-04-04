@@ -1,0 +1,119 @@
+{
+    "version": 1,
+    "author": "Bimini Road",
+    "tags": [
+        "BuildingBlocks"
+    ],
+    "description": "This is a phasor block made for use in clocks.  The PWM knob controls the ratio of the square wave’s On/Off time.",
+    "patch": {
+        "id": "fd8c19b2-cb7a-46f3-bc0a-0e46ba103de3",
+        "pan": {
+            "x": -45.7967529296875,
+            "y": -8.96127700805664
+        },
+        "zoom": 3.4174065589904787,
+        "nodes": [
+            {
+                "type": "Phasor",
+                "id": "50a0dd6e-ac02-4e67-8db3-09bfb07e93fe",
+                "position": {
+                    "x": -89.84852600097656,
+                    "y": 6.449882507324219
+                }
+            },
+            {
+                "type": "Expr",
+                "id": "c1ba942b-eac9-461b-bfd6-aad219772454",
+                "position": {
+                    "x": 56.32649230957031,
+                    "y": -23.822242736816408
+                },
+                "expr": "PWM>Phasor/(2*pi)"
+            },
+            {
+                "type": "Light",
+                "id": "cb68e716-0d3e-4f61-9847-7bc7baf059d7",
+                "position": {
+                    "x": 211.9792022705078,
+                    "y": 49.42436981201172
+                }
+            },
+            {
+                "type": "Knob",
+                "id": "fa6f54d6-2830-4971-889a-6d361029cd6e",
+                "position": {
+                    "x": -167.02655029296876,
+                    "y": 27.039199829101564
+                },
+                "name": "Hz",
+                "knob": {
+                    "value": 1.0,
+                    "min": 0.0,
+                    "max": 1.0
+                },
+                "exposedPosition": {
+                    "x": 0.0,
+                    "y": 0.0
+                }
+            },
+            {
+                "type": "Knob",
+                "id": "21e1de94-35b7-4f36-9d03-226a20dd6997",
+                "position": {
+                    "x": -20.893310546875,
+                    "y": -38.52732849121094
+                },
+                "name": "PWM",
+                "knob": {
+                    "value": 0.5,
+                    "min": 0.0,
+                    "max": 1.0
+                },
+                "exposedPosition": {
+                    "x": 0.0,
+                    "y": 0.0
+                }
+            }
+        ],
+        "wires": [
+            {
+                "from": "fa6f54d6-2830-4971-889a-6d361029cd6e",
+                "output": 0,
+                "to": "50a0dd6e-ac02-4e67-8db3-09bfb07e93fe",
+                "input": 0
+            },
+            {
+                "from": "21e1de94-35b7-4f36-9d03-226a20dd6997",
+                "output": 0,
+                "to": "c1ba942b-eac9-461b-bfd6-aad219772454",
+                "input": 0
+            },
+            {
+                "from": "50a0dd6e-ac02-4e67-8db3-09bfb07e93fe",
+                "output": 0,
+                "to": "c1ba942b-eac9-461b-bfd6-aad219772454",
+                "input": 1
+            },
+            {
+                "from": "c1ba942b-eac9-461b-bfd6-aad219772454",
+                "output": 0,
+                "to": "cb68e716-0d3e-4f61-9847-7bc7baf059d7",
+                "input": 0
+            }
+        ]
+    },
+    "history": {
+        "states": [
+            {
+                "id": "e48be430-71e5-484f-9788-c7397bda39de"
+            }
+        ],
+        "current": "e48be430-71e5-484f-9788-c7397bda39de"
+    },
+    "undoStack": {
+        "stack": [
+            "e48be430-71e5-484f-9788-c7397bda39de"
+        ],
+        "current": 0
+    }
+}

@@ -1,0 +1,102 @@
+{
+    "version": 1,
+    "author": "Bimini Road",
+    "tags": [
+        "BuildingBlocks"
+    ],
+    "description": "This switch alternates between the A and B inputs.  Attached for convenience is a lighted A/B indicator.",
+    "patch": {
+        "id": "5ff75b7d-c80a-4337-a312-c293aca582db",
+        "pan": {
+            "x": 73.40972900390625,
+            "y": -131.65431213378907
+        },
+        "zoom": 3.146306037902832,
+        "nodes": [
+            {
+                "type": "Crossfade",
+                "id": "39e4aafe-11a3-425e-9746-40c813f9d2b9",
+                "position": {
+                    "x": -56.9522705078125,
+                    "y": 24.835105895996095
+                }
+            },
+            {
+                "type": "Trigger",
+                "id": "9f9006a2-f1db-4deb-99f9-64b9cd34b2d9",
+                "position": {
+                    "x": -219.8671875,
+                    "y": 83.9081802368164
+                },
+                "toggle": true,
+                "state": false,
+                "midiNote": -1
+            },
+            {
+                "type": "Light",
+                "id": "d84eca7d-1e62-4fc4-af2b-8122b9b2956a",
+                "position": {
+                    "x": -7.366323471069336,
+                    "y": 156.24122619628907
+                }
+            },
+            {
+                "type": "Expr",
+                "id": "50f5338a-765f-4d42-968d-280537ecdf72",
+                "position": {
+                    "x": -139.8792724609375,
+                    "y": 197.6260528564453
+                },
+                "expr": "x==0"
+            },
+            {
+                "type": "Light",
+                "id": "98d2675a-dcd4-43c1-9c40-87b94d63a487",
+                "position": {
+                    "x": -8.55171012878418,
+                    "y": 198.4735107421875
+                }
+            }
+        ],
+        "wires": [
+            {
+                "from": "9f9006a2-f1db-4deb-99f9-64b9cd34b2d9",
+                "output": 0,
+                "to": "39e4aafe-11a3-425e-9746-40c813f9d2b9",
+                "input": 2
+            },
+            {
+                "from": "9f9006a2-f1db-4deb-99f9-64b9cd34b2d9",
+                "output": 0,
+                "to": "d84eca7d-1e62-4fc4-af2b-8122b9b2956a",
+                "input": 0
+            },
+            {
+                "from": "9f9006a2-f1db-4deb-99f9-64b9cd34b2d9",
+                "output": 0,
+                "to": "50f5338a-765f-4d42-968d-280537ecdf72",
+                "input": 0
+            },
+            {
+                "from": "50f5338a-765f-4d42-968d-280537ecdf72",
+                "output": 0,
+                "to": "98d2675a-dcd4-43c1-9c40-87b94d63a487",
+                "input": 0
+            }
+        ]
+    },
+    "history": {
+        "states": [
+            {
+                "id": "8a617245-cacf-4f42-b6c9-58fdffc5194c"
+            }
+        ],
+        "current": "8a617245-cacf-4f42-b6c9-58fdffc5194c"
+    },
+    "undoStack": {
+        "stack": [
+            "8a617245-cacf-4f42-b6c9-58fdffc5194c"
+        ],
+        "current": 0
+    }
+}

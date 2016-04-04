@@ -1,0 +1,744 @@
+{
+    "version": 1,
+    "patch": {
+        "id": "653e7ac7-b46a-4f2c-bf9a-4c6d7a5d3c32",
+        "pan": {
+            "x": 245.8059539794922,
+            "y": 357.67578125
+        },
+        "zoom": 0.3604704737663269,
+        "nodes": [
+            {
+                "type": "Text",
+                "id": "f7a78aea-4f1f-4e2a-8546-66ffd328d044",
+                "position": {
+                    "x": -48.31729507446289,
+                    "y": -47.90758514404297
+                },
+                "text": "A library of fundamental blocks of code - the nodes- are connected at the inputs (red circles) and outputs (blue circles), and they \"talk\" to one another in numbers. ",
+                "width": 213.5771484375
+            },
+            {
+                "type": "Text",
+                "id": "ceca85d9-979b-4dfe-9466-723f5c1a1dd9",
+                "position": {
+                    "x": -49.69270324707031,
+                    "y": -143.2435302734375
+                },
+                "text": "Observe these two lights.  The light node is a block of code that tells the light to \"turn on\" when its input is high.",
+                "width": 213.5771484375
+            },
+            {
+                "type": "Text",
+                "id": "a0e6c32d-ac3f-477a-9eb6-b5efe19c8354",
+                "position": {
+                    "x": -49.57090377807617,
+                    "y": -217.28395080566407
+                },
+                "text": "Within Audulus, a \"high\" signal is any non-zero positive number, and a \"low\" signal is simply 0.  When nothing is connected to an input, that input defaults to a value of 0.  This is why the unlit light does not need to have a 0 plugged in to be unlit.",
+                "width": 235.51620483398438
+            },
+            {
+                "type": "Light",
+                "id": "de50c604-21fe-4d68-94bd-a4ac37175791",
+                "position": {
+                    "x": -148.65557861328126,
+                    "y": -251.41268920898438
+                }
+            },
+            {
+                "type": "Expr",
+                "id": "c32b74a4-dc7a-4b5e-b3c4-d4cb3269e242",
+                "position": {
+                    "x": -278.6555480957031,
+                    "y": -251.41268920898438
+                },
+                "expr": "1"
+            },
+            {
+                "type": "Light",
+                "id": "155a84d5-d4c9-49ea-a5ff-d27a316ffc3f",
+                "position": {
+                    "x": -148.46917724609376,
+                    "y": -206.41937255859376
+                }
+            },
+            {
+                "type": "Text",
+                "id": "3d1114e2-a569-4210-9f65-1eaacb904cbc",
+                "position": {
+                    "x": -49.39955520629883,
+                    "y": -335.2698669433594
+                },
+                "text": "Many inputs and outputs in Audulus are optimized to work within a range of 0 and 1.  For example, the brightness of the individual RGB light inputs is controllable within a 0-1 range.",
+                "width": 235.51620483398438
+            },
+            {
+                "type": "RGBLight",
+                "id": "c57816fa-b9a1-4232-a21e-29bc6bce0879",
+                "position": {
+                    "x": -148.031494140625,
+                    "y": -477.8661804199219
+                }
+            },
+            {
+                "type": "Knob",
+                "id": "a83fbc0e-633e-40be-9e3e-ecdc7de482cf",
+                "position": {
+                    "x": -246.89468383789063,
+                    "y": -427.2292785644531
+                },
+                "name": "Brightness",
+                "knob": {
+                    "value": 0.0,
+                    "min": 0.0,
+                    "max": 1.0
+                },
+                "exposedPosition": {
+                    "x": 0.0,
+                    "y": 0.0
+                }
+            },
+            {
+                "type": "Value",
+                "id": "b1d6d137-160c-4e49-aedc-d9702c6f62de",
+                "position": {
+                    "x": -279.9395446777344,
+                    "y": -380.48651123046877
+                }
+            },
+            {
+                "type": "Text",
+                "id": "d319e860-91a0-4871-bfc6-5d3b4caf2829",
+                "position": {
+                    "x": -50.4230842590332,
+                    "y": -424.01708984375
+                },
+                "text": "Try switching the connection to the red or blue input.  To do this, click/tap on the green input and drag the wire to another input.  Notice that you can't draw a connection from an input to an output.  All connections must flow from and output to an input - this is a rule in Audulus.  In the iOS version, if you are zoomed out too far to make connections, the inputs and outputs \"close.\"",
+                "width": 235.51620483398438
+            },
+            {
+                "type": "Text",
+                "id": "6ba229b3-6629-46d1-8187-b665bbb2ad17",
+                "position": {
+                    "x": -46.45005416870117,
+                    "y": -623.2655639648438
+                },
+                "text": "Another rule in Audulus is that outputs can be sent to multiple inputs, but multiple outputs cannot be attached to one input.",
+                "width": 235.51620483398438
+            },
+            {
+                "type": "Text",
+                "id": "adda9c08-36fc-49b8-ac27-2233903759ac",
+                "position": {
+                    "x": -48.46699523925781,
+                    "y": -687.9150390625
+                },
+                "text": "This is because you must define how the two signals combine.  Are they being added?  Multiplied?  Rooted and then divided?  There are specific cases where each is appropriate, but it is enough to know for now that when two signals meet, you must define how they interact.",
+                "width": 239.25958251953126
+            },
+            {
+                "type": "Knob",
+                "id": "9d5d02cc-391c-45f9-9594-606c294115c8",
+                "position": {
+                    "x": -492.09844970703127,
+                    "y": -1009.020751953125
+                },
+                "name": "X=",
+                "knob": {
+                    "value": 2.0,
+                    "min": -2.0,
+                    "max": 2.0
+                },
+                "exposedPosition": {
+                    "x": 0.0,
+                    "y": 0.0
+                }
+            },
+            {
+                "type": "Value",
+                "id": "fa61dbd9-8ae8-402c-b63f-4360dba7734b",
+                "position": {
+                    "x": -526.0730590820313,
+                    "y": -1101.395751953125
+                }
+            },
+            {
+                "type": "Add",
+                "id": "be250e32-92cb-4251-941d-870ae987f726",
+                "position": {
+                    "x": -252.39410400390626,
+                    "y": -776.75634765625
+                }
+            },
+            {
+                "type": "Value",
+                "id": "5d8281b8-6132-4623-82e8-bd205443863d",
+                "position": {
+                    "x": -189.25241088867188,
+                    "y": -796.0569458007813
+                }
+            },
+            {
+                "type": "Mult",
+                "id": "400496a2-01e5-46df-ab32-2df380ebd90e",
+                "position": {
+                    "x": -250.611083984375,
+                    "y": -879.8276977539063
+                }
+            },
+            {
+                "type": "Value",
+                "id": "f4ae460a-9803-4b02-a286-c6c07faaf2cc",
+                "position": {
+                    "x": -187.609375,
+                    "y": -900.5936279296875
+                }
+            },
+            {
+                "type": "Value",
+                "id": "7f9c5011-702e-4433-ab8e-b1ce6c083721",
+                "position": {
+                    "x": -171.63522338867188,
+                    "y": -679.3936157226563
+                }
+            },
+            {
+                "type": "Expr",
+                "id": "70e1619d-539d-4960-a380-96482b1d7f7d",
+                "position": {
+                    "x": -366.64404296875,
+                    "y": -701.8287963867188
+                },
+                "expr": "1"
+            },
+            {
+                "type": "Add",
+                "id": "7d474f46-22cf-4b1d-9c9b-1659fc2d9c12",
+                "position": {
+                    "x": -234.77691650390626,
+                    "y": -660.093017578125
+                }
+            },
+            {
+                "type": "Expr",
+                "id": "73be8d81-8a99-4934-9a5f-4cec79f97dae",
+                "position": {
+                    "x": -366.81964111328127,
+                    "y": -658.3903198242188
+                },
+                "expr": "1"
+            },
+            {
+                "type": "Expr",
+                "id": "97c96fb9-d6ba-45e3-b8ae-28669c625443",
+                "position": {
+                    "x": -320.05242919921877,
+                    "y": -1007.3576049804688
+                },
+                "expr": "x^y"
+            },
+            {
+                "type": "Value",
+                "id": "fc120932-871e-4a4a-af92-f3951e41274b",
+                "position": {
+                    "x": -188.9100341796875,
+                    "y": -992.8046264648438
+                }
+            },
+            {
+                "type": "Expr",
+                "id": "34614faf-34be-4a5f-bbf1-17dfe244a93b",
+                "position": {
+                    "x": -322.18115234375,
+                    "y": -1083.081787109375
+                },
+                "expr": "x>y"
+            },
+            {
+                "type": "Value",
+                "id": "cae4b06b-65fd-49d0-9580-bd3c6b9b351d",
+                "position": {
+                    "x": -189.5372314453125,
+                    "y": -1068.15283203125
+                }
+            },
+            {
+                "type": "Expr",
+                "id": "1799bca9-f648-436f-9d94-0807d14cabde",
+                "position": {
+                    "x": -323.01910400390627,
+                    "y": -1160.2027587890625
+                },
+                "expr": "x<y"
+            },
+            {
+                "type": "Value",
+                "id": "0aa449d3-b9fd-4a7d-9936-c393d67a2c6d",
+                "position": {
+                    "x": -189.73019409179688,
+                    "y": -1145.1431884765625
+                }
+            },
+            {
+                "type": "Text",
+                "id": "70e4e231-b2eb-4a3d-9f34-01b5777f4e3b",
+                "position": {
+                    "x": -47.383033752441409,
+                    "y": -809.4048461914063
+                },
+                "text": "Try turning the two knobs and watch how the value nodes react at the outputs of each combining function.  The last two are logic gates - their output goes high when the input values satisfy the expression.",
+                "width": 239.25958251953126
+            },
+            {
+                "type": "Value",
+                "id": "076b2dac-ffbd-43b7-ab7d-aa774e9f7ea0",
+                "position": {
+                    "x": -525.2925415039063,
+                    "y": -962.1268310546875
+                }
+            },
+            {
+                "type": "Knob",
+                "id": "de12501e-6831-4040-a999-587eb0c24ade",
+                "position": {
+                    "x": -491.31787109375,
+                    "y": -869.7518310546875
+                },
+                "name": "Y=",
+                "knob": {
+                    "value": 0.0,
+                    "min": -2.0,
+                    "max": 2.0
+                },
+                "exposedPosition": {
+                    "x": 0.0,
+                    "y": 0.0
+                }
+            },
+            {
+                "type": "Text",
+                "id": "2236be52-5eab-4dc9-957b-f909453dba4d",
+                "position": {
+                    "x": -46.43757629394531,
+                    "y": -1191.0892333984375
+                },
+                "text": "Audio should be constrained to a -1 to +1 range.  You can conceptualize this range as the speaker cone pulled all the way in (-1) or pushed all the way out (+1).  The speaker can't go any further than that, so values outside that range are \"clipped,\" causing nasty distortion.  Perhaps this is something you want, but for most applications, keeping a level node between your patch and the speaker node will allow you to dial in the appropriate level of the output.",
+                "width": 220.11056518554688
+            },
+            {
+                "type": "Osc",
+                "id": "6b40c756-23a2-4f2d-982e-22095bc4f74e",
+                "position": {
+                    "x": -522.3683471679688,
+                    "y": -1365.42431640625
+                },
+                "wave": 3
+            },
+            {
+                "type": "Level",
+                "id": "40baadff-2e41-471d-86ac-5b52b34562bd",
+                "position": {
+                    "x": -325.690185546875,
+                    "y": -1320.757080078125
+                },
+                "level": {
+                    "value": 0.0,
+                    "min": 0.0,
+                    "max": 1.0
+                }
+            },
+            {
+                "type": "Speaker",
+                "id": "68f5345a-8558-474f-bdfb-b300707ba273",
+                "position": {
+                    "x": -169.65818786621095,
+                    "y": -1336.37109375
+                }
+            },
+            {
+                "type": "Text",
+                "id": "91058cd2-0814-4cd5-b046-18cca9f0a2da",
+                "position": {
+                    "x": -46.407928466796878,
+                    "y": -1402.500732421875
+                },
+                "text": "Always turn up master volumes slowly.  Introducing signal slowly to the speaker node is important - if you have something tweaked the wrong way, the signal to the speaker node could be very hot and distorted.  This might not be a problem for an iPad speaker, but it can be painful when using earbuds or when plugged into a loud amplifier - not to mention the mild heart attack you get from being startled.  Just remember that during the designing phase, you're working with code, not a finished instrument that has carefully tuned and defined ranges for each variable.  The tweakability of Audulus is powerful, but you must approach it with caution or you might be blasted by a powerfully loud noise.",
+                "width": 206.89334106445313
+            },
+            {
+                "type": "Waveform",
+                "id": "63b0550b-b587-4516-bab4-d3085bd30621",
+                "position": {
+                    "x": -437.262939453125,
+                    "y": -1539.5274658203125
+                }
+            },
+            {
+                "type": "Knob",
+                "id": "5524b6fd-2624-48c8-91b3-ebc14f54ba4f",
+                "position": {
+                    "x": -645.5048217773438,
+                    "y": -1256.6070556640625
+                },
+                "name": "Frequency",
+                "knob": {
+                    "value": 440.0,
+                    "min": 0.0,
+                    "max": 2000.0
+                },
+                "exposedPosition": {
+                    "x": 0.0,
+                    "y": 0.0
+                }
+            },
+            {
+                "type": "Value",
+                "id": "b922dd78-fe08-448c-9995-d207f051a3ec",
+                "position": {
+                    "x": -669.3663330078125,
+                    "y": -1211.56103515625
+                }
+            },
+            {
+                "type": "Expr",
+                "id": "41e77efa-a3ef-4032-893b-65f25b7962b8",
+                "position": {
+                    "x": -647.6268920898438,
+                    "y": -1363.93212890625
+                },
+                "expr": "1"
+            },
+            {
+                "type": "Knob",
+                "id": "567718ff-8910-46b8-a28a-e425cae6cafb",
+                "position": {
+                    "x": -315.7433166503906,
+                    "y": -1222.0797119140625
+                },
+                "name": "Volume",
+                "knob": {
+                    "value": 0.0,
+                    "min": 0.0,
+                    "max": 1.0
+                },
+                "exposedPosition": {
+                    "x": 0.0,
+                    "y": 0.0
+                }
+            },
+            {
+                "type": "Text",
+                "id": "9dbd7615-2bbd-4bc9-abe7-82682adc65d7",
+                "position": {
+                    "x": -45.02540588378906,
+                    "y": 974.5742797851563
+                },
+                "text": "How to Think in Audulus ::",
+                "width": 209.21514892578126
+            },
+            {
+                "type": "Text",
+                "id": "c67e8878-5c3c-4921-b26d-7a9301b7c232",
+                "position": {
+                    "x": -45.388511657714847,
+                    "y": 918.2533569335938
+                },
+                "text": "by Bimini Road - Version 1 - 10/30/15",
+                "width": 285.3251953125
+            },
+            {
+                "type": "Text",
+                "id": "9ac23106-46ff-4ac5-8791-d1078b648af4",
+                "position": {
+                    "x": -46.54109191894531,
+                    "y": -905.875
+                },
+                "text": "Notice that the overall signal flow is left to right.  This is useful to keep in mind when studying others' patches - they usually \"begin\" on the left side and \"end\" on the right.",
+                "width": 239.25958251953126
+            },
+            {
+                "type": "Text",
+                "id": "6b7bf6c6-3284-4b05-a774-26f1d9c0a60c",
+                "position": {
+                    "x": -46.195701599121097,
+                    "y": -992.7742919921875
+                },
+                "text": "Notice also that the connections change color depending on the value of the signal running through them.  This is a visual indication of signal presence, and is useful in many ways, but especially for debugging complicated patches.  As values stray from 0 in either a negative or positive direction, the connection becomes more red, with +/- 0.5 being purple and +/- 1.0 or greater being red.",
+                "width": 247.43905639648438
+            },
+            {
+                "type": "Text",
+                "id": "e4e43345-2984-4595-8a1c-26a75d371734",
+                "position": {
+                    "x": -45.33455276489258,
+                    "y": 868.1945190429688
+                },
+                "text": "Chapter 1 of this tutorial series, \"How to Think in Audulus,\" is intended to take a complete beginner to a \"conversational\" understanding of Audulus as quickly and painlessly as possible.",
+                "width": 213.5771484375
+            },
+            {
+                "type": "Text",
+                "id": "3796e6c9-004b-4887-97c3-2e2f6dc12c22",
+                "position": {
+                    "x": -47.8931884765625,
+                    "y": 760.3097534179688
+                },
+                "text": "In this introduction, you'll learn the basics of Audulus signal flow, and how to properly hook up an audio output.",
+                "width": 215.09039306640626
+            },
+            {
+                "type": "Text",
+                "id": "00528ef8-2fea-4045-ad5d-957df059185a",
+                "position": {
+                    "x": -48.21644592285156,
+                    "y": 660.8240356445313
+                },
+                "text": "Audulus is a visual programming language that is streamlined for use in creating digital instruments and effects.",
+                "width": 213.5771484375
+            },
+            {
+                "type": "Text",
+                "id": "3d2f8f53-f165-44d0-bb2d-9220454ae998",
+                "position": {
+                    "x": -47.36210632324219,
+                    "y": 587.0227661132813
+                },
+                "text": "Visual programming is a way to code without having to know anything about coding.  You may know more about visual programming than you think - it is a quiet revolution that is slowly growing into all aspects of our digital lives.  Website creators like Squarespace are a kind of visual programming platform - they allow you to add and arrange blocks from a library of elements to build a website.  Audulus works in a similar sense, but instead of constructing websites, it's designed to make creating synthesizers, effects, and control signals from \"scratch\" both fun and easy.",
+                "width": 213.5771484375
+            },
+            {
+                "type": "Text",
+                "id": "7014f260-7350-4219-a836-7039f80fe865",
+                "position": {
+                    "x": -48.073875427246097,
+                    "y": 332.0814208984375
+                },
+                "text": "Another way to think about visual programming in Audulus is quite awe-inspiring to consider: visual programming is as close as you can get to painting with ideas.",
+                "width": 213.5771484375
+            },
+            {
+                "type": "Text",
+                "id": "88183333-4055-44ea-919a-a6cd8a849a31",
+                "position": {
+                    "x": -47.07635498046875,
+                    "y": 236.85462951660157
+                },
+                "text": "You can do almost anything you could ever want to do with or to audio in Audulus.  If you continue with this tutorial series, translating your thoughts into a design will become almost effortless.  You will begin to think of more designs than you could ever have time to build.  You will be able to look at a module or effect and know almost instantly how to recreate it in Audulus.  An appreciation for how \"deep\" you can get with Audulus can only be cultivated over time as you create and study patches.  You'll eventually grasp that the only meaningful limiting factors in Audulus are your patience and your cleverness.",
+                "width": 219.62466430664063
+            },
+            {
+                "type": "Text",
+                "id": "323d61b0-c849-40e1-aa10-9a1f961bbc1c",
+                "position": {
+                    "x": -45.48568344116211,
+                    "y": 950.9336547851563
+                },
+                "text": "Chapter 1: How to Be in Audulus   Section 1: What is Audulus?",
+                "width": 223.03677368164063
+            }
+        ],
+        "wires": [
+            {
+                "from": "c32b74a4-dc7a-4b5e-b3c4-d4cb3269e242",
+                "output": 0,
+                "to": "de50c604-21fe-4d68-94bd-a4ac37175791",
+                "input": 0
+            },
+            {
+                "from": "a83fbc0e-633e-40be-9e3e-ecdc7de482cf",
+                "output": 0,
+                "to": "c57816fa-b9a1-4232-a21e-29bc6bce0879",
+                "input": 1
+            },
+            {
+                "from": "a83fbc0e-633e-40be-9e3e-ecdc7de482cf",
+                "output": 0,
+                "to": "b1d6d137-160c-4e49-aedc-d9702c6f62de",
+                "input": 0
+            },
+            {
+                "from": "9d5d02cc-391c-45f9-9594-606c294115c8",
+                "output": 0,
+                "to": "fa61dbd9-8ae8-402c-b63f-4360dba7734b",
+                "input": 0
+            },
+            {
+                "from": "de12501e-6831-4040-a999-587eb0c24ade",
+                "output": 0,
+                "to": "be250e32-92cb-4251-941d-870ae987f726",
+                "input": 0
+            },
+            {
+                "from": "9d5d02cc-391c-45f9-9594-606c294115c8",
+                "output": 0,
+                "to": "be250e32-92cb-4251-941d-870ae987f726",
+                "input": 1
+            },
+            {
+                "from": "be250e32-92cb-4251-941d-870ae987f726",
+                "output": 0,
+                "to": "5d8281b8-6132-4623-82e8-bd205443863d",
+                "input": 0
+            },
+            {
+                "from": "de12501e-6831-4040-a999-587eb0c24ade",
+                "output": 0,
+                "to": "400496a2-01e5-46df-ab32-2df380ebd90e",
+                "input": 0
+            },
+            {
+                "from": "9d5d02cc-391c-45f9-9594-606c294115c8",
+                "output": 0,
+                "to": "400496a2-01e5-46df-ab32-2df380ebd90e",
+                "input": 1
+            },
+            {
+                "from": "400496a2-01e5-46df-ab32-2df380ebd90e",
+                "output": 0,
+                "to": "f4ae460a-9803-4b02-a286-c6c07faaf2cc",
+                "input": 0
+            },
+            {
+                "from": "7d474f46-22cf-4b1d-9c9b-1659fc2d9c12",
+                "output": 0,
+                "to": "7f9c5011-702e-4433-ab8e-b1ce6c083721",
+                "input": 0
+            },
+            {
+                "from": "73be8d81-8a99-4934-9a5f-4cec79f97dae",
+                "output": 0,
+                "to": "7d474f46-22cf-4b1d-9c9b-1659fc2d9c12",
+                "input": 0
+            },
+            {
+                "from": "70e1619d-539d-4960-a380-96482b1d7f7d",
+                "output": 0,
+                "to": "7d474f46-22cf-4b1d-9c9b-1659fc2d9c12",
+                "input": 1
+            },
+            {
+                "from": "9d5d02cc-391c-45f9-9594-606c294115c8",
+                "output": 0,
+                "to": "97c96fb9-d6ba-45e3-b8ae-28669c625443",
+                "input": 0
+            },
+            {
+                "from": "de12501e-6831-4040-a999-587eb0c24ade",
+                "output": 0,
+                "to": "97c96fb9-d6ba-45e3-b8ae-28669c625443",
+                "input": 1
+            },
+            {
+                "from": "97c96fb9-d6ba-45e3-b8ae-28669c625443",
+                "output": 0,
+                "to": "fc120932-871e-4a4a-af92-f3951e41274b",
+                "input": 0
+            },
+            {
+                "from": "9d5d02cc-391c-45f9-9594-606c294115c8",
+                "output": 0,
+                "to": "34614faf-34be-4a5f-bbf1-17dfe244a93b",
+                "input": 0
+            },
+            {
+                "from": "de12501e-6831-4040-a999-587eb0c24ade",
+                "output": 0,
+                "to": "34614faf-34be-4a5f-bbf1-17dfe244a93b",
+                "input": 1
+            },
+            {
+                "from": "34614faf-34be-4a5f-bbf1-17dfe244a93b",
+                "output": 0,
+                "to": "cae4b06b-65fd-49d0-9580-bd3c6b9b351d",
+                "input": 0
+            },
+            {
+                "from": "9d5d02cc-391c-45f9-9594-606c294115c8",
+                "output": 0,
+                "to": "1799bca9-f648-436f-9d94-0807d14cabde",
+                "input": 0
+            },
+            {
+                "from": "de12501e-6831-4040-a999-587eb0c24ade",
+                "output": 0,
+                "to": "1799bca9-f648-436f-9d94-0807d14cabde",
+                "input": 1
+            },
+            {
+                "from": "1799bca9-f648-436f-9d94-0807d14cabde",
+                "output": 0,
+                "to": "0aa449d3-b9fd-4a7d-9936-c393d67a2c6d",
+                "input": 0
+            },
+            {
+                "from": "de12501e-6831-4040-a999-587eb0c24ade",
+                "output": 0,
+                "to": "076b2dac-ffbd-43b7-ab7d-aa774e9f7ea0",
+                "input": 0
+            },
+            {
+                "from": "5524b6fd-2624-48c8-91b3-ebc14f54ba4f",
+                "output": 0,
+                "to": "6b40c756-23a2-4f2d-982e-22095bc4f74e",
+                "input": 0
+            },
+            {
+                "from": "41e77efa-a3ef-4032-893b-65f25b7962b8",
+                "output": 0,
+                "to": "6b40c756-23a2-4f2d-982e-22095bc4f74e",
+                "input": 1
+            },
+            {
+                "from": "6b40c756-23a2-4f2d-982e-22095bc4f74e",
+                "output": 0,
+                "to": "40baadff-2e41-471d-86ac-5b52b34562bd",
+                "input": 0
+            },
+            {
+                "from": "567718ff-8910-46b8-a28a-e425cae6cafb",
+                "output": 0,
+                "to": "40baadff-2e41-471d-86ac-5b52b34562bd",
+                "input": 1
+            },
+            {
+                "from": "40baadff-2e41-471d-86ac-5b52b34562bd",
+                "output": 0,
+                "to": "68f5345a-8558-474f-bdfb-b300707ba273",
+                "input": 0
+            },
+            {
+                "from": "40baadff-2e41-471d-86ac-5b52b34562bd",
+                "output": 0,
+                "to": "68f5345a-8558-474f-bdfb-b300707ba273",
+                "input": 1
+            },
+            {
+                "from": "6b40c756-23a2-4f2d-982e-22095bc4f74e",
+                "output": 0,
+                "to": "63b0550b-b587-4516-bab4-d3085bd30621",
+                "input": 0
+            },
+            {
+                "from": "5524b6fd-2624-48c8-91b3-ebc14f54ba4f",
+                "output": 0,
+                "to": "b922dd78-fe08-448c-9995-d207f051a3ec",
+                "input": 0
+            }
+        ]
+    },
+    "history": {
+        "states": [
+            {
+                "id": "7aabf243-5dac-4af4-81ec-160f15a53ea8"
+            }
+        ],
+        "current": "7aabf243-5dac-4af4-81ec-160f15a53ea8"
+    },
+    "undoStack": {
+        "stack": [
+            "7aabf243-5dac-4af4-81ec-160f15a53ea8"
+        ],
+        "current": 0
+    }
+}
