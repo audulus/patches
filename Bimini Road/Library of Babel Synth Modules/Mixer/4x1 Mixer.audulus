@@ -1,0 +1,385 @@
+{
+    "version": 1,
+    "author": "Bimini Road",
+    "tags": [
+        "Mixer"
+    ],
+    "description": "This is a repackaging of the mixer node as a module.  For more info, see the Audulus node documentation.\n\nThe trim knob decreases the output level.",
+    "patch": {
+        "id": "f7eee058-8acb-49cb-b0ac-c21ebd68d925",
+        "pan": {
+            "x": -95.08740234375,
+            "y": -36.654930114746097
+        },
+        "zoom": 4.836292743682861,
+        "nodes": [
+            {
+                "type": "Patch",
+                "id": "5932e5aa-a1e4-4c02-b276-169bf8e1e1d7",
+                "position": {
+                    "x": 20.08740234375,
+                    "y": -8.83526611328125
+                },
+                "subPatch": {
+                    "id": "345b10b3-e9a0-44ef-a71e-6a037c1388d0",
+                    "pan": {
+                        "x": 37.299835205078128,
+                        "y": -41.733299255371097
+                    },
+                    "zoom": 1.2187292575836182,
+                    "nodes": [
+                        {
+                            "type": "Mixer4x1",
+                            "id": "ea18de3e-b60b-48bb-839d-27de61ae222e",
+                            "position": {
+                                "x": 19.00860595703125,
+                                "y": -20.88965606689453
+                            }
+                        },
+                        {
+                            "type": "Level",
+                            "id": "9e243807-a6c5-42e0-98af-f03ae4b9aba2",
+                            "position": {
+                                "x": -115.87355041503906,
+                                "y": 87.78617095947266
+                            },
+                            "level": {
+                                "value": 0.5,
+                                "min": 0.0,
+                                "max": 1.0
+                            }
+                        },
+                        {
+                            "type": "Level",
+                            "id": "7aeb0b26-3835-493b-a926-2d20aa143049",
+                            "position": {
+                                "x": -117.06413269042969,
+                                "y": 44.90143585205078
+                            },
+                            "level": {
+                                "value": 0.5,
+                                "min": 0.0,
+                                "max": 1.0
+                            }
+                        },
+                        {
+                            "type": "Level",
+                            "id": "bbd4ea4f-64a6-4542-b407-4bd3c3c2b19b",
+                            "position": {
+                                "x": -118.04312133789063,
+                                "y": 4.009532928466797
+                            },
+                            "level": {
+                                "value": 0.5,
+                                "min": 0.0,
+                                "max": 1.0
+                            }
+                        },
+                        {
+                            "type": "Level",
+                            "id": "17436f1a-b2b2-43bf-bdee-5d901f11df05",
+                            "position": {
+                                "x": -117.86229705810547,
+                                "y": -37.26808166503906
+                            },
+                            "level": {
+                                "value": 0.5,
+                                "min": 0.0,
+                                "max": 1.0
+                            }
+                        },
+                        {
+                            "type": "Output",
+                            "id": "b4cfb151-7aaf-4657-acc5-3cfceb4edbe6",
+                            "position": {
+                                "x": 274.3701171875,
+                                "y": -21.502002716064454
+                            },
+                            "name": "Out",
+                            "exposedPosition": {
+                                "x": 160.0,
+                                "y": -35.0
+                            }
+                        },
+                        {
+                            "type": "Input",
+                            "id": "8513b58c-a5db-4692-ab03-e93d4f2cd9d2",
+                            "position": {
+                                "x": -213.25677490234376,
+                                "y": 87.76838684082031
+                            },
+                            "name": "4",
+                            "exposedPosition": {
+                                "x": -10.0,
+                                "y": -35.0
+                            }
+                        },
+                        {
+                            "type": "Input",
+                            "id": "e3dc66fe-66e4-450d-bd21-bcf1ffc27050",
+                            "position": {
+                                "x": -212.29920959472657,
+                                "y": 45.10186767578125
+                            },
+                            "name": "3",
+                            "exposedPosition": {
+                                "x": -10.0,
+                                "y": -10.0
+                            }
+                        },
+                        {
+                            "type": "Input",
+                            "id": "98dcb959-8f6a-4087-84a7-6e7f92c803f2",
+                            "position": {
+                                "x": -213.08189392089845,
+                                "y": 4.441062927246094
+                            },
+                            "name": "2",
+                            "exposedPosition": {
+                                "x": -10.0,
+                                "y": 15.0
+                            }
+                        },
+                        {
+                            "type": "Input",
+                            "id": "18f664e3-b741-4280-be57-bfa9661f2e90",
+                            "position": {
+                                "x": -214.14639282226563,
+                                "y": -36.422935485839847
+                            },
+                            "name": "1",
+                            "exposedPosition": {
+                                "x": -10.0,
+                                "y": 40.0
+                            }
+                        },
+                        {
+                            "type": "Knob",
+                            "id": "02021e4c-3b9a-483f-8c90-9745cdb5f718",
+                            "position": {
+                                "x": -211.69351196289063,
+                                "y": 285.30743408203127
+                            },
+                            "name": "4",
+                            "knob": {
+                                "value": 1.0,
+                                "min": 0.0,
+                                "max": 1.0
+                            },
+                            "exposedPosition": {
+                                "x": 150.0,
+                                "y": 90.0
+                            }
+                        },
+                        {
+                            "type": "Knob",
+                            "id": "265fe37e-3a1f-4ea2-80b1-d64eae1e876f",
+                            "position": {
+                                "x": -268.27215576171877,
+                                "y": 192.98007202148438
+                            },
+                            "name": "3",
+                            "knob": {
+                                "value": 1.0,
+                                "min": 0.0,
+                                "max": 1.0
+                            },
+                            "exposedPosition": {
+                                "x": 100.0,
+                                "y": 90.0
+                            }
+                        },
+                        {
+                            "type": "Knob",
+                            "id": "d09c8212-65bb-4cbd-bddd-55167a051725",
+                            "position": {
+                                "x": -205.08799743652345,
+                                "y": -191.84075927734376
+                            },
+                            "name": "1",
+                            "knob": {
+                                "value": 1.0,
+                                "min": 0.0,
+                                "max": 1.0
+                            },
+                            "exposedPosition": {
+                                "x": 0.0,
+                                "y": 90.0
+                            }
+                        },
+                        {
+                            "type": "Knob",
+                            "id": "cb5608cb-06f1-4ef8-966a-04da49c2810b",
+                            "position": {
+                                "x": -263.26336669921877,
+                                "y": -97.85873413085938
+                            },
+                            "name": "2",
+                            "knob": {
+                                "value": 1.0,
+                                "min": 0.0,
+                                "max": 1.0
+                            },
+                            "exposedPosition": {
+                                "x": 50.0,
+                                "y": 90.0
+                            }
+                        },
+                        {
+                            "type": "Text",
+                            "id": "8608a70d-09af-4085-bc17-2dc65cb1a1ed",
+                            "position": {
+                                "x": 54.394187927246097,
+                                "y": 172.3455352783203
+                            },
+                            "exposedPosition": {
+                                "x": -20.0,
+                                "y": 130.0
+                            },
+                            "text": "4x1 Mixer",
+                            "width": 256.0
+                        },
+                        {
+                            "type": "Level",
+                            "id": "0bc716b4-fc88-4bed-b828-d438580e2ef2",
+                            "position": {
+                                "x": 145.53897094726563,
+                                "y": -20.845413208007814
+                            },
+                            "level": {
+                                "value": 0.5,
+                                "min": 0.0,
+                                "max": 1.0
+                            }
+                        },
+                        {
+                            "type": "Knob",
+                            "id": "6d290cf6-21d3-4f69-b76e-f1dfe3da40b8",
+                            "position": {
+                                "x": 189.6520233154297,
+                                "y": 77.10862731933594
+                            },
+                            "name": "Trim",
+                            "knob": {
+                                "value": 1.0,
+                                "min": 0.0,
+                                "max": 1.0
+                            },
+                            "exposedPosition": {
+                                "x": 150.0,
+                                "y": 20.0
+                            }
+                        }
+                    ],
+                    "wires": [
+                        {
+                            "from": "17436f1a-b2b2-43bf-bdee-5d901f11df05",
+                            "output": 0,
+                            "to": "ea18de3e-b60b-48bb-839d-27de61ae222e",
+                            "input": 0
+                        },
+                        {
+                            "from": "bbd4ea4f-64a6-4542-b407-4bd3c3c2b19b",
+                            "output": 0,
+                            "to": "ea18de3e-b60b-48bb-839d-27de61ae222e",
+                            "input": 1
+                        },
+                        {
+                            "from": "7aeb0b26-3835-493b-a926-2d20aa143049",
+                            "output": 0,
+                            "to": "ea18de3e-b60b-48bb-839d-27de61ae222e",
+                            "input": 2
+                        },
+                        {
+                            "from": "9e243807-a6c5-42e0-98af-f03ae4b9aba2",
+                            "output": 0,
+                            "to": "ea18de3e-b60b-48bb-839d-27de61ae222e",
+                            "input": 3
+                        },
+                        {
+                            "from": "8513b58c-a5db-4692-ab03-e93d4f2cd9d2",
+                            "output": 0,
+                            "to": "9e243807-a6c5-42e0-98af-f03ae4b9aba2",
+                            "input": 0
+                        },
+                        {
+                            "from": "02021e4c-3b9a-483f-8c90-9745cdb5f718",
+                            "output": 0,
+                            "to": "9e243807-a6c5-42e0-98af-f03ae4b9aba2",
+                            "input": 1
+                        },
+                        {
+                            "from": "e3dc66fe-66e4-450d-bd21-bcf1ffc27050",
+                            "output": 0,
+                            "to": "7aeb0b26-3835-493b-a926-2d20aa143049",
+                            "input": 0
+                        },
+                        {
+                            "from": "265fe37e-3a1f-4ea2-80b1-d64eae1e876f",
+                            "output": 0,
+                            "to": "7aeb0b26-3835-493b-a926-2d20aa143049",
+                            "input": 1
+                        },
+                        {
+                            "from": "98dcb959-8f6a-4087-84a7-6e7f92c803f2",
+                            "output": 0,
+                            "to": "bbd4ea4f-64a6-4542-b407-4bd3c3c2b19b",
+                            "input": 0
+                        },
+                        {
+                            "from": "cb5608cb-06f1-4ef8-966a-04da49c2810b",
+                            "output": 0,
+                            "to": "bbd4ea4f-64a6-4542-b407-4bd3c3c2b19b",
+                            "input": 1
+                        },
+                        {
+                            "from": "18f664e3-b741-4280-be57-bfa9661f2e90",
+                            "output": 0,
+                            "to": "17436f1a-b2b2-43bf-bdee-5d901f11df05",
+                            "input": 0
+                        },
+                        {
+                            "from": "d09c8212-65bb-4cbd-bddd-55167a051725",
+                            "output": 0,
+                            "to": "17436f1a-b2b2-43bf-bdee-5d901f11df05",
+                            "input": 1
+                        },
+                        {
+                            "from": "0bc716b4-fc88-4bed-b828-d438580e2ef2",
+                            "output": 0,
+                            "to": "b4cfb151-7aaf-4657-acc5-3cfceb4edbe6",
+                            "input": 0
+                        },
+                        {
+                            "from": "ea18de3e-b60b-48bb-839d-27de61ae222e",
+                            "output": 0,
+                            "to": "0bc716b4-fc88-4bed-b828-d438580e2ef2",
+                            "input": 0
+                        },
+                        {
+                            "from": "6d290cf6-21d3-4f69-b76e-f1dfe3da40b8",
+                            "output": 0,
+                            "to": "0bc716b4-fc88-4bed-b828-d438580e2ef2",
+                            "input": 1
+                        }
+                    ]
+                }
+            }
+        ],
+        "wires": []
+    },
+    "history": {
+        "states": [
+            {
+                "id": "1485d24e-bbc9-4373-994a-121eeb0c4b77"
+            }
+        ],
+        "current": "1485d24e-bbc9-4373-994a-121eeb0c4b77"
+    },
+    "undoStack": {
+        "stack": [
+            "1485d24e-bbc9-4373-994a-121eeb0c4b77"
+        ],
+        "current": 0
+    }
+}

@@ -1,0 +1,156 @@
+{
+    "version": 1,
+    "author": "Bimini Road",
+    "tags": [
+        "Distortion"
+    ],
+    "description": "This is a repackaging of the distortion node as a module.  For more info, see the Audulus node documentation.\n\nThe trim knob decreases the Output level.",
+    "patch": {
+        "id": "b6b7dc4e-fd92-4460-b00d-352a479f067f",
+        "pan": {
+            "x": 8.547313690185547,
+            "y": -145.39971923828126
+        },
+        "zoom": 4.835894584655762,
+        "nodes": [
+            {
+                "type": "Patch",
+                "id": "567221a8-4210-4094-9240-caf58fc282c0",
+                "position": {
+                    "x": 11.45268726348877,
+                    "y": 89.90126037597656
+                },
+                "subPatch": {
+                    "id": "1d619d45-3b23-4ed7-9f0e-eaf3ce9e4281",
+                    "pan": {
+                        "x": 161.0718994140625,
+                        "y": -12.132354736328125
+                    },
+                    "zoom": 0.8823358416557312,
+                    "nodes": [
+                        {
+                            "type": "Text",
+                            "id": "d9a4517b-7695-4a5b-bdca-3c40e3fa4bc4",
+                            "position": {
+                                "x": -58.135555267333987,
+                                "y": 70.31295776367188
+                            },
+                            "exposedPosition": {
+                                "x": -50.0,
+                                "y": 140.0
+                            },
+                            "text": "Distortion",
+                            "width": 256.0
+                        },
+                        {
+                            "type": "Input",
+                            "id": "3bd123b3-0964-4df7-873d-634b9da79bfd",
+                            "position": {
+                                "x": -188.4859161376953,
+                                "y": -5.628045082092285
+                            },
+                            "name": "In",
+                            "exposedPosition": {
+                                "x": -55.0,
+                                "y": -25.0
+                            }
+                        },
+                        {
+                            "type": "Output",
+                            "id": "edef98e0-d281-40ec-9ded-5361137cece6",
+                            "position": {
+                                "x": 186.905029296875,
+                                "y": -4.016700744628906
+                            },
+                            "name": "Out",
+                            "exposedPosition": {
+                                "x": 15.0,
+                                "y": -25.0
+                            }
+                        },
+                        {
+                            "type": "Distortion",
+                            "id": "cbccb916-60b2-4017-adee-295d1bd35cf5",
+                            "position": {
+                                "x": -100.15187072753906,
+                                "y": -5.438037872314453
+                            }
+                        },
+                        {
+                            "type": "Level",
+                            "id": "e21969a1-55d5-4f4f-9dc1-09f3cf0982d2",
+                            "position": {
+                                "x": 51.246246337890628,
+                                "y": -4.358848571777344
+                            },
+                            "level": {
+                                "value": 0.5,
+                                "min": 0.0,
+                                "max": 1.0
+                            }
+                        },
+                        {
+                            "type": "Knob",
+                            "id": "521b353d-2089-41aa-b776-b43fdf1d66df",
+                            "position": {
+                                "x": 91.22360229492188,
+                                "y": 121.3638916015625
+                            },
+                            "name": "Trim",
+                            "knob": {
+                                "value": 0.5,
+                                "min": 0.0,
+                                "max": 1.0
+                            },
+                            "exposedPosition": {
+                                "x": -20.0,
+                                "y": 100.0
+                            }
+                        }
+                    ],
+                    "wires": [
+                        {
+                            "from": "e21969a1-55d5-4f4f-9dc1-09f3cf0982d2",
+                            "output": 0,
+                            "to": "edef98e0-d281-40ec-9ded-5361137cece6",
+                            "input": 0
+                        },
+                        {
+                            "from": "3bd123b3-0964-4df7-873d-634b9da79bfd",
+                            "output": 0,
+                            "to": "cbccb916-60b2-4017-adee-295d1bd35cf5",
+                            "input": 0
+                        },
+                        {
+                            "from": "cbccb916-60b2-4017-adee-295d1bd35cf5",
+                            "output": 0,
+                            "to": "e21969a1-55d5-4f4f-9dc1-09f3cf0982d2",
+                            "input": 0
+                        },
+                        {
+                            "from": "521b353d-2089-41aa-b776-b43fdf1d66df",
+                            "output": 0,
+                            "to": "e21969a1-55d5-4f4f-9dc1-09f3cf0982d2",
+                            "input": 1
+                        }
+                    ]
+                }
+            }
+        ],
+        "wires": []
+    },
+    "history": {
+        "states": [
+            {
+                "id": "6befded0-ab22-48e4-82d9-e9a891d2dd69"
+            }
+        ],
+        "current": "6befded0-ab22-48e4-82d9-e9a891d2dd69"
+    },
+    "undoStack": {
+        "stack": [
+            "6befded0-ab22-48e4-82d9-e9a891d2dd69"
+        ],
+        "current": 0
+    }
+}

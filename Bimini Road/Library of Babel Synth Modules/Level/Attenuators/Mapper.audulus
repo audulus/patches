@@ -1,0 +1,211 @@
+{
+    "version": 1,
+    "author": "Bimini Road",
+    "tags": [
+        "Attenuator"
+    ],
+    "description": "This is a repackaging of the Mapper node as a module.  For more info, see the Audulus node documentation.",
+    "patch": {
+        "id": "01f8a34b-bef9-4f61-ad07-614c05167173",
+        "pan": {
+            "x": -102.65228271484375,
+            "y": -92.55160522460938
+        },
+        "zoom": 4.836019992828369,
+        "nodes": [
+            {
+                "type": "Patch",
+                "id": "23c0f57c-0136-4acd-895e-ee4d106f9f2f",
+                "position": {
+                    "x": 62.65229797363281,
+                    "y": 107.05573272705078
+                },
+                "subPatch": {
+                    "id": "17acc2ee-22a1-49b1-ade4-891b5428145f",
+                    "pan": {
+                        "x": -45.35728454589844,
+                        "y": -37.059959411621097
+                    },
+                    "zoom": 1.0865986347198487,
+                    "nodes": [
+                        {
+                            "type": "Input",
+                            "id": "142c806f-3a3c-404e-aefe-2d6c72b6ef0e",
+                            "position": {
+                                "x": -20.790607452392579,
+                                "y": -64.87903594970703
+                            },
+                            "name": "In",
+                            "exposedPosition": {
+                                "x": -40.0,
+                                "y": -95.0
+                            }
+                        },
+                        {
+                            "type": "Output",
+                            "id": "48fe1ab2-5b51-4575-a7f5-996504ec9f05",
+                            "position": {
+                                "x": 215.11244201660157,
+                                "y": -64.58612060546875
+                            },
+                            "name": "Out",
+                            "exposedPosition": {
+                                "x": 120.0,
+                                "y": -95.0
+                            }
+                        },
+                        {
+                            "type": "Text",
+                            "id": "f790ff42-1af9-4414-815b-ab66870c3ce0",
+                            "position": {
+                                "x": -152.13525390625,
+                                "y": 129.63612365722657
+                            },
+                            "exposedPosition": {
+                                "x": -50.0,
+                                "y": 70.0
+                            },
+                            "text": "Mapper",
+                            "width": 256.0
+                        },
+                        {
+                            "type": "Level",
+                            "id": "fb38f962-bbbe-4039-9f95-d802c0a4461b",
+                            "position": {
+                                "x": 83.09002685546875,
+                                "y": -64.37187194824219
+                            },
+                            "level": {
+                                "value": 0.5,
+                                "min": 0.0,
+                                "max": 1.0
+                            }
+                        },
+                        {
+                            "type": "Mapper",
+                            "id": "eaee49bf-e86f-440d-82ce-5c64411344ec",
+                            "position": {
+                                "x": -247.203369140625,
+                                "y": -71.4795150756836
+                            },
+                            "exposedPosition": {
+                                "x": -30.0,
+                                "y": -55.0
+                            },
+                            "c0": 0.49128782749176028,
+                            "c1": 0.8605773448944092,
+                            "c2": 0.0
+                        },
+                        {
+                            "type": "Expr",
+                            "id": "c90f5e8a-3bf4-4c63-8dcb-9481022523da",
+                            "position": {
+                                "x": -25.339874267578126,
+                                "y": -6.357353210449219
+                            },
+                            "expr": "clamp(x, 0, 1)"
+                        },
+                        {
+                            "type": "Knob",
+                            "id": "77a3e6d7-a952-4dad-bf7e-2993e2e8ab59",
+                            "position": {
+                                "x": -338.71832275390627,
+                                "y": 11.734672546386719
+                            },
+                            "name": "<>",
+                            "knob": {
+                                "value": 0.0,
+                                "min": 0.0,
+                                "max": 1.0
+                            },
+                            "exposedPosition": {
+                                "x": 35.0,
+                                "y": -70.0
+                            }
+                        },
+                        {
+                            "type": "RGBLight",
+                            "id": "2f8e2d62-d48c-4739-81ab-75fa6eb6f0b3",
+                            "position": {
+                                "x": 389.4328918457031,
+                                "y": -65.58792877197266
+                            },
+                            "exposedPosition": {
+                                "x": 75.0,
+                                "y": -95.0
+                            }
+                        },
+                        {
+                            "type": "Expr",
+                            "id": "2b0ea7f3-734b-414f-b183-d2f5b704ca4e",
+                            "position": {
+                                "x": 305.3434143066406,
+                                "y": -66.37406158447266
+                            },
+                            "expr": ".4"
+                        }
+                    ],
+                    "wires": [
+                        {
+                            "from": "fb38f962-bbbe-4039-9f95-d802c0a4461b",
+                            "output": 0,
+                            "to": "48fe1ab2-5b51-4575-a7f5-996504ec9f05",
+                            "input": 0
+                        },
+                        {
+                            "from": "142c806f-3a3c-404e-aefe-2d6c72b6ef0e",
+                            "output": 0,
+                            "to": "fb38f962-bbbe-4039-9f95-d802c0a4461b",
+                            "input": 0
+                        },
+                        {
+                            "from": "c90f5e8a-3bf4-4c63-8dcb-9481022523da",
+                            "output": 0,
+                            "to": "fb38f962-bbbe-4039-9f95-d802c0a4461b",
+                            "input": 1
+                        },
+                        {
+                            "from": "77a3e6d7-a952-4dad-bf7e-2993e2e8ab59",
+                            "output": 0,
+                            "to": "eaee49bf-e86f-440d-82ce-5c64411344ec",
+                            "input": 0
+                        },
+                        {
+                            "from": "eaee49bf-e86f-440d-82ce-5c64411344ec",
+                            "output": 0,
+                            "to": "c90f5e8a-3bf4-4c63-8dcb-9481022523da",
+                            "input": 0
+                        },
+                        {
+                            "from": "c90f5e8a-3bf4-4c63-8dcb-9481022523da",
+                            "output": 0,
+                            "to": "2f8e2d62-d48c-4739-81ab-75fa6eb6f0b3",
+                            "input": 0
+                        },
+                        {
+                            "from": "2b0ea7f3-734b-414f-b183-d2f5b704ca4e",
+                            "output": 0,
+                            "to": "2f8e2d62-d48c-4739-81ab-75fa6eb6f0b3",
+                            "input": 2
+                        }
+                    ]
+                }
+            }
+        ],
+        "wires": []
+    },
+    "history": {
+        "states": [
+            {
+                "id": "5ea1a66b-138f-4ae7-8c7d-6e68db5f50d0"
+            }
+        ],
+        "current": "5ea1a66b-138f-4ae7-8c7d-6e68db5f50d0"
+    },
+    "undoStack": {
+        "stack": [
+            "5ea1a66b-138f-4ae7-8c7d-6e68db5f50d0"
+        ],
+        "current": 0
+    }
+}

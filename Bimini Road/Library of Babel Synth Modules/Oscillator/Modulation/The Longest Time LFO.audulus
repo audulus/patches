@@ -1,0 +1,614 @@
+{
+    "version": 1,
+    "author": "Bimini Road",
+    "tags": [
+        "LFO"
+    ],
+    "description": "This is a very slow sinusoidal LFO built to control installation pieces.\n\nNOTE: The LFO currently will only go down to 1 day per cycle, but this will be fixed in a later version.",
+    "patch": {
+        "id": "f95827c6-cc2c-4ba7-b904-ea091d1828e3",
+        "pan": {
+            "x": -15.808086395263672,
+            "y": -252.9502410888672
+        },
+        "zoom": 3.6629445552825929,
+        "nodes": [
+            {
+                "type": "Patch",
+                "id": "3bdd1604-0e96-428c-9322-197d9a1ca988",
+                "position": {
+                    "x": -9.8502197265625,
+                    "y": 109.49713134765625
+                },
+                "subPatch": {
+                    "id": "cf3ff862-aa51-4db4-ba53-b745de17f53b",
+                    "pan": {
+                        "x": 178.77537536621095,
+                        "y": 56.30784606933594
+                    },
+                    "zoom": 0.9252671003341675,
+                    "nodes": [
+                        {
+                            "type": "Expr",
+                            "id": "59219935-0bc1-4b09-a2ec-820bfa851e7f",
+                            "position": {
+                                "x": 6.9210357666015629,
+                                "y": -4.151580810546875
+                            },
+                            "expr": "(x+1)/2"
+                        },
+                        {
+                            "type": "Text",
+                            "id": "c9d82edb-a1c9-4cd6-8ba5-ba726ca51383",
+                            "position": {
+                                "x": -147.23255920410157,
+                                "y": 105.55741119384766
+                            },
+                            "exposedPosition": {
+                                "x": -75.0,
+                                "y": 230.0
+                            },
+                            "text": "Bimini Road :: The Longest Time LFO",
+                            "width": 283.19317626953127
+                        },
+                        {
+                            "type": "Expr",
+                            "id": "e505d3fe-44ac-4c93-abdd-7100dbe8cb1e",
+                            "position": {
+                                "x": 5.4766387939453129,
+                                "y": -49.061004638671878
+                            },
+                            "expr": "sin(x)"
+                        },
+                        {
+                            "type": "Output",
+                            "id": "ecbb01ff-9a2f-4d7c-9e7a-cb07891af808",
+                            "position": {
+                                "x": 27.171356201171876,
+                                "y": -91.44528198242188
+                            },
+                            "name": "Out",
+                            "exposedPosition": {
+                                "x": 135.0,
+                                "y": 65.0
+                            }
+                        },
+                        {
+                            "type": "Phasor",
+                            "id": "05a42a4b-482d-4975-b964-305c652a1591",
+                            "position": {
+                                "x": -138.99203491210938,
+                                "y": -48.626617431640628
+                            }
+                        },
+                        {
+                            "type": "Knob",
+                            "id": "7c7c6d16-d64b-4149-bb02-7b058b6b622b",
+                            "position": {
+                                "x": -490.5280456542969,
+                                "y": -31.597328186035158
+                            },
+                            "name": "",
+                            "knob": {
+                                "value": 0.0,
+                                "min": 0.0,
+                                "max": 7.0
+                            },
+                            "exposedPosition": {
+                                "x": 25.0,
+                                "y": 85.0
+                            }
+                        },
+                        {
+                            "type": "Mux8",
+                            "id": "d5570779-78fd-403a-a37e-19ad103a3783",
+                            "position": {
+                                "x": -277.7171936035156,
+                                "y": -49.06560134887695
+                            }
+                        },
+                        {
+                            "type": "Expr",
+                            "id": "f81598e2-ae60-4145-a1e5-7ff4d5515c2b",
+                            "position": {
+                                "x": -407.7171936035156,
+                                "y": -19.093738555908204
+                            },
+                            "expr": "1/60"
+                        },
+                        {
+                            "type": "Expr",
+                            "id": "a79f2888-96e3-4b03-9414-1c3e7dabad6f",
+                            "position": {
+                                "x": -428.8089904785156,
+                                "y": 22.527503967285158
+                            },
+                            "expr": "1/60/60"
+                        },
+                        {
+                            "type": "Expr",
+                            "id": "a3c98519-ae77-4fd0-bcdc-0d061fe32e49",
+                            "position": {
+                                "x": -449.1641540527344,
+                                "y": 65.06291198730469
+                            },
+                            "expr": "1/60/60/24"
+                        },
+                        {
+                            "type": "Expr",
+                            "id": "26dafa46-56e6-48e2-b457-a7df5b9e4f48",
+                            "position": {
+                                "x": -484.60296630859377,
+                                "y": 107.42837524414063
+                            },
+                            "expr": "1/60/60/60/24/7"
+                        },
+                        {
+                            "type": "Value",
+                            "id": "1958d98f-ea59-46ff-9953-5c4866ba96fa",
+                            "position": {
+                                "x": -212.30908203125,
+                                "y": -111.92472076416016
+                            }
+                        },
+                        {
+                            "type": "Expr",
+                            "id": "2318e94f-9c49-45ea-9571-5d4cf37cca3e",
+                            "position": {
+                                "x": -504.8391418457031,
+                                "y": 149.51275634765626
+                            },
+                            "expr": "1/60/60/60/24/7/30"
+                        },
+                        {
+                            "type": "Expr",
+                            "id": "540b0ba0-7f68-4686-900b-82745b36cb5d",
+                            "position": {
+                                "x": -525.9859619140625,
+                                "y": 192.3377227783203
+                            },
+                            "expr": "1/60/60/60/24/7/30/12"
+                        },
+                        {
+                            "type": "Expr",
+                            "id": "62df2834-6c7f-413e-8147-27fcb29b1c68",
+                            "position": {
+                                "x": -546.234375,
+                                "y": 234.9136199951172
+                            },
+                            "expr": "1/60/60/60/24/7/30/12/10"
+                        },
+                        {
+                            "type": "Expr",
+                            "id": "90f4b19f-5610-43c5-a43e-57c21d71cd10",
+                            "position": {
+                                "x": -574.271484375,
+                                "y": 278.68048095703127
+                            },
+                            "expr": "1/60/60/60/24/7/30/12/10/100"
+                        },
+                        {
+                            "type": "Meter",
+                            "id": "f7a416d5-dc40-4046-b811-119fa6120d46",
+                            "position": {
+                                "x": 164.57823181152345,
+                                "y": -3.8168258666992189
+                            },
+                            "exposedPosition": {
+                                "x": 105.0,
+                                "y": 75.0
+                            }
+                        },
+                        {
+                            "type": "Text",
+                            "id": "a9c11d40-e832-40f5-b23b-063706417e3f",
+                            "position": {
+                                "x": -12.158935546875,
+                                "y": -444.6817321777344
+                            },
+                            "exposedPosition": {
+                                "x": 10.0,
+                                "y": 195.0
+                            },
+                            "text": "Minute",
+                            "width": 256.0
+                        },
+                        {
+                            "type": "Text",
+                            "id": "acc3c4ce-e6dd-481b-a63c-19422dc4c09c",
+                            "position": {
+                                "x": -11.756210327148438,
+                                "y": -401.6219177246094
+                            },
+                            "exposedPosition": {
+                                "x": 10.0,
+                                "y": 185.0
+                            },
+                            "text": "Hour",
+                            "width": 256.0
+                        },
+                        {
+                            "type": "Text",
+                            "id": "0408eba0-a05a-4ef6-a69f-964d5a33a79d",
+                            "position": {
+                                "x": -12.780746459960938,
+                                "y": -315.2220458984375
+                            },
+                            "exposedPosition": {
+                                "x": 10.0,
+                                "y": 165.0
+                            },
+                            "text": "Week",
+                            "width": 256.0
+                        },
+                        {
+                            "type": "Text",
+                            "id": "6dced5ab-9de7-4352-a290-79594dda8caa",
+                            "position": {
+                                "x": -11.209030151367188,
+                                "y": -360.38897705078127
+                            },
+                            "exposedPosition": {
+                                "x": 10.0,
+                                "y": 175.0
+                            },
+                            "text": "Day",
+                            "width": 256.0
+                        },
+                        {
+                            "type": "Text",
+                            "id": "7dfff235-8a34-4142-8c15-46080ffeae70",
+                            "position": {
+                                "x": -18.450729370117189,
+                                "y": -149.07437133789063
+                            },
+                            "exposedPosition": {
+                                "x": 10.0,
+                                "y": 125.0
+                            },
+                            "text": "Century",
+                            "width": 256.0
+                        },
+                        {
+                            "type": "Text",
+                            "id": "5c059e5b-e9a4-40d5-ae7a-8f8bc6abe6fa",
+                            "position": {
+                                "x": -16.348419189453126,
+                                "y": -191.62911987304688
+                            },
+                            "exposedPosition": {
+                                "x": 10.0,
+                                "y": 135.0
+                            },
+                            "text": "Decade",
+                            "width": 256.0
+                        },
+                        {
+                            "type": "Text",
+                            "id": "c7f9606e-8f91-4a59-82a9-8dfd91b1b051",
+                            "position": {
+                                "x": -13.288543701171875,
+                                "y": -233.82119750976563
+                            },
+                            "exposedPosition": {
+                                "x": 10.0,
+                                "y": 145.0
+                            },
+                            "text": "Year",
+                            "width": 256.0
+                        },
+                        {
+                            "type": "Text",
+                            "id": "a3b18833-a94f-483b-a0d7-3872ad6d9400",
+                            "position": {
+                                "x": -13.87493896484375,
+                                "y": -274.8555908203125
+                            },
+                            "exposedPosition": {
+                                "x": 10.0,
+                                "y": 155.0
+                            },
+                            "text": "Month",
+                            "width": 256.0
+                        },
+                        {
+                            "type": "Expr",
+                            "id": "df1761d6-808a-457e-8ccd-23a923b0ad7e",
+                            "position": {
+                                "x": -458.693115234375,
+                                "y": -464.8914489746094
+                            },
+                            "expr": "floor(x)"
+                        },
+                        {
+                            "type": "Light",
+                            "id": "2458dcf4-5472-4e04-8030-05e22f66d6de",
+                            "position": {
+                                "x": -121.91181945800781,
+                                "y": -295.50689697265627
+                            },
+                            "exposedPosition": {
+                                "x": 0.0,
+                                "y": 155.0
+                            }
+                        },
+                        {
+                            "type": "Expr",
+                            "id": "ac7001b8-6770-44c3-a57d-999f6049711a",
+                            "position": {
+                                "x": -388.5365905761719,
+                                "y": -419.1117858886719
+                            },
+                            "expr": "1"
+                        },
+                        {
+                            "type": "Light",
+                            "id": "7520a215-856e-4d57-9215-2c1275336e9f",
+                            "position": {
+                                "x": -119.70191955566406,
+                                "y": -463.70208740234377
+                            },
+                            "exposedPosition": {
+                                "x": 0.0,
+                                "y": 195.0
+                            }
+                        },
+                        {
+                            "type": "Light",
+                            "id": "b35ae88e-cae4-4d11-acf1-718ffad00346",
+                            "position": {
+                                "x": -121.65824890136719,
+                                "y": -378.61151123046877
+                            },
+                            "exposedPosition": {
+                                "x": 0.0,
+                                "y": 175.0
+                            }
+                        },
+                        {
+                            "type": "Light",
+                            "id": "f37e7c0f-65d2-48a8-a9f7-9254be529353",
+                            "position": {
+                                "x": -120.37167358398438,
+                                "y": -420.8638916015625
+                            },
+                            "exposedPosition": {
+                                "x": 0.0,
+                                "y": 185.0
+                            }
+                        },
+                        {
+                            "type": "Light",
+                            "id": "279a7332-aec2-4ead-bffd-9ef811a661a1",
+                            "position": {
+                                "x": -121.72097778320313,
+                                "y": -336.4793701171875
+                            },
+                            "exposedPosition": {
+                                "x": 0.0,
+                                "y": 165.0
+                            }
+                        },
+                        {
+                            "type": "Light",
+                            "id": "07c9da23-09b8-4b9f-8cab-f7e6e958f357",
+                            "position": {
+                                "x": -123.3238525390625,
+                                "y": -168.99020385742188
+                            },
+                            "exposedPosition": {
+                                "x": 0.0,
+                                "y": 125.0
+                            }
+                        },
+                        {
+                            "type": "Light",
+                            "id": "6461b8c5-c4bb-47e7-9829-5ae57017320e",
+                            "position": {
+                                "x": -121.97454833984375,
+                                "y": -253.37472534179688
+                            },
+                            "exposedPosition": {
+                                "x": 0.0,
+                                "y": 145.0
+                            }
+                        },
+                        {
+                            "type": "Light",
+                            "id": "67836d27-e7f5-4bad-8e61-e5540a834c8d",
+                            "position": {
+                                "x": -123.26112365722656,
+                                "y": -211.1223907470703
+                            },
+                            "exposedPosition": {
+                                "x": 0.0,
+                                "y": 135.0
+                            }
+                        },
+                        {
+                            "type": "Demux8",
+                            "id": "7cb1aa89-ebd1-40cb-9f79-4b154bfa507b",
+                            "position": {
+                                "x": -309.964599609375,
+                                "y": -464.5531311035156
+                            }
+                        }
+                    ],
+                    "wires": [
+                        {
+                            "from": "e505d3fe-44ac-4c93-abdd-7100dbe8cb1e",
+                            "output": 0,
+                            "to": "59219935-0bc1-4b09-a2ec-820bfa851e7f",
+                            "input": 0
+                        },
+                        {
+                            "from": "05a42a4b-482d-4975-b964-305c652a1591",
+                            "output": 0,
+                            "to": "e505d3fe-44ac-4c93-abdd-7100dbe8cb1e",
+                            "input": 0
+                        },
+                        {
+                            "from": "59219935-0bc1-4b09-a2ec-820bfa851e7f",
+                            "output": 0,
+                            "to": "ecbb01ff-9a2f-4d7c-9e7a-cb07891af808",
+                            "input": 0
+                        },
+                        {
+                            "from": "d5570779-78fd-403a-a37e-19ad103a3783",
+                            "output": 0,
+                            "to": "05a42a4b-482d-4975-b964-305c652a1591",
+                            "input": 0
+                        },
+                        {
+                            "from": "7c7c6d16-d64b-4149-bb02-7b058b6b622b",
+                            "output": 0,
+                            "to": "d5570779-78fd-403a-a37e-19ad103a3783",
+                            "input": 0
+                        },
+                        {
+                            "from": "f81598e2-ae60-4145-a1e5-7ff4d5515c2b",
+                            "output": 0,
+                            "to": "d5570779-78fd-403a-a37e-19ad103a3783",
+                            "input": 1
+                        },
+                        {
+                            "from": "a79f2888-96e3-4b03-9414-1c3e7dabad6f",
+                            "output": 0,
+                            "to": "d5570779-78fd-403a-a37e-19ad103a3783",
+                            "input": 2
+                        },
+                        {
+                            "from": "a3c98519-ae77-4fd0-bcdc-0d061fe32e49",
+                            "output": 0,
+                            "to": "d5570779-78fd-403a-a37e-19ad103a3783",
+                            "input": 3
+                        },
+                        {
+                            "from": "26dafa46-56e6-48e2-b457-a7df5b9e4f48",
+                            "output": 0,
+                            "to": "d5570779-78fd-403a-a37e-19ad103a3783",
+                            "input": 4
+                        },
+                        {
+                            "from": "2318e94f-9c49-45ea-9571-5d4cf37cca3e",
+                            "output": 0,
+                            "to": "d5570779-78fd-403a-a37e-19ad103a3783",
+                            "input": 5
+                        },
+                        {
+                            "from": "540b0ba0-7f68-4686-900b-82745b36cb5d",
+                            "output": 0,
+                            "to": "d5570779-78fd-403a-a37e-19ad103a3783",
+                            "input": 6
+                        },
+                        {
+                            "from": "62df2834-6c7f-413e-8147-27fcb29b1c68",
+                            "output": 0,
+                            "to": "d5570779-78fd-403a-a37e-19ad103a3783",
+                            "input": 7
+                        },
+                        {
+                            "from": "90f4b19f-5610-43c5-a43e-57c21d71cd10",
+                            "output": 0,
+                            "to": "d5570779-78fd-403a-a37e-19ad103a3783",
+                            "input": 8
+                        },
+                        {
+                            "from": "d5570779-78fd-403a-a37e-19ad103a3783",
+                            "output": 0,
+                            "to": "1958d98f-ea59-46ff-9953-5c4866ba96fa",
+                            "input": 0
+                        },
+                        {
+                            "from": "59219935-0bc1-4b09-a2ec-820bfa851e7f",
+                            "output": 0,
+                            "to": "f7a416d5-dc40-4046-b811-119fa6120d46",
+                            "input": 0
+                        },
+                        {
+                            "from": "7c7c6d16-d64b-4149-bb02-7b058b6b622b",
+                            "output": 0,
+                            "to": "df1761d6-808a-457e-8ccd-23a923b0ad7e",
+                            "input": 0
+                        },
+                        {
+                            "from": "7cb1aa89-ebd1-40cb-9f79-4b154bfa507b",
+                            "output": 4,
+                            "to": "2458dcf4-5472-4e04-8030-05e22f66d6de",
+                            "input": 0
+                        },
+                        {
+                            "from": "7cb1aa89-ebd1-40cb-9f79-4b154bfa507b",
+                            "output": 0,
+                            "to": "7520a215-856e-4d57-9215-2c1275336e9f",
+                            "input": 0
+                        },
+                        {
+                            "from": "7cb1aa89-ebd1-40cb-9f79-4b154bfa507b",
+                            "output": 2,
+                            "to": "b35ae88e-cae4-4d11-acf1-718ffad00346",
+                            "input": 0
+                        },
+                        {
+                            "from": "7cb1aa89-ebd1-40cb-9f79-4b154bfa507b",
+                            "output": 1,
+                            "to": "f37e7c0f-65d2-48a8-a9f7-9254be529353",
+                            "input": 0
+                        },
+                        {
+                            "from": "7cb1aa89-ebd1-40cb-9f79-4b154bfa507b",
+                            "output": 3,
+                            "to": "279a7332-aec2-4ead-bffd-9ef811a661a1",
+                            "input": 0
+                        },
+                        {
+                            "from": "7cb1aa89-ebd1-40cb-9f79-4b154bfa507b",
+                            "output": 7,
+                            "to": "07c9da23-09b8-4b9f-8cab-f7e6e958f357",
+                            "input": 0
+                        },
+                        {
+                            "from": "7cb1aa89-ebd1-40cb-9f79-4b154bfa507b",
+                            "output": 5,
+                            "to": "6461b8c5-c4bb-47e7-9829-5ae57017320e",
+                            "input": 0
+                        },
+                        {
+                            "from": "7cb1aa89-ebd1-40cb-9f79-4b154bfa507b",
+                            "output": 6,
+                            "to": "67836d27-e7f5-4bad-8e61-e5540a834c8d",
+                            "input": 0
+                        },
+                        {
+                            "from": "df1761d6-808a-457e-8ccd-23a923b0ad7e",
+                            "output": 0,
+                            "to": "7cb1aa89-ebd1-40cb-9f79-4b154bfa507b",
+                            "input": 0
+                        },
+                        {
+                            "from": "ac7001b8-6770-44c3-a57d-999f6049711a",
+                            "output": 0,
+                            "to": "7cb1aa89-ebd1-40cb-9f79-4b154bfa507b",
+                            "input": 1
+                        }
+                    ]
+                }
+            }
+        ],
+        "wires": []
+    },
+    "history": {
+        "states": [
+            {
+                "id": "8229f199-9e49-4595-b313-5a5abbf304fd"
+            }
+        ],
+        "current": "8229f199-9e49-4595-b313-5a5abbf304fd"
+    },
+    "undoStack": {
+        "stack": [
+            "8229f199-9e49-4595-b313-5a5abbf304fd"
+        ],
+        "current": 0
+    }
+}

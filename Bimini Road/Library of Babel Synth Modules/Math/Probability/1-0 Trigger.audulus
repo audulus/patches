@@ -1,0 +1,348 @@
+{
+    "version": 1,
+    "author": "Bimini Road",
+    "tags": [
+        "Probability"
+    ],
+    "description": "The 1/0 Probability Trigger is a biased coin flipper whose output is set to 1 or 0 every time a trigger pulse is applied at the Trig input.  It is biased by the Probability fader which can favor either 1 (on) or 0 (off).  For a true coin-flipper, set the knob to 0.5.\n\nA truly essential module for humanizing things like drum patterns.",
+    "patch": {
+        "id": "36bde4a0-f444-4682-81b9-4b6afb7d1ff7",
+        "pan": {
+            "x": -34.203697204589847,
+            "y": 5.543209075927734
+        },
+        "zoom": 4.0,
+        "nodes": [
+            {
+                "type": "Patch",
+                "id": "8b8d758c-03be-4a05-8272-36a9107a4e21",
+                "position": {
+                    "x": -32.5,
+                    "y": 19.500001907348634
+                },
+                "subPatch": {
+                    "id": "17acc2ee-22a1-49b1-ade4-891b5428145f",
+                    "pan": {
+                        "x": -112.52316284179688,
+                        "y": 239.84396362304688
+                    },
+                    "zoom": 1.120160460472107,
+                    "nodes": [
+                        {
+                            "type": "Input",
+                            "id": "cca5c70c-e318-4633-84fd-05cf08df2e4a",
+                            "position": {
+                                "x": -27.62686538696289,
+                                "y": -146.95167541503907
+                            },
+                            "name": "Trig",
+                            "exposedPosition": {
+                                "x": 0.0,
+                                "y": -95.0
+                            }
+                        },
+                        {
+                            "type": "Knob",
+                            "id": "4752e918-bb48-482e-9db7-5fe966f4ac82",
+                            "position": {
+                                "x": -208.88851928710938,
+                                "y": -173.7356719970703
+                            },
+                            "name": "Probability",
+                            "knob": {
+                                "value": 0.30809590220451357,
+                                "min": 0.0,
+                                "max": 1.0
+                            },
+                            "exposedPosition": {
+                                "x": 40.0,
+                                "y": 30.0
+                            }
+                        },
+                        {
+                            "type": "Text",
+                            "id": "5ba8c5e2-76ae-48f9-85ee-64ec71bbf3a1",
+                            "position": {
+                                "x": 115.05305480957031,
+                                "y": -28.8359375
+                            },
+                            "exposedPosition": {
+                                "x": 5.0,
+                                "y": 70.0
+                            },
+                            "text": "1/0 Trigger",
+                            "width": 256.0
+                        },
+                        {
+                            "type": "RGBLight",
+                            "id": "30bafee3-fae7-4602-bcd2-cb84396fbf48",
+                            "position": {
+                                "x": 443.8927917480469,
+                                "y": -396.8296813964844
+                            },
+                            "exposedPosition": {
+                                "x": 50.0,
+                                "y": -95.0
+                            }
+                        },
+                        {
+                            "type": "Mult",
+                            "id": "3ffe1157-4982-470c-8c1f-eade047ad81b",
+                            "position": {
+                                "x": 365.2485656738281,
+                                "y": -268.78863525390627
+                            }
+                        },
+                        {
+                            "type": "Output",
+                            "id": "f5dc2c66-9056-46ec-b654-a7f7f403fc15",
+                            "position": {
+                                "x": 442.1076354980469,
+                                "y": -288.03515625
+                            },
+                            "name": "A",
+                            "exposedPosition": {
+                                "x": 80.0,
+                                "y": -95.0
+                            }
+                        },
+                        {
+                            "type": "Expr",
+                            "id": "67d20177-6038-4c67-a60d-bc6f51b684af",
+                            "position": {
+                                "x": 246.47515869140626,
+                                "y": -208.1826934814453
+                            },
+                            "expr": "x==0"
+                        },
+                        {
+                            "type": "Random",
+                            "id": "bd77395f-bda7-4dd8-a7c9-ec7a454e44ef",
+                            "position": {
+                                "x": -195.228271484375,
+                                "y": -316.92449951171877
+                            },
+                            "seed": 666
+                        },
+                        {
+                            "type": "Expr",
+                            "id": "e9bb6fb3-3c0f-4fe7-b1f0-6a61f1d4867e",
+                            "position": {
+                                "x": -115.35545349121094,
+                                "y": -223.88052368164063
+                            },
+                            "expr": "rnd < prob"
+                        },
+                        {
+                            "type": "Sample & Hold",
+                            "id": "542ae037-8408-49e7-a5ec-1d01aa5b7056",
+                            "position": {
+                                "x": 68.62388610839844,
+                                "y": -208.37445068359376
+                            }
+                        },
+                        {
+                            "type": "Text",
+                            "id": "b251a640-b429-4946-a620-c8a43b04c6ca",
+                            "position": {
+                                "x": 23.552505493164064,
+                                "y": -72.36407470703125
+                            },
+                            "text": "Designed by JDRaoul Arranged by Bimini Road",
+                            "width": 256.0
+                        },
+                        {
+                            "type": "Expr",
+                            "id": "62db9cd2-fdd0-432a-b294-138e8298f2fb",
+                            "position": {
+                                "x": 313.8927917480469,
+                                "y": -396.8296813964844
+                            },
+                            "expr": ".4"
+                        },
+                        {
+                            "type": "Text",
+                            "id": "be00103e-c16e-400d-a95c-be96b09b15bc",
+                            "position": {
+                                "x": -216.54359436035157,
+                                "y": -244.61431884765626
+                            },
+                            "exposedPosition": {
+                                "x": 30.0,
+                                "y": -15.0
+                            },
+                            "text": "1/0",
+                            "width": 256.0
+                        },
+                        {
+                            "type": "RGBLight",
+                            "id": "c06e410d-1874-4eee-995f-f80cd06ac657",
+                            "position": {
+                                "x": -18.319908142089845,
+                                "y": -357.94989013671877
+                            },
+                            "exposedPosition": {
+                                "x": 60.0,
+                                "y": -15.0
+                            }
+                        },
+                        {
+                            "type": "RGBLight",
+                            "id": "ed2df772-7c41-49bb-aa6b-2d5a7b70de6f",
+                            "position": {
+                                "x": -19.457809448242189,
+                                "y": -466.61260986328127
+                            },
+                            "exposedPosition": {
+                                "x": 20.0,
+                                "y": -15.0
+                            }
+                        },
+                        {
+                            "type": "Crossfade",
+                            "id": "61d64633-505f-4ff6-a6b2-6f5d2543f3f3",
+                            "position": {
+                                "x": -168.84649658203126,
+                                "y": -466.83416748046877
+                            }
+                        },
+                        {
+                            "type": "Expr",
+                            "id": "0e9f34a6-76b2-43f0-859a-12a2d18b98f4",
+                            "position": {
+                                "x": -298.84649658203127,
+                                "y": -466.83416748046877
+                            },
+                            "expr": "1"
+                        }
+                    ],
+                    "wires": [
+                        {
+                            "from": "3ffe1157-4982-470c-8c1f-eade047ad81b",
+                            "output": 0,
+                            "to": "30bafee3-fae7-4602-bcd2-cb84396fbf48",
+                            "input": 1
+                        },
+                        {
+                            "from": "62db9cd2-fdd0-432a-b294-138e8298f2fb",
+                            "output": 0,
+                            "to": "30bafee3-fae7-4602-bcd2-cb84396fbf48",
+                            "input": 2
+                        },
+                        {
+                            "from": "67d20177-6038-4c67-a60d-bc6f51b684af",
+                            "output": 0,
+                            "to": "3ffe1157-4982-470c-8c1f-eade047ad81b",
+                            "input": 0
+                        },
+                        {
+                            "from": "cca5c70c-e318-4633-84fd-05cf08df2e4a",
+                            "output": 0,
+                            "to": "3ffe1157-4982-470c-8c1f-eade047ad81b",
+                            "input": 1
+                        },
+                        {
+                            "from": "3ffe1157-4982-470c-8c1f-eade047ad81b",
+                            "output": 0,
+                            "to": "f5dc2c66-9056-46ec-b654-a7f7f403fc15",
+                            "input": 0
+                        },
+                        {
+                            "from": "542ae037-8408-49e7-a5ec-1d01aa5b7056",
+                            "output": 0,
+                            "to": "67d20177-6038-4c67-a60d-bc6f51b684af",
+                            "input": 0
+                        },
+                        {
+                            "from": "bd77395f-bda7-4dd8-a7c9-ec7a454e44ef",
+                            "output": 0,
+                            "to": "e9bb6fb3-3c0f-4fe7-b1f0-6a61f1d4867e",
+                            "input": 0
+                        },
+                        {
+                            "from": "4752e918-bb48-482e-9db7-5fe966f4ac82",
+                            "output": 0,
+                            "to": "e9bb6fb3-3c0f-4fe7-b1f0-6a61f1d4867e",
+                            "input": 1
+                        },
+                        {
+                            "from": "e9bb6fb3-3c0f-4fe7-b1f0-6a61f1d4867e",
+                            "output": 0,
+                            "to": "542ae037-8408-49e7-a5ec-1d01aa5b7056",
+                            "input": 0
+                        },
+                        {
+                            "from": "cca5c70c-e318-4633-84fd-05cf08df2e4a",
+                            "output": 0,
+                            "to": "542ae037-8408-49e7-a5ec-1d01aa5b7056",
+                            "input": 1
+                        },
+                        {
+                            "from": "4752e918-bb48-482e-9db7-5fe966f4ac82",
+                            "output": 0,
+                            "to": "c06e410d-1874-4eee-995f-f80cd06ac657",
+                            "input": 0
+                        },
+                        {
+                            "from": "4752e918-bb48-482e-9db7-5fe966f4ac82",
+                            "output": 0,
+                            "to": "c06e410d-1874-4eee-995f-f80cd06ac657",
+                            "input": 1
+                        },
+                        {
+                            "from": "4752e918-bb48-482e-9db7-5fe966f4ac82",
+                            "output": 0,
+                            "to": "c06e410d-1874-4eee-995f-f80cd06ac657",
+                            "input": 2
+                        },
+                        {
+                            "from": "61d64633-505f-4ff6-a6b2-6f5d2543f3f3",
+                            "output": 0,
+                            "to": "ed2df772-7c41-49bb-aa6b-2d5a7b70de6f",
+                            "input": 0
+                        },
+                        {
+                            "from": "61d64633-505f-4ff6-a6b2-6f5d2543f3f3",
+                            "output": 0,
+                            "to": "ed2df772-7c41-49bb-aa6b-2d5a7b70de6f",
+                            "input": 1
+                        },
+                        {
+                            "from": "61d64633-505f-4ff6-a6b2-6f5d2543f3f3",
+                            "output": 0,
+                            "to": "ed2df772-7c41-49bb-aa6b-2d5a7b70de6f",
+                            "input": 2
+                        },
+                        {
+                            "from": "0e9f34a6-76b2-43f0-859a-12a2d18b98f4",
+                            "output": 0,
+                            "to": "61d64633-505f-4ff6-a6b2-6f5d2543f3f3",
+                            "input": 0
+                        },
+                        {
+                            "from": "4752e918-bb48-482e-9db7-5fe966f4ac82",
+                            "output": 0,
+                            "to": "61d64633-505f-4ff6-a6b2-6f5d2543f3f3",
+                            "input": 2
+                        }
+                    ]
+                }
+            }
+        ],
+        "wires": []
+    },
+    "history": {
+        "states": [
+            {
+                "id": "185c1a47-23ef-4870-9c41-e9771a8841e2"
+            }
+        ],
+        "current": "185c1a47-23ef-4870-9c41-e9771a8841e2"
+    },
+    "undoStack": {
+        "stack": [
+            "185c1a47-23ef-4870-9c41-e9771a8841e2"
+        ],
+        "current": 0
+    }
+}

@@ -1,0 +1,206 @@
+{
+    "version": 1,
+    "author": "Bimini Road",
+    "tags": [
+        "LFO"
+    ],
+    "description": "This LFO outputs a saw wave between 0-1.  The Trim knob lowers the maximum value of the LFO (e.g., set half way, its range is 0-0.5).\n\nLFOs in this library are set operate from 0 to 1 (DC) by default instead of -1 to 1 (AC) because a majority of functions in Audulus are tuned to work between 0 and 1.  \n\nTo create an AC signal, multiply the LFO output by 2 and subtract 1.",
+    "patch": {
+        "id": "7538991b-46b5-4524-a4ee-a59f52b243c1",
+        "pan": {
+            "x": 44.66845703125,
+            "y": -60.26380920410156
+        },
+        "zoom": 4.8361005783081059,
+        "nodes": [
+            {
+                "type": "Patch",
+                "id": "02b4b952-6ebc-47e9-8a93-1e5e3221b414",
+                "position": {
+                    "x": 17.83154296875,
+                    "y": -70.23037719726563
+                },
+                "subPatch": {
+                    "id": "80d012b9-5f62-43ce-919e-d3ad14cddd0b",
+                    "pan": {
+                        "x": -265.2143249511719,
+                        "y": 133.48178100585938
+                    },
+                    "zoom": 1.3731740713119507,
+                    "nodes": [
+                        {
+                            "type": "Text",
+                            "id": "ae9ab170-de1b-485e-b395-c4ecd1477e11",
+                            "position": {
+                                "x": 116.75765991210938,
+                                "y": -65.39908599853516
+                            },
+                            "exposedPosition": {
+                                "x": -90.0,
+                                "y": 215.0
+                            },
+                            "text": "Saw LFO",
+                            "width": 256.0
+                        },
+                        {
+                            "type": "Output",
+                            "id": "bb636d45-5764-4600-8c8d-518d66e75131",
+                            "position": {
+                                "x": 520.7872314453125,
+                                "y": -240.4722900390625
+                            },
+                            "name": "Out",
+                            "exposedPosition": {
+                                "x": -45.0,
+                                "y": 50.0
+                            }
+                        },
+                        {
+                            "type": "Phasor",
+                            "id": "7b61224d-969d-4bca-adcf-bb20aec6da9e",
+                            "position": {
+                                "x": 65.25762939453125,
+                                "y": -197.78717041015626
+                            }
+                        },
+                        {
+                            "type": "Knob",
+                            "id": "d63015f5-a866-426d-b5b1-1ab3a6c64ce4",
+                            "position": {
+                                "x": -30.358558654785158,
+                                "y": -178.16986083984376
+                            },
+                            "name": "Hz",
+                            "knob": {
+                                "value": 1.5803873538970948,
+                                "min": 0.0,
+                                "max": 10.0
+                            },
+                            "exposedPosition": {
+                                "x": -65.0,
+                                "y": 175.0
+                            }
+                        },
+                        {
+                            "type": "RGBLight",
+                            "id": "ddfafa7d-d573-4a92-9332-02b962f3e833",
+                            "position": {
+                                "x": 519.895751953125,
+                                "y": -195.9906768798828
+                            },
+                            "exposedPosition": {
+                                "x": -65.0,
+                                "y": 65.0
+                            }
+                        },
+                        {
+                            "type": "Expr",
+                            "id": "f80a037a-8a25-4775-8484-8ed4414e9a49",
+                            "position": {
+                                "x": 213.88177490234376,
+                                "y": -199.02793884277345
+                            },
+                            "expr": "x/(2*pi)"
+                        },
+                        {
+                            "type": "Level",
+                            "id": "f9fd7c8d-c5b9-47cb-93c7-9ed1095aac0e",
+                            "position": {
+                                "x": 369.4960021972656,
+                                "y": -198.5369415283203
+                            },
+                            "level": {
+                                "value": 0.5,
+                                "min": 0.0,
+                                "max": 1.0
+                            }
+                        },
+                        {
+                            "type": "Knob",
+                            "id": "43f565ca-1650-4306-adad-fa63b99747c3",
+                            "position": {
+                                "x": 390.2178039550781,
+                                "y": -66.49130249023438
+                            },
+                            "name": "Trim",
+                            "knob": {
+                                "value": 1.0,
+                                "min": 0.0,
+                                "max": 1.0
+                            },
+                            "exposedPosition": {
+                                "x": -65.0,
+                                "y": 110.0
+                            }
+                        }
+                    ],
+                    "wires": [
+                        {
+                            "from": "f9fd7c8d-c5b9-47cb-93c7-9ed1095aac0e",
+                            "output": 0,
+                            "to": "bb636d45-5764-4600-8c8d-518d66e75131",
+                            "input": 0
+                        },
+                        {
+                            "from": "d63015f5-a866-426d-b5b1-1ab3a6c64ce4",
+                            "output": 0,
+                            "to": "7b61224d-969d-4bca-adcf-bb20aec6da9e",
+                            "input": 0
+                        },
+                        {
+                            "from": "f9fd7c8d-c5b9-47cb-93c7-9ed1095aac0e",
+                            "output": 0,
+                            "to": "ddfafa7d-d573-4a92-9332-02b962f3e833",
+                            "input": 0
+                        },
+                        {
+                            "from": "f9fd7c8d-c5b9-47cb-93c7-9ed1095aac0e",
+                            "output": 0,
+                            "to": "ddfafa7d-d573-4a92-9332-02b962f3e833",
+                            "input": 1
+                        },
+                        {
+                            "from": "f9fd7c8d-c5b9-47cb-93c7-9ed1095aac0e",
+                            "output": 0,
+                            "to": "ddfafa7d-d573-4a92-9332-02b962f3e833",
+                            "input": 2
+                        },
+                        {
+                            "from": "7b61224d-969d-4bca-adcf-bb20aec6da9e",
+                            "output": 0,
+                            "to": "f80a037a-8a25-4775-8484-8ed4414e9a49",
+                            "input": 0
+                        },
+                        {
+                            "from": "f80a037a-8a25-4775-8484-8ed4414e9a49",
+                            "output": 0,
+                            "to": "f9fd7c8d-c5b9-47cb-93c7-9ed1095aac0e",
+                            "input": 0
+                        },
+                        {
+                            "from": "43f565ca-1650-4306-adad-fa63b99747c3",
+                            "output": 0,
+                            "to": "f9fd7c8d-c5b9-47cb-93c7-9ed1095aac0e",
+                            "input": 1
+                        }
+                    ]
+                }
+            }
+        ],
+        "wires": []
+    },
+    "history": {
+        "states": [
+            {
+                "id": "bdaefa11-d0d2-458c-b590-d5e76e7239df"
+            }
+        ],
+        "current": "bdaefa11-d0d2-458c-b590-d5e76e7239df"
+    },
+    "undoStack": {
+        "stack": [
+            "bdaefa11-d0d2-458c-b590-d5e76e7239df"
+        ],
+        "current": 0
+    }
+}

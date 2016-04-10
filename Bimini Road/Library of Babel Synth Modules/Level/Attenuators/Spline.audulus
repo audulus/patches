@@ -1,0 +1,174 @@
+{
+    "version": 1,
+    "author": "Bimini Road",
+    "tags": [
+        "Attenuator"
+    ],
+    "description": "This is a repackaging of the spline node as a module.  For more info, see the Audulus node documentation.",
+    "patch": {
+        "id": "4eccfe18-07af-4275-9b6b-b474687e200f",
+        "pan": {
+            "x": -0.5,
+            "y": -4.9932708740234379
+        },
+        "zoom": 4.836144924163818,
+        "nodes": [
+            {
+                "type": "Patch",
+                "id": "47107a68-0c0d-49b7-b400-969c53b1f304",
+                "position": {
+                    "x": -42.0,
+                    "y": -55.5
+                },
+                "subPatch": {
+                    "id": "9ddf142c-a5b1-4e67-9d29-c66860a5b126",
+                    "pan": {
+                        "x": 6.25653076171875,
+                        "y": -7.353824615478516
+                    },
+                    "zoom": 1.3479670286178589,
+                    "nodes": [
+                        {
+                            "type": "Spline",
+                            "id": "8b41d81b-b01e-4b79-acbd-c09a86438859",
+                            "position": {
+                                "x": -201.50758361816407,
+                                "y": -60.32089614868164
+                            },
+                            "exposedPosition": {
+                                "x": -115.0,
+                                "y": 20.0
+                            },
+                            "controlPoints": [
+                                {
+                                    "x": 0.26599186658859255,
+                                    "y": 0.45493125915527346
+                                },
+                                {
+                                    "x": 0.49582967162132265,
+                                    "y": 0.6708102226257324
+                                },
+                                {
+                                    "x": 0.7209327816963196,
+                                    "y": 0.4367537498474121
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Level",
+                            "id": "18d02463-3dea-4a8d-9cb6-05a65822f56e",
+                            "position": {
+                                "x": 118.18910217285156,
+                                "y": -118.61780548095703
+                            },
+                            "level": {
+                                "value": 0.5,
+                                "min": 0.0,
+                                "max": 1.0
+                            }
+                        },
+                        {
+                            "type": "Input",
+                            "id": "ae523b96-1d41-4762-9e1d-c2fd66492372",
+                            "position": {
+                                "x": 14.783058166503907,
+                                "y": -118.11146545410156
+                            },
+                            "name": "In",
+                            "exposedPosition": {
+                                "x": -110.0,
+                                "y": -20.0
+                            }
+                        },
+                        {
+                            "type": "Output",
+                            "id": "00c12202-6bfa-4f62-9bf1-cf59c0d3b9c2",
+                            "position": {
+                                "x": 255.59164428710938,
+                                "y": -118.26576232910156
+                            },
+                            "name": "Out",
+                            "exposedPosition": {
+                                "x": 195.0,
+                                "y": -20.0
+                            }
+                        },
+                        {
+                            "type": "Text",
+                            "id": "be8c6cba-36cd-4b4c-8ccc-fd7ffe01432b",
+                            "position": {
+                                "x": -38.880531311035159,
+                                "y": 117.32543182373047
+                            },
+                            "exposedPosition": {
+                                "x": -120.0,
+                                "y": 145.0
+                            },
+                            "text": "Spline",
+                            "width": 256.0
+                        },
+                        {
+                            "type": "Knob",
+                            "id": "5183399f-a06f-485f-a87b-b6aba7da2b6b",
+                            "position": {
+                                "x": -298.47503662109377,
+                                "y": 13.04278564453125
+                            },
+                            "name": "<--  -->",
+                            "knob": {
+                                "value": 0.40703925490379336,
+                                "min": 0.0,
+                                "max": 1.0
+                            },
+                            "exposedPosition": {
+                                "x": 45.0,
+                                "y": 10.0
+                            }
+                        }
+                    ],
+                    "wires": [
+                        {
+                            "from": "5183399f-a06f-485f-a87b-b6aba7da2b6b",
+                            "output": 0,
+                            "to": "8b41d81b-b01e-4b79-acbd-c09a86438859",
+                            "input": 0
+                        },
+                        {
+                            "from": "ae523b96-1d41-4762-9e1d-c2fd66492372",
+                            "output": 0,
+                            "to": "18d02463-3dea-4a8d-9cb6-05a65822f56e",
+                            "input": 0
+                        },
+                        {
+                            "from": "8b41d81b-b01e-4b79-acbd-c09a86438859",
+                            "output": 0,
+                            "to": "18d02463-3dea-4a8d-9cb6-05a65822f56e",
+                            "input": 1
+                        },
+                        {
+                            "from": "18d02463-3dea-4a8d-9cb6-05a65822f56e",
+                            "output": 0,
+                            "to": "00c12202-6bfa-4f62-9bf1-cf59c0d3b9c2",
+                            "input": 0
+                        }
+                    ]
+                }
+            }
+        ],
+        "wires": []
+    },
+    "history": {
+        "states": [
+            {
+                "id": "522687ec-32da-41c2-9674-64eb6c9fbcf8"
+            }
+        ],
+        "current": "522687ec-32da-41c2-9674-64eb6c9fbcf8"
+    },
+    "undoStack": {
+        "stack": [
+            "522687ec-32da-41c2-9674-64eb6c9fbcf8"
+        ],
+        "current": 0
+    }
+}

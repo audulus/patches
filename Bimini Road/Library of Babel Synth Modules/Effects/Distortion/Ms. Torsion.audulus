@@ -1,0 +1,343 @@
+{
+    "version": 1,
+    "author": "Bimini Road",
+    "tags": [
+        "Distortion"
+    ],
+    "description": "This is a simple distortion with 4 variables.  \n\n- Crush is a dry/wet mix knob.\n- Gnash raises the cutoff point of the LPF on the distortion.\n- Bite increases the Q value of the LFP curve\n- Grind shifts the distortion an octave up.",
+    "patch": {
+        "id": "bfb697be-db51-4de2-a255-5543d9b58370",
+        "pan": {
+            "x": -3.0000152587890627,
+            "y": -2.210662841796875
+        },
+        "zoom": 4.8361005783081059,
+        "nodes": [
+            {
+                "type": "Patch",
+                "id": "0144d231-002c-4613-a5dc-2a1d9a974737",
+                "position": {
+                    "x": -77.0,
+                    "y": -33.28352355957031
+                },
+                "subPatch": {
+                    "id": "a505f6eb-7f69-45a7-9f3f-c9a847d302a0",
+                    "pan": {
+                        "x": -40.639408111572269,
+                        "y": 16.339988708496095
+                    },
+                    "zoom": 1.3172473907470704,
+                    "nodes": [
+                        {
+                            "type": "Distortion",
+                            "id": "c5a4f6c2-9448-476a-a1cd-62a8c2eb04d4",
+                            "position": {
+                                "x": -188.45008850097657,
+                                "y": 11.838829040527344
+                            }
+                        },
+                        {
+                            "type": "Text",
+                            "id": "daa4c0e9-6342-4364-b58c-79a3f0361612",
+                            "position": {
+                                "x": -33.78825378417969,
+                                "y": 336.117431640625
+                            },
+                            "exposedPosition": {
+                                "x": -35.0,
+                                "y": 120.0
+                            },
+                            "text": "Bimini Road :: Ms. Torsion Distortion",
+                            "width": 256.0
+                        },
+                        {
+                            "type": "Input",
+                            "id": "86b3a712-cc44-4538-88d5-91658ec000ff",
+                            "position": {
+                                "x": -281.258544921875,
+                                "y": 11.778160095214844
+                            },
+                            "name": "In",
+                            "exposedPosition": {
+                                "x": -25.0,
+                                "y": -45.0
+                            }
+                        },
+                        {
+                            "type": "Crossfade",
+                            "id": "220c5520-e5ff-4e12-b2a1-120074d4c46c",
+                            "position": {
+                                "x": 194.69717407226563,
+                                "y": -48.527679443359378
+                            }
+                        },
+                        {
+                            "type": "Output",
+                            "id": "82f9eada-b142-40f3-9ece-85ed4490e726",
+                            "position": {
+                                "x": 340.67657470703127,
+                                "y": -49.022247314453128
+                            },
+                            "name": "Out",
+                            "exposedPosition": {
+                                "x": 185.0,
+                                "y": -45.0
+                            }
+                        },
+                        {
+                            "type": "Filter",
+                            "id": "d1e8834e-db28-4473-a655-3725f565eabe",
+                            "position": {
+                                "x": -22.651756286621095,
+                                "y": 54.304351806640628
+                            },
+                            "f": 14350.2646484375,
+                            "res": 0.39221036434173586
+                        },
+                        {
+                            "type": "Knob",
+                            "id": "12cf77c7-67d7-40f7-9c14-6024ef114ae3",
+                            "position": {
+                                "x": -120.04084014892578,
+                                "y": 112.48495483398438
+                            },
+                            "name": "Gnash",
+                            "knob": {
+                                "value": 15000.0,
+                                "min": 0.0,
+                                "max": 15000.0
+                            },
+                            "exposedPosition": {
+                                "x": 80.0,
+                                "y": 80.0
+                            }
+                        },
+                        {
+                            "type": "Knob",
+                            "id": "c473cb12-61aa-483a-8b52-01f05cc7b914",
+                            "position": {
+                                "x": -121.402099609375,
+                                "y": 209.15550231933595
+                            },
+                            "name": "Bite",
+                            "knob": {
+                                "value": 0.6543845534324646,
+                                "min": 0.0,
+                                "max": 0.8500000238418579
+                            },
+                            "exposedPosition": {
+                                "x": 130.0,
+                                "y": 80.0
+                            }
+                        },
+                        {
+                            "type": "PitchShift",
+                            "id": "ed13ee65-21dc-4c56-a70e-33a8af74b894",
+                            "position": {
+                                "x": 40.26251983642578,
+                                "y": -139.2411651611328
+                            }
+                        },
+                        {
+                            "type": "Crossfade",
+                            "id": "6e8481b8-4d33-48c0-af59-aab56c77eef0",
+                            "position": {
+                                "x": 46.360023498535159,
+                                "y": -283.31072998046877
+                            }
+                        },
+                        {
+                            "type": "Expr",
+                            "id": "4d0b5076-7493-4d2d-8524-bdada0659c68",
+                            "position": {
+                                "x": -89.73748016357422,
+                                "y": -109.24116516113281
+                            },
+                            "expr": "2"
+                        },
+                        {
+                            "type": "Trigger",
+                            "id": "3c8c64bc-bb97-4bef-9c8c-0eebf5bef767",
+                            "position": {
+                                "x": -191.04562377929688,
+                                "y": -225.93765258789063
+                            },
+                            "exposedPosition": {
+                                "x": 80.0,
+                                "y": 15.0
+                            },
+                            "toggle": true,
+                            "state": true,
+                            "midiNote": -1
+                        },
+                        {
+                            "type": "Knob",
+                            "id": "dd28a2ea-ffb1-432f-b713-2dd6c6a92b91",
+                            "position": {
+                                "x": -228.43838500976563,
+                                "y": -41.72316360473633
+                            },
+                            "name": "Crush",
+                            "knob": {
+                                "value": 0.8743844032287598,
+                                "min": 0.0,
+                                "max": 1.0
+                            },
+                            "exposedPosition": {
+                                "x": 30.0,
+                                "y": 80.0
+                            }
+                        },
+                        {
+                            "type": "Level",
+                            "id": "27eee141-bd6c-483a-93db-7c0ba960664b",
+                            "position": {
+                                "x": -93.11347961425781,
+                                "y": -282.67449951171877
+                            },
+                            "level": {
+                                "value": 1.3061672449111939,
+                                "min": 0.0,
+                                "max": 2.0
+                            }
+                        },
+                        {
+                            "type": "Level",
+                            "id": "bcec2add-5238-43fe-8e6f-5994fae03c14",
+                            "position": {
+                                "x": 196.8240203857422,
+                                "y": 92.39395904541016
+                            },
+                            "level": {
+                                "value": 0.7295795679092407,
+                                "min": 0.0,
+                                "max": 2.0
+                            }
+                        },
+                        {
+                            "type": "Text",
+                            "id": "a33ff46b-0b41-4bd4-85aa-e1c7ff935cca",
+                            "position": {
+                                "x": -147.17140197753907,
+                                "y": -165.3196563720703
+                            },
+                            "exposedPosition": {
+                                "x": 65.0,
+                                "y": -15.0
+                            },
+                            "text": "Grind",
+                            "width": 256.0
+                        }
+                    ],
+                    "wires": [
+                        {
+                            "from": "86b3a712-cc44-4538-88d5-91658ec000ff",
+                            "output": 0,
+                            "to": "c5a4f6c2-9448-476a-a1cd-62a8c2eb04d4",
+                            "input": 0
+                        },
+                        {
+                            "from": "86b3a712-cc44-4538-88d5-91658ec000ff",
+                            "output": 0,
+                            "to": "220c5520-e5ff-4e12-b2a1-120074d4c46c",
+                            "input": 0
+                        },
+                        {
+                            "from": "bcec2add-5238-43fe-8e6f-5994fae03c14",
+                            "output": 0,
+                            "to": "220c5520-e5ff-4e12-b2a1-120074d4c46c",
+                            "input": 1
+                        },
+                        {
+                            "from": "dd28a2ea-ffb1-432f-b713-2dd6c6a92b91",
+                            "output": 0,
+                            "to": "220c5520-e5ff-4e12-b2a1-120074d4c46c",
+                            "input": 2
+                        },
+                        {
+                            "from": "220c5520-e5ff-4e12-b2a1-120074d4c46c",
+                            "output": 0,
+                            "to": "82f9eada-b142-40f3-9ece-85ed4490e726",
+                            "input": 0
+                        },
+                        {
+                            "from": "6e8481b8-4d33-48c0-af59-aab56c77eef0",
+                            "output": 0,
+                            "to": "d1e8834e-db28-4473-a655-3725f565eabe",
+                            "input": 0
+                        },
+                        {
+                            "from": "12cf77c7-67d7-40f7-9c14-6024ef114ae3",
+                            "output": 0,
+                            "to": "d1e8834e-db28-4473-a655-3725f565eabe",
+                            "input": 1
+                        },
+                        {
+                            "from": "c473cb12-61aa-483a-8b52-01f05cc7b914",
+                            "output": 0,
+                            "to": "d1e8834e-db28-4473-a655-3725f565eabe",
+                            "input": 2
+                        },
+                        {
+                            "from": "c5a4f6c2-9448-476a-a1cd-62a8c2eb04d4",
+                            "output": 0,
+                            "to": "ed13ee65-21dc-4c56-a70e-33a8af74b894",
+                            "input": 0
+                        },
+                        {
+                            "from": "4d0b5076-7493-4d2d-8524-bdada0659c68",
+                            "output": 0,
+                            "to": "ed13ee65-21dc-4c56-a70e-33a8af74b894",
+                            "input": 1
+                        },
+                        {
+                            "from": "c5a4f6c2-9448-476a-a1cd-62a8c2eb04d4",
+                            "output": 0,
+                            "to": "6e8481b8-4d33-48c0-af59-aab56c77eef0",
+                            "input": 0
+                        },
+                        {
+                            "from": "27eee141-bd6c-483a-93db-7c0ba960664b",
+                            "output": 0,
+                            "to": "6e8481b8-4d33-48c0-af59-aab56c77eef0",
+                            "input": 1
+                        },
+                        {
+                            "from": "3c8c64bc-bb97-4bef-9c8c-0eebf5bef767",
+                            "output": 0,
+                            "to": "6e8481b8-4d33-48c0-af59-aab56c77eef0",
+                            "input": 2
+                        },
+                        {
+                            "from": "ed13ee65-21dc-4c56-a70e-33a8af74b894",
+                            "output": 0,
+                            "to": "27eee141-bd6c-483a-93db-7c0ba960664b",
+                            "input": 0
+                        },
+                        {
+                            "from": "d1e8834e-db28-4473-a655-3725f565eabe",
+                            "output": 0,
+                            "to": "bcec2add-5238-43fe-8e6f-5994fae03c14",
+                            "input": 0
+                        }
+                    ]
+                }
+            }
+        ],
+        "wires": []
+    },
+    "history": {
+        "states": [
+            {
+                "id": "408ad0e1-8d38-495d-b4bc-c61ea3278015"
+            }
+        ],
+        "current": "408ad0e1-8d38-495d-b4bc-c61ea3278015"
+    },
+    "undoStack": {
+        "stack": [
+            "408ad0e1-8d38-495d-b4bc-c61ea3278015"
+        ],
+        "current": 0
+    }
+}

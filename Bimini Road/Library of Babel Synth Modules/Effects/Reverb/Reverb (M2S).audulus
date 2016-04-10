@@ -1,0 +1,190 @@
+{
+    "version": 1,
+    "author": "Bimini Road",
+    "tags": [
+        "Reverb"
+    ],
+    "description": "This is a repackaging of the Reverb node as a module.  For more info, see the Audulus node documentation.",
+    "patch": {
+        "id": "31ee3cdc-99fd-4095-810d-241efe8919d0",
+        "pan": {
+            "x": -0.49999237060546877,
+            "y": -2.2132415771484377
+        },
+        "zoom": 4.835975170135498,
+        "nodes": [
+            {
+                "type": "Patch",
+                "id": "954fe44a-9386-42a1-8073-584553c9b4ed",
+                "position": {
+                    "x": 30.5,
+                    "y": -28.283550262451173
+                },
+                "subPatch": {
+                    "id": "67aa279b-011c-4ab8-b5e0-6dd89e028b40",
+                    "pan": {
+                        "x": 107.11814880371094,
+                        "y": 17.233943939208986
+                    },
+                    "zoom": 1.4029592275619507,
+                    "nodes": [
+                        {
+                            "type": "Reverb",
+                            "id": "55ed216a-89a8-42e4-bc2f-beaf44038378",
+                            "position": {
+                                "x": -131.31997680664063,
+                                "y": -17.651443481445314
+                            },
+                            "decay": {
+                                "value": 0.5,
+                                "min": 0.0,
+                                "max": 1.0
+                            },
+                            "mix": {
+                                "value": 0.5,
+                                "min": 0.0,
+                                "max": 1.0
+                            }
+                        },
+                        {
+                            "type": "Input",
+                            "id": "bc1a7a1a-9a8e-4f5f-82c3-e1110f60007c",
+                            "position": {
+                                "x": -220.47682189941407,
+                                "y": 7.914058208465576
+                            },
+                            "name": "In",
+                            "exposedPosition": {
+                                "x": -75.0,
+                                "y": -50.0
+                            }
+                        },
+                        {
+                            "type": "Output",
+                            "id": "2aa5939a-8b84-4818-9143-c4a93dc1323c",
+                            "position": {
+                                "x": 65.06228637695313,
+                                "y": 31.13777732849121
+                            },
+                            "name": "L",
+                            "exposedPosition": {
+                                "x": 15.0,
+                                "y": -25.0
+                            }
+                        },
+                        {
+                            "type": "Knob",
+                            "id": "ac1151bb-ee18-484a-8da5-164a5374b30d",
+                            "position": {
+                                "x": -136.17062377929688,
+                                "y": 129.87774658203126
+                            },
+                            "name": "Mix",
+                            "knob": {
+                                "value": 0.5,
+                                "min": 0.0,
+                                "max": 1.0
+                            },
+                            "exposedPosition": {
+                                "x": -60.0,
+                                "y": 75.0
+                            }
+                        },
+                        {
+                            "type": "Knob",
+                            "id": "f3b2e7d8-933a-427a-b62e-42c05e3470f7",
+                            "position": {
+                                "x": -18.317941665649415,
+                                "y": 130.65045166015626
+                            },
+                            "name": "Decay",
+                            "knob": {
+                                "value": 0.5,
+                                "min": 0.0,
+                                "max": 1.0
+                            },
+                            "exposedPosition": {
+                                "x": -5.0,
+                                "y": 75.0
+                            }
+                        },
+                        {
+                            "type": "Text",
+                            "id": "e4bf070d-f5e0-41c1-8cec-5677d56e6e4e",
+                            "position": {
+                                "x": -77.46480560302735,
+                                "y": 204.0086669921875
+                            },
+                            "exposedPosition": {
+                                "x": -50.0,
+                                "y": 115.0
+                            },
+                            "text": "Reverb",
+                            "width": 256.0
+                        },
+                        {
+                            "type": "Output",
+                            "id": "1f34676b-f0bb-4b0e-9009-220a9d13bcc8",
+                            "position": {
+                                "x": 64.74395751953125,
+                                "y": -13.050275802612305
+                            },
+                            "name": "R",
+                            "exposedPosition": {
+                                "x": 15.0,
+                                "y": -50.0
+                            }
+                        }
+                    ],
+                    "wires": [
+                        {
+                            "from": "bc1a7a1a-9a8e-4f5f-82c3-e1110f60007c",
+                            "output": 0,
+                            "to": "55ed216a-89a8-42e4-bc2f-beaf44038378",
+                            "input": 0
+                        },
+                        {
+                            "from": "f3b2e7d8-933a-427a-b62e-42c05e3470f7",
+                            "output": 0,
+                            "to": "55ed216a-89a8-42e4-bc2f-beaf44038378",
+                            "input": 1
+                        },
+                        {
+                            "from": "ac1151bb-ee18-484a-8da5-164a5374b30d",
+                            "output": 0,
+                            "to": "55ed216a-89a8-42e4-bc2f-beaf44038378",
+                            "input": 2
+                        },
+                        {
+                            "from": "55ed216a-89a8-42e4-bc2f-beaf44038378",
+                            "output": 1,
+                            "to": "2aa5939a-8b84-4818-9143-c4a93dc1323c",
+                            "input": 0
+                        },
+                        {
+                            "from": "55ed216a-89a8-42e4-bc2f-beaf44038378",
+                            "output": 0,
+                            "to": "1f34676b-f0bb-4b0e-9009-220a9d13bcc8",
+                            "input": 0
+                        }
+                    ]
+                }
+            }
+        ],
+        "wires": []
+    },
+    "history": {
+        "states": [
+            {
+                "id": "60f8955b-2139-41fa-acd8-9d2272dede48"
+            }
+        ],
+        "current": "60f8955b-2139-41fa-acd8-9d2272dede48"
+    },
+    "undoStack": {
+        "stack": [
+            "60f8955b-2139-41fa-acd8-9d2272dede48"
+        ],
+        "current": 0
+    }
+}

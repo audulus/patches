@@ -1,0 +1,161 @@
+{
+    "version": 1,
+    "author": "Bimini Road",
+    "tags": [
+        "Attenuator"
+    ],
+    "description": "This is a repackaging of the range node as a module.  For more info, see the Audulus node documentation.",
+    "patch": {
+        "id": "f7cb8b34-d56a-4da1-a9a8-ff1fcd05f1ae",
+        "pan": {
+            "x": 19.047651290893556,
+            "y": -75.35386657714844
+        },
+        "zoom": 4.835986137390137,
+        "nodes": [
+            {
+                "type": "Patch",
+                "id": "5883dfff-2daa-4909-854e-fbb291189262",
+                "position": {
+                    "x": -24.047651290893556,
+                    "y": -5.142707824707031
+                },
+                "subPatch": {
+                    "id": "3a6fd838-cc23-4b2b-986f-b7f13cfb2a97",
+                    "pan": {
+                        "x": -87.22770690917969,
+                        "y": -216.1749267578125
+                    },
+                    "zoom": 1.0223861932754517,
+                    "nodes": [
+                        {
+                            "type": "Range",
+                            "id": "ca13a32f-4458-4f0a-9460-cc404be95986",
+                            "position": {
+                                "x": 13.452552795410157,
+                                "y": 90.22357940673828
+                            }
+                        },
+                        {
+                            "type": "Knob",
+                            "id": "65c86f9e-e699-416f-a2e0-91b2a5af5bff",
+                            "position": {
+                                "x": -100.76599884033203,
+                                "y": 307.5343933105469
+                            },
+                            "name": "Max",
+                            "knob": {
+                                "value": 0.7940709590911865,
+                                "min": 0.0,
+                                "max": 1.0
+                            },
+                            "exposedPosition": {
+                                "x": 30.0,
+                                "y": 125.0
+                            }
+                        },
+                        {
+                            "type": "Knob",
+                            "id": "8cef08ba-e007-42b8-9e1d-d99c5d512e23",
+                            "position": {
+                                "x": -99.68086242675781,
+                                "y": 203.47821044921876
+                            },
+                            "name": "Min",
+                            "knob": {
+                                "value": 0.1515958309173584,
+                                "min": 0.0,
+                                "max": 1.0
+                            },
+                            "exposedPosition": {
+                                "x": -20.0,
+                                "y": 125.0
+                            }
+                        },
+                        {
+                            "type": "Input",
+                            "id": "38ae17c4-3f5d-4d87-ac56-855dd34cce24",
+                            "position": {
+                                "x": -111.20895385742188,
+                                "y": 91.32144165039063
+                            },
+                            "name": "In",
+                            "exposedPosition": {
+                                "x": -30.0,
+                                "y": 0.0
+                            }
+                        },
+                        {
+                            "type": "Output",
+                            "id": "e093546b-7264-4761-87d0-c6a6c9fe7aaf",
+                            "position": {
+                                "x": 175.5092315673828,
+                                "y": 88.98316955566406
+                            },
+                            "name": "Out",
+                            "exposedPosition": {
+                                "x": 40.0,
+                                "y": 0.0
+                            }
+                        },
+                        {
+                            "type": "Text",
+                            "id": "79da0b8e-cf2f-4ad4-bff3-265e379c2ff3",
+                            "position": {
+                                "x": 57.800537109375,
+                                "y": 251.22621154785157
+                            },
+                            "exposedPosition": {
+                                "x": -10.0,
+                                "y": 165.0
+                            },
+                            "text": "Range",
+                            "width": 256.0
+                        }
+                    ],
+                    "wires": [
+                        {
+                            "from": "38ae17c4-3f5d-4d87-ac56-855dd34cce24",
+                            "output": 0,
+                            "to": "ca13a32f-4458-4f0a-9460-cc404be95986",
+                            "input": 0
+                        },
+                        {
+                            "from": "8cef08ba-e007-42b8-9e1d-d99c5d512e23",
+                            "output": 0,
+                            "to": "ca13a32f-4458-4f0a-9460-cc404be95986",
+                            "input": 1
+                        },
+                        {
+                            "from": "65c86f9e-e699-416f-a2e0-91b2a5af5bff",
+                            "output": 0,
+                            "to": "ca13a32f-4458-4f0a-9460-cc404be95986",
+                            "input": 2
+                        },
+                        {
+                            "from": "ca13a32f-4458-4f0a-9460-cc404be95986",
+                            "output": 0,
+                            "to": "e093546b-7264-4761-87d0-c6a6c9fe7aaf",
+                            "input": 0
+                        }
+                    ]
+                }
+            }
+        ],
+        "wires": []
+    },
+    "history": {
+        "states": [
+            {
+                "id": "9e1aa6b2-2469-4c07-91a3-054d6e5758d7"
+            }
+        ],
+        "current": "9e1aa6b2-2469-4c07-91a3-054d6e5758d7"
+    },
+    "undoStack": {
+        "stack": [
+            "9e1aa6b2-2469-4c07-91a3-054d6e5758d7"
+        ],
+        "current": 0
+    }
+}

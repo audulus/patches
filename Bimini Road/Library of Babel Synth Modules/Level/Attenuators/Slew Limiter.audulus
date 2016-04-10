@@ -1,0 +1,167 @@
+{
+    "version": 1,
+    "author": "Bimini Road",
+    "tags": [
+        "Attenuator"
+    ],
+    "description": "This slew limiter resists changes from a high to low state.  It does not resist changes from a low to a high state.  Thus, an trigger impulse fed to the Input, with a high slew amount, would look like an instantaneous rise and a slow fall.\n\nUsually you will find a slew limiter between a control source like a keyboard or sequencer and an oscillator in order to add glide or portamento.",
+    "patch": {
+        "id": "11f2c7ef-2f43-419c-994b-7da7f3ea5549",
+        "pan": {
+            "x": 0.19213104248046876,
+            "y": 25.536705017089845
+        },
+        "zoom": 4.835965633392334,
+        "nodes": [
+            {
+                "type": "Patch",
+                "id": "91e4e30f-3546-4249-bca7-f23dc37aae51",
+                "position": {
+                    "x": -10.192131042480469,
+                    "y": -11.033687591552735
+                },
+                "subPatch": {
+                    "id": "17acc2ee-22a1-49b1-ade4-891b5428145f",
+                    "pan": {
+                        "x": -141.96719360351563,
+                        "y": -85.93647003173828
+                    },
+                    "zoom": 2.4770092964172365,
+                    "nodes": [
+                        {
+                            "type": "Input",
+                            "id": "80d1410d-888f-4e20-9d96-d85dfb7fa28a",
+                            "position": {
+                                "x": -11.951581954956055,
+                                "y": 42.76763153076172
+                            },
+                            "name": "In",
+                            "exposedPosition": {
+                                "x": -25.0,
+                                "y": -95.0
+                            }
+                        },
+                        {
+                            "type": "Output",
+                            "id": "50faae35-2bbf-485d-b5b5-0a34bb5eb1c7",
+                            "position": {
+                                "x": 247.9980010986328,
+                                "y": -3.0343780517578127
+                            },
+                            "name": "Out",
+                            "exposedPosition": {
+                                "x": 45.0,
+                                "y": -95.0
+                            }
+                        },
+                        {
+                            "type": "Knob",
+                            "id": "8e8ef2f7-08e9-4afa-af29-8cf2e833b65c",
+                            "position": {
+                                "x": -3.213409423828125,
+                                "y": 140.3957977294922
+                            },
+                            "name": "Amount",
+                            "knob": {
+                                "value": 0.0,
+                                "min": 0.0,
+                                "max": 0.9998999834060669
+                            },
+                            "exposedPosition": {
+                                "x": 10.0,
+                                "y": 30.0
+                            }
+                        },
+                        {
+                            "type": "Text",
+                            "id": "43ad0faa-232d-44ef-b41c-cbf68cb4d626",
+                            "position": {
+                                "x": 106.06704711914063,
+                                "y": 198.77561950683595
+                            },
+                            "exposedPosition": {
+                                "x": -25.0,
+                                "y": 70.0
+                            },
+                            "text": "Slew Limiter",
+                            "width": 256.0
+                        },
+                        {
+                            "type": "FeedbackDelay",
+                            "id": "e715e201-547c-4122-a77e-891a5261a43b",
+                            "position": {
+                                "x": 63.054473876953128,
+                                "y": -1.7099380493164063
+                            }
+                        },
+                        {
+                            "type": "Crossfade",
+                            "id": "128223ad-1b6d-4ccc-a3e0-c2144db4540b",
+                            "position": {
+                                "x": 79.68186950683594,
+                                "y": 42.22386932373047
+                            }
+                        },
+                        {
+                            "type": "Text",
+                            "id": "abba9b73-1c37-48ff-bdeb-4f669a1e4f8c",
+                            "position": {
+                                "x": 95.63970947265625,
+                                "y": -26.902679443359376
+                            },
+                            "text": "Designed by Afta8",
+                            "width": 256.0
+                        }
+                    ],
+                    "wires": [
+                        {
+                            "from": "e715e201-547c-4122-a77e-891a5261a43b",
+                            "output": 0,
+                            "to": "50faae35-2bbf-485d-b5b5-0a34bb5eb1c7",
+                            "input": 0
+                        },
+                        {
+                            "from": "128223ad-1b6d-4ccc-a3e0-c2144db4540b",
+                            "output": 0,
+                            "to": "e715e201-547c-4122-a77e-891a5261a43b",
+                            "input": 0
+                        },
+                        {
+                            "from": "80d1410d-888f-4e20-9d96-d85dfb7fa28a",
+                            "output": 0,
+                            "to": "128223ad-1b6d-4ccc-a3e0-c2144db4540b",
+                            "input": 0
+                        },
+                        {
+                            "from": "e715e201-547c-4122-a77e-891a5261a43b",
+                            "output": 0,
+                            "to": "128223ad-1b6d-4ccc-a3e0-c2144db4540b",
+                            "input": 1
+                        },
+                        {
+                            "from": "8e8ef2f7-08e9-4afa-af29-8cf2e833b65c",
+                            "output": 0,
+                            "to": "128223ad-1b6d-4ccc-a3e0-c2144db4540b",
+                            "input": 2
+                        }
+                    ]
+                }
+            }
+        ],
+        "wires": []
+    },
+    "history": {
+        "states": [
+            {
+                "id": "1eb17513-72ce-48cf-80b4-d7fbbafb25a6"
+            }
+        ],
+        "current": "1eb17513-72ce-48cf-80b4-d7fbbafb25a6"
+    },
+    "undoStack": {
+        "stack": [
+            "1eb17513-72ce-48cf-80b4-d7fbbafb25a6"
+        ],
+        "current": 0
+    }
+}
