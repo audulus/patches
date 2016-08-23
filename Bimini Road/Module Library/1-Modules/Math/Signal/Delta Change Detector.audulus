@@ -1,0 +1,202 @@
+{
+    "version": 1,
+    "tags": [
+        "Math",
+        "Signal",
+        "Logic",
+        "Gate",
+        "Detector"
+    ],
+    "patch": {
+        "id": "d01689bb-062e-47cb-9387-d768f860fc59",
+        "pan": {
+            "x": 161.4650421142578,
+            "y": -56.448638916015628
+        },
+        "zoom": 17.280000686645509,
+        "nodes": [
+            {
+                "type": "Patch",
+                "id": "d3d8ae22-1037-46f4-b108-238542fd2f49",
+                "position": {
+                    "x": -86.46504211425781,
+                    "y": -3.5513648986816408
+                },
+                "subPatch": {
+                    "id": "10a4f457-570f-4ef4-b15a-3c9952ba55f8",
+                    "pan": {
+                        "x": -253.59071350097657,
+                        "y": -237.31532287597657
+                    },
+                    "zoom": 1.4582788944244385,
+                    "nodes": [
+                        {
+                            "type": "Output",
+                            "id": "e4ba126b-ba84-45bf-bb4b-17fa23dadefb",
+                            "position": {
+                                "x": 347.2571716308594,
+                                "y": -20.2073917388916
+                            },
+                            "name": "",
+                            "exposedPosition": {
+                                "x": -45.0,
+                                "y": 60.0
+                            }
+                        },
+                        {
+                            "type": "Sample & Hold",
+                            "id": "a4a65134-6928-4a2b-adbb-9b3efe33cfed",
+                            "position": {
+                                "x": 121.846923828125,
+                                "y": 88.98870086669922
+                            }
+                        },
+                        {
+                            "type": "Expr",
+                            "id": "d297dfb7-f567-4540-b65f-f7e42362c55f",
+                            "position": {
+                                "x": 110.85676574707031,
+                                "y": -34.82048416137695
+                            },
+                            "expr": "Signal!=Sample"
+                        },
+                        {
+                            "type": "Light",
+                            "id": "ace7cef7-0df0-4b0d-a38e-6209d3f57424",
+                            "position": {
+                                "x": 350.2259216308594,
+                                "y": 21.318906784057618
+                            },
+                            "exposedPosition": {
+                                "x": -45.0,
+                                "y": 60.0
+                            }
+                        },
+                        {
+                            "type": "FeedbackDelay",
+                            "id": "dbdd0a97-c7f4-4654-a849-445ccab93943",
+                            "position": {
+                                "x": 122.384521484375,
+                                "y": 42.794639587402347
+                            }
+                        },
+                        {
+                            "type": "Input",
+                            "id": "15af9512-e2be-4cef-a5a0-a6d0c45be23f",
+                            "position": {
+                                "x": -33.434791564941409,
+                                "y": 48.25860595703125
+                            },
+                            "name": "",
+                            "exposedPosition": {
+                                "x": -105.0,
+                                "y": 60.0
+                            }
+                        },
+                        {
+                            "type": "Text",
+                            "id": "f661858d-f0dc-466f-8ac4-9bb5829dca47",
+                            "position": {
+                                "x": 180.9933624267578,
+                                "y": 236.5438690185547
+                            },
+                            "exposedPosition": {
+                                "x": -90.0,
+                                "y": 60.0
+                            },
+                            "text": "Delta",
+                            "width": 256.0
+                        },
+                        {
+                            "type": "Text",
+                            "id": "5a111aea-8944-4a4e-bd58-7c07c11d6e8a",
+                            "position": {
+                                "x": -69.22404479980469,
+                                "y": 67.2518310546875
+                            },
+                            "exposedPosition": {
+                                "x": -110.0,
+                                "y": 60.0
+                            },
+                            "text": ">",
+                            "width": 256.0
+                        },
+                        {
+                            "type": "Text",
+                            "id": "bfb55a32-4a40-4688-8e17-115f2a153379",
+                            "position": {
+                                "x": 448.6771240234375,
+                                "y": 4.1197052001953129
+                            },
+                            "exposedPosition": {
+                                "x": -50.0,
+                                "y": 60.0
+                            },
+                            "text": "g",
+                            "width": 256.0
+                        }
+                    ],
+                    "wires": [
+                        {
+                            "from": "d297dfb7-f567-4540-b65f-f7e42362c55f",
+                            "output": 0,
+                            "to": "e4ba126b-ba84-45bf-bb4b-17fa23dadefb",
+                            "input": 0
+                        },
+                        {
+                            "from": "15af9512-e2be-4cef-a5a0-a6d0c45be23f",
+                            "output": 0,
+                            "to": "a4a65134-6928-4a2b-adbb-9b3efe33cfed",
+                            "input": 0
+                        },
+                        {
+                            "from": "dbdd0a97-c7f4-4654-a849-445ccab93943",
+                            "output": 0,
+                            "to": "a4a65134-6928-4a2b-adbb-9b3efe33cfed",
+                            "input": 1
+                        },
+                        {
+                            "from": "15af9512-e2be-4cef-a5a0-a6d0c45be23f",
+                            "output": 0,
+                            "to": "d297dfb7-f567-4540-b65f-f7e42362c55f",
+                            "input": 0
+                        },
+                        {
+                            "from": "a4a65134-6928-4a2b-adbb-9b3efe33cfed",
+                            "output": 0,
+                            "to": "d297dfb7-f567-4540-b65f-f7e42362c55f",
+                            "input": 1
+                        },
+                        {
+                            "from": "d297dfb7-f567-4540-b65f-f7e42362c55f",
+                            "output": 0,
+                            "to": "ace7cef7-0df0-4b0d-a38e-6209d3f57424",
+                            "input": 0
+                        },
+                        {
+                            "from": "d297dfb7-f567-4540-b65f-f7e42362c55f",
+                            "output": 0,
+                            "to": "dbdd0a97-c7f4-4654-a849-445ccab93943",
+                            "input": 0
+                        }
+                    ]
+                }
+            }
+        ],
+        "wires": []
+    },
+    "history": {
+        "states": [
+            {
+                "id": "e38e8679-8736-4dc0-9153-36fc8696c5a1"
+            }
+        ],
+        "current": "e38e8679-8736-4dc0-9153-36fc8696c5a1"
+    },
+    "undoStack": {
+        "stack": [
+            "e38e8679-8736-4dc0-9153-36fc8696c5a1"
+        ],
+        "current": 0
+    }
+}

@@ -1,0 +1,357 @@
+{
+    "version": 1,
+    "author": "Bimini Road",
+    "tags": [
+        "Tutorial"
+    ],
+    "description": "This is a tutorial on how to turn a Timer node into a saw and square wave oscillator.  Look inside the module for a node-by-node breakdown of how it works.",
+    "patch": {
+        "id": "88ec1442-3f23-4fb9-8fa1-bd8d5f831c75",
+        "pan": {
+            "x": -469.7552185058594,
+            "y": 86.938232421875
+        },
+        "zoom": 3.8040568828582765,
+        "nodes": [
+            {
+                "type": "Patch",
+                "id": "7ff96d32-cbc0-4e9b-9beb-74df3bd5b9a1",
+                "position": {
+                    "x": 306.052978515625,
+                    "y": -101.41064453125
+                },
+                "subPatch": {
+                    "id": "75afdeae-0eb3-4497-b2cf-abf9842fcd22",
+                    "pan": {
+                        "x": 54.970916748046878,
+                        "y": -13.222412109375
+                    },
+                    "zoom": 1.1445804834365845,
+                    "nodes": [
+                        {
+                            "type": "Text",
+                            "id": "db28d148-e770-4100-a87f-f0e75732e4a1",
+                            "position": {
+                                "x": 202.78228759765626,
+                                "y": -232.1812286376953
+                            },
+                            "text": "The Light node is useful for monitoring the Square output because this square wave does not change in amplitude.  It is like a digital signal that is either on or off.",
+                            "width": 245.6975860595703
+                        },
+                        {
+                            "type": "Text",
+                            "id": "77879688-6450-4796-9a33-9dc712e13d55",
+                            "position": {
+                                "x": -114.03727722167969,
+                                "y": -251.6125946044922
+                            },
+                            "text": "This expression checks if the Timer node's output is greater than half the value of the knob's output.  If it is, the expression is true and it outputs a 1.  When it is not true, it outputs a 0.  This makes an equal period square wave oscillator whose amplitude is always 1.  The frequency increases as the knob is turned down because smaller knob values mean more frequent Timer node resets according to the Timer>=Knob expression.",
+                            "width": 226.99891662597657
+                        },
+                        {
+                            "type": "Output",
+                            "id": "e92f5242-fa60-40e6-8d0a-29b712e8f7e0",
+                            "position": {
+                                "x": 103.22915649414063,
+                                "y": -213.31312561035157
+                            },
+                            "name": "Square",
+                            "exposedPosition": {
+                                "x": 0.0,
+                                "y": -15.0
+                            }
+                        },
+                        {
+                            "type": "Text",
+                            "id": "54c8ef2c-77f4-4b55-81fc-eb015a69a5d2",
+                            "position": {
+                                "x": -117.12637329101563,
+                                "y": -29.28374481201172
+                            },
+                            "text": "The Timer node outputs the number of seconds since it was last reset.  Whenever an Audulus file is closed and reopened, the Timer is reset (i.e., it does not continue to run while the program is closed).  The timer node is reset when its input receives any non-zero positive number.",
+                            "width": 234.44512939453126
+                        },
+                        {
+                            "type": "Text",
+                            "id": "47b15a4a-9d90-4c4a-baa8-6d510de127c9",
+                            "position": {
+                                "x": 192.15777587890626,
+                                "y": 132.7144775390625
+                            },
+                            "text": "The RGB node is more useful for monitoring the Saw output than the Light node because the RGB node can indicate signal strength with brightness.  It is like a DC signal with a voltage varying from 0-1.",
+                            "width": 234.1670684814453
+                        },
+                        {
+                            "type": "Output",
+                            "id": "a2d7f27e-6cc4-490f-9bc2-06c263620f6f",
+                            "position": {
+                                "x": 89.89706420898438,
+                                "y": -2.6396350860595705
+                            },
+                            "name": "Saw",
+                            "exposedPosition": {
+                                "x": 0.0,
+                                "y": 10.0
+                            }
+                        },
+                        {
+                            "type": "Expr",
+                            "id": "d989e876-ed73-44ef-8a20-7e2250771dad",
+                            "position": {
+                                "x": -128.61453247070313,
+                                "y": 43.056907653808597
+                            },
+                            "expr": "Timer>=Knob"
+                        },
+                        {
+                            "type": "Timer",
+                            "id": "26f4c5ab-e285-4f55-96fc-544eb659bf3e",
+                            "position": {
+                                "x": -71.34066772460938,
+                                "y": -3.528787612915039
+                            }
+                        },
+                        {
+                            "type": "Expr",
+                            "id": "5a26e504-498f-4d7f-b1b0-4472abaee0b7",
+                            "position": {
+                                "x": -123.32554626464844,
+                                "y": -228.80921936035157
+                            },
+                            "expr": "Timer>(Knob/2)"
+                        },
+                        {
+                            "type": "Text",
+                            "id": "278ee73b-c4d8-4f89-a53d-cb3030db4f21",
+                            "position": {
+                                "x": -533.4448852539063,
+                                "y": 55.58815002441406
+                            },
+                            "text": "This is a 0-1 knob.  Whenever you create a knob, its default range is 0-1.",
+                            "width": 140.06398010253907
+                        },
+                        {
+                            "type": "Knob",
+                            "id": "ee22105b-6fc5-4f13-a502-7da1e1c487c9",
+                            "position": {
+                                "x": -481.1444091796875,
+                                "y": -43.29911804199219
+                            },
+                            "name": "",
+                            "knob": {
+                                "value": 1.0,
+                                "min": 0.0,
+                                "max": 1.0
+                            },
+                            "exposedPosition": {
+                                "x": 0.0,
+                                "y": 40.0
+                            }
+                        },
+                        {
+                            "type": "Text",
+                            "id": "594e1b8a-38ab-4190-97fa-5f7a253ee443",
+                            "position": {
+                                "x": -139.18115234375,
+                                "y": 332.42779541015627
+                            },
+                            "text": "This expression compares the output of the Timer node to the value of the knob.  If the Timer node's value is exactly or exceeds the knob's value, then the expression resets the timer.  This creates a saw wave output.  Both the amplitude and frequency of the saw wave are determined by the knob's value.  Because of the way the Timer>=Knob expression resets the timer, frequency range of this oscillator is theoretically 1-infinity Hz.  In other words, as you decrease knob values, the frequency of its output increases in a sharply exponential manner.",
+                            "width": 226.99891662597657
+                        },
+                        {
+                            "type": "Text",
+                            "id": "608091eb-7e48-4b53-aa3b-94cb27450eea",
+                            "position": {
+                                "x": -12.641036987304688,
+                                "y": 421.8411560058594
+                            },
+                            "exposedPosition": {
+                                "x": -50.0,
+                                "y": 75.0
+                            },
+                            "text": "Timer LFO",
+                            "width": 256.0
+                        },
+                        {
+                            "type": "RGBLight",
+                            "id": "22c3d659-2ee1-44ce-86e4-5d353f146a37",
+                            "position": {
+                                "x": 94.83589935302735,
+                                "y": 47.16790008544922
+                            },
+                            "exposedPosition": {
+                                "x": 0.0,
+                                "y": 10.0
+                            }
+                        },
+                        {
+                            "type": "Light",
+                            "id": "264ee9ab-bd72-4992-aa0e-e1f517b0101f",
+                            "position": {
+                                "x": 103.90963745117188,
+                                "y": -265.0711669921875
+                            },
+                            "exposedPosition": {
+                                "x": 0.0,
+                                "y": -15.0
+                            }
+                        },
+                        {
+                            "type": "Expr",
+                            "id": "86766d5c-4ec7-44d4-8071-14eddbd20499",
+                            "position": {
+                                "x": -401.44195556640627,
+                                "y": -63.49116134643555
+                            },
+                            "expr": "Knob*.99999+0.00001"
+                        },
+                        {
+                            "type": "Text",
+                            "id": "d74b31fb-729f-4bb2-b20c-658463a6e7ea",
+                            "position": {
+                                "x": -372.7562255859375,
+                                "y": -88.64540100097656
+                            },
+                            "text": "This expression changes the knob's range from 0-1 to 0.0001-1.  The knob's signal is first multiplied by .99999 to decrease the maximum, and then the 0.00001 is added to shift the range up slightly.  If the knob goes to zero, the Timer LFO shuts down because the Timer>=Knob is continuously true.  A knob's range can be changed directly by clicking or tapping on it, but this way is preferrable - if all knobs are kept as 0-1 knobs, then modulation signals can be directly applied to knobs everywhere without needing extra translational math (because the translational math is already inside the modules).",
+                            "width": 228.4305419921875
+                        },
+                        {
+                            "type": "Value",
+                            "id": "5760e274-1cb0-41bc-8285-9a4f6c31e343",
+                            "position": {
+                                "x": -384.38409423828127,
+                                "y": -14.944835662841797
+                            }
+                        },
+                        {
+                            "type": "Value",
+                            "id": "253402fe-2b42-49fd-908e-ff3595407092",
+                            "position": {
+                                "x": -385.1173400878906,
+                                "y": 29.788619995117189
+                            }
+                        }
+                    ],
+                    "wires": [
+                        {
+                            "from": "5a26e504-498f-4d7f-b1b0-4472abaee0b7",
+                            "output": 0,
+                            "to": "e92f5242-fa60-40e6-8d0a-29b712e8f7e0",
+                            "input": 0
+                        },
+                        {
+                            "from": "26f4c5ab-e285-4f55-96fc-544eb659bf3e",
+                            "output": 0,
+                            "to": "a2d7f27e-6cc4-490f-9bc2-06c263620f6f",
+                            "input": 0
+                        },
+                        {
+                            "from": "26f4c5ab-e285-4f55-96fc-544eb659bf3e",
+                            "output": 0,
+                            "to": "d989e876-ed73-44ef-8a20-7e2250771dad",
+                            "input": 0
+                        },
+                        {
+                            "from": "86766d5c-4ec7-44d4-8071-14eddbd20499",
+                            "output": 0,
+                            "to": "d989e876-ed73-44ef-8a20-7e2250771dad",
+                            "input": 1
+                        },
+                        {
+                            "from": "d989e876-ed73-44ef-8a20-7e2250771dad",
+                            "output": 0,
+                            "to": "26f4c5ab-e285-4f55-96fc-544eb659bf3e",
+                            "input": 0
+                        },
+                        {
+                            "from": "26f4c5ab-e285-4f55-96fc-544eb659bf3e",
+                            "output": 0,
+                            "to": "5a26e504-498f-4d7f-b1b0-4472abaee0b7",
+                            "input": 0
+                        },
+                        {
+                            "from": "86766d5c-4ec7-44d4-8071-14eddbd20499",
+                            "output": 0,
+                            "to": "5a26e504-498f-4d7f-b1b0-4472abaee0b7",
+                            "input": 1
+                        },
+                        {
+                            "from": "26f4c5ab-e285-4f55-96fc-544eb659bf3e",
+                            "output": 0,
+                            "to": "22c3d659-2ee1-44ce-86e4-5d353f146a37",
+                            "input": 1
+                        },
+                        {
+                            "from": "5a26e504-498f-4d7f-b1b0-4472abaee0b7",
+                            "output": 0,
+                            "to": "264ee9ab-bd72-4992-aa0e-e1f517b0101f",
+                            "input": 0
+                        },
+                        {
+                            "from": "ee22105b-6fc5-4f13-a502-7da1e1c487c9",
+                            "output": 0,
+                            "to": "86766d5c-4ec7-44d4-8071-14eddbd20499",
+                            "input": 0
+                        },
+                        {
+                            "from": "ee22105b-6fc5-4f13-a502-7da1e1c487c9",
+                            "output": 0,
+                            "to": "5760e274-1cb0-41bc-8285-9a4f6c31e343",
+                            "input": 0
+                        },
+                        {
+                            "from": "86766d5c-4ec7-44d4-8071-14eddbd20499",
+                            "output": 0,
+                            "to": "253402fe-2b42-49fd-908e-ff3595407092",
+                            "input": 0
+                        }
+                    ]
+                }
+            },
+            {
+                "type": "Waveform",
+                "id": "09a18a27-26ec-4b0f-8255-d695981099c5",
+                "position": {
+                    "x": 346.8811950683594,
+                    "y": -163.45103454589845
+                }
+            },
+            {
+                "type": "Waveform",
+                "id": "2308c8b2-5a11-434d-8442-aba3e94abd16",
+                "position": {
+                    "x": 346.7103576660156,
+                    "y": -163.21917724609376
+                }
+            }
+        ],
+        "wires": [
+            {
+                "from": "7ff96d32-cbc0-4e9b-9beb-74df3bd5b9a1",
+                "output": 1,
+                "to": "09a18a27-26ec-4b0f-8255-d695981099c5",
+                "input": 0
+            },
+            {
+                "from": "7ff96d32-cbc0-4e9b-9beb-74df3bd5b9a1",
+                "output": 0,
+                "to": "2308c8b2-5a11-434d-8442-aba3e94abd16",
+                "input": 0
+            }
+        ]
+    },
+    "history": {
+        "states": [
+            {
+                "id": "8aac3522-8660-42af-8bc0-522e065c9ecd"
+            }
+        ],
+        "current": "8aac3522-8660-42af-8bc0-522e065c9ecd"
+    },
+    "undoStack": {
+        "stack": [
+            "8aac3522-8660-42af-8bc0-522e065c9ecd"
+        ],
+        "current": 0
+    }
+}

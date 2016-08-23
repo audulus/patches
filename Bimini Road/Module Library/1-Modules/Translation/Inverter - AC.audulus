@@ -1,0 +1,141 @@
+{
+    "version": 1,
+    "tags": [
+        "Audio",
+        "Translation"
+    ],
+    "patch": {
+        "id": "72fa86b0-e170-4200-9420-fb81db82e46d",
+        "pan": {
+            "x": 35.0,
+            "y": -40.0
+        },
+        "zoom": 12.342857360839844,
+        "nodes": [
+            {
+                "type": "Patch",
+                "id": "f43c4874-8dba-46c2-9714-fc238d381675",
+                "position": {
+                    "x": 0.0,
+                    "y": 0.0
+                },
+                "subPatch": {
+                    "id": "df81ab27-af1a-40dd-a832-ea5af54597cc",
+                    "pan": {
+                        "x": -144.4732208251953,
+                        "y": -60.78070068359375
+                    },
+                    "zoom": 2.33117413520813,
+                    "nodes": [
+                        {
+                            "type": "Input",
+                            "id": "bb0fc827-38b8-4d6f-b0ad-82d33dd068fa",
+                            "position": {
+                                "x": -6.2146453857421879,
+                                "y": 20.76282501220703
+                            },
+                            "name": "",
+                            "exposedPosition": {
+                                "x": -85.0,
+                                "y": 40.0
+                            }
+                        },
+                        {
+                            "type": "Output",
+                            "id": "5c18de0f-20a4-4471-90e1-3c0169d95be0",
+                            "position": {
+                                "x": 226.48770141601563,
+                                "y": 21.05759048461914
+                            },
+                            "name": "",
+                            "exposedPosition": {
+                                "x": 15.0,
+                                "y": 40.0
+                            }
+                        },
+                        {
+                            "type": "Text",
+                            "id": "1c3099cd-23bf-4f23-98bf-406811f7be5e",
+                            "position": {
+                                "x": 123.86866760253906,
+                                "y": 84.80873107910156
+                            },
+                            "exposedPosition": {
+                                "x": -70.0,
+                                "y": 40.0
+                            },
+                            "text": "AC Inverter",
+                            "width": 256.0
+                        },
+                        {
+                            "type": "Expr",
+                            "id": "7ebdb74b-4932-4437-a06f-ea0caa347acc",
+                            "position": {
+                                "x": 86.58551025390625,
+                                "y": 21.259864807128908
+                            },
+                            "expr": "a*-1"
+                        },
+                        {
+                            "type": "Text",
+                            "id": "714b8405-9e72-4be4-a299-71c83faf7bf1",
+                            "position": {
+                                "x": -43.19541931152344,
+                                "y": 45.75499725341797
+                            },
+                            "exposedPosition": {
+                                "x": -90.0,
+                                "y": 40.0
+                            },
+                            "text": "a",
+                            "width": 256.0
+                        },
+                        {
+                            "type": "Text",
+                            "id": "4dced15b-5cea-4fa4-b76b-6fd5c0a1f55c",
+                            "position": {
+                                "x": 326.05047607421877,
+                                "y": 44.897377014160159
+                            },
+                            "exposedPosition": {
+                                "x": 10.0,
+                                "y": 40.0
+                            },
+                            "text": "a",
+                            "width": 256.0
+                        }
+                    ],
+                    "wires": [
+                        {
+                            "from": "7ebdb74b-4932-4437-a06f-ea0caa347acc",
+                            "output": 0,
+                            "to": "5c18de0f-20a4-4471-90e1-3c0169d95be0",
+                            "input": 0
+                        },
+                        {
+                            "from": "bb0fc827-38b8-4d6f-b0ad-82d33dd068fa",
+                            "output": 0,
+                            "to": "7ebdb74b-4932-4437-a06f-ea0caa347acc",
+                            "input": 0
+                        }
+                    ]
+                }
+            }
+        ],
+        "wires": []
+    },
+    "history": {
+        "states": [
+            {
+                "id": "6b8009ab-8d20-4d01-a9bf-80cf01b36a73"
+            }
+        ],
+        "current": "6b8009ab-8d20-4d01-a9bf-80cf01b36a73"
+    },
+    "undoStack": {
+        "stack": [
+            "6b8009ab-8d20-4d01-a9bf-80cf01b36a73"
+        ],
+        "current": 0
+    }
+}

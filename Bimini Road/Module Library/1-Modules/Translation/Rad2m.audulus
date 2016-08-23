@@ -1,0 +1,159 @@
+{
+    "version": 1,
+    "tags": [
+        "Modulation",
+        "Translation"
+    ],
+    "patch": {
+        "id": "2fadbd37-0488-424e-bb36-bc6875f3826b",
+        "pan": {
+            "x": 136.25,
+            "y": -51.875
+        },
+        "zoom": 16.457143783569337,
+        "nodes": [
+            {
+                "type": "Patch",
+                "id": "031afee0-f498-41b4-89b6-dd4941755e11",
+                "position": {
+                    "x": -103.75,
+                    "y": -178.125
+                },
+                "subPatch": {
+                    "id": "5510ea70-f3cd-4add-aaf8-912181a83f37",
+                    "pan": {
+                        "x": -167.79721069335938,
+                        "y": 7.506248474121094
+                    },
+                    "zoom": 1.2033954858779908,
+                    "nodes": [
+                        {
+                            "type": "Input",
+                            "id": "d0e1a28f-8dec-4bd3-a5c1-746ed65ebe19",
+                            "position": {
+                                "x": -91.99029541015625,
+                                "y": 45.6376953125
+                            },
+                            "name": "",
+                            "exposedPosition": {
+                                "x": -65.0,
+                                "y": 230.0
+                            }
+                        },
+                        {
+                            "type": "Output",
+                            "id": "506853c2-9653-4a39-ae90-2284f6609ffa",
+                            "position": {
+                                "x": 273.9879150390625,
+                                "y": 46.3670654296875
+                            },
+                            "name": "",
+                            "exposedPosition": {
+                                "x": 0.0,
+                                "y": 230.0
+                            }
+                        },
+                        {
+                            "type": "Expr",
+                            "id": "1d0a571a-2dbc-4013-a790-d282289eec59",
+                            "position": {
+                                "x": 2.70245361328125,
+                                "y": 46.39385986328125
+                            },
+                            "expr": "Radians/(2*pi)"
+                        },
+                        {
+                            "type": "Text",
+                            "id": "0f7e6d37-b9e3-4e89-9d16-ff17a169c293",
+                            "position": {
+                                "x": 69.3001708984375,
+                                "y": 126.63612365722656
+                            },
+                            "exposedPosition": {
+                                "x": -50.0,
+                                "y": 230.0
+                            },
+                            "text": "Rad2m",
+                            "width": 256.0
+                        },
+                        {
+                            "type": "Text",
+                            "id": "dae0b28a-8265-4182-b29d-9cc8bf0c96c4",
+                            "position": {
+                                "x": -121.72183227539063,
+                                "y": 69.37126159667969
+                            },
+                            "exposedPosition": {
+                                "x": -70.0,
+                                "y": 230.0
+                            },
+                            "text": "r",
+                            "width": 256.0
+                        },
+                        {
+                            "type": "RGBLight",
+                            "id": "b85165a4-4d08-4b46-97a5-07f0bb3b3ea3",
+                            "position": {
+                                "x": 276.4805908203125,
+                                "y": -56.62507247924805
+                            },
+                            "exposedPosition": {
+                                "x": 0.0,
+                                "y": 230.0
+                            }
+                        },
+                        {
+                            "type": "Text",
+                            "id": "46204926-d232-4703-8dd7-05da9b5f389a",
+                            "position": {
+                                "x": 373.0732727050781,
+                                "y": 68.78904724121094
+                            },
+                            "exposedPosition": {
+                                "x": -5.0,
+                                "y": 230.0
+                            },
+                            "text": "m",
+                            "width": 256.0
+                        }
+                    ],
+                    "wires": [
+                        {
+                            "from": "1d0a571a-2dbc-4013-a790-d282289eec59",
+                            "output": 0,
+                            "to": "506853c2-9653-4a39-ae90-2284f6609ffa",
+                            "input": 0
+                        },
+                        {
+                            "from": "d0e1a28f-8dec-4bd3-a5c1-746ed65ebe19",
+                            "output": 0,
+                            "to": "1d0a571a-2dbc-4013-a790-d282289eec59",
+                            "input": 0
+                        },
+                        {
+                            "from": "1d0a571a-2dbc-4013-a790-d282289eec59",
+                            "output": 0,
+                            "to": "b85165a4-4d08-4b46-97a5-07f0bb3b3ea3",
+                            "input": 0
+                        }
+                    ]
+                }
+            }
+        ],
+        "wires": []
+    },
+    "history": {
+        "states": [
+            {
+                "id": "d796d9f8-ecae-4ac7-8952-df895b583792"
+            }
+        ],
+        "current": "d796d9f8-ecae-4ac7-8952-df895b583792"
+    },
+    "undoStack": {
+        "stack": [
+            "d796d9f8-ecae-4ac7-8952-df895b583792"
+        ],
+        "current": 0
+    }
+}

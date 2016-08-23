@@ -1,0 +1,292 @@
+{
+    "version": 1,
+    "author": "MacroMachines.net",
+    "tags": [
+        "MacroMachines",
+        "Compressor",
+        "Effect",
+        "Dynamics",
+        "Limiter",
+        "Audio"
+    ],
+    "description": "crossfades to soft clip tanh distortion when input > threshold knob",
+    "patch": {
+        "id": "d1208413-e386-4698-8d33-931dc93c4c19",
+        "pan": {
+            "x": -25.801368713378908,
+            "y": 10.74334716796875
+        },
+        "zoom": 10.126420021057129,
+        "nodes": [
+            {
+                "type": "Patch",
+                "id": "a3ca21e7-7c4d-4b54-b426-818445f38d68",
+                "position": {
+                    "x": 5.801368713378906,
+                    "y": -33.73661804199219
+                },
+                "subPatch": {
+                    "id": "0fb06fda-fd8c-460e-81a9-293f21d159e9",
+                    "pan": {
+                        "x": -170.9753875732422,
+                        "y": -167.72972106933595
+                    },
+                    "zoom": 0.9990694522857666,
+                    "nodes": [
+                        {
+                            "type": "Expr",
+                            "id": "f9e9f97d-0bd9-464b-951e-27bdd1494914",
+                            "position": {
+                                "x": -130.7167205810547,
+                                "y": 81.19293212890625
+                            },
+                            "expr": "tanh(signal)"
+                        },
+                        {
+                            "type": "RGBLight",
+                            "id": "0215fcca-ef23-45ca-90c4-fbe6791980cf",
+                            "position": {
+                                "x": 270.4105224609375,
+                                "y": 240.5441436767578
+                            },
+                            "exposedPosition": {
+                                "x": 35.0,
+                                "y": 55.0
+                            }
+                        },
+                        {
+                            "type": "Crossfade",
+                            "id": "f88ed7bf-713f-4e39-b217-e170dc3164f1",
+                            "position": {
+                                "x": 367.2576904296875,
+                                "y": 51.05949783325195
+                            }
+                        },
+                        {
+                            "type": "Input",
+                            "id": "58895a57-5f14-4f87-932d-87954b9e28ff",
+                            "position": {
+                                "x": -217.43081665039063,
+                                "y": 47.83234405517578
+                            },
+                            "name": "",
+                            "exposedPosition": {
+                                "x": -15.0,
+                                "y": 50.0
+                            }
+                        },
+                        {
+                            "type": "Output",
+                            "id": "aa96cf38-cc81-4fb5-90f5-b9a5b6bfc2e9",
+                            "position": {
+                                "x": 502.921142578125,
+                                "y": 48.12033462524414
+                            },
+                            "name": "",
+                            "exposedPosition": {
+                                "x": 55.0,
+                                "y": 50.0
+                            }
+                        },
+                        {
+                            "type": "Expr",
+                            "id": "63ce9d8b-6445-420e-8de5-e324557778dc",
+                            "position": {
+                                "x": -169.39012145996095,
+                                "y": 147.89100646972657
+                            },
+                            "expr": "abs(signal)>threshold"
+                        },
+                        {
+                            "type": "ADSR",
+                            "id": "3a1ea3a9-2734-4ed6-98f0-b398d10dc04f",
+                            "position": {
+                                "x": 117.02688598632813,
+                                "y": 137.04295349121095
+                            },
+                            "attack": {
+                                "value": 0.0,
+                                "min": 0.0,
+                                "max": 1.0
+                            },
+                            "decay": {
+                                "value": 0.0,
+                                "min": 0.0,
+                                "max": 1.0
+                            },
+                            "sustain": {
+                                "value": 1.0,
+                                "min": 0.0,
+                                "max": 1.0
+                            },
+                            "release": {
+                                "value": 0.03426596522331238,
+                                "min": 0.0,
+                                "max": 1.0
+                            }
+                        },
+                        {
+                            "type": "Knob",
+                            "id": "e78dbc73-25a9-4333-b9dc-8a9c77fcfb5e",
+                            "position": {
+                                "x": -250.25405883789063,
+                                "y": 197.74615478515626
+                            },
+                            "name": "",
+                            "knob": {
+                                "value": 0.4944891929626465,
+                                "min": 0.0,
+                                "max": 1.0
+                            },
+                            "exposedPosition": {
+                                "x": 20.0,
+                                "y": 5.0
+                            }
+                        },
+                        {
+                            "type": "Text",
+                            "id": "e0c042ca-1243-4c1f-9b1e-f4d0e5b5ad67",
+                            "position": {
+                                "x": 371.871826171875,
+                                "y": 271.66949462890627
+                            },
+                            "exposedPosition": {
+                                "x": 0.0,
+                                "y": 55.0
+                            },
+                            "text": "Tube",
+                            "width": 134.8325653076172
+                        },
+                        {
+                            "type": "Text",
+                            "id": "aa39ebf6-69e1-4724-a793-c6e5204e957b",
+                            "position": {
+                                "x": -266.2253112792969,
+                                "y": 259.1415710449219
+                            },
+                            "exposedPosition": {
+                                "x": 5.0,
+                                "y": 5.0
+                            },
+                            "text": "thrsh",
+                            "width": 134.8325653076172
+                        },
+                        {
+                            "type": "Text",
+                            "id": "03d8af7c-a470-46c7-9b58-3c2e38669b8c",
+                            "position": {
+                                "x": 372.58038330078127,
+                                "y": 236.89810180664063
+                            },
+                            "exposedPosition": {
+                                "x": 0.0,
+                                "y": 40.0
+                            },
+                            "text": "Limiter",
+                            "width": 134.8325653076172
+                        },
+                        {
+                            "type": "Text",
+                            "id": "d574113f-e7e6-40b5-a51b-858412df63de",
+                            "position": {
+                                "x": -241.56072998046876,
+                                "y": 71.13873291015625
+                            },
+                            "exposedPosition": {
+                                "x": -20.0,
+                                "y": 50.0
+                            },
+                            "text": "a",
+                            "width": 134.8325653076172
+                        },
+                        {
+                            "type": "Text",
+                            "id": "5f9913f8-6203-4326-8738-4358857f3a37",
+                            "position": {
+                                "x": 613.6937255859375,
+                                "y": 68.5834732055664
+                            },
+                            "exposedPosition": {
+                                "x": 50.0,
+                                "y": 50.0
+                            },
+                            "text": "a",
+                            "width": 134.8325653076172
+                        }
+                    ],
+                    "wires": [
+                        {
+                            "from": "58895a57-5f14-4f87-932d-87954b9e28ff",
+                            "output": 0,
+                            "to": "f9e9f97d-0bd9-464b-951e-27bdd1494914",
+                            "input": 0
+                        },
+                        {
+                            "from": "3a1ea3a9-2734-4ed6-98f0-b398d10dc04f",
+                            "output": 0,
+                            "to": "0215fcca-ef23-45ca-90c4-fbe6791980cf",
+                            "input": 0
+                        },
+                        {
+                            "from": "58895a57-5f14-4f87-932d-87954b9e28ff",
+                            "output": 0,
+                            "to": "f88ed7bf-713f-4e39-b217-e170dc3164f1",
+                            "input": 0
+                        },
+                        {
+                            "from": "f9e9f97d-0bd9-464b-951e-27bdd1494914",
+                            "output": 0,
+                            "to": "f88ed7bf-713f-4e39-b217-e170dc3164f1",
+                            "input": 1
+                        },
+                        {
+                            "from": "3a1ea3a9-2734-4ed6-98f0-b398d10dc04f",
+                            "output": 0,
+                            "to": "f88ed7bf-713f-4e39-b217-e170dc3164f1",
+                            "input": 2
+                        },
+                        {
+                            "from": "f88ed7bf-713f-4e39-b217-e170dc3164f1",
+                            "output": 0,
+                            "to": "aa96cf38-cc81-4fb5-90f5-b9a5b6bfc2e9",
+                            "input": 0
+                        },
+                        {
+                            "from": "58895a57-5f14-4f87-932d-87954b9e28ff",
+                            "output": 0,
+                            "to": "63ce9d8b-6445-420e-8de5-e324557778dc",
+                            "input": 0
+                        },
+                        {
+                            "from": "e78dbc73-25a9-4333-b9dc-8a9c77fcfb5e",
+                            "output": 0,
+                            "to": "63ce9d8b-6445-420e-8de5-e324557778dc",
+                            "input": 1
+                        },
+                        {
+                            "from": "63ce9d8b-6445-420e-8de5-e324557778dc",
+                            "output": 0,
+                            "to": "3a1ea3a9-2734-4ed6-98f0-b398d10dc04f",
+                            "input": 0
+                        }
+                    ]
+                }
+            }
+        ],
+        "wires": []
+    },
+    "history": {
+        "states": [
+            {
+                "id": "a9fda3d7-1d9e-44c6-96b9-e46bbe09d7f4"
+            }
+        ],
+        "current": "a9fda3d7-1d9e-44c6-96b9-e46bbe09d7f4"
+    },
+    "undoStack": {
+        "stack": [
+            "a9fda3d7-1d9e-44c6-96b9-e46bbe09d7f4"
+        ],
+        "current": 0
+    }
+}

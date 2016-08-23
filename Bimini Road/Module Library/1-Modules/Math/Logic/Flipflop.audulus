@@ -1,0 +1,210 @@
+{
+    "version": 1,
+    "author": "Bimini Road",
+    "tags": [
+        "Math",
+        "Logic",
+        "Gate"
+    ],
+    "description": "This is a flipflop module. Flipflops can divide clock pulses and store information.\n\nThis module contains a node-by-node tutorial.\n\nInputs:\ng - Clock pulse (0 or 1)\n\nOutputs:\ng - Flipflop (0 or 1)",
+    "patch": {
+        "id": "ce242119-d7d7-43f1-9460-5b24f8f0b5e9",
+        "pan": {
+            "x": 101.86885070800781,
+            "y": -55.34984588623047
+        },
+        "zoom": 15.026086807250977,
+        "nodes": [
+            {
+                "type": "Patch",
+                "id": "450df593-b146-4381-91d0-8bb9d04f6c14",
+                "position": {
+                    "x": -54.36885070800781,
+                    "y": 15.349847793579102
+                },
+                "subPatch": {
+                    "id": "78ba3104-eee0-49a6-8356-48ab3d50b3c1",
+                    "pan": {
+                        "x": -190.47970581054688,
+                        "y": 24.796924591064454
+                    },
+                    "zoom": 1.8884994983673096,
+                    "nodes": [
+                        {
+                            "type": "Input",
+                            "id": "66953bdf-2e76-499a-90b3-aabdab2cc9f6",
+                            "position": {
+                                "x": 18.40235137939453,
+                                "y": 68.41926574707031
+                            },
+                            "name": "",
+                            "exposedPosition": {
+                                "x": -85.0,
+                                "y": 40.0
+                            }
+                        },
+                        {
+                            "type": "Output",
+                            "id": "2197771a-5812-4f13-a202-156ff7ddf0fe",
+                            "position": {
+                                "x": 288.2130126953125,
+                                "y": 38.740482330322269
+                            },
+                            "name": "",
+                            "exposedPosition": {
+                                "x": -10.0,
+                                "y": 40.0
+                            }
+                        },
+                        {
+                            "type": "Text",
+                            "id": "0586e05c-202c-4e81-a1d8-33956001b2ae",
+                            "position": {
+                                "x": 189.32000732421876,
+                                "y": 158.25607299804688
+                            },
+                            "exposedPosition": {
+                                "x": -70.0,
+                                "y": 40.0
+                            },
+                            "text": "Flipflop",
+                            "width": 256.0
+                        },
+                        {
+                            "type": "Expr",
+                            "id": "75c9921e-50df-4934-b77a-2a60c8d52170",
+                            "position": {
+                                "x": 99.83432006835938,
+                                "y": -9.80331039428711
+                            },
+                            "expr": "1-Flipflop"
+                        },
+                        {
+                            "type": "Sample & Hold",
+                            "id": "35feb2a4-6b35-4ae5-89a2-6d67e12e6260",
+                            "position": {
+                                "x": 110.58074951171875,
+                                "y": 37.938934326171878
+                            }
+                        },
+                        {
+                            "type": "Light",
+                            "id": "60fe467f-c78f-4358-8d09-bbe9d2492d51",
+                            "position": {
+                                "x": 288.367919921875,
+                                "y": 79.73121643066406
+                            },
+                            "exposedPosition": {
+                                "x": -10.0,
+                                "y": 40.0
+                            }
+                        },
+                        {
+                            "type": "Light",
+                            "id": "919c3f49-97a2-4390-93d1-fd111dcc06c0",
+                            "position": {
+                                "x": 23.435340881347658,
+                                "y": 112.59318542480469
+                            },
+                            "exposedPosition": {
+                                "x": -85.0,
+                                "y": 40.0
+                            }
+                        },
+                        {
+                            "type": "Text",
+                            "id": "85c94c40-9cb3-4cd1-8856-882024f68211",
+                            "position": {
+                                "x": 27.050674438476564,
+                                "y": -32.45051574707031
+                            },
+                            "text": "This is a flipflop.  Flipflops are the smallest unit of memory.  Flipflops are very important in computer processing.  When the flipflop's input is pulsed, the output goes high (1) and stays high.  When its input is pulsed again, its output returns to low (0).  The flipflop begins with an output of zero. This output is sent in a feedback loop to the expression 1-Flipflop.  The variable Flipflop here is 0, so the output of the expression is 1.  When the trigger input of the Sample & Hold node is pulsed, the value of 1 from the 1-Flipflop(0) expression is sampled and held at the output.  The output of the Sample & Hold node is now 1.  The output of the expression 1-Flipflop(1) turns to 0.  When the trigger input is pulsed again, this 0 output is sampled and the whole process starts over again.",
+                            "width": 378.94146728515627
+                        },
+                        {
+                            "type": "Text",
+                            "id": "fab6c5b7-8f29-4b52-b717-423009ce77e1",
+                            "position": {
+                                "x": -6.8475189208984379,
+                                "y": 90.88479614257813
+                            },
+                            "exposedPosition": {
+                                "x": -90.0,
+                                "y": 40.0
+                            },
+                            "text": "g",
+                            "width": 256.0
+                        },
+                        {
+                            "type": "Text",
+                            "id": "b38a7824-8f15-4b55-9070-57fd1921e959",
+                            "position": {
+                                "x": 388.94500732421877,
+                                "y": 58.21424865722656
+                            },
+                            "exposedPosition": {
+                                "x": -15.0,
+                                "y": 40.0
+                            },
+                            "text": "g",
+                            "width": 256.0
+                        }
+                    ],
+                    "wires": [
+                        {
+                            "from": "35feb2a4-6b35-4ae5-89a2-6d67e12e6260",
+                            "output": 0,
+                            "to": "2197771a-5812-4f13-a202-156ff7ddf0fe",
+                            "input": 0
+                        },
+                        {
+                            "from": "35feb2a4-6b35-4ae5-89a2-6d67e12e6260",
+                            "output": 0,
+                            "to": "75c9921e-50df-4934-b77a-2a60c8d52170",
+                            "input": 0
+                        },
+                        {
+                            "from": "75c9921e-50df-4934-b77a-2a60c8d52170",
+                            "output": 0,
+                            "to": "35feb2a4-6b35-4ae5-89a2-6d67e12e6260",
+                            "input": 0
+                        },
+                        {
+                            "from": "66953bdf-2e76-499a-90b3-aabdab2cc9f6",
+                            "output": 0,
+                            "to": "35feb2a4-6b35-4ae5-89a2-6d67e12e6260",
+                            "input": 1
+                        },
+                        {
+                            "from": "35feb2a4-6b35-4ae5-89a2-6d67e12e6260",
+                            "output": 0,
+                            "to": "60fe467f-c78f-4358-8d09-bbe9d2492d51",
+                            "input": 0
+                        },
+                        {
+                            "from": "66953bdf-2e76-499a-90b3-aabdab2cc9f6",
+                            "output": 0,
+                            "to": "919c3f49-97a2-4390-93d1-fd111dcc06c0",
+                            "input": 0
+                        }
+                    ]
+                }
+            }
+        ],
+        "wires": []
+    },
+    "history": {
+        "states": [
+            {
+                "id": "fc0aa4b5-7cfd-4900-9455-0f42fbc0b727"
+            }
+        ],
+        "current": "fc0aa4b5-7cfd-4900-9455-0f42fbc0b727"
+    },
+    "undoStack": {
+        "stack": [
+            "fc0aa4b5-7cfd-4900-9455-0f42fbc0b727"
+        ],
+        "current": 0
+    }
+}

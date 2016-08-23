@@ -1,0 +1,283 @@
+{
+    "version": 1,
+    "tags": [
+        "Tutorial"
+    ],
+    "patch": {
+        "id": "f1acf55d-0b1f-43f0-af2d-9fed261d878c",
+        "pan": {
+            "x": -372.9672546386719,
+            "y": -26.438751220703126
+        },
+        "zoom": 0.818716287612915,
+        "nodes": [
+            {
+                "type": "Phasor",
+                "id": "3f1dd3c1-5477-4795-897a-bae643a626cf",
+                "position": {
+                    "x": -59.86506652832031,
+                    "y": 88.40885162353516
+                }
+            },
+            {
+                "type": "Expr",
+                "id": "a5729eef-2906-4faa-9e81-0ef4e1e36a6f",
+                "position": {
+                    "x": -189.8650665283203,
+                    "y": 88.40885162353516
+                },
+                "expr": "1"
+            },
+            {
+                "type": "Waveform",
+                "id": "7c782910-6917-478a-8aba-55d5f5e529c5",
+                "position": {
+                    "x": 324.0788879394531,
+                    "y": 36.42870330810547
+                }
+            },
+            {
+                "type": "Expr",
+                "id": "cd2e57cf-0e39-4fca-abf0-ff364facaf07",
+                "position": {
+                    "x": 121.23550415039063,
+                    "y": 89.98910522460938
+                },
+                "expr": "Input/(2*pi)"
+            },
+            {
+                "type": "Expr",
+                "id": "fc2d47a3-89c6-478d-8ae6-85df217f302c",
+                "position": {
+                    "x": 93.96766662597656,
+                    "y": -67.65203094482422
+                },
+                "expr": "floor(Saw*10)/10"
+            },
+            {
+                "type": "Waveform",
+                "id": "7ae812bc-56b3-42ba-9648-7de5b9e0c71d",
+                "position": {
+                    "x": 327.8682556152344,
+                    "y": -120.41958618164063
+                }
+            },
+            {
+                "type": "Expr",
+                "id": "dd3b2d3c-62d3-4ed5-82df-147da93ccf04",
+                "position": {
+                    "x": 117.83724975585938,
+                    "y": -228.70950317382813
+                },
+                "expr": "x==0"
+            },
+            {
+                "type": "Waveform",
+                "id": "d06e9d76-4927-49d5-b690-28ee922dca93",
+                "position": {
+                    "x": 335.0271911621094,
+                    "y": -280.15447998046877
+                }
+            },
+            {
+                "type": "Expr",
+                "id": "13568ab4-062a-4935-9f45-e7e3cb29a094",
+                "position": {
+                    "x": 119.28732299804688,
+                    "y": -299.05194091796877
+                },
+                "expr": "x==1"
+            },
+            {
+                "type": "Waveform",
+                "id": "3e03a4ab-0fd2-4637-943b-ae0957f59b51",
+                "position": {
+                    "x": 335.0350646972656,
+                    "y": -283.07305908203127
+                }
+            },
+            {
+                "type": "Value",
+                "id": "0e194809-5952-4db5-81a8-927b0ba12ce1",
+                "position": {
+                    "x": 135.48275756835938,
+                    "y": -131.04847717285157
+                }
+            },
+            {
+                "type": "Text",
+                "id": "03cc69a5-c3f4-4e77-bd65-a4b5e963226a",
+                "position": {
+                    "x": 709.5863647460938,
+                    "y": 108.38555908203125
+                },
+                "text": "Translate 0-2pi range to 0-1",
+                "width": 206.09130859375
+            },
+            {
+                "type": "Text",
+                "id": "0c4edbe6-06e5-4b98-b1fb-741ca6f976ff",
+                "position": {
+                    "x": 716.17626953125,
+                    "y": -46.64117431640625
+                },
+                "text": "Quantize the wave into discreet peroids of time (in this case, 1/10th of a second)",
+                "width": 206.09130859375
+            },
+            {
+                "type": "Text",
+                "id": "f3ba6a19-1b6b-4af8-9e7e-6fb32538a745",
+                "position": {
+                    "x": 723.671875,
+                    "y": -195.42330932617188
+                },
+                "text": "0 and 1 (formerly 2pi) are true at the same moment!",
+                "width": 295.35400390625
+            },
+            {
+                "type": "Waveform",
+                "id": "c6c09e29-e63e-44c6-a6f7-5445a6610256",
+                "position": {
+                    "x": 337.7865905761719,
+                    "y": 203.92938232421876
+                }
+            },
+            {
+                "type": "Expr",
+                "id": "fe2d8e52-b994-4546-9e26-ab2601b5ce5e",
+                "position": {
+                    "x": 122.04672241210938,
+                    "y": 185.03192138671876
+                },
+                "expr": "x==1"
+            },
+            {
+                "type": "Waveform",
+                "id": "4dc86a16-fab2-42d7-8b65-592e3337ebca",
+                "position": {
+                    "x": 337.7944641113281,
+                    "y": 201.01080322265626
+                }
+            },
+            {
+                "type": "Expr",
+                "id": "ffa52a1f-9d3a-4874-bb85-2713716c87b0",
+                "position": {
+                    "x": 120.59664916992188,
+                    "y": 255.37435913085938
+                },
+                "expr": "x==0"
+            },
+            {
+                "type": "Text",
+                "id": "e5e63195-e764-48b4-9328-ff188a50e33d",
+                "position": {
+                    "x": 715.2076416015625,
+                    "y": 284.7598571777344
+                },
+                "text": "Detecting the beginning/ending of the Phasor cycle doesn't work this way - you need a few more steps (below)",
+                "width": 206.09130859375
+            }
+        ],
+        "wires": [
+            {
+                "from": "a5729eef-2906-4faa-9e81-0ef4e1e36a6f",
+                "output": 0,
+                "to": "3f1dd3c1-5477-4795-897a-bae643a626cf",
+                "input": 0
+            },
+            {
+                "from": "cd2e57cf-0e39-4fca-abf0-ff364facaf07",
+                "output": 0,
+                "to": "7c782910-6917-478a-8aba-55d5f5e529c5",
+                "input": 0
+            },
+            {
+                "from": "3f1dd3c1-5477-4795-897a-bae643a626cf",
+                "output": 0,
+                "to": "cd2e57cf-0e39-4fca-abf0-ff364facaf07",
+                "input": 0
+            },
+            {
+                "from": "cd2e57cf-0e39-4fca-abf0-ff364facaf07",
+                "output": 0,
+                "to": "fc2d47a3-89c6-478d-8ae6-85df217f302c",
+                "input": 0
+            },
+            {
+                "from": "fc2d47a3-89c6-478d-8ae6-85df217f302c",
+                "output": 0,
+                "to": "7ae812bc-56b3-42ba-9648-7de5b9e0c71d",
+                "input": 0
+            },
+            {
+                "from": "fc2d47a3-89c6-478d-8ae6-85df217f302c",
+                "output": 0,
+                "to": "dd3b2d3c-62d3-4ed5-82df-147da93ccf04",
+                "input": 0
+            },
+            {
+                "from": "dd3b2d3c-62d3-4ed5-82df-147da93ccf04",
+                "output": 0,
+                "to": "d06e9d76-4927-49d5-b690-28ee922dca93",
+                "input": 0
+            },
+            {
+                "from": "dd3b2d3c-62d3-4ed5-82df-147da93ccf04",
+                "output": 0,
+                "to": "13568ab4-062a-4935-9f45-e7e3cb29a094",
+                "input": 0
+            },
+            {
+                "from": "13568ab4-062a-4935-9f45-e7e3cb29a094",
+                "output": 0,
+                "to": "3e03a4ab-0fd2-4637-943b-ae0957f59b51",
+                "input": 0
+            },
+            {
+                "from": "fc2d47a3-89c6-478d-8ae6-85df217f302c",
+                "output": 0,
+                "to": "0e194809-5952-4db5-81a8-927b0ba12ce1",
+                "input": 0
+            },
+            {
+                "from": "ffa52a1f-9d3a-4874-bb85-2713716c87b0",
+                "output": 0,
+                "to": "c6c09e29-e63e-44c6-a6f7-5445a6610256",
+                "input": 0
+            },
+            {
+                "from": "cd2e57cf-0e39-4fca-abf0-ff364facaf07",
+                "output": 0,
+                "to": "fe2d8e52-b994-4546-9e26-ab2601b5ce5e",
+                "input": 0
+            },
+            {
+                "from": "fe2d8e52-b994-4546-9e26-ab2601b5ce5e",
+                "output": 0,
+                "to": "4dc86a16-fab2-42d7-8b65-592e3337ebca",
+                "input": 0
+            },
+            {
+                "from": "cd2e57cf-0e39-4fca-abf0-ff364facaf07",
+                "output": 0,
+                "to": "ffa52a1f-9d3a-4874-bb85-2713716c87b0",
+                "input": 0
+            }
+        ]
+    },
+    "history": {
+        "states": [
+            {
+                "id": "10ae0b36-53c3-4f1f-bd54-aa63605c9041"
+            }
+        ],
+        "current": "10ae0b36-53c3-4f1f-bd54-aa63605c9041"
+    },
+    "undoStack": {
+        "stack": [
+            "10ae0b36-53c3-4f1f-bd54-aa63605c9041"
+        ],
+        "current": 0
+    }
+}
