@@ -8,17 +8,17 @@
     "patch": {
         "id": "220f9fe9-a123-467e-a730-b059c92843bf",
         "pan": {
-            "x": 125.0,
-            "y": 54.50422668457031
+            "x": 117.21637725830078,
+            "y": -70.60540771484375
         },
-        "zoom": 2.3650121688842775,
+        "zoom": 0.8647066354751587,
         "nodes": [
             {
                 "type": "Patch",
                 "id": "cf71cfc5-b045-4206-a6fa-522efa569614",
                 "position": {
-                    "x": 0.0,
-                    "y": 0.0
+                    "x": 87.34249877929688,
+                    "y": 191.9547882080078
                 },
                 "subPatch": {
                     "id": "0a79118d-666b-424d-9be0-6507deee7e8d",
@@ -5795,6 +5795,14 @@
                         }
                     ]
                 }
+            },
+            {
+                "type": "Speaker",
+                "id": "6a64521d-0911-44a1-9ca8-1d37291eff13",
+                "position": {
+                    "x": 67.81439208984375,
+                    "y": -15.119674682617188
+                }
             }
         ],
         "wires": [
@@ -5827,21 +5835,137 @@
                 "output": 2,
                 "to": "cf71cfc5-b045-4206-a6fa-522efa569614",
                 "input": 6
+            },
+            {
+                "from": "cf71cfc5-b045-4206-a6fa-522efa569614",
+                "output": 0,
+                "to": "6a64521d-0911-44a1-9ca8-1d37291eff13",
+                "input": 0
+            },
+            {
+                "from": "cf71cfc5-b045-4206-a6fa-522efa569614",
+                "output": 0,
+                "to": "6a64521d-0911-44a1-9ca8-1d37291eff13",
+                "input": 1
             }
         ]
     },
     "history": {
         "states": [
             {
-                "id": "b0b65a8a-568f-413b-a9e1-e41b465a3ea1"
+                "id": "427d0805-accd-4c25-b782-7c9b09c6c518"
+            },
+            {
+                "id": "8a28e239-65a1-432c-a121-b77ae08b3531",
+                "parent": "427d0805-accd-4c25-b782-7c9b09c6c518",
+                "undo": {
+                    "type": "SetNodePosition",
+                    "position": {
+                        "x": -170.6300048828125,
+                        "y": 170.8274383544922
+                    },
+                    "node": "cf71cfc5-b045-4206-a6fa-522efa569614"
+                }
+            },
+            {
+                "id": "650003a7-dadf-45f1-8518-d6fbc78599fe",
+                "parent": "8a28e239-65a1-432c-a121-b77ae08b3531",
+                "undo": {
+                    "type": "SetNodePosition",
+                    "position": {
+                        "x": -190.15811157226563,
+                        "y": -36.24702453613281
+                    },
+                    "node": "6a64521d-0911-44a1-9ca8-1d37291eff13"
+                }
+            },
+            {
+                "id": "1f892ff6-dbec-43fa-acfb-9da52bf47af2",
+                "parent": "650003a7-dadf-45f1-8518-d6fbc78599fe",
+                "undo": {
+                    "type": "SetNodePosition",
+                    "position": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "node": "cf71cfc5-b045-4206-a6fa-522efa569614"
+                }
+            },
+            {
+                "id": "7db21dd5-5f6d-44f5-aa67-ae40bb332d39",
+                "parent": "1f892ff6-dbec-43fa-acfb-9da52bf47af2",
+                "undo": {
+                    "type": "SetNodePosition",
+                    "position": {
+                        "x": -19.528106689453126,
+                        "y": -207.074462890625
+                    },
+                    "node": "6a64521d-0911-44a1-9ca8-1d37291eff13"
+                }
+            },
+            {
+                "id": "1f850492-936e-4718-9dba-8cbb5f1ea1c0",
+                "parent": "8eb054c0-379e-4933-869d-ae8d89e701bf",
+                "undo": {
+                    "type": "Disconnect",
+                    "node": "6a64521d-0911-44a1-9ca8-1d37291eff13",
+                    "input": 0
+                }
+            },
+            {
+                "id": "ad968699-0167-4ef1-baf5-fe35f6bd56fa",
+                "parent": "1f850492-936e-4718-9dba-8cbb5f1ea1c0",
+                "undo": {
+                    "type": "Disconnect",
+                    "node": "6a64521d-0911-44a1-9ca8-1d37291eff13",
+                    "input": 1
+                }
+            },
+            {
+                "id": "82cdca72-601d-47c0-854d-f19b451ab3df",
+                "parent": "ad968699-0167-4ef1-baf5-fe35f6bd56fa",
+                "undo": {
+                    "type": "SetNodePosition",
+                    "position": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "node": "6a64521d-0911-44a1-9ca8-1d37291eff13"
+                }
+            },
+            {
+                "id": "8eb054c0-379e-4933-869d-ae8d89e701bf",
+                "parent": "7db21dd5-5f6d-44f5-aa67-ae40bb332d39",
+                "undo": {
+                    "type": "SetNodePosition",
+                    "position": {
+                        "x": -40.57829284667969,
+                        "y": -37.166015625
+                    },
+                    "node": "6a64521d-0911-44a1-9ca8-1d37291eff13"
+                }
+            },
+            {
+                "id": "b0b65a8a-568f-413b-a9e1-e41b465a3ea1",
+                "parent": "82cdca72-601d-47c0-854d-f19b451ab3df",
+                "undo": {
+                    "type": "RemoveNode",
+                    "node": "6a64521d-0911-44a1-9ca8-1d37291eff13"
+                }
             }
         ],
-        "current": "b0b65a8a-568f-413b-a9e1-e41b465a3ea1"
+        "current": "427d0805-accd-4c25-b782-7c9b09c6c518"
     },
     "undoStack": {
         "stack": [
-            "b0b65a8a-568f-413b-a9e1-e41b465a3ea1"
+            "b0b65a8a-568f-413b-a9e1-e41b465a3ea1",
+            "ad968699-0167-4ef1-baf5-fe35f6bd56fa",
+            "1f850492-936e-4718-9dba-8cbb5f1ea1c0",
+            "8eb054c0-379e-4933-869d-ae8d89e701bf",
+            "7db21dd5-5f6d-44f5-aa67-ae40bb332d39",
+            "650003a7-dadf-45f1-8518-d6fbc78599fe",
+            "427d0805-accd-4c25-b782-7c9b09c6c518"
         ],
-        "current": 0
+        "current": 6
     }
 }
