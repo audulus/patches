@@ -516,7 +516,7 @@
                                 "x": -205.0,
                                 "y": -55.0
                             },
-                            "text": "wm",
+                            "text": "pwm",
                             "width": 256.0
                         },
                         {
@@ -2353,15 +2353,51 @@
     "history": {
         "states": [
             {
-                "id": "96336e49-bd16-4bff-ba16-5e88ca996fae"
+                "id": "9a89393a-82f0-469e-a4a3-bba4c13bc2bb"
+            },
+            {
+                "id": "5acc62d7-b9f2-49da-8395-c49c57f68f5f",
+                "parent": "9a89393a-82f0-469e-a4a3-bba4c13bc2bb",
+                "undo": {
+                    "type": "SetNodeState",
+                    "node": "a3b4602b-fd0a-4a6f-937d-5d4a99a7f220",
+                    "state": {
+                        "type": "Text",
+                        "id": "a3b4602b-fd0a-4a6f-937d-5d4a99a7f220",
+                        "position": {
+                            "x": -96.89910888671875,
+                            "y": 286.921142578125
+                        },
+                        "exposedPosition": {
+                            "x": -205.0,
+                            "y": -55.0
+                        },
+                        "text": "wm",
+                        "width": 256.0
+                    }
+                }
+            },
+            {
+                "id": "96336e49-bd16-4bff-ba16-5e88ca996fae",
+                "parent": "5acc62d7-b9f2-49da-8395-c49c57f68f5f",
+                "undo": {
+                    "type": "SetNodePosition",
+                    "position": {
+                        "x": 3.5287017822265627,
+                        "y": 9.456939697265625
+                    },
+                    "node": "666d1115-2597-4e85-8b49-1cad686af326"
+                }
             }
         ],
-        "current": "96336e49-bd16-4bff-ba16-5e88ca996fae"
+        "current": "9a89393a-82f0-469e-a4a3-bba4c13bc2bb"
     },
     "undoStack": {
         "stack": [
-            "96336e49-bd16-4bff-ba16-5e88ca996fae"
+            "96336e49-bd16-4bff-ba16-5e88ca996fae",
+            "5acc62d7-b9f2-49da-8395-c49c57f68f5f",
+            "9a89393a-82f0-469e-a4a3-bba4c13bc2bb"
         ],
-        "current": 0
+        "current": 2
     }
 }
