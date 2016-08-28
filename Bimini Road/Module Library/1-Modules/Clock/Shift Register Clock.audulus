@@ -7,7 +7,7 @@
         "Logic",
         "Hz"
     ],
-    "description": "This is a clock module patch. Clocks generate on/off pulses. Clocks are often used to drive sequencers.\n\nThis particular clock uses a shift register to derive 8 clock signals from one clock pulse.\n\nThis module contains a node-by-node tutorial.\n\nInputs:\ng - Clock Pulse (0 or 1)\n\nOutputs:\ng - Clock Pulse (0 or 1)\nColumn 1\n/1, /2, /4, /8\nColumn 2\n/16, /32, /64, /128",
+    "description": "Clocks are the heartbeat of a modular patch - they keep tempo and drive sequencers forwards.  Clocks in Audulus create g, or gate signals, which are 0 or 1.  The width modulation (WM) control determines the ratio of on/off time of the gate.  The bottom knob turns the clock on and off.  If you turn the Hz knob all the way down, you can input a Hz value directly at the Hz input.\n\nThis clock is attached to a Shift Register module, which allows you to have multiple subdivisions of the clock and their inverses - perfect for triggering drums.",
     "patch": {
         "id": "8588a6e7-5bce-4751-ae64-857a021b6ea2",
         "pan": {
@@ -5199,14 +5199,14 @@
     "history": {
         "states": [
             {
-                "id": "5ed14c1c-f8d1-4bb0-b873-8816a0a20fbf"
+                "id": "f84ea9a5-317a-4b4d-aec5-c9888db4e177"
             }
         ],
-        "current": "5ed14c1c-f8d1-4bb0-b873-8816a0a20fbf"
+        "current": "f84ea9a5-317a-4b4d-aec5-c9888db4e177"
     },
     "undoStack": {
         "stack": [
-            "5ed14c1c-f8d1-4bb0-b873-8816a0a20fbf"
+            "f84ea9a5-317a-4b4d-aec5-c9888db4e177"
         ],
         "current": 0
     }
