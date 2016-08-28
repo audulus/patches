@@ -6,7 +6,7 @@
         "Gate",
         "Hz"
     ],
-    "description": "This is a clock module. Clocks generate on/off pulses. Clocks are often used to drive sequencers.\n\nThis module contains a node-by-node tutorial.\n\nKnobs:\nHz - controls the speed of the clock.\nResponse: Exponential (50% ~ 0.6Hz).\nRange: 0-100Hz\n\nTriggers:\nClock On/Off\nResponse: Toggle\n\nInputs:\ng - Clock Sync (0 or 1)\nHz - Accepts Hz values only when Hz knob is set to 0 (Positive numbers)\n\nOutputs:\ng - Clock Pulse (0 or 1)",
+    "description": "Clocks are the heartbeat of a modular patch - they keep tempo and drive sequencers forwards.  Clocks in Audulus create g, or gate signals, which are 0 or 1.  The width modulation (WM) control determines the ratio of on/off time of the gate.  The bottom knob turns the clock on and off.  If you turn the Hz knob all the way down, you can input a Hz value directly at the Hz input.",
     "patch": {
         "id": "02090e25-bc3d-4bb3-b585-95425a03d6a4",
         "pan": {
