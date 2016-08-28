@@ -4,6 +4,7 @@
         "Envelope",
         "Octave"
     ],
+    "description": "This module is meant to be your one-stop-shop for all your envelope needs.  The envelope generates an e signal that can be plugged into any oscillator.  It is triggered by a g (gate) signal at its input.  The time range for each portion of the envelope is adjustable to 0-1, 0-10, and 0-60 seconds (for a potentially 3 minute long ADR envelope).  The mode control prevents any incoming gate signal from retriggering the envelope until it has completed its entire cycle.  The envelope creates two different signals: one linear, and the other shaped by the shape and drive controls to be exponential or logarithmic.  Use the linear output for your volume envelope and the shaped output for your filter and you can get a great sound with just one envelope and one set of controls.  The ^v control sets the floor of the shaped envelope and the width controls its range - use this to tune the frequency response of the envelope.  If you intend to use the env>0 mode, you can take the Octave (o) signal from the output of this module to prevent legato sliding during the cycle of the envelope.  Inverted outputs of each envelope are provided for convenience.",
     "patch": {
         "id": "2c1ced37-11da-4270-ba0b-8b1da4b09605",
         "pan": {
@@ -1345,14 +1346,14 @@
     "history": {
         "states": [
             {
-                "id": "51fb493e-e031-4a32-9742-c2b743be50ec"
+                "id": "fa57ba97-0bd7-44b2-a777-cd7865f3b8a5"
             }
         ],
-        "current": "51fb493e-e031-4a32-9742-c2b743be50ec"
+        "current": "fa57ba97-0bd7-44b2-a777-cd7865f3b8a5"
     },
     "undoStack": {
         "stack": [
-            "51fb493e-e031-4a32-9742-c2b743be50ec"
+            "fa57ba97-0bd7-44b2-a777-cd7865f3b8a5"
         ],
         "current": 0
     }
