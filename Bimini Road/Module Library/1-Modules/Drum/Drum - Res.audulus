@@ -5,6 +5,7 @@
         "Audio",
         "Envelope"
     ],
+    "description": "The Res Drum uses an impulse fed into a resonant filter to create drum sounds.  The two peaking filters you see are for noise and tone, respectively.  Draw a connection down from the e (envelope) output to any of the parameters for more organic shaping.",
     "patch": {
         "id": "c73c42d9-8cf4-4dd5-bf56-6d66abe6f1ba",
         "pan": {
@@ -119,8 +120,8 @@
                                 "x": 5.0,
                                 "y": 0.0
                             },
-                            "f": 112.90957641601563,
-                            "res": 0.9476755857467651
+                            "f": 125.61155700683594,
+                            "res": 0.9179579019546509
                         },
                         {
                             "type": "Filter",
@@ -133,8 +134,8 @@
                                 "x": 5.0,
                                 "y": 0.0
                             },
-                            "f": 716.429443359375,
-                            "res": 0.9431747198104858
+                            "f": 658.123291015625,
+                            "res": 1.0
                         },
                         {
                             "type": "Expr",
@@ -572,19 +573,26 @@
                 }
             }
         ],
-        "wires": []
+        "wires": [
+            {
+                "from": "2051e14e-df99-4585-bae9-8f98821a730e",
+                "output": 1,
+                "to": "2051e14e-df99-4585-bae9-8f98821a730e",
+                "input": 1
+            }
+        ]
     },
     "history": {
         "states": [
             {
-                "id": "dd123de7-8111-4748-95ec-e37b13af5740"
+                "id": "bbcbde41-b7ba-4aa3-9fbb-afdf1846d811"
             }
         ],
-        "current": "dd123de7-8111-4748-95ec-e37b13af5740"
+        "current": "bbcbde41-b7ba-4aa3-9fbb-afdf1846d811"
     },
     "undoStack": {
         "stack": [
-            "dd123de7-8111-4748-95ec-e37b13af5740"
+            "bbcbde41-b7ba-4aa3-9fbb-afdf1846d811"
         ],
         "current": 0
     }
