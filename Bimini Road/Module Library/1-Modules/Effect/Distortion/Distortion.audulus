@@ -1,5 +1,12 @@
 {
     "version": 1,
+    "author": "Bimini Road",
+    "tags": [
+        "Distortion",
+        "Effect",
+        "Signal"
+    ],
+    "description": "This module is a repackaging of the distortion node with an added tanh(x) drive function to limit the gain of the audio and further shape the distortion.",
     "patch": {
         "id": "bf538f81-b8b9-4788-9efc-d9cb6cade55f",
         "pan": {
@@ -631,15 +638,28 @@
     "history": {
         "states": [
             {
-                "id": "4a721afd-dd2e-48e7-806a-fef0d06efa5d"
+                "id": "4a721afd-dd2e-48e7-806a-fef0d06efa5d",
+                "parent": "60df5d7b-02db-4abf-8288-b3f0fc71f4a9",
+                "undo": {
+                    "type": "SetNodePosition",
+                    "position": {
+                        "x": 144.09555053710938,
+                        "y": 44.74992370605469
+                    },
+                    "node": "167370db-baf1-4889-8850-a5b941415ba0"
+                }
+            },
+            {
+                "id": "60df5d7b-02db-4abf-8288-b3f0fc71f4a9"
             }
         ],
-        "current": "4a721afd-dd2e-48e7-806a-fef0d06efa5d"
+        "current": "60df5d7b-02db-4abf-8288-b3f0fc71f4a9"
     },
     "undoStack": {
         "stack": [
-            "4a721afd-dd2e-48e7-806a-fef0d06efa5d"
+            "4a721afd-dd2e-48e7-806a-fef0d06efa5d",
+            "60df5d7b-02db-4abf-8288-b3f0fc71f4a9"
         ],
-        "current": 0
+        "current": 1
     }
 }
