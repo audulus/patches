@@ -5,6 +5,7 @@
         "VCO",
         "Audio"
     ],
+    "description": "This VCO uses trigonometry to turn sculpt sine waves into fat analog tones.  All of the controls are very interactive with one another, and respond well to having envelopes applied to them.",
     "patch": {
         "id": "0d4872db-b3c7-4422-b15c-30262c37ced8",
         "pan": {
@@ -2044,15 +2045,28 @@
     "history": {
         "states": [
             {
-                "id": "12d02e2a-16f8-4671-85c7-94bc876d091c"
+                "id": "d47acac8-b909-49af-a6dc-71db82afa209"
+            },
+            {
+                "id": "12d02e2a-16f8-4671-85c7-94bc876d091c",
+                "parent": "d47acac8-b909-49af-a6dc-71db82afa209",
+                "undo": {
+                    "type": "SetNodePosition",
+                    "position": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "node": "2593598e-f48d-4bba-bbdd-985129ed946c"
+                }
             }
         ],
-        "current": "12d02e2a-16f8-4671-85c7-94bc876d091c"
+        "current": "d47acac8-b909-49af-a6dc-71db82afa209"
     },
     "undoStack": {
         "stack": [
-            "12d02e2a-16f8-4671-85c7-94bc876d091c"
+            "12d02e2a-16f8-4671-85c7-94bc876d091c",
+            "d47acac8-b909-49af-a6dc-71db82afa209"
         ],
-        "current": 0
+        "current": 1
     }
 }
