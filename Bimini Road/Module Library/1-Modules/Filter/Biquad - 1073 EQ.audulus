@@ -6,6 +6,7 @@
         "Biquad",
         "Audio"
     ],
+    "description": "This module is a recreation of the filter curves and cutoff points of the Neve 1073 EQ.  It is a great tone shaping EQ, especially for guitar.",
     "patch": {
         "id": "1541def4-0855-47ba-81a5-842bb1bb3ad1",
         "pan": {
@@ -4234,71 +4235,518 @@
     "history": {
         "states": [
             {
-                "id": "158cc654-0233-473b-8a4f-5adfca50478c",
-                "parent": "cd62254d-cd53-4168-9932-9b20d0b9208e",
+                "id": "b1b1b876-3bbb-4010-9ba6-d4ec72497b06",
+                "parent": "e7f9b821-32a9-426b-9023-3ad5af637926",
+                "undo": {
+                    "type": "RemoveNode",
+                    "node": "4a3839be-59ca-4a64-b8c9-250cb4a3f650"
+                }
+            },
+            {
+                "id": "42b27007-69c5-4052-bf91-ecab3863d75e",
+                "parent": "d21c81e8-f486-470a-8b25-602c04da2de5",
+                "undo": {
+                    "type": "RemoveNode",
+                    "node": "fde444b7-ffce-4ba2-9c01-2537c6e537e9"
+                }
+            },
+            {
+                "id": "c1cdce70-714d-4c16-8560-c17bd46ec5f8",
+                "parent": "93784579-0885-4edf-8b9d-22ac371de751",
+                "undo": {
+                    "type": "Connect",
+                    "from": "dfe5d5b7-cdc5-40af-bafe-db18e7442a6e",
+                    "output": 0,
+                    "to": "57363b4c-c980-4aa3-b3d1-3c6f9e609f09",
+                    "input": 5
+                }
+            },
+            {
+                "id": "2a753a71-2d92-474c-9889-f3a946b78860",
+                "parent": "ebf77a11-b589-45a5-afd1-5afcea954bbb",
+                "undo": {
+                    "type": "Connect",
+                    "from": "4abf20cf-6802-4a17-a0bb-188bd78f2769",
+                    "output": 0,
+                    "to": "57363b4c-c980-4aa3-b3d1-3c6f9e609f09",
+                    "input": 6
+                }
+            },
+            {
+                "id": "cc4aba69-c66b-4e95-82b3-9b79487a9aab",
+                "parent": "3caba005-1be5-428a-8a2f-d0a9a7a01b98",
                 "undo": {
                     "type": "InsertNode",
                     "patch": "1541def4-0855-47ba-81a5-842bb1bb3ad1",
                     "node": {
-                        "type": "Trigger",
-                        "id": "fde444b7-ffce-4ba2-9c01-2537c6e537e9",
+                        "type": "Knob",
+                        "id": "dfe5d5b7-cdc5-40af-bafe-db18e7442a6e",
                         "position": {
-                            "x": -197.29132080078129,
-                            "y": -22.768280029296876
+                            "x": 47.7965087890625,
+                            "y": 324.1580810546875
                         },
-                        "toggle": true,
-                        "state": true,
-                        "midiNote": -1
+                        "name": "",
+                        "knob": {
+                            "value": 0.5302178859710693,
+                            "min": 0.0,
+                            "max": 1.0
+                        },
+                        "exposedPosition": {
+                            "x": 0.0,
+                            "y": 0.0
+                        }
                     },
-                    "index": 2
+                    "index": 4
                 }
             },
             {
-                "id": "c5c57ecc-43bc-4c46-a9c3-bce4b82a5f61",
-                "parent": "01cf2e01-0f30-430a-9203-64d65fbe29e4",
+                "id": "32cbf71d-e2d7-4528-b9ae-9a33828c6d80",
+                "parent": "481aa182-46c0-4fe4-8315-abff88a9ec43",
                 "undo": {
                     "type": "Disconnect",
-                    "node": "57363b4c-c980-4aa3-b3d1-3c6f9e609f09",
+                    "node": "73046b27-240e-4b37-8af9-1542482b2ec9",
                     "input": 4
                 }
             },
             {
-                "id": "cd62254d-cd53-4168-9932-9b20d0b9208e",
-                "parent": "dd15b6d3-9a16-480e-ae9b-67685922151f",
+                "id": "fe337fb8-b64c-4945-beb8-a95da78d20b6",
+                "parent": "1744b1c5-a260-4e43-a79f-7c01ebf0a2bc",
+                "undo": {
+                    "type": "Connect",
+                    "from": "7b35bb85-b007-4840-83f7-01672de3c454",
+                    "output": 0,
+                    "to": "73046b27-240e-4b37-8af9-1542482b2ec9",
+                    "input": 3
+                }
+            },
+            {
+                "id": "2f7bcb09-3293-496a-9304-6a61aa8f469e",
+                "parent": "c4a1705f-dedc-4d44-a671-657874aa8a3b",
+                "undo": {
+                    "type": "RemoveNode",
+                    "node": "72d8e71a-27c8-4da6-a99e-6a9412577798"
+                }
+            },
+            {
+                "id": "93784579-0885-4edf-8b9d-22ac371de751",
+                "parent": "cc4aba69-c66b-4e95-82b3-9b79487a9aab",
+                "undo": {
+                    "type": "Connect",
+                    "from": "dfe5d5b7-cdc5-40af-bafe-db18e7442a6e",
+                    "output": 0,
+                    "to": "73046b27-240e-4b37-8af9-1542482b2ec9",
+                    "input": 5
+                }
+            },
+            {
+                "id": "50fa419d-b909-40e7-8bdd-e03d58f9f195",
+                "parent": "ce9f0924-12ab-4b17-98a0-85a38d4e19b3",
+                "undo": {
+                    "type": "RemoveNode",
+                    "node": "9820664a-3065-4c82-9899-2789c8fa3560"
+                }
+            },
+            {
+                "id": "e1cc7e17-0e6c-40e4-8933-7dd9961f41dd",
+                "parent": "b551c7bc-87bf-477b-aa70-739113258cb6",
                 "undo": {
                     "type": "InsertNode",
                     "patch": "1541def4-0855-47ba-81a5-842bb1bb3ad1",
                     "node": {
-                        "type": "Text",
-                        "id": "e7535e5c-a40e-45b5-9c9b-7fd44ef7f77d",
+                        "type": "Knob",
+                        "id": "4a3839be-59ca-4a64-b8c9-250cb4a3f650",
                         "position": {
-                            "x": -159.7950439453125,
-                            "y": -41.786903381347659
+                            "x": -72.3299560546875,
+                            "y": 322.9473266601563
                         },
-                        "text": "EQ On/Off",
-                        "width": 256.0
+                        "name": "",
+                        "knob": {
+                            "value": 0.6923752427101135,
+                            "min": 0.0,
+                            "max": 1.0
+                        },
+                        "exposedPosition": {
+                            "x": 0.0,
+                            "y": 0.0
+                        }
                     },
-                    "index": 1
+                    "index": 8
                 }
             },
             {
-                "id": "e341c5d3-1961-4406-8131-2203fe93f11b",
-                "parent": "158cc654-0233-473b-8a4f-5adfca50478c",
+                "id": "c150d1b5-ac06-4e77-a1a5-1e08172aa90d",
+                "parent": "b8cf8466-592f-469b-aee3-ffc578ad0e9c",
+                "undo": {
+                    "type": "SetNodePosition",
+                    "position": {
+                        "x": 1253.9510498046875,
+                        "y": 255.5709228515625
+                    },
+                    "node": "dfe5d5b7-cdc5-40af-bafe-db18e7442a6e"
+                }
+            },
+            {
+                "id": "169b1258-6877-466a-b1b7-24ec28eab348",
+                "parent": "6ea412c4-a399-482b-b092-1d6dd6afcf12",
+                "undo": {
+                    "type": "Disconnect",
+                    "node": "57363b4c-c980-4aa3-b3d1-3c6f9e609f09",
+                    "input": 6
+                }
+            },
+            {
+                "id": "8394a578-7ee9-43df-8cdd-c397bbf4006b",
+                "parent": "d6f626b8-8401-4afd-a33c-c10bc8d7d917",
                 "undo": {
                     "type": "Connect",
                     "from": "fde444b7-ffce-4ba2-9c01-2537c6e537e9",
                     "output": 0,
-                    "to": "57363b4c-c980-4aa3-b3d1-3c6f9e609f09",
+                    "to": "73046b27-240e-4b37-8af9-1542482b2ec9",
                     "input": 7
                 }
             },
             {
-                "id": "ad00338b-0c8d-49e0-a8d8-a99fcd7d7f8a",
-                "parent": "c98d8dc1-6bea-433e-ab7f-aa853ac51521",
+                "id": "ce9f0924-12ab-4b17-98a0-85a38d4e19b3",
+                "parent": "2f7bcb09-3293-496a-9304-6a61aa8f469e",
+                "undo": {
+                    "type": "SetNodePosition",
+                    "position": {
+                        "x": 521.45703125,
+                        "y": 451.5721130371094
+                    },
+                    "node": "9820664a-3065-4c82-9899-2789c8fa3560"
+                }
+            },
+            {
+                "id": "c4a1705f-dedc-4d44-a671-657874aa8a3b",
+                "parent": "42b27007-69c5-4052-bf91-ecab3863d75e",
+                "undo": {
+                    "type": "RemoveNode",
+                    "node": "e7535e5c-a40e-45b5-9c9b-7fd44ef7f77d"
+                }
+            },
+            {
+                "id": "b68eac33-05cd-4702-a119-93bc81fad150",
+                "parent": "09308978-eecd-4547-bf36-e0d297b2cc96",
+                "undo": {
+                    "type": "Connect",
+                    "from": "9e359aa9-be4b-492d-be47-6be7e6dd1299",
+                    "output": 0,
+                    "to": "73046b27-240e-4b37-8af9-1542482b2ec9",
+                    "input": 1
+                }
+            },
+            {
+                "id": "5e24415e-b0de-4b3a-bf09-224e685ae53c",
+                "parent": "0e8baaa6-7976-4f32-af20-c8a348b8aa0a",
+                "undo": {
+                    "type": "Connect",
+                    "from": "72d8e71a-27c8-4da6-a99e-6a9412577798",
+                    "output": 0,
+                    "to": "57363b4c-c980-4aa3-b3d1-3c6f9e609f09",
+                    "input": 4
+                }
+            },
+            {
+                "id": "540bbb5e-ccc6-4f91-ac55-ec644c729a70",
+                "parent": "8394a578-7ee9-43df-8cdd-c397bbf4006b",
+                "undo": {
+                    "type": "SetNodePosition",
+                    "position": {
+                        "x": -41.2596435546875,
+                        "y": 363.59912109375
+                    },
+                    "node": "73046b27-240e-4b37-8af9-1542482b2ec9"
+                }
+            },
+            {
+                "id": "d86c4fe8-ae4f-4f0d-b4e4-4e67125ffd6a",
+                "parent": "c8ee3e96-6d4d-4893-b940-93de67dd23ff",
+                "undo": {
+                    "type": "RemoveNode",
+                    "node": "4abf20cf-6802-4a17-a0bb-188bd78f2769"
+                }
+            },
+            {
+                "id": "e2945c92-e2c0-4d74-b535-2f14aa194790",
+                "parent": "9d463f47-2be3-4d54-ab00-ca827e52f2b5",
                 "undo": {
                     "type": "Disconnect",
                     "node": "73046b27-240e-4b37-8af9-1542482b2ec9",
-                    "input": 6
+                    "input": 1
+                }
+            },
+            {
+                "id": "83cf73be-b05e-4e41-8c62-4b8bd7e43cc4",
+                "parent": "0ea9b1e8-254f-44ec-93d7-266988cae7d0",
+                "undo": {
+                    "type": "SetNodePosition",
+                    "position": {
+                        "x": 1046.3594970703125,
+                        "y": -110.37407684326172
+                    },
+                    "node": "e7535e5c-a40e-45b5-9c9b-7fd44ef7f77d"
+                }
+            },
+            {
+                "id": "c8ee3e96-6d4d-4893-b940-93de67dd23ff",
+                "parent": "22d094ee-f3f7-4e98-85b7-d7569518832a",
+                "undo": {
+                    "type": "RemoveNode",
+                    "node": "73046b27-240e-4b37-8af9-1542482b2ec9"
+                }
+            },
+            {
+                "id": "c3d6efdd-9713-48c7-8d5d-f0bbb31a0c83",
+                "parent": "d86c4fe8-ae4f-4f0d-b4e4-4e67125ffd6a",
+                "undo": {
+                    "type": "RemoveNode",
+                    "node": "57363b4c-c980-4aa3-b3d1-3c6f9e609f09"
+                }
+            },
+            {
+                "id": "e7f9b821-32a9-426b-9023-3ad5af637926",
+                "parent": "b536ad52-669f-476f-9f3e-980897c83e33",
+                "undo": {
+                    "type": "Disconnect",
+                    "node": "57363b4c-c980-4aa3-b3d1-3c6f9e609f09",
+                    "input": 1
+                }
+            },
+            {
+                "id": "22d094ee-f3f7-4e98-85b7-d7569518832a",
+                "parent": "b1b1b876-3bbb-4010-9ba6-d4ec72497b06",
+                "undo": {
+                    "type": "RemoveNode",
+                    "node": "7b35bb85-b007-4840-83f7-01672de3c454"
+                }
+            },
+            {
+                "id": "d21c81e8-f486-470a-8b25-602c04da2de5",
+                "parent": "4a19fd2b-dba0-4a29-a3a8-3d7dc70f2fda",
+                "undo": {
+                    "type": "RemoveNode",
+                    "node": "dfe5d5b7-cdc5-40af-bafe-db18e7442a6e"
+                }
+            },
+            {
+                "id": "01cf2e01-0f30-430a-9203-64d65fbe29e4",
+                "parent": "169b1258-6877-466a-b1b7-24ec28eab348",
+                "undo": {
+                    "type": "Disconnect",
+                    "node": "57363b4c-c980-4aa3-b3d1-3c6f9e609f09",
+                    "input": 5
+                }
+            },
+            {
+                "id": "09308978-eecd-4547-bf36-e0d297b2cc96",
+                "parent": "a8ab4f16-da24-45f5-82ac-e8e2a2bba40e",
+                "undo": {
+                    "type": "InsertNode",
+                    "patch": "1541def4-0855-47ba-81a5-842bb1bb3ad1",
+                    "node": {
+                        "type": "Knob",
+                        "id": "9e359aa9-be4b-492d-be47-6be7e6dd1299",
+                        "position": {
+                            "x": -185.6810302734375,
+                            "y": 238.9384002685547
+                        },
+                        "name": "",
+                        "knob": {
+                            "value": 0.324196070432663,
+                            "min": 0.0,
+                            "max": 1.0
+                        },
+                        "exposedPosition": {
+                            "x": 0.0,
+                            "y": 0.0
+                        }
+                    },
+                    "index": 4
+                }
+            },
+            {
+                "id": "6ea412c4-a399-482b-b092-1d6dd6afcf12",
+                "parent": "e2945c92-e2c0-4d74-b535-2f14aa194790",
+                "undo": {
+                    "type": "Disconnect",
+                    "node": "57363b4c-c980-4aa3-b3d1-3c6f9e609f09",
+                    "input": 7
+                }
+            },
+            {
+                "id": "7861ce79-dc5b-450a-b197-cc7a1360ffd0",
+                "parent": "32cbf71d-e2d7-4528-b9ae-9a33828c6d80",
+                "undo": {
+                    "type": "Disconnect",
+                    "node": "73046b27-240e-4b37-8af9-1542482b2ec9",
+                    "input": 3
+                }
+            },
+            {
+                "id": "0ea9b1e8-254f-44ec-93d7-266988cae7d0",
+                "parent": "c150d1b5-ac06-4e77-a1a5-1e08172aa90d",
+                "undo": {
+                    "type": "SetNodePosition",
+                    "position": {
+                        "x": 1008.8632202148438,
+                        "y": -91.35545349121094
+                    },
+                    "node": "fde444b7-ffce-4ba2-9c01-2537c6e537e9"
+                }
+            },
+            {
+                "id": "9bb1217d-2a94-4164-b316-4d727ea4b048",
+                "parent": "83cf73be-b05e-4e41-8c62-4b8bd7e43cc4",
+                "undo": {
+                    "type": "SetNodePosition",
+                    "position": {
+                        "x": 1253.121337890625,
+                        "y": 172.59268188476563
+                    },
+                    "node": "72d8e71a-27c8-4da6-a99e-6a9412577798"
+                }
+            },
+            {
+                "id": "b8cf8466-592f-469b-aee3-ffc578ad0e9c",
+                "parent": "ec1ec887-9e7e-48dc-8883-a2287dbb53e1",
+                "undo": {
+                    "type": "SetNodePosition",
+                    "position": {
+                        "x": 1020.4735107421875,
+                        "y": 170.35122680664063
+                    },
+                    "node": "9e359aa9-be4b-492d-be47-6be7e6dd1299"
+                }
+            },
+            {
+                "id": "3caba005-1be5-428a-8a2f-d0a9a7a01b98",
+                "parent": "b68eac33-05cd-4702-a119-93bc81fad150",
+                "undo": {
+                    "type": "Connect",
+                    "from": "9e359aa9-be4b-492d-be47-6be7e6dd1299",
+                    "output": 0,
+                    "to": "57363b4c-c980-4aa3-b3d1-3c6f9e609f09",
+                    "input": 1
+                }
+            },
+            {
+                "id": "265e5a6b-b70d-47e3-8938-024aa106d6df",
+                "parent": "540bbb5e-ccc6-4f91-ac55-ec644c729a70",
+                "undo": {
+                    "type": "InsertNode",
+                    "patch": "1541def4-0855-47ba-81a5-842bb1bb3ad1",
+                    "node": {
+                        "type": "Knob",
+                        "id": "4abf20cf-6802-4a17-a0bb-188bd78f2769",
+                        "position": {
+                            "x": 160.635009765625,
+                            "y": 240.63490295410157
+                        },
+                        "name": "",
+                        "knob": {
+                            "value": 0.7676706910133362,
+                            "min": 0.0,
+                            "max": 1.0
+                        },
+                        "exposedPosition": {
+                            "x": 0.0,
+                            "y": 0.0
+                        }
+                    },
+                    "index": 4
+                }
+            },
+            {
+                "id": "d8d82ee0-86c1-4f56-a719-28385062c4fd",
+                "parent": "7168066d-91c9-4d4c-ac6d-4fc25d6fb6fd",
+                "undo": {
+                    "type": "SetNodePosition",
+                    "position": {
+                        "x": 1366.78955078125,
+                        "y": 172.0477294921875
+                    },
+                    "node": "4abf20cf-6802-4a17-a0bb-188bd78f2769"
+                }
+            },
+            {
+                "id": "b536ad52-669f-476f-9f3e-980897c83e33",
+                "parent": "8b9b58c6-9fbf-4029-9c75-8a4829d7c9b0",
+                "undo": {
+                    "type": "Disconnect",
+                    "node": "57363b4c-c980-4aa3-b3d1-3c6f9e609f09",
+                    "input": 2
+                }
+            },
+            {
+                "id": "c98d8dc1-6bea-433e-ab7f-aa853ac51521",
+                "parent": "9bb1217d-2a94-4164-b316-4d727ea4b048",
+                "undo": {
+                    "type": "Disconnect",
+                    "node": "73046b27-240e-4b37-8af9-1542482b2ec9",
+                    "input": 7
+                }
+            },
+            {
+                "id": "7168066d-91c9-4d4c-ac6d-4fc25d6fb6fd",
+                "parent": "30e3892c-19c9-45cc-9132-319c6043b646",
+                "undo": {
+                    "type": "SetNodePosition",
+                    "position": {
+                        "x": 1164.8948974609375,
+                        "y": 295.0119323730469
+                    },
+                    "node": "73046b27-240e-4b37-8af9-1542482b2ec9"
+                }
+            },
+            {
+                "id": "9d463f47-2be3-4d54-ab00-ca827e52f2b5",
+                "parent": "7861ce79-dc5b-450a-b197-cc7a1360ffd0",
+                "undo": {
+                    "type": "Disconnect",
+                    "node": "73046b27-240e-4b37-8af9-1542482b2ec9",
+                    "input": 2
+                }
+            },
+            {
+                "id": "a8ab4f16-da24-45f5-82ac-e8e2a2bba40e",
+                "parent": "88ee0ce5-f5c0-4165-a0be-479df1951b54",
+                "undo": {
+                    "type": "Connect",
+                    "from": "4a3839be-59ca-4a64-b8c9-250cb4a3f650",
+                    "output": 0,
+                    "to": "57363b4c-c980-4aa3-b3d1-3c6f9e609f09",
+                    "input": 2
+                }
+            },
+            {
+                "id": "30e3892c-19c9-45cc-9132-319c6043b646",
+                "parent": "6b78cba9-5d33-4ba1-977d-d0c5be403ffa",
+                "undo": {
+                    "type": "SetNodePosition",
+                    "position": {
+                        "x": 1132.994873046875,
+                        "y": 171.22006225585938
+                    },
+                    "node": "7b35bb85-b007-4840-83f7-01672de3c454"
+                }
+            },
+            {
+                "id": "8b9b58c6-9fbf-4029-9c75-8a4829d7c9b0",
+                "parent": "c5c57ecc-43bc-4c46-a9c3-bce4b82a5f61",
+                "undo": {
+                    "type": "Disconnect",
+                    "node": "57363b4c-c980-4aa3-b3d1-3c6f9e609f09",
+                    "input": 3
+                }
+            },
+            {
+                "id": "481aa182-46c0-4fe4-8315-abff88a9ec43",
+                "parent": "ad00338b-0c8d-49e0-a8d8-a99fcd7d7f8a",
+                "undo": {
+                    "type": "Disconnect",
+                    "node": "73046b27-240e-4b37-8af9-1542482b2ec9",
+                    "input": 5
                 }
             },
             {
@@ -8491,6 +8939,93 @@
                         }
                     },
                     "index": 0
+                }
+            },
+            {
+                "id": "4a19fd2b-dba0-4a29-a3a8-3d7dc70f2fda",
+                "parent": "c3d6efdd-9713-48c7-8d5d-f0bbb31a0c83",
+                "undo": {
+                    "type": "RemoveNode",
+                    "node": "9e359aa9-be4b-492d-be47-6be7e6dd1299"
+                }
+            },
+            {
+                "id": "b551c7bc-87bf-477b-aa70-739113258cb6",
+                "parent": "fe337fb8-b64c-4945-beb8-a95da78d20b6",
+                "undo": {
+                    "type": "Connect",
+                    "from": "7b35bb85-b007-4840-83f7-01672de3c454",
+                    "output": 0,
+                    "to": "57363b4c-c980-4aa3-b3d1-3c6f9e609f09",
+                    "input": 3
+                }
+            },
+            {
+                "id": "ca198a29-64cd-498b-9046-3f6e55b722e4"
+            },
+            {
+                "id": "0e8baaa6-7976-4f32-af20-c8a348b8aa0a",
+                "parent": "9cc003cc-aeac-4e70-8146-4b6e4d08d3a4",
+                "undo": {
+                    "type": "Connect",
+                    "from": "72d8e71a-27c8-4da6-a99e-6a9412577798",
+                    "output": 0,
+                    "to": "73046b27-240e-4b37-8af9-1542482b2ec9",
+                    "input": 4
+                }
+            },
+            {
+                "id": "1744b1c5-a260-4e43-a79f-7c01ebf0a2bc",
+                "parent": "5e24415e-b0de-4b3a-bf09-224e685ae53c",
+                "undo": {
+                    "type": "InsertNode",
+                    "patch": "1541def4-0855-47ba-81a5-842bb1bb3ad1",
+                    "node": {
+                        "type": "Knob",
+                        "id": "7b35bb85-b007-4840-83f7-01672de3c454",
+                        "position": {
+                            "x": -73.15966796875,
+                            "y": 239.80723571777345
+                        },
+                        "name": "",
+                        "knob": {
+                            "value": 0.5826954245567322,
+                            "min": 0.0,
+                            "max": 1.0
+                        },
+                        "exposedPosition": {
+                            "x": 0.0,
+                            "y": 0.0
+                        }
+                    },
+                    "index": 7
+                }
+            },
+            {
+                "id": "9cc003cc-aeac-4e70-8146-4b6e4d08d3a4",
+                "parent": "2a753a71-2d92-474c-9889-f3a946b78860",
+                "undo": {
+                    "type": "InsertNode",
+                    "patch": "1541def4-0855-47ba-81a5-842bb1bb3ad1",
+                    "node": {
+                        "type": "Knob",
+                        "id": "72d8e71a-27c8-4da6-a99e-6a9412577798",
+                        "position": {
+                            "x": 46.966796875,
+                            "y": 241.1798553466797
+                        },
+                        "name": "",
+                        "knob": {
+                            "value": 0.3868049085140228,
+                            "min": 0.0,
+                            "max": 1.0
+                        },
+                        "exposedPosition": {
+                            "x": 0.0,
+                            "y": 0.0
+                        }
+                    },
+                    "index": 1
                 }
             },
             {
@@ -12753,140 +13288,71 @@
                 }
             },
             {
-                "id": "9cc003cc-aeac-4e70-8146-4b6e4d08d3a4",
-                "parent": "2a753a71-2d92-474c-9889-f3a946b78860",
+                "id": "ad00338b-0c8d-49e0-a8d8-a99fcd7d7f8a",
+                "parent": "c98d8dc1-6bea-433e-ab7f-aa853ac51521",
                 "undo": {
-                    "type": "InsertNode",
-                    "patch": "1541def4-0855-47ba-81a5-842bb1bb3ad1",
-                    "node": {
-                        "type": "Knob",
-                        "id": "72d8e71a-27c8-4da6-a99e-6a9412577798",
-                        "position": {
-                            "x": 46.966796875,
-                            "y": 241.1798553466797
-                        },
-                        "name": "",
-                        "knob": {
-                            "value": 0.3868049085140228,
-                            "min": 0.0,
-                            "max": 1.0
-                        },
-                        "exposedPosition": {
-                            "x": 0.0,
-                            "y": 0.0
-                        }
-                    },
-                    "index": 1
+                    "type": "Disconnect",
+                    "node": "73046b27-240e-4b37-8af9-1542482b2ec9",
+                    "input": 6
                 }
             },
             {
-                "id": "1744b1c5-a260-4e43-a79f-7c01ebf0a2bc",
-                "parent": "5e24415e-b0de-4b3a-bf09-224e685ae53c",
-                "undo": {
-                    "type": "InsertNode",
-                    "patch": "1541def4-0855-47ba-81a5-842bb1bb3ad1",
-                    "node": {
-                        "type": "Knob",
-                        "id": "7b35bb85-b007-4840-83f7-01672de3c454",
-                        "position": {
-                            "x": -73.15966796875,
-                            "y": 239.80723571777345
-                        },
-                        "name": "",
-                        "knob": {
-                            "value": 0.5826954245567322,
-                            "min": 0.0,
-                            "max": 1.0
-                        },
-                        "exposedPosition": {
-                            "x": 0.0,
-                            "y": 0.0
-                        }
-                    },
-                    "index": 7
-                }
-            },
-            {
-                "id": "0e8baaa6-7976-4f32-af20-c8a348b8aa0a",
-                "parent": "9cc003cc-aeac-4e70-8146-4b6e4d08d3a4",
+                "id": "e341c5d3-1961-4406-8131-2203fe93f11b",
+                "parent": "158cc654-0233-473b-8a4f-5adfca50478c",
                 "undo": {
                     "type": "Connect",
-                    "from": "72d8e71a-27c8-4da6-a99e-6a9412577798",
+                    "from": "fde444b7-ffce-4ba2-9c01-2537c6e537e9",
                     "output": 0,
-                    "to": "73046b27-240e-4b37-8af9-1542482b2ec9",
+                    "to": "57363b4c-c980-4aa3-b3d1-3c6f9e609f09",
+                    "input": 7
+                }
+            },
+            {
+                "id": "c5c57ecc-43bc-4c46-a9c3-bce4b82a5f61",
+                "parent": "01cf2e01-0f30-430a-9203-64d65fbe29e4",
+                "undo": {
+                    "type": "Disconnect",
+                    "node": "57363b4c-c980-4aa3-b3d1-3c6f9e609f09",
                     "input": 4
                 }
             },
             {
-                "id": "ca198a29-64cd-498b-9046-3f6e55b722e4"
-            },
-            {
-                "id": "b551c7bc-87bf-477b-aa70-739113258cb6",
-                "parent": "fe337fb8-b64c-4945-beb8-a95da78d20b6",
+                "id": "158cc654-0233-473b-8a4f-5adfca50478c",
+                "parent": "cd62254d-cd53-4168-9932-9b20d0b9208e",
                 "undo": {
-                    "type": "Connect",
-                    "from": "7b35bb85-b007-4840-83f7-01672de3c454",
-                    "output": 0,
-                    "to": "57363b4c-c980-4aa3-b3d1-3c6f9e609f09",
-                    "input": 3
-                }
-            },
-            {
-                "id": "4a19fd2b-dba0-4a29-a3a8-3d7dc70f2fda",
-                "parent": "c3d6efdd-9713-48c7-8d5d-f0bbb31a0c83",
-                "undo": {
-                    "type": "RemoveNode",
-                    "node": "9e359aa9-be4b-492d-be47-6be7e6dd1299"
-                }
-            },
-            {
-                "id": "9d463f47-2be3-4d54-ab00-ca827e52f2b5",
-                "parent": "7861ce79-dc5b-450a-b197-cc7a1360ffd0",
-                "undo": {
-                    "type": "Disconnect",
-                    "node": "73046b27-240e-4b37-8af9-1542482b2ec9",
-                    "input": 2
-                }
-            },
-            {
-                "id": "a8ab4f16-da24-45f5-82ac-e8e2a2bba40e",
-                "parent": "88ee0ce5-f5c0-4165-a0be-479df1951b54",
-                "undo": {
-                    "type": "Connect",
-                    "from": "4a3839be-59ca-4a64-b8c9-250cb4a3f650",
-                    "output": 0,
-                    "to": "57363b4c-c980-4aa3-b3d1-3c6f9e609f09",
-                    "input": 2
-                }
-            },
-            {
-                "id": "481aa182-46c0-4fe4-8315-abff88a9ec43",
-                "parent": "ad00338b-0c8d-49e0-a8d8-a99fcd7d7f8a",
-                "undo": {
-                    "type": "Disconnect",
-                    "node": "73046b27-240e-4b37-8af9-1542482b2ec9",
-                    "input": 5
-                }
-            },
-            {
-                "id": "30e3892c-19c9-45cc-9132-319c6043b646",
-                "parent": "6b78cba9-5d33-4ba1-977d-d0c5be403ffa",
-                "undo": {
-                    "type": "SetNodePosition",
-                    "position": {
-                        "x": 1132.994873046875,
-                        "y": 171.22006225585938
+                    "type": "InsertNode",
+                    "patch": "1541def4-0855-47ba-81a5-842bb1bb3ad1",
+                    "node": {
+                        "type": "Trigger",
+                        "id": "fde444b7-ffce-4ba2-9c01-2537c6e537e9",
+                        "position": {
+                            "x": -197.29132080078129,
+                            "y": -22.768280029296876
+                        },
+                        "toggle": true,
+                        "state": true,
+                        "midiNote": -1
                     },
-                    "node": "7b35bb85-b007-4840-83f7-01672de3c454"
+                    "index": 2
                 }
             },
             {
-                "id": "8b9b58c6-9fbf-4029-9c75-8a4829d7c9b0",
-                "parent": "c5c57ecc-43bc-4c46-a9c3-bce4b82a5f61",
+                "id": "cd62254d-cd53-4168-9932-9b20d0b9208e",
+                "parent": "dd15b6d3-9a16-480e-ae9b-67685922151f",
                 "undo": {
-                    "type": "Disconnect",
-                    "node": "57363b4c-c980-4aa3-b3d1-3c6f9e609f09",
-                    "input": 3
+                    "type": "InsertNode",
+                    "patch": "1541def4-0855-47ba-81a5-842bb1bb3ad1",
+                    "node": {
+                        "type": "Text",
+                        "id": "e7535e5c-a40e-45b5-9c9b-7fd44ef7f77d",
+                        "position": {
+                            "x": -159.7950439453125,
+                            "y": -41.786903381347659
+                        },
+                        "text": "EQ On/Off",
+                        "width": 256.0
+                    },
+                    "index": 1
                 }
             },
             {
@@ -12898,471 +13364,6 @@
                         "x": 1133.8245849609375,
                         "y": 254.36013793945313
                     },
-                    "node": "4a3839be-59ca-4a64-b8c9-250cb4a3f650"
-                }
-            },
-            {
-                "id": "7168066d-91c9-4d4c-ac6d-4fc25d6fb6fd",
-                "parent": "30e3892c-19c9-45cc-9132-319c6043b646",
-                "undo": {
-                    "type": "SetNodePosition",
-                    "position": {
-                        "x": 1164.8948974609375,
-                        "y": 295.0119323730469
-                    },
-                    "node": "73046b27-240e-4b37-8af9-1542482b2ec9"
-                }
-            },
-            {
-                "id": "c98d8dc1-6bea-433e-ab7f-aa853ac51521",
-                "parent": "9bb1217d-2a94-4164-b316-4d727ea4b048",
-                "undo": {
-                    "type": "Disconnect",
-                    "node": "73046b27-240e-4b37-8af9-1542482b2ec9",
-                    "input": 7
-                }
-            },
-            {
-                "id": "b536ad52-669f-476f-9f3e-980897c83e33",
-                "parent": "8b9b58c6-9fbf-4029-9c75-8a4829d7c9b0",
-                "undo": {
-                    "type": "Disconnect",
-                    "node": "57363b4c-c980-4aa3-b3d1-3c6f9e609f09",
-                    "input": 2
-                }
-            },
-            {
-                "id": "d8d82ee0-86c1-4f56-a719-28385062c4fd",
-                "parent": "7168066d-91c9-4d4c-ac6d-4fc25d6fb6fd",
-                "undo": {
-                    "type": "SetNodePosition",
-                    "position": {
-                        "x": 1366.78955078125,
-                        "y": 172.0477294921875
-                    },
-                    "node": "4abf20cf-6802-4a17-a0bb-188bd78f2769"
-                }
-            },
-            {
-                "id": "265e5a6b-b70d-47e3-8938-024aa106d6df",
-                "parent": "540bbb5e-ccc6-4f91-ac55-ec644c729a70",
-                "undo": {
-                    "type": "InsertNode",
-                    "patch": "1541def4-0855-47ba-81a5-842bb1bb3ad1",
-                    "node": {
-                        "type": "Knob",
-                        "id": "4abf20cf-6802-4a17-a0bb-188bd78f2769",
-                        "position": {
-                            "x": 160.635009765625,
-                            "y": 240.63490295410157
-                        },
-                        "name": "",
-                        "knob": {
-                            "value": 0.7676706910133362,
-                            "min": 0.0,
-                            "max": 1.0
-                        },
-                        "exposedPosition": {
-                            "x": 0.0,
-                            "y": 0.0
-                        }
-                    },
-                    "index": 4
-                }
-            },
-            {
-                "id": "3caba005-1be5-428a-8a2f-d0a9a7a01b98",
-                "parent": "b68eac33-05cd-4702-a119-93bc81fad150",
-                "undo": {
-                    "type": "Connect",
-                    "from": "9e359aa9-be4b-492d-be47-6be7e6dd1299",
-                    "output": 0,
-                    "to": "57363b4c-c980-4aa3-b3d1-3c6f9e609f09",
-                    "input": 1
-                }
-            },
-            {
-                "id": "b8cf8466-592f-469b-aee3-ffc578ad0e9c",
-                "parent": "ec1ec887-9e7e-48dc-8883-a2287dbb53e1",
-                "undo": {
-                    "type": "SetNodePosition",
-                    "position": {
-                        "x": 1020.4735107421875,
-                        "y": 170.35122680664063
-                    },
-                    "node": "9e359aa9-be4b-492d-be47-6be7e6dd1299"
-                }
-            },
-            {
-                "id": "9bb1217d-2a94-4164-b316-4d727ea4b048",
-                "parent": "83cf73be-b05e-4e41-8c62-4b8bd7e43cc4",
-                "undo": {
-                    "type": "SetNodePosition",
-                    "position": {
-                        "x": 1253.121337890625,
-                        "y": 172.59268188476563
-                    },
-                    "node": "72d8e71a-27c8-4da6-a99e-6a9412577798"
-                }
-            },
-            {
-                "id": "0ea9b1e8-254f-44ec-93d7-266988cae7d0",
-                "parent": "c150d1b5-ac06-4e77-a1a5-1e08172aa90d",
-                "undo": {
-                    "type": "SetNodePosition",
-                    "position": {
-                        "x": 1008.8632202148438,
-                        "y": -91.35545349121094
-                    },
-                    "node": "fde444b7-ffce-4ba2-9c01-2537c6e537e9"
-                }
-            },
-            {
-                "id": "7861ce79-dc5b-450a-b197-cc7a1360ffd0",
-                "parent": "32cbf71d-e2d7-4528-b9ae-9a33828c6d80",
-                "undo": {
-                    "type": "Disconnect",
-                    "node": "73046b27-240e-4b37-8af9-1542482b2ec9",
-                    "input": 3
-                }
-            },
-            {
-                "id": "6ea412c4-a399-482b-b092-1d6dd6afcf12",
-                "parent": "e2945c92-e2c0-4d74-b535-2f14aa194790",
-                "undo": {
-                    "type": "Disconnect",
-                    "node": "57363b4c-c980-4aa3-b3d1-3c6f9e609f09",
-                    "input": 7
-                }
-            },
-            {
-                "id": "09308978-eecd-4547-bf36-e0d297b2cc96",
-                "parent": "a8ab4f16-da24-45f5-82ac-e8e2a2bba40e",
-                "undo": {
-                    "type": "InsertNode",
-                    "patch": "1541def4-0855-47ba-81a5-842bb1bb3ad1",
-                    "node": {
-                        "type": "Knob",
-                        "id": "9e359aa9-be4b-492d-be47-6be7e6dd1299",
-                        "position": {
-                            "x": -185.6810302734375,
-                            "y": 238.9384002685547
-                        },
-                        "name": "",
-                        "knob": {
-                            "value": 0.324196070432663,
-                            "min": 0.0,
-                            "max": 1.0
-                        },
-                        "exposedPosition": {
-                            "x": 0.0,
-                            "y": 0.0
-                        }
-                    },
-                    "index": 4
-                }
-            },
-            {
-                "id": "01cf2e01-0f30-430a-9203-64d65fbe29e4",
-                "parent": "169b1258-6877-466a-b1b7-24ec28eab348",
-                "undo": {
-                    "type": "Disconnect",
-                    "node": "57363b4c-c980-4aa3-b3d1-3c6f9e609f09",
-                    "input": 5
-                }
-            },
-            {
-                "id": "d21c81e8-f486-470a-8b25-602c04da2de5",
-                "parent": "4a19fd2b-dba0-4a29-a3a8-3d7dc70f2fda",
-                "undo": {
-                    "type": "RemoveNode",
-                    "node": "dfe5d5b7-cdc5-40af-bafe-db18e7442a6e"
-                }
-            },
-            {
-                "id": "22d094ee-f3f7-4e98-85b7-d7569518832a",
-                "parent": "b1b1b876-3bbb-4010-9ba6-d4ec72497b06",
-                "undo": {
-                    "type": "RemoveNode",
-                    "node": "7b35bb85-b007-4840-83f7-01672de3c454"
-                }
-            },
-            {
-                "id": "e7f9b821-32a9-426b-9023-3ad5af637926",
-                "parent": "b536ad52-669f-476f-9f3e-980897c83e33",
-                "undo": {
-                    "type": "Disconnect",
-                    "node": "57363b4c-c980-4aa3-b3d1-3c6f9e609f09",
-                    "input": 1
-                }
-            },
-            {
-                "id": "c3d6efdd-9713-48c7-8d5d-f0bbb31a0c83",
-                "parent": "d86c4fe8-ae4f-4f0d-b4e4-4e67125ffd6a",
-                "undo": {
-                    "type": "RemoveNode",
-                    "node": "57363b4c-c980-4aa3-b3d1-3c6f9e609f09"
-                }
-            },
-            {
-                "id": "83cf73be-b05e-4e41-8c62-4b8bd7e43cc4",
-                "parent": "0ea9b1e8-254f-44ec-93d7-266988cae7d0",
-                "undo": {
-                    "type": "SetNodePosition",
-                    "position": {
-                        "x": 1046.3594970703125,
-                        "y": -110.37407684326172
-                    },
-                    "node": "e7535e5c-a40e-45b5-9c9b-7fd44ef7f77d"
-                }
-            },
-            {
-                "id": "c8ee3e96-6d4d-4893-b940-93de67dd23ff",
-                "parent": "22d094ee-f3f7-4e98-85b7-d7569518832a",
-                "undo": {
-                    "type": "RemoveNode",
-                    "node": "73046b27-240e-4b37-8af9-1542482b2ec9"
-                }
-            },
-            {
-                "id": "b68eac33-05cd-4702-a119-93bc81fad150",
-                "parent": "09308978-eecd-4547-bf36-e0d297b2cc96",
-                "undo": {
-                    "type": "Connect",
-                    "from": "9e359aa9-be4b-492d-be47-6be7e6dd1299",
-                    "output": 0,
-                    "to": "73046b27-240e-4b37-8af9-1542482b2ec9",
-                    "input": 1
-                }
-            },
-            {
-                "id": "5e24415e-b0de-4b3a-bf09-224e685ae53c",
-                "parent": "0e8baaa6-7976-4f32-af20-c8a348b8aa0a",
-                "undo": {
-                    "type": "Connect",
-                    "from": "72d8e71a-27c8-4da6-a99e-6a9412577798",
-                    "output": 0,
-                    "to": "57363b4c-c980-4aa3-b3d1-3c6f9e609f09",
-                    "input": 4
-                }
-            },
-            {
-                "id": "540bbb5e-ccc6-4f91-ac55-ec644c729a70",
-                "parent": "8394a578-7ee9-43df-8cdd-c397bbf4006b",
-                "undo": {
-                    "type": "SetNodePosition",
-                    "position": {
-                        "x": -41.2596435546875,
-                        "y": 363.59912109375
-                    },
-                    "node": "73046b27-240e-4b37-8af9-1542482b2ec9"
-                }
-            },
-            {
-                "id": "d86c4fe8-ae4f-4f0d-b4e4-4e67125ffd6a",
-                "parent": "c8ee3e96-6d4d-4893-b940-93de67dd23ff",
-                "undo": {
-                    "type": "RemoveNode",
-                    "node": "4abf20cf-6802-4a17-a0bb-188bd78f2769"
-                }
-            },
-            {
-                "id": "e2945c92-e2c0-4d74-b535-2f14aa194790",
-                "parent": "9d463f47-2be3-4d54-ab00-ca827e52f2b5",
-                "undo": {
-                    "type": "Disconnect",
-                    "node": "73046b27-240e-4b37-8af9-1542482b2ec9",
-                    "input": 1
-                }
-            },
-            {
-                "id": "c4a1705f-dedc-4d44-a671-657874aa8a3b",
-                "parent": "42b27007-69c5-4052-bf91-ecab3863d75e",
-                "undo": {
-                    "type": "RemoveNode",
-                    "node": "e7535e5c-a40e-45b5-9c9b-7fd44ef7f77d"
-                }
-            },
-            {
-                "id": "ce9f0924-12ab-4b17-98a0-85a38d4e19b3",
-                "parent": "2f7bcb09-3293-496a-9304-6a61aa8f469e",
-                "undo": {
-                    "type": "SetNodePosition",
-                    "position": {
-                        "x": 521.45703125,
-                        "y": 451.5721130371094
-                    },
-                    "node": "9820664a-3065-4c82-9899-2789c8fa3560"
-                }
-            },
-            {
-                "id": "8394a578-7ee9-43df-8cdd-c397bbf4006b",
-                "parent": "d6f626b8-8401-4afd-a33c-c10bc8d7d917",
-                "undo": {
-                    "type": "Connect",
-                    "from": "fde444b7-ffce-4ba2-9c01-2537c6e537e9",
-                    "output": 0,
-                    "to": "73046b27-240e-4b37-8af9-1542482b2ec9",
-                    "input": 7
-                }
-            },
-            {
-                "id": "169b1258-6877-466a-b1b7-24ec28eab348",
-                "parent": "6ea412c4-a399-482b-b092-1d6dd6afcf12",
-                "undo": {
-                    "type": "Disconnect",
-                    "node": "57363b4c-c980-4aa3-b3d1-3c6f9e609f09",
-                    "input": 6
-                }
-            },
-            {
-                "id": "c150d1b5-ac06-4e77-a1a5-1e08172aa90d",
-                "parent": "b8cf8466-592f-469b-aee3-ffc578ad0e9c",
-                "undo": {
-                    "type": "SetNodePosition",
-                    "position": {
-                        "x": 1253.9510498046875,
-                        "y": 255.5709228515625
-                    },
-                    "node": "dfe5d5b7-cdc5-40af-bafe-db18e7442a6e"
-                }
-            },
-            {
-                "id": "e1cc7e17-0e6c-40e4-8933-7dd9961f41dd",
-                "parent": "b551c7bc-87bf-477b-aa70-739113258cb6",
-                "undo": {
-                    "type": "InsertNode",
-                    "patch": "1541def4-0855-47ba-81a5-842bb1bb3ad1",
-                    "node": {
-                        "type": "Knob",
-                        "id": "4a3839be-59ca-4a64-b8c9-250cb4a3f650",
-                        "position": {
-                            "x": -72.3299560546875,
-                            "y": 322.9473266601563
-                        },
-                        "name": "",
-                        "knob": {
-                            "value": 0.6923752427101135,
-                            "min": 0.0,
-                            "max": 1.0
-                        },
-                        "exposedPosition": {
-                            "x": 0.0,
-                            "y": 0.0
-                        }
-                    },
-                    "index": 8
-                }
-            },
-            {
-                "id": "50fa419d-b909-40e7-8bdd-e03d58f9f195",
-                "parent": "ce9f0924-12ab-4b17-98a0-85a38d4e19b3",
-                "undo": {
-                    "type": "RemoveNode",
-                    "node": "9820664a-3065-4c82-9899-2789c8fa3560"
-                }
-            },
-            {
-                "id": "93784579-0885-4edf-8b9d-22ac371de751",
-                "parent": "cc4aba69-c66b-4e95-82b3-9b79487a9aab",
-                "undo": {
-                    "type": "Connect",
-                    "from": "dfe5d5b7-cdc5-40af-bafe-db18e7442a6e",
-                    "output": 0,
-                    "to": "73046b27-240e-4b37-8af9-1542482b2ec9",
-                    "input": 5
-                }
-            },
-            {
-                "id": "2f7bcb09-3293-496a-9304-6a61aa8f469e",
-                "parent": "c4a1705f-dedc-4d44-a671-657874aa8a3b",
-                "undo": {
-                    "type": "RemoveNode",
-                    "node": "72d8e71a-27c8-4da6-a99e-6a9412577798"
-                }
-            },
-            {
-                "id": "fe337fb8-b64c-4945-beb8-a95da78d20b6",
-                "parent": "1744b1c5-a260-4e43-a79f-7c01ebf0a2bc",
-                "undo": {
-                    "type": "Connect",
-                    "from": "7b35bb85-b007-4840-83f7-01672de3c454",
-                    "output": 0,
-                    "to": "73046b27-240e-4b37-8af9-1542482b2ec9",
-                    "input": 3
-                }
-            },
-            {
-                "id": "32cbf71d-e2d7-4528-b9ae-9a33828c6d80",
-                "parent": "481aa182-46c0-4fe4-8315-abff88a9ec43",
-                "undo": {
-                    "type": "Disconnect",
-                    "node": "73046b27-240e-4b37-8af9-1542482b2ec9",
-                    "input": 4
-                }
-            },
-            {
-                "id": "cc4aba69-c66b-4e95-82b3-9b79487a9aab",
-                "parent": "3caba005-1be5-428a-8a2f-d0a9a7a01b98",
-                "undo": {
-                    "type": "InsertNode",
-                    "patch": "1541def4-0855-47ba-81a5-842bb1bb3ad1",
-                    "node": {
-                        "type": "Knob",
-                        "id": "dfe5d5b7-cdc5-40af-bafe-db18e7442a6e",
-                        "position": {
-                            "x": 47.7965087890625,
-                            "y": 324.1580810546875
-                        },
-                        "name": "",
-                        "knob": {
-                            "value": 0.5302178859710693,
-                            "min": 0.0,
-                            "max": 1.0
-                        },
-                        "exposedPosition": {
-                            "x": 0.0,
-                            "y": 0.0
-                        }
-                    },
-                    "index": 4
-                }
-            },
-            {
-                "id": "2a753a71-2d92-474c-9889-f3a946b78860",
-                "parent": "ebf77a11-b589-45a5-afd1-5afcea954bbb",
-                "undo": {
-                    "type": "Connect",
-                    "from": "4abf20cf-6802-4a17-a0bb-188bd78f2769",
-                    "output": 0,
-                    "to": "57363b4c-c980-4aa3-b3d1-3c6f9e609f09",
-                    "input": 6
-                }
-            },
-            {
-                "id": "c1cdce70-714d-4c16-8560-c17bd46ec5f8",
-                "parent": "93784579-0885-4edf-8b9d-22ac371de751",
-                "undo": {
-                    "type": "Connect",
-                    "from": "dfe5d5b7-cdc5-40af-bafe-db18e7442a6e",
-                    "output": 0,
-                    "to": "57363b4c-c980-4aa3-b3d1-3c6f9e609f09",
-                    "input": 5
-                }
-            },
-            {
-                "id": "42b27007-69c5-4052-bf91-ecab3863d75e",
-                "parent": "d21c81e8-f486-470a-8b25-602c04da2de5",
-                "undo": {
-                    "type": "RemoveNode",
-                    "node": "fde444b7-ffce-4ba2-9c01-2537c6e537e9"
-                }
-            },
-            {
-                "id": "b1b1b876-3bbb-4010-9ba6-d4ec72497b06",
-                "parent": "e7f9b821-32a9-426b-9023-3ad5af637926",
-                "undo": {
-                    "type": "RemoveNode",
                     "node": "4a3839be-59ca-4a64-b8c9-250cb4a3f650"
                 }
             }
