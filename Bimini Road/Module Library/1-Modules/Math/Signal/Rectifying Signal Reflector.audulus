@@ -8,13 +8,14 @@
         "Gate",
         "Modulation"
     ],
+    "description": "This module determines which signal is greater than the other and rectifies and returns that signal.  There are also some interesting feedback options to create wild modulation signals from two normal LFOs.",
     "patch": {
         "id": "3e78a501-e7dc-4447-8db4-784f02846532",
         "pan": {
-            "x": -42.34129333496094,
-            "y": 829.2396240234375
+            "x": -2.7695541381835939,
+            "y": 885.8611450195313
         },
-        "zoom": 5.254054069519043,
+        "zoom": 1.4568783044815064,
         "nodes": [
             {
                 "type": "Patch",
@@ -26,10 +27,10 @@
                 "subPatch": {
                     "id": "73f98534-9fd6-42c7-b9d8-36854623eadc",
                     "pan": {
-                        "x": -216.31954956054688,
-                        "y": -60.46943664550781
+                        "x": -320.5054626464844,
+                        "y": -2.76971435546875
                     },
-                    "zoom": 0.8917579054832459,
+                    "zoom": 1.227009892463684,
                     "nodes": [
                         {
                             "type": "Knob",
@@ -700,6 +701,20 @@
                             },
                             "text": "B",
                             "width": 256.0
+                        },
+                        {
+                            "type": "Text",
+                            "id": "73b7f546-40ef-4302-897c-2edd591d348d",
+                            "position": {
+                                "x": 578.9780883789063,
+                                "y": -124.00251770019531
+                            },
+                            "exposedPosition": {
+                                "x": 65.0,
+                                "y": 300.0
+                            },
+                            "text": "m",
+                            "width": 256.0
                         }
                     ],
                     "wires": [
@@ -995,15 +1010,120 @@
     "history": {
         "states": [
             {
-                "id": "588ba8d5-aba9-49a4-bc27-2e463df1fb1f"
+                "id": "c469ede4-5f24-487b-a44a-b0dfc538e457",
+                "parent": "89bfe706-1bc8-4f52-b1be-aa6173b489ab",
+                "undo": {
+                    "type": "SetNodePosition",
+                    "position": {
+                        "x": -87.6587142944336,
+                        "y": -1121.7396240234375
+                    },
+                    "node": "1450ff7c-8b5d-4363-979b-e7217cad314f"
+                }
+            },
+            {
+                "id": "558670ba-f452-4dcc-a41e-bc092d5c0100",
+                "parent": "c469ede4-5f24-487b-a44a-b0dfc538e457",
+                "undo": {
+                    "type": "SetExposedPosition",
+                    "node": "73b7f546-40ef-4302-897c-2edd591d348d",
+                    "position": {
+                        "x": 0.0,
+                        "y": 0.0
+                    }
+                }
+            },
+            {
+                "id": "89bfe706-1bc8-4f52-b1be-aa6173b489ab"
+            },
+            {
+                "id": "588ba8d5-aba9-49a4-bc27-2e463df1fb1f",
+                "parent": "be8c9d0a-5f07-4a8b-9e6b-61be1291c841",
+                "undo": {
+                    "type": "SetNodePosition",
+                    "position": {
+                        "x": -87.6587142944336,
+                        "y": -1121.7396240234375
+                    },
+                    "node": "1450ff7c-8b5d-4363-979b-e7217cad314f"
+                }
+            },
+            {
+                "id": "be8c9d0a-5f07-4a8b-9e6b-61be1291c841",
+                "parent": "802932bb-8f56-4610-b810-3dd47d5fd0a4",
+                "undo": {
+                    "type": "RemoveNode",
+                    "node": "73b7f546-40ef-4302-897c-2edd591d348d"
+                }
+            },
+            {
+                "id": "a0eccae8-c015-4a3d-85d6-220ea15161ee",
+                "parent": "85719de4-20ae-406a-98b1-292c871a1581",
+                "undo": {
+                    "type": "SetNodeState",
+                    "node": "73b7f546-40ef-4302-897c-2edd591d348d",
+                    "state": {
+                        "type": "Text",
+                        "id": "73b7f546-40ef-4302-897c-2edd591d348d",
+                        "position": {
+                            "x": 589.1654052734375,
+                            "y": -135.81985473632813
+                        },
+                        "exposedPosition": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "text": "text",
+                        "width": 256.0
+                    }
+                }
+            },
+            {
+                "id": "85719de4-20ae-406a-98b1-292c871a1581",
+                "parent": "558670ba-f452-4dcc-a41e-bc092d5c0100",
+                "undo": {
+                    "type": "SetNodePosition",
+                    "position": {
+                        "x": 589.1654052734375,
+                        "y": -135.81985473632813
+                    },
+                    "node": "73b7f546-40ef-4302-897c-2edd591d348d"
+                }
+            },
+            {
+                "id": "7dc6448e-99dc-4459-b987-3e06a6e658b8",
+                "parent": "a0eccae8-c015-4a3d-85d6-220ea15161ee",
+                "undo": {
+                    "type": "Unexpose",
+                    "node": "73b7f546-40ef-4302-897c-2edd591d348d"
+                }
+            },
+            {
+                "id": "802932bb-8f56-4610-b810-3dd47d5fd0a4",
+                "parent": "7dc6448e-99dc-4459-b987-3e06a6e658b8",
+                "undo": {
+                    "type": "SetNodePosition",
+                    "position": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "node": "73b7f546-40ef-4302-897c-2edd591d348d"
+                }
             }
         ],
-        "current": "588ba8d5-aba9-49a4-bc27-2e463df1fb1f"
+        "current": "89bfe706-1bc8-4f52-b1be-aa6173b489ab"
     },
     "undoStack": {
         "stack": [
-            "588ba8d5-aba9-49a4-bc27-2e463df1fb1f"
+            "588ba8d5-aba9-49a4-bc27-2e463df1fb1f",
+            "be8c9d0a-5f07-4a8b-9e6b-61be1291c841",
+            "7dc6448e-99dc-4459-b987-3e06a6e658b8",
+            "a0eccae8-c015-4a3d-85d6-220ea15161ee",
+            "85719de4-20ae-406a-98b1-292c871a1581",
+            "558670ba-f452-4dcc-a41e-bc092d5c0100",
+            "c469ede4-5f24-487b-a44a-b0dfc538e457",
+            "89bfe706-1bc8-4f52-b1be-aa6173b489ab"
         ],
-        "current": 0
+        "current": 7
     }
 }
