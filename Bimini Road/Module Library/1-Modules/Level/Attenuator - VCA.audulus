@@ -8,6 +8,7 @@
         "VCA",
         "Signal"
     ],
+    "description": "VCAs aren’t really necessary in Audulus.  All a VCA is, really, is a signal multiplier.  Usually you’d feed an oscillator into a VCA and use an envelope to control the level of amplification of the oscillator, but this is made unnecessary by basically having a “built-in” VCA on every oscillator module in Audulus.  You can also just attach any modulation signal to an Level module to get cross modulations going.  In fact, if you look inside this module, all it is is a level node.  \n\nSo, in short, this is an unnecessary module, but it’s here because people who are used to modular synthesizers expect to need one.  If they read this metadata or just generally get used to the library, they’ll understand why it’s not needed.  Just for fun, there’s a drive control on this for some added distortion.",
     "patch": {
         "id": "9542352e-9385-4c07-9d57-174af118fe2b",
         "pan": {
@@ -26,10 +27,10 @@
                 "subPatch": {
                     "id": "ea3739bf-3d45-4c09-8325-ae8799a563b4",
                     "pan": {
-                        "x": -155.965576171875,
-                        "y": 128.21617126464845
+                        "x": -408.9978332519531,
+                        "y": 145.95236206054688
                     },
-                    "zoom": 1.340950846672058,
+                    "zoom": 1.1709680557250977,
                     "nodes": [
                         {
                             "type": "Input",
@@ -48,8 +49,8 @@
                             "type": "Output",
                             "id": "c6d4452b-4f28-4e66-9cd4-52abb09e1cd6",
                             "position": {
-                                "x": 693.2349853515625,
-                                "y": -179.30422973632813
+                                "x": 475.80010986328127,
+                                "y": -160.88330078125
                             },
                             "name": "",
                             "exposedPosition": {
@@ -105,8 +106,8 @@
                             "type": "RGBLight",
                             "id": "d7a4f388-8656-425a-93c3-3615228f3bf6",
                             "position": {
-                                "x": 694.3521728515625,
-                                "y": -135.52975463867188
+                                "x": 476.91729736328127,
+                                "y": -117.10882568359375
                             },
                             "exposedPosition": {
                                 "x": 45.0,
@@ -131,8 +132,8 @@
                             "type": "Text",
                             "id": "82b3fc5c-bb6e-4a09-a491-a1190e853be0",
                             "position": {
-                                "x": 797.2249755859375,
-                                "y": -157.867919921875
+                                "x": 579.7901000976563,
+                                "y": -139.44699096679688
                             },
                             "exposedPosition": {
                                 "x": 40.0,
@@ -177,8 +178,8 @@
                             "type": "Input",
                             "id": "e9cece88-8cd8-41bd-b486-b8553d014920",
                             "position": {
-                                "x": 359.89324951171877,
-                                "y": -194.68600463867188
+                                "x": 354.889404296875,
+                                "y": -203.5461883544922
                             },
                             "name": "",
                             "exposedPosition": {
@@ -190,8 +191,8 @@
                             "type": "RGBLight",
                             "id": "29ec38ff-2e43-4b3f-ad9d-cab5994bf68b",
                             "position": {
-                                "x": 363.3443603515625,
-                                "y": -299.24176025390627
+                                "x": 358.34051513671877,
+                                "y": -308.1019287109375
                             },
                             "exposedPosition": {
                                 "x": -5.0,
@@ -199,20 +200,11 @@
                             }
                         },
                         {
-                            "type": "Expr",
-                            "id": "211dcbac-0106-4723-a21a-b43aeaa3e3e0",
-                            "position": {
-                                "x": 460.94091796875,
-                                "y": -194.36557006835938
-                            },
-                            "expr": "Envelope*Signal"
-                        },
-                        {
                             "type": "Text",
                             "id": "24b18873-488f-40a4-9714-69b9e6602857",
                             "position": {
-                                "x": 344.1716003417969,
-                                "y": -172.677978515625
+                                "x": 339.1677551269531,
+                                "y": -181.5381622314453
                             },
                             "exposedPosition": {
                                 "x": -10.0,
@@ -220,11 +212,24 @@
                             },
                             "text": "e",
                             "width": 256.0
+                        },
+                        {
+                            "type": "Level",
+                            "id": "9a5386cf-db6a-4704-98af-cd76d7f39c92",
+                            "position": {
+                                "x": 341.51898193359377,
+                                "y": -162.1415557861328
+                            },
+                            "level": {
+                                "value": 0.5,
+                                "min": 0.0,
+                                "max": 1.0
+                            }
                         }
                     ],
                     "wires": [
                         {
-                            "from": "211dcbac-0106-4723-a21a-b43aeaa3e3e0",
+                            "from": "9a5386cf-db6a-4704-98af-cd76d7f39c92",
                             "output": 0,
                             "to": "c6d4452b-4f28-4e66-9cd4-52abb09e1cd6",
                             "input": 0
@@ -236,7 +241,7 @@
                             "input": 0
                         },
                         {
-                            "from": "211dcbac-0106-4723-a21a-b43aeaa3e3e0",
+                            "from": "9a5386cf-db6a-4704-98af-cd76d7f39c92",
                             "output": 0,
                             "to": "d7a4f388-8656-425a-93c3-3615228f3bf6",
                             "input": 0
@@ -266,15 +271,15 @@
                             "input": 0
                         },
                         {
-                            "from": "e9cece88-8cd8-41bd-b486-b8553d014920",
+                            "from": "811e9dad-0832-4197-8918-99af96ad6f27",
                             "output": 0,
-                            "to": "211dcbac-0106-4723-a21a-b43aeaa3e3e0",
+                            "to": "9a5386cf-db6a-4704-98af-cd76d7f39c92",
                             "input": 0
                         },
                         {
-                            "from": "811e9dad-0832-4197-8918-99af96ad6f27",
+                            "from": "e9cece88-8cd8-41bd-b486-b8553d014920",
                             "output": 0,
-                            "to": "211dcbac-0106-4723-a21a-b43aeaa3e3e0",
+                            "to": "9a5386cf-db6a-4704-98af-cd76d7f39c92",
                             "input": 1
                         }
                     ]
@@ -286,14 +291,14 @@
     "history": {
         "states": [
             {
-                "id": "e19ccbb8-2714-465a-beeb-d0160348da39"
+                "id": "617fa9b3-2296-4724-ab71-46f8c196a653"
             }
         ],
-        "current": "e19ccbb8-2714-465a-beeb-d0160348da39"
+        "current": "617fa9b3-2296-4724-ab71-46f8c196a653"
     },
     "undoStack": {
         "stack": [
-            "e19ccbb8-2714-465a-beeb-d0160348da39"
+            "617fa9b3-2296-4724-ab71-46f8c196a653"
         ],
         "current": 0
     }

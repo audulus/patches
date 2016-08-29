@@ -6,6 +6,7 @@
         "Curve",
         "Knob"
     ],
+    "description": "This module translates a linear 0-1 m signal to exponential (left) to linear (middle) to logarithmic (right).",
     "patch": {
         "id": "ee2f620d-648f-4b6b-927c-147335dfdd88",
         "pan": {
@@ -14,24 +15,6 @@
         },
         "zoom": 1.7956414222717286,
         "nodes": [
-            {
-                "type": "Knob",
-                "id": "c14ceeda-f60f-4185-bfe2-ff0c67bfdf62",
-                "position": {
-                    "x": -101.18212890625,
-                    "y": 6.5016937255859379
-                },
-                "name": "",
-                "knob": {
-                    "value": 0.6493037939071655,
-                    "min": 0.0,
-                    "max": 1.0
-                },
-                "exposedPosition": {
-                    "x": 0.0,
-                    "y": 0.0
-                }
-            },
             {
                 "type": "Patch",
                 "id": "fc378dbf-bfb4-44e8-ae07-e305861f9a51",
@@ -322,26 +305,19 @@
                 }
             }
         ],
-        "wires": [
-            {
-                "from": "c14ceeda-f60f-4185-bfe2-ff0c67bfdf62",
-                "output": 0,
-                "to": "fc378dbf-bfb4-44e8-ae07-e305861f9a51",
-                "input": 1
-            }
-        ]
+        "wires": []
     },
     "history": {
         "states": [
             {
-                "id": "83160c7c-9b5a-4109-93bd-af3d589296d5"
+                "id": "f9c60684-6982-4a15-97cb-d6155fcb8830"
             }
         ],
-        "current": "83160c7c-9b5a-4109-93bd-af3d589296d5"
+        "current": "f9c60684-6982-4a15-97cb-d6155fcb8830"
     },
     "undoStack": {
         "stack": [
-            "83160c7c-9b5a-4109-93bd-af3d589296d5"
+            "f9c60684-6982-4a15-97cb-d6155fcb8830"
         ],
         "current": 0
     }
