@@ -4,13 +4,14 @@
         "Knob",
         "Number"
     ],
+    "description": "This module takes a 0-1 knob signal and translates it into integers 0 through the number set at the # input.",
     "patch": {
         "id": "a2c8d4c4-5ed5-4256-912e-1d842acd8b0e",
         "pan": {
-            "x": -51.55989074707031,
-            "y": 27.005571365356447
+            "x": -139.75621032714845,
+            "y": -37.90008544921875
         },
-        "zoom": 14.729758262634278,
+        "zoom": 1.5647509098052979,
         "nodes": [
             {
                 "type": "Patch",
@@ -171,21 +172,37 @@
                         }
                     ]
                 }
+            },
+            {
+                "type": "Expr",
+                "id": "b245bab0-afba-4375-b0d6-ea400f2f12b7",
+                "position": {
+                    "x": 16.600112915039064,
+                    "y": -103.4399185180664
+                },
+                "expr": "7"
             }
         ],
-        "wires": []
+        "wires": [
+            {
+                "from": "b245bab0-afba-4375-b0d6-ea400f2f12b7",
+                "output": 0,
+                "to": "a8c64862-4d00-4278-8760-fa624c8ae815",
+                "input": 1
+            }
+        ]
     },
     "history": {
         "states": [
             {
-                "id": "c8095ea5-f2d7-4643-b3d2-c0d030aea5f5"
+                "id": "9e5ed090-c08b-484c-8155-c89f1f84787e"
             }
         ],
-        "current": "c8095ea5-f2d7-4643-b3d2-c0d030aea5f5"
+        "current": "9e5ed090-c08b-484c-8155-c89f1f84787e"
     },
     "undoStack": {
         "stack": [
-            "c8095ea5-f2d7-4643-b3d2-c0d030aea5f5"
+            "9e5ed090-c08b-484c-8155-c89f1f84787e"
         ],
         "current": 0
     }

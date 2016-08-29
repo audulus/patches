@@ -6,6 +6,7 @@
         "Signal",
         "Gate"
     ],
+    "description": "This module takes a 0-1 knob signal and translates it to the range defined by the H and L signal.  It also will pass the > input when the knob is turned all the way down.",
     "patch": {
         "id": "2cdb3073-7626-4a7e-a050-4fe1327b6037",
         "pan": {
@@ -999,7 +1000,7 @@
                                 "x": -230.0,
                                 "y": -30.0
                             },
-                            "text": "#",
+                            "text": ">",
                             "width": 256.0
                         },
                         {
@@ -1516,16 +1517,59 @@
     "history": {
         "states": [
             {
-                "id": "bd16f8c8-550d-4351-b797-4603b95b5fab"
-            },
-            {
-                "id": "1b3c8097-8521-4887-852a-08f8ac707338",
-                "parent": "bd16f8c8-550d-4351-b797-4603b95b5fab",
+                "id": "ef2c771e-5766-4139-99bb-aab3f3224f80",
+                "parent": "884d0cb3-3f4a-46b1-8cac-3fbe0b4c4009",
                 "undo": {
                     "type": "SetNodePosition",
                     "position": {
-                        "x": 0.0,
-                        "y": 0.0
+                        "x": 6.90234375,
+                        "y": -2.0390625
+                    },
+                    "node": "f6faf8d2-90f6-45bf-8f6f-7ea7daeb35d3"
+                }
+            },
+            {
+                "id": "2a859048-1613-4ab8-84ab-fdb13ac886e4",
+                "parent": "ef2c771e-5766-4139-99bb-aab3f3224f80",
+                "undo": {
+                    "type": "SetNodeState",
+                    "node": "259ae125-1dd1-45dd-b9d3-802591141bb1",
+                    "state": {
+                        "type": "Text",
+                        "id": "259ae125-1dd1-45dd-b9d3-802591141bb1",
+                        "position": {
+                            "x": 417.5815734863281,
+                            "y": 25.145118713378908
+                        },
+                        "exposedPosition": {
+                            "x": -230.0,
+                            "y": -30.0
+                        },
+                        "text": "#",
+                        "width": 256.0
+                    }
+                }
+            },
+            {
+                "id": "f2699934-7a0d-4947-ba6e-5f04a52eafd2",
+                "parent": "2a859048-1613-4ab8-84ab-fdb13ac886e4",
+                "undo": {
+                    "type": "SetNodePosition",
+                    "position": {
+                        "x": 417.5815734863281,
+                        "y": 25.145118713378908
+                    },
+                    "node": "259ae125-1dd1-45dd-b9d3-802591141bb1"
+                }
+            },
+            {
+                "id": "bd16f8c8-550d-4351-b797-4603b95b5fab",
+                "parent": "f2699934-7a0d-4947-ba6e-5f04a52eafd2",
+                "undo": {
+                    "type": "SetNodePosition",
+                    "position": {
+                        "x": 6.90234375,
+                        "y": -2.0390625
                     },
                     "node": "f6faf8d2-90f6-45bf-8f6f-7ea7daeb35d3"
                 }
@@ -1543,22 +1587,41 @@
                 }
             },
             {
+                "id": "884d0cb3-3f4a-46b1-8cac-3fbe0b4c4009"
+            },
+            {
                 "id": "deaeef2b-06d3-4562-bc64-f5ab20f1b15b",
                 "parent": "1ed4444b-b3cd-4fe4-bc6f-1a44ecf5df8a",
                 "undo": {
                     "type": "RemoveNode",
                     "node": "f6faf8d2-90f6-45bf-8f6f-7ea7daeb35d3"
                 }
+            },
+            {
+                "id": "1b3c8097-8521-4887-852a-08f8ac707338",
+                "parent": "bd16f8c8-550d-4351-b797-4603b95b5fab",
+                "undo": {
+                    "type": "SetNodePosition",
+                    "position": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
+                    "node": "f6faf8d2-90f6-45bf-8f6f-7ea7daeb35d3"
+                }
             }
         ],
-        "current": "bd16f8c8-550d-4351-b797-4603b95b5fab"
+        "current": "884d0cb3-3f4a-46b1-8cac-3fbe0b4c4009"
     },
     "undoStack": {
         "stack": [
             "deaeef2b-06d3-4562-bc64-f5ab20f1b15b",
             "1b3c8097-8521-4887-852a-08f8ac707338",
-            "bd16f8c8-550d-4351-b797-4603b95b5fab"
+            "bd16f8c8-550d-4351-b797-4603b95b5fab",
+            "f2699934-7a0d-4947-ba6e-5f04a52eafd2",
+            "2a859048-1613-4ab8-84ab-fdb13ac886e4",
+            "ef2c771e-5766-4139-99bb-aab3f3224f80",
+            "884d0cb3-3f4a-46b1-8cac-3fbe0b4c4009"
         ],
-        "current": 2
+        "current": 6
     }
 }

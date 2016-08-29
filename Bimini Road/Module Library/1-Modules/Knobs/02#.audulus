@@ -5,13 +5,14 @@
         "Translation",
         "Number"
     ],
+    "description": "This module translates a knob signal from 0 to 1 to 0 to the number set at the # input.",
     "patch": {
         "id": "5e820c6a-bb9e-4d5d-8214-ba532638fd35",
         "pan": {
-            "x": 10.0,
-            "y": 19.5
+            "x": 13.635421752929688,
+            "y": 40.66363525390625
         },
-        "zoom": 13.690140724182129,
+        "zoom": 6.101194858551025,
         "nodes": [
             {
                 "type": "Patch",
@@ -182,21 +183,37 @@
                         }
                     ]
                 }
+            },
+            {
+                "type": "Expr",
+                "id": "37796fa4-6817-4459-9e85-7031b65c50df",
+                "position": {
+                    "x": -49.616432189941409,
+                    "y": -97.30829620361328
+                },
+                "expr": "2"
             }
         ],
-        "wires": []
+        "wires": [
+            {
+                "from": "37796fa4-6817-4459-9e85-7031b65c50df",
+                "output": 0,
+                "to": "68d89676-7fbf-4aba-baf8-b3a46c943af5",
+                "input": 0
+            }
+        ]
     },
     "history": {
         "states": [
             {
-                "id": "ead413b9-4d0f-4444-8a85-800635ac4b98"
+                "id": "df798b8d-ccd9-40c0-af28-3448a5ea3796"
             }
         ],
-        "current": "ead413b9-4d0f-4444-8a85-800635ac4b98"
+        "current": "df798b8d-ccd9-40c0-af28-3448a5ea3796"
     },
     "undoStack": {
         "stack": [
-            "ead413b9-4d0f-4444-8a85-800635ac4b98"
+            "df798b8d-ccd9-40c0-af28-3448a5ea3796"
         ],
         "current": 0
     }

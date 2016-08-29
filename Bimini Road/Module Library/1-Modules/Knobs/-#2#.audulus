@@ -5,13 +5,14 @@
         "Translation",
         "Number"
     ],
+    "description": "This module translates a knobs range from 0-1 to a range set by the # input.",
     "patch": {
         "id": "553e8eb7-44e9-41db-b4c5-9871bb680348",
         "pan": {
-            "x": 10.0,
-            "y": 19.5
+            "x": 40.230003356933597,
+            "y": -20.666860580444337
         },
-        "zoom": 13.690140724182129,
+        "zoom": 1.9035567045211793,
         "nodes": [
             {
                 "type": "Patch",
@@ -182,21 +183,37 @@
                         }
                     ]
                 }
+            },
+            {
+                "type": "Expr",
+                "id": "f4ae8a42-a800-456f-8d7e-5c3da367e301",
+                "position": {
+                    "x": -46.61871337890625,
+                    "y": -97.7058334350586
+                },
+                "expr": "1"
             }
         ],
-        "wires": []
+        "wires": [
+            {
+                "from": "f4ae8a42-a800-456f-8d7e-5c3da367e301",
+                "output": 0,
+                "to": "297bf4e0-750d-4857-9ad4-e3d70b1fa99a",
+                "input": 0
+            }
+        ]
     },
     "history": {
         "states": [
             {
-                "id": "38c1c3a6-a63b-41b1-8ffe-fc840e3d49ae"
+                "id": "c8e4c6da-7ae8-42bd-b76f-7bf9103d779b"
             }
         ],
-        "current": "38c1c3a6-a63b-41b1-8ffe-fc840e3d49ae"
+        "current": "c8e4c6da-7ae8-42bd-b76f-7bf9103d779b"
     },
     "undoStack": {
         "stack": [
-            "38c1c3a6-a63b-41b1-8ffe-fc840e3d49ae"
+            "c8e4c6da-7ae8-42bd-b76f-7bf9103d779b"
         ],
         "current": 0
     }
