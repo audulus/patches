@@ -2,7 +2,7 @@
     "version": 1,
     "author": "Jody Golick",
     "tags": [
-        "sequencer"
+        "Sequencer"
     ],
     "patch": {
         "id": "b629b846-52d4-4f05-a100-b127f00fa5a6",
@@ -196,7 +196,8 @@
                                                         "x": -10.0,
                                                         "y": 30.0
                                                     },
-                                                    "text": "16 Counter"
+                                                    "text": "16 Counter",
+                                                    "width": 256.0
                                                 },
                                                 {
                                                     "type": "Input",
@@ -350,7 +351,8 @@
                                                         "x": -40.0,
                                                         "y": 30.0
                                                     },
-                                                    "text": "flipflop"
+                                                    "text": "flipflop",
+                                                    "width": 256.0
                                                 }
                                             ],
                                             "wires": [
@@ -1716,7 +1718,8 @@
                                 "x": 15.0,
                                 "y": -130.0
                             },
-                            "text": "-"
+                            "text": "-",
+                            "width": 256.0
                         },
                         {
                             "type": "Text",
@@ -1729,7 +1732,8 @@
                                 "x": 50.0,
                                 "y": -160.0
                             },
-                            "text": "loop"
+                            "text": "loop",
+                            "width": 256.0
                         },
                         {
                             "type": "Text",
@@ -1742,7 +1746,8 @@
                                 "x": -15.0,
                                 "y": -160.0
                             },
-                            "text": "+"
+                            "text": "+",
+                            "width": 256.0
                         },
                         {
                             "type": "Text",
@@ -1755,7 +1760,8 @@
                                 "x": -85.0,
                                 "y": 250.0
                             },
-                            "text": "Bidirectional Seq16 "
+                            "text": "Bidirectional Seq16 ",
+                            "width": 256.0
                         },
                         {
                             "type": "Output",
@@ -2277,7 +2283,8 @@
                                 "x": -15.0,
                                 "y": 30.0
                             },
-                            "text": "Clock"
+                            "text": "Clock",
+                            "width": 256.0
                         }
                     ],
                     "wires": [
@@ -2345,6 +2352,33 @@
     "history": {
         "states": [
             {
+                "id": "950b6c1c-a08c-426c-b085-1f9285ed1cbc"
+            },
+            {
+                "id": "60948f02-554e-4838-905e-42370723f588",
+                "parent": "684edd62-7394-4ab6-b0f9-8e0f9e3b68d2",
+                "undo": {
+                    "type": "SetNodePosition",
+                    "position": {
+                        "x": -565.6442260742188,
+                        "y": -864.4815063476563
+                    },
+                    "node": "3edc2344-e4b9-42b5-beed-147fdb941a91"
+                }
+            },
+            {
+                "id": "f03ebdcd-b39d-40d0-a72d-313958911db9",
+                "parent": "7d8898a5-d1b5-4cad-822e-85b1523ce986",
+                "undo": {
+                    "type": "SetNodePosition",
+                    "position": {
+                        "x": -608.694580078125,
+                        "y": 82.87245178222656
+                    },
+                    "node": "e3670785-e75c-4d4e-bc3e-503752773978"
+                }
+            },
+            {
                 "id": "c6dfc14f-6593-413a-955a-96d7c8770bf3",
                 "parent": "72c68a7c-387e-48dd-9ff2-06a445fa93c3",
                 "undo": {
@@ -2381,27 +2415,15 @@
                 }
             },
             {
-                "id": "de0864fa-bf34-40be-971c-c2d61eb269ff",
-                "parent": "f03ebdcd-b39d-40d0-a72d-313958911db9",
+                "id": "684edd62-7394-4ab6-b0f9-8e0f9e3b68d2",
+                "parent": "950b6c1c-a08c-426c-b085-1f9285ed1cbc",
                 "undo": {
                     "type": "SetNodePosition",
                     "position": {
-                        "x": -619.59765625,
-                        "y": -38.56671142578125
+                        "x": 313.12933349609377,
+                        "y": -287.53948974609377
                     },
-                    "node": "353d624c-4bff-4168-a63a-3e72993b3554"
-                }
-            },
-            {
-                "id": "f03ebdcd-b39d-40d0-a72d-313958911db9",
-                "parent": "7d8898a5-d1b5-4cad-822e-85b1523ce986",
-                "undo": {
-                    "type": "SetNodePosition",
-                    "position": {
-                        "x": -608.694580078125,
-                        "y": 82.87245178222656
-                    },
-                    "node": "e3670785-e75c-4d4e-bc3e-503752773978"
+                    "node": "ae2ca879-003c-449f-9aa6-0b8ad2b8be00"
                 }
             },
             {
@@ -2417,31 +2439,16 @@
                 }
             },
             {
-                "id": "60948f02-554e-4838-905e-42370723f588",
-                "parent": "684edd62-7394-4ab6-b0f9-8e0f9e3b68d2",
+                "id": "de0864fa-bf34-40be-971c-c2d61eb269ff",
+                "parent": "f03ebdcd-b39d-40d0-a72d-313958911db9",
                 "undo": {
                     "type": "SetNodePosition",
                     "position": {
-                        "x": -565.6442260742188,
-                        "y": -864.4815063476563
+                        "x": -619.59765625,
+                        "y": -38.56671142578125
                     },
-                    "node": "3edc2344-e4b9-42b5-beed-147fdb941a91"
+                    "node": "353d624c-4bff-4168-a63a-3e72993b3554"
                 }
-            },
-            {
-                "id": "684edd62-7394-4ab6-b0f9-8e0f9e3b68d2",
-                "parent": "950b6c1c-a08c-426c-b085-1f9285ed1cbc",
-                "undo": {
-                    "type": "SetNodePosition",
-                    "position": {
-                        "x": 313.12933349609377,
-                        "y": -287.53948974609377
-                    },
-                    "node": "ae2ca879-003c-449f-9aa6-0b8ad2b8be00"
-                }
-            },
-            {
-                "id": "950b6c1c-a08c-426c-b085-1f9285ed1cbc"
             }
         ],
         "current": "950b6c1c-a08c-426c-b085-1f9285ed1cbc"
