@@ -1,0 +1,141 @@
+{
+    "version": 1,
+    "tags": [
+        "Utilities"
+    ],
+    "description": "Translates an Hz signal to a octave signal.",
+    "patch": {
+        "id": "e584149e-add1-4be5-8a30-b0482a2a8dbe",
+        "pan": {
+            "x": -17.5,
+            "y": 75.0
+        },
+        "zoom": 16.457143783569337,
+        "nodes": [
+            {
+                "type": "Patch",
+                "id": "1b8f7125-6acd-41e3-8b7a-a7880c2d0cb2",
+                "position": {
+                    "x": 0.0,
+                    "y": 0.0
+                },
+                "subPatch": {
+                    "id": "9458512d-a6f0-4c51-8bd0-fb112b9cc278",
+                    "pan": {
+                        "x": 63.111392974853519,
+                        "y": -50.51366424560547
+                    },
+                    "zoom": 2.746814012527466,
+                    "nodes": [
+                        {
+                            "type": "Expr",
+                            "id": "a0fbdde8-5a00-46f0-9c12-f12de5558e11",
+                            "position": {
+                                "x": -158.1171875,
+                                "y": 21.26171875
+                            },
+                            "expr": "log2(hz/440)"
+                        },
+                        {
+                            "type": "Text",
+                            "id": "195b3471-14cd-474a-980c-a4ee77906b1e",
+                            "position": {
+                                "x": -112.96522521972656,
+                                "y": 89.99761199951172
+                            },
+                            "exposedPosition": {
+                                "x": 5.0,
+                                "y": -75.0
+                            },
+                            "text": "Hz2o",
+                            "width": 121.66253662109375
+                        },
+                        {
+                            "type": "Input",
+                            "id": "a8a3b522-7a20-480d-9936-963b22dabb99",
+                            "position": {
+                                "x": -285.86920166015627,
+                                "y": 21.533275604248048
+                            },
+                            "name": "",
+                            "exposedPosition": {
+                                "x": -15.0,
+                                "y": -75.0
+                            }
+                        },
+                        {
+                            "type": "Output",
+                            "id": "661c278a-655d-49dd-9fdc-3f5eeb482d76",
+                            "position": {
+                                "x": 64.12783813476563,
+                                "y": 21.377273559570314
+                            },
+                            "name": "",
+                            "exposedPosition": {
+                                "x": 50.0,
+                                "y": -75.0
+                            }
+                        },
+                        {
+                            "type": "Text",
+                            "id": "5cfe0823-1476-4f0f-bd7b-8785051a6e29",
+                            "position": {
+                                "x": -330.8092956542969,
+                                "y": 43.20832443237305
+                            },
+                            "exposedPosition": {
+                                "x": -20.0,
+                                "y": -75.0
+                            },
+                            "text": "Hz",
+                            "width": 256.0
+                        },
+                        {
+                            "type": "Text",
+                            "id": "a665d84b-1294-4ea9-9402-9e5c27485dc1",
+                            "position": {
+                                "x": 168.18125915527345,
+                                "y": 42.772281646728519
+                            },
+                            "exposedPosition": {
+                                "x": 45.0,
+                                "y": -75.0
+                            },
+                            "text": "o",
+                            "width": 256.0
+                        }
+                    ],
+                    "wires": [
+                        {
+                            "from": "a8a3b522-7a20-480d-9936-963b22dabb99",
+                            "output": 0,
+                            "to": "a0fbdde8-5a00-46f0-9c12-f12de5558e11",
+                            "input": 0
+                        },
+                        {
+                            "from": "a0fbdde8-5a00-46f0-9c12-f12de5558e11",
+                            "output": 0,
+                            "to": "661c278a-655d-49dd-9fdc-3f5eeb482d76",
+                            "input": 0
+                        }
+                    ]
+                }
+            }
+        ],
+        "wires": []
+    },
+    "history": {
+        "states": [
+            {
+                "id": "13876cd8-567e-4f47-8f15-d46ceba62cac"
+            }
+        ],
+        "current": "13876cd8-567e-4f47-8f15-d46ceba62cac"
+    },
+    "undoStack": {
+        "stack": [
+            "13876cd8-567e-4f47-8f15-d46ceba62cac"
+        ],
+        "current": 0
+    }
+}

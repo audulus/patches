@@ -1,0 +1,357 @@
+{
+    "version": 1,
+    "tags": [
+        "Math"
+    ],
+    "description": "This module allows you to define the center value of a knob (a knob’s output when it is set to 50%) and the range the knob covers (the amount of swing left to right).",
+    "patch": {
+        "id": "b6e9b3af-9fa1-4829-8237-69e16f332b52",
+        "pan": {
+            "x": 82.01617431640625,
+            "y": 142.7044677734375
+        },
+        "zoom": 5.846621513366699,
+        "nodes": [
+            {
+                "type": "Patch",
+                "id": "4b6d0974-fec1-4adb-b276-c4939c4bf1fd",
+                "position": {
+                    "x": -23.2750301361084,
+                    "y": 227.44509887695313
+                },
+                "subPatch": {
+                    "id": "78032925-88ea-4dda-b67a-9b8bb3c6dc37",
+                    "pan": {
+                        "x": -322.3669738769531,
+                        "y": -57.89884948730469
+                    },
+                    "zoom": 1.4353781938552857,
+                    "nodes": [
+                        {
+                            "type": "Text",
+                            "id": "68226646-2448-4e11-ac59-e31697429451",
+                            "position": {
+                                "x": 235.41864013671876,
+                                "y": 380.2828063964844
+                            },
+                            "exposedPosition": {
+                                "x": -10.0,
+                                "y": -360.0
+                            },
+                            "text": "Center",
+                            "width": 256.0
+                        },
+                        {
+                            "type": "Expr",
+                            "id": "a2d46439-1d1c-4be2-b0fc-c890b3dcbbe5",
+                            "position": {
+                                "x": 153.97622680664063,
+                                "y": -280.6878662109375
+                            },
+                            "expr": "Center-(Range/2)"
+                        },
+                        {
+                            "type": "Expr",
+                            "id": "e2e924b5-96bc-4408-b53d-7a62cff5ba3d",
+                            "position": {
+                                "x": 153.53359985351563,
+                                "y": -207.998046875
+                            },
+                            "expr": "Center+(Range/2)"
+                        },
+                        {
+                            "type": "Crossfade",
+                            "id": "67d5a635-7140-4120-94f6-ff845894a7c9",
+                            "position": {
+                                "x": 415.7774658203125,
+                                "y": -223.2335662841797
+                            }
+                        },
+                        {
+                            "type": "Input",
+                            "id": "d96566a6-f655-4964-af94-28044a774527",
+                            "position": {
+                                "x": 297.83087158203127,
+                                "y": -131.2417449951172
+                            },
+                            "name": "",
+                            "exposedPosition": {
+                                "x": -25.0,
+                                "y": -360.0
+                            }
+                        },
+                        {
+                            "type": "Input",
+                            "id": "3dfaca52-3c1f-4633-af5d-26452bc5cba2",
+                            "position": {
+                                "x": 48.10816955566406,
+                                "y": -279.67156982421877
+                            },
+                            "name": "",
+                            "exposedPosition": {
+                                "x": -25.0,
+                                "y": -385.0
+                            }
+                        },
+                        {
+                            "type": "Input",
+                            "id": "5f4f069f-0d6b-48db-b5a6-d079db21cf9a",
+                            "position": {
+                                "x": 40.16802978515625,
+                                "y": -176.97543334960938
+                            },
+                            "name": "",
+                            "exposedPosition": {
+                                "x": -25.0,
+                                "y": -410.0
+                            }
+                        },
+                        {
+                            "type": "Output",
+                            "id": "24506e66-a830-4783-8f5c-b1d45f364301",
+                            "position": {
+                                "x": 554.9121704101563,
+                                "y": -221.4608154296875
+                            },
+                            "name": "",
+                            "exposedPosition": {
+                                "x": 40.0,
+                                "y": -360.0
+                            }
+                        },
+                        {
+                            "type": "Text",
+                            "id": "54a99d4c-02bc-40d1-bbe0-c9c2813d8d2e",
+                            "position": {
+                                "x": 15.212478637695313,
+                                "y": -257.228271484375
+                            },
+                            "exposedPosition": {
+                                "x": -30.0,
+                                "y": -385.0
+                            },
+                            "text": "c",
+                            "width": 51.653839111328128
+                        },
+                        {
+                            "type": "Text",
+                            "id": "3d7cdf2b-477f-4942-bfba-e3f30456e6e1",
+                            "position": {
+                                "x": 14.82208251953125,
+                                "y": -154.36614990234376
+                            },
+                            "exposedPosition": {
+                                "x": -30.0,
+                                "y": -410.0
+                            },
+                            "text": "r",
+                            "width": 51.653839111328128
+                        },
+                        {
+                            "type": "Text",
+                            "id": "5d1e7897-f5bd-428f-91fa-1ede4d902976",
+                            "position": {
+                                "x": 275.3037414550781,
+                                "y": -109.73744201660156
+                            },
+                            "exposedPosition": {
+                                "x": -30.0,
+                                "y": -360.0
+                            },
+                            "text": "k",
+                            "width": 44.64825439453125
+                        },
+                        {
+                            "type": "Text",
+                            "id": "d096954a-e829-4c90-99fb-f4246c15ba52",
+                            "position": {
+                                "x": 588.8026123046875,
+                                "y": -160.05812072753907
+                            },
+                            "exposedPosition": {
+                                "x": 35.0,
+                                "y": -360.0
+                            },
+                            "text": "#",
+                            "width": 256.0
+                        },
+                        {
+                            "type": "Text",
+                            "id": "0d3671e2-6b58-412f-80ab-585a140b934f",
+                            "position": {
+                                "x": 290.1035461425781,
+                                "y": 380.4855651855469
+                            },
+                            "exposedPosition": {
+                                "x": -10.0,
+                                "y": -375.0
+                            },
+                            "text": "Range",
+                            "width": 256.0
+                        },
+                        {
+                            "type": "Text",
+                            "id": "5bd27fdc-f869-4cb7-8084-b0fa6932a130",
+                            "position": {
+                                "x": 187.49966430664063,
+                                "y": 92.41926574707031
+                            },
+                            "text": "Two values, an range (r) and center (c) come into the brick and enter two expressions.  The top expression takes the center value and adds half of the range to it.  The expression below it takes the center value and subtracts the range value from it.  Then, the incoming k (knob) signal fades between the values with a Crossfade node.  If it helps to understand how this works, consider a center value of 0 and a range value of 2.  0+2/2 = 1 and 0-2/2 = -1.  The Crossfade node is then fading between -1 and 1, and when the k signal is .5 (when the knob is centered) the # output is 0.",
+                            "width": 256.0
+                        },
+                        {
+                            "type": "Text",
+                            "id": "c0715d9a-93fe-4f65-ac45-251eb401ab3c",
+                            "position": {
+                                "x": 184.99514770507813,
+                                "y": 290.8214416503906
+                            },
+                            "text": "This brick translates a 0-1 k (knob) signal by setting a center point (c) and then defining the range around that point (r).  For example, if you set the c value to 1 and the r value to 2, the # (number) output will range from -1 to 3 as the knob is turned from left to right.  To invert the action of the knob, just set the r value to negative - in the same example, if the r value was -2, the knob would now go from 3 on the left to -1 on the right.  This brick is really useful for translating LFOs into a modulation range for filters.  Set the frequency you want to modulate around at the c input and the range of modulation at the r input, and then attach the 0-1 LFO to the k input.",
+                            "width": 256.0
+                        },
+                        {
+                            "type": "Text",
+                            "id": "d5a7102b-f864-4a1a-8245-9cff7e8a2252",
+                            "position": {
+                                "x": 234.21844482421876,
+                                "y": 118.84476470947266
+                            },
+                            "text": "How does this brick work?",
+                            "width": 256.0
+                        },
+                        {
+                            "type": "Text",
+                            "id": "d9dd0759-6c64-4655-a1cf-ffc709515bbc",
+                            "position": {
+                                "x": 246.37100219726563,
+                                "y": 333.2441711425781
+                            },
+                            "text": "What is this brick?",
+                            "width": 256.0
+                        }
+                    ],
+                    "wires": [
+                        {
+                            "from": "3dfaca52-3c1f-4633-af5d-26452bc5cba2",
+                            "output": 0,
+                            "to": "a2d46439-1d1c-4be2-b0fc-c890b3dcbbe5",
+                            "input": 0
+                        },
+                        {
+                            "from": "5f4f069f-0d6b-48db-b5a6-d079db21cf9a",
+                            "output": 0,
+                            "to": "a2d46439-1d1c-4be2-b0fc-c890b3dcbbe5",
+                            "input": 1
+                        },
+                        {
+                            "from": "3dfaca52-3c1f-4633-af5d-26452bc5cba2",
+                            "output": 0,
+                            "to": "e2e924b5-96bc-4408-b53d-7a62cff5ba3d",
+                            "input": 0
+                        },
+                        {
+                            "from": "5f4f069f-0d6b-48db-b5a6-d079db21cf9a",
+                            "output": 0,
+                            "to": "e2e924b5-96bc-4408-b53d-7a62cff5ba3d",
+                            "input": 1
+                        },
+                        {
+                            "from": "a2d46439-1d1c-4be2-b0fc-c890b3dcbbe5",
+                            "output": 0,
+                            "to": "67d5a635-7140-4120-94f6-ff845894a7c9",
+                            "input": 0
+                        },
+                        {
+                            "from": "e2e924b5-96bc-4408-b53d-7a62cff5ba3d",
+                            "output": 0,
+                            "to": "67d5a635-7140-4120-94f6-ff845894a7c9",
+                            "input": 1
+                        },
+                        {
+                            "from": "d96566a6-f655-4964-af94-28044a774527",
+                            "output": 0,
+                            "to": "67d5a635-7140-4120-94f6-ff845894a7c9",
+                            "input": 2
+                        },
+                        {
+                            "from": "67d5a635-7140-4120-94f6-ff845894a7c9",
+                            "output": 0,
+                            "to": "24506e66-a830-4783-8f5c-b1d45f364301",
+                            "input": 0
+                        }
+                    ]
+                }
+            },
+            {
+                "type": "Knob",
+                "id": "3216de44-a43a-493b-96e4-3a8a5dae1765",
+                "position": {
+                    "x": -160.75733947753907,
+                    "y": -99.57954406738281
+                },
+                "name": "",
+                "knob": {
+                    "value": 1.0,
+                    "min": 0.0,
+                    "max": 1.0
+                },
+                "exposedPosition": {
+                    "x": 0.0,
+                    "y": 0.0
+                }
+            },
+            {
+                "type": "Expr",
+                "id": "8a966605-b583-4f9d-88b0-26ec0b4e4e42",
+                "position": {
+                    "x": -161.61526489257813,
+                    "y": -183.2027130126953
+                },
+                "expr": "1"
+            },
+            {
+                "type": "Expr",
+                "id": "917eaa87-a88f-45fb-82ff-f10a8fbfeab1",
+                "position": {
+                    "x": -161.37586975097657,
+                    "y": -225.82940673828126
+                },
+                "expr": "1"
+            }
+        ],
+        "wires": [
+            {
+                "from": "3216de44-a43a-493b-96e4-3a8a5dae1765",
+                "output": 0,
+                "to": "4b6d0974-fec1-4adb-b276-c4939c4bf1fd",
+                "input": 0
+            },
+            {
+                "from": "8a966605-b583-4f9d-88b0-26ec0b4e4e42",
+                "output": 0,
+                "to": "4b6d0974-fec1-4adb-b276-c4939c4bf1fd",
+                "input": 1
+            },
+            {
+                "from": "917eaa87-a88f-45fb-82ff-f10a8fbfeab1",
+                "output": 0,
+                "to": "4b6d0974-fec1-4adb-b276-c4939c4bf1fd",
+                "input": 2
+            }
+        ]
+    },
+    "history": {
+        "states": [
+            {
+                "id": "2baf5835-8117-4ecd-a07a-5095ce1e55f8"
+            }
+        ],
+        "current": "2baf5835-8117-4ecd-a07a-5095ce1e55f8"
+    },
+    "undoStack": {
+        "stack": [
+            "2baf5835-8117-4ecd-a07a-5095ce1e55f8"
+        ],
+        "current": 0
+    }
+}

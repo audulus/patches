@@ -1,0 +1,155 @@
+{
+    "version": 1,
+    "tags": [
+        "Utilities"
+    ],
+    "description": "Translates a millisecond signal to a number of samples.",
+    "patch": {
+        "id": "8f315b16-2b5c-44a1-b1c0-9003fb815ca3",
+        "pan": {
+            "x": 45.0,
+            "y": 5.240488052368164
+        },
+        "zoom": 9.094736099243164,
+        "nodes": [
+            {
+                "type": "Patch",
+                "id": "f772e854-cd8a-49c5-a901-3c92bfcfc148",
+                "position": {
+                    "x": 0.0,
+                    "y": -0.24048805236816407
+                },
+                "subPatch": {
+                    "id": "fb874bf7-119c-447e-8089-29c4e82e8c67",
+                    "pan": {
+                        "x": -107.814697265625,
+                        "y": 40.879634857177737
+                    },
+                    "zoom": 1.3244022130966187,
+                    "nodes": [
+                        {
+                            "type": "Input",
+                            "id": "84a4fc6f-59e9-49c3-bdd8-a46a12078718",
+                            "position": {
+                                "x": -183.35804748535157,
+                                "y": -108.70036315917969
+                            },
+                            "name": "",
+                            "exposedPosition": {
+                                "x": -120.0,
+                                "y": -5.0
+                            }
+                        },
+                        {
+                            "type": "Output",
+                            "id": "10c29e8c-78ae-4503-91ba-ba7af4b24f5f",
+                            "position": {
+                                "x": 249.10281372070313,
+                                "y": -82.64088439941406
+                            },
+                            "name": "",
+                            "exposedPosition": {
+                                "x": 30.0,
+                                "y": -5.0
+                            }
+                        },
+                        {
+                            "type": "SampleRate",
+                            "id": "5f10fe66-4c81-449b-9c24-053a414a0a60",
+                            "position": {
+                                "x": -202.18624877929688,
+                                "y": -59.739688873291019
+                            }
+                        },
+                        {
+                            "type": "Expr",
+                            "id": "1c6b5ce1-841a-4520-8f52-c4a220741a0f",
+                            "position": {
+                                "x": -56.51117706298828,
+                                "y": -98.92172241210938
+                            },
+                            "expr": "ms*(sampleRate/1000)"
+                        },
+                        {
+                            "type": "Text",
+                            "id": "f9f58968-55f1-44ad-9b87-abf68963fcd0",
+                            "position": {
+                                "x": 41.231964111328128,
+                                "y": 90.77957916259766
+                            },
+                            "exposedPosition": {
+                                "x": -105.0,
+                                "y": -5.0
+                            },
+                            "text": "Millseconds2Samples",
+                            "width": 256.0
+                        },
+                        {
+                            "type": "Text",
+                            "id": "7d35bb78-3cb3-4cab-b352-9c29fa27444d",
+                            "position": {
+                                "x": 384.93133544921877,
+                                "y": -60.1005859375
+                            },
+                            "exposedPosition": {
+                                "x": -125.0,
+                                "y": -5.0
+                            },
+                            "text": "#",
+                            "width": 256.0
+                        },
+                        {
+                            "type": "Text",
+                            "id": "9aeac682-bcdd-452f-8002-3af36d82a370",
+                            "position": {
+                                "x": -216.21571350097657,
+                                "y": -90.36166381835938
+                            },
+                            "exposedPosition": {
+                                "x": 25.0,
+                                "y": -5.0
+                            },
+                            "text": "#",
+                            "width": 256.0
+                        }
+                    ],
+                    "wires": [
+                        {
+                            "from": "1c6b5ce1-841a-4520-8f52-c4a220741a0f",
+                            "output": 0,
+                            "to": "10c29e8c-78ae-4503-91ba-ba7af4b24f5f",
+                            "input": 0
+                        },
+                        {
+                            "from": "84a4fc6f-59e9-49c3-bdd8-a46a12078718",
+                            "output": 0,
+                            "to": "1c6b5ce1-841a-4520-8f52-c4a220741a0f",
+                            "input": 0
+                        },
+                        {
+                            "from": "5f10fe66-4c81-449b-9c24-053a414a0a60",
+                            "output": 0,
+                            "to": "1c6b5ce1-841a-4520-8f52-c4a220741a0f",
+                            "input": 1
+                        }
+                    ]
+                }
+            }
+        ],
+        "wires": []
+    },
+    "history": {
+        "states": [
+            {
+                "id": "81a0db48-7b46-488f-ac16-2399f872005c"
+            }
+        ],
+        "current": "81a0db48-7b46-488f-ac16-2399f872005c"
+    },
+    "undoStack": {
+        "stack": [
+            "81a0db48-7b46-488f-ac16-2399f872005c"
+        ],
+        "current": 0
+    }
+}

@@ -2,9 +2,7 @@
     "version": 1,
     "author": "Bimini Road",
     "tags": [
-        "Controller",
-        "Modulation",
-        "Gate"
+        "Controller"
     ],
     "description": "This 8x8 point XY pad produces values between 0 and 1 in steps of 0.125 (1/8) at the X and Y outputs.\n\nTo use it, draw a connection down from the output directly above the XY field.  Important: Hold this connection - do not let go, and do not connect it to a point on the XY field.  Instead, wave the connection above the field without letting go.  If you accidentally let go of the connection, it can be difficult finding and disconnecting it - try using the undo function instead.\n\nConnecting in the bottom left corner is a coordinate of (0,0).  Connecting in the upper right corner is a coordinate of (1,1).\n\nTo smooth the transitions between each step, connect the outputs of this module to a slew limiter.\n\nCommon XY Pairs:\n\nX - Filter Cutoff\nY - Filter Resonance\n\nX - Filter Cutoff\nY - Gate Amplitude\n\nX - Pitch\nY - Gate Amplitude\n\nX - Pitch 1\nY - Pitch 2",
     "patch": {

@@ -1,0 +1,140 @@
+{
+    "version": 1,
+    "tags": [
+        "Utilities"
+    ],
+    "description": "Translates the sample rate to seconds.",
+    "patch": {
+        "id": "e3427683-4457-43e3-a763-20627f97375b",
+        "pan": {
+            "x": -87.0,
+            "y": 80.0
+        },
+        "zoom": 8.0,
+        "nodes": [
+            {
+                "type": "Patch",
+                "id": "ff296593-2d63-47d7-aeb1-9f6cce6ced43",
+                "position": {
+                    "x": 0.0,
+                    "y": 0.0
+                },
+                "subPatch": {
+                    "id": "e365f1a9-c178-4daf-b32d-f5289443073f",
+                    "pan": {
+                        "x": -73.83688354492188,
+                        "y": -31.87071990966797
+                    },
+                    "zoom": 1.2884228229522706,
+                    "nodes": [
+                        {
+                            "type": "SampleRate",
+                            "id": "f46254e7-1553-4bd5-a9ab-af4f08312e47",
+                            "position": {
+                                "x": -197.0322265625,
+                                "y": 0.61566162109375
+                            }
+                        },
+                        {
+                            "type": "Expr",
+                            "id": "67db7b9d-0bb5-4b60-931c-f4feab966738",
+                            "position": {
+                                "x": -48.42608642578125,
+                                "y": 0.196533203125
+                            },
+                            "expr": "1/SampleRate"
+                        },
+                        {
+                            "type": "Value",
+                            "id": "66321011-5546-45ba-b500-4a258460a931",
+                            "position": {
+                                "x": 197.322265625,
+                                "y": 0.4637451171875
+                            },
+                            "exposedPosition": {
+                                "x": 75.0,
+                                "y": -80.0
+                            }
+                        },
+                        {
+                            "type": "Text",
+                            "id": "88909e69-e49b-4271-8b81-090fee2075e0",
+                            "position": {
+                                "x": 65.06797790527344,
+                                "y": 86.12445068359375
+                            },
+                            "exposedPosition": {
+                                "x": -10.0,
+                                "y": -80.0
+                            },
+                            "text": "SR2Seconds",
+                            "width": 256.0
+                        },
+                        {
+                            "type": "Output",
+                            "id": "1585083d-4db3-46b3-852d-b46aa57a3387",
+                            "position": {
+                                "x": 199.79638671875,
+                                "y": -44.25190353393555
+                            },
+                            "name": "",
+                            "exposedPosition": {
+                                "x": 175.0,
+                                "y": -80.0
+                            }
+                        },
+                        {
+                            "type": "Text",
+                            "id": "893eff28-00fc-4af1-91d0-7c94dafa7ff0",
+                            "position": {
+                                "x": 300.85906982421877,
+                                "y": -20.242111206054689
+                            },
+                            "exposedPosition": {
+                                "x": 170.0,
+                                "y": -80.0
+                            },
+                            "text": "#",
+                            "width": 256.0
+                        }
+                    ],
+                    "wires": [
+                        {
+                            "from": "f46254e7-1553-4bd5-a9ab-af4f08312e47",
+                            "output": 0,
+                            "to": "67db7b9d-0bb5-4b60-931c-f4feab966738",
+                            "input": 0
+                        },
+                        {
+                            "from": "67db7b9d-0bb5-4b60-931c-f4feab966738",
+                            "output": 0,
+                            "to": "66321011-5546-45ba-b500-4a258460a931",
+                            "input": 0
+                        },
+                        {
+                            "from": "67db7b9d-0bb5-4b60-931c-f4feab966738",
+                            "output": 0,
+                            "to": "1585083d-4db3-46b3-852d-b46aa57a3387",
+                            "input": 0
+                        }
+                    ]
+                }
+            }
+        ],
+        "wires": []
+    },
+    "history": {
+        "states": [
+            {
+                "id": "71e71a9c-de9e-4ec6-8161-a6f33aff99da"
+            }
+        ],
+        "current": "71e71a9c-de9e-4ec6-8161-a6f33aff99da"
+    },
+    "undoStack": {
+        "stack": [
+            "71e71a9c-de9e-4ec6-8161-a6f33aff99da"
+        ],
+        "current": 0
+    }
+}

@@ -1,0 +1,159 @@
+{
+    "version": 1,
+    "tags": [
+        "Utilities"
+    ],
+    "description": "Truncate the input number to the thousandths place.",
+    "patch": {
+        "id": "3c7f52c2-b616-4217-a84e-f3e63b0676c0",
+        "pan": {
+            "x": -57.524078369140628,
+            "y": -15.40618896484375
+        },
+        "zoom": 16.457143783569337,
+        "nodes": [
+            {
+                "type": "Patch",
+                "id": "bbfc9be3-696c-4074-83e4-eea265d372ef",
+                "position": {
+                    "x": 0.024078369140625,
+                    "y": 25.40618896484375
+                },
+                "subPatch": {
+                    "id": "61b9d35e-c41c-4e09-8e24-709ccf248411",
+                    "pan": {
+                        "x": 19.17645263671875,
+                        "y": -222.61239624023438
+                    },
+                    "zoom": 3.5669078826904299,
+                    "nodes": [
+                        {
+                            "type": "Input",
+                            "id": "dffbf959-5762-41ba-86b0-dbf11ac3f185",
+                            "position": {
+                                "x": -237.8413543701172,
+                                "y": 226.0582275390625
+                            },
+                            "name": "",
+                            "exposedPosition": {
+                                "x": 25.0,
+                                "y": -10.0
+                            }
+                        },
+                        {
+                            "type": "Output",
+                            "id": "14b3e60c-8736-414e-b6ce-c512c272695d",
+                            "position": {
+                                "x": 114.48844909667969,
+                                "y": 226.6614532470703
+                            },
+                            "name": "",
+                            "exposedPosition": {
+                                "x": 90.0,
+                                "y": -10.0
+                            }
+                        },
+                        {
+                            "type": "Text",
+                            "id": "a83a50c5-1a31-44b0-b187-d4a57ff09a36",
+                            "position": {
+                                "x": -17.983734130859376,
+                                "y": 342.8707275390625
+                            },
+                            "exposedPosition": {
+                                "x": 40.0,
+                                "y": -10.0
+                            },
+                            "text": "0.001",
+                            "width": 256.0
+                        },
+                        {
+                            "type": "RGBLight",
+                            "id": "f1f3865a-3154-4d24-b54c-7d3b5044f48d",
+                            "position": {
+                                "x": -235.74850463867188,
+                                "y": 122.03176879882813
+                            },
+                            "exposedPosition": {
+                                "x": 25.0,
+                                "y": -10.0
+                            }
+                        },
+                        {
+                            "type": "Text",
+                            "id": "47e389e1-fa11-400b-9979-748d116f2acb",
+                            "position": {
+                                "x": -210.74899291992188,
+                                "y": 102.35409545898438
+                            },
+                            "exposedPosition": {
+                                "x": 20.0,
+                                "y": -10.0
+                            },
+                            "text": "k",
+                            "width": 256.0
+                        },
+                        {
+                            "type": "Expr",
+                            "id": "78ab7b33-254f-4d8b-89c6-85bd4a416c76",
+                            "position": {
+                                "x": -147.51817321777345,
+                                "y": 225.98907470703126
+                            },
+                            "expr": "floor(Knob*1000)/1000"
+                        },
+                        {
+                            "type": "Text",
+                            "id": "1b2648d1-2f22-4d13-bceb-cae01271e2c1",
+                            "position": {
+                                "x": 135.0191650390625,
+                                "y": 284.8555603027344
+                            },
+                            "exposedPosition": {
+                                "x": 85.0,
+                                "y": -10.0
+                            },
+                            "text": "#",
+                            "width": 256.0
+                        }
+                    ],
+                    "wires": [
+                        {
+                            "from": "78ab7b33-254f-4d8b-89c6-85bd4a416c76",
+                            "output": 0,
+                            "to": "14b3e60c-8736-414e-b6ce-c512c272695d",
+                            "input": 0
+                        },
+                        {
+                            "from": "dffbf959-5762-41ba-86b0-dbf11ac3f185",
+                            "output": 0,
+                            "to": "f1f3865a-3154-4d24-b54c-7d3b5044f48d",
+                            "input": 0
+                        },
+                        {
+                            "from": "dffbf959-5762-41ba-86b0-dbf11ac3f185",
+                            "output": 0,
+                            "to": "78ab7b33-254f-4d8b-89c6-85bd4a416c76",
+                            "input": 0
+                        }
+                    ]
+                }
+            }
+        ],
+        "wires": []
+    },
+    "history": {
+        "states": [
+            {
+                "id": "7b9fb3de-9d3b-420d-93dd-b6fb6eb000cc"
+            }
+        ],
+        "current": "7b9fb3de-9d3b-420d-93dd-b6fb6eb000cc"
+    },
+    "undoStack": {
+        "stack": [
+            "7b9fb3de-9d3b-420d-93dd-b6fb6eb000cc"
+        ],
+        "current": 0
+    }
+}

@@ -2,8 +2,7 @@
     "version": 1,
     "tags": [
         "Presets",
-        "Drum",
-        "Audio"
+        "Drum"
     ],
     "description": "Snare drum presets.",
     "patch": {
@@ -12268,22 +12267,31 @@
     "history": {
         "states": [
             {
-                "id": "52bd27b0-f0b1-455e-aed7-8071899e4940",
-                "parent": "55cea7e6-3b4d-4845-b90e-ec01512d80ee",
+                "id": "69624f38-1df3-4dfb-811b-65e760321922",
+                "parent": "82223769-ad87-482b-bc78-2655caa6fe1f",
                 "undo": {
-                    "type": "Disconnect",
-                    "node": "f5fcb7ce-af59-4fc5-bd4c-52c4d7cc7bb8",
-                    "input": 0
+                    "type": "SetKnobValue",
+                    "node": "86f50ae8-f964-46c9-beaa-4f0a3f283a51",
+                    "knob": 0,
+                    "value": 0.28905391693115237
                 }
             },
             {
-                "id": "55cea7e6-3b4d-4845-b90e-ec01512d80ee",
-                "parent": "5e574385-1a2b-4819-84cb-00ece81c072c",
+                "id": "cfb7fcee-6cbc-4889-9b39-2f90c06949b2",
+                "parent": "300f3054-9022-44d5-891e-9ba24d46ee1b",
+                "undo": {
+                    "type": "RemoveNode",
+                    "node": "86f50ae8-f964-46c9-beaa-4f0a3f283a51"
+                }
+            },
+            {
+                "id": "300f3054-9022-44d5-891e-9ba24d46ee1b",
+                "parent": "52bd27b0-f0b1-455e-aed7-8071899e4940",
                 "undo": {
                     "type": "SetNodePosition",
                     "position": {
-                        "x": -291.95721435546877,
-                        "y": 44.60926818847656
+                        "x": -67.12968444824219,
+                        "y": 177.61380004882813
                     },
                     "node": "86f50ae8-f964-46c9-beaa-4f0a3f283a51"
                 }
@@ -12302,33 +12310,24 @@
                 }
             },
             {
-                "id": "300f3054-9022-44d5-891e-9ba24d46ee1b",
-                "parent": "52bd27b0-f0b1-455e-aed7-8071899e4940",
+                "id": "55cea7e6-3b4d-4845-b90e-ec01512d80ee",
+                "parent": "5e574385-1a2b-4819-84cb-00ece81c072c",
                 "undo": {
                     "type": "SetNodePosition",
                     "position": {
-                        "x": -67.12968444824219,
-                        "y": 177.61380004882813
+                        "x": -291.95721435546877,
+                        "y": 44.60926818847656
                     },
                     "node": "86f50ae8-f964-46c9-beaa-4f0a3f283a51"
                 }
             },
             {
-                "id": "cfb7fcee-6cbc-4889-9b39-2f90c06949b2",
-                "parent": "300f3054-9022-44d5-891e-9ba24d46ee1b",
+                "id": "52bd27b0-f0b1-455e-aed7-8071899e4940",
+                "parent": "55cea7e6-3b4d-4845-b90e-ec01512d80ee",
                 "undo": {
-                    "type": "RemoveNode",
-                    "node": "86f50ae8-f964-46c9-beaa-4f0a3f283a51"
-                }
-            },
-            {
-                "id": "69624f38-1df3-4dfb-811b-65e760321922",
-                "parent": "82223769-ad87-482b-bc78-2655caa6fe1f",
-                "undo": {
-                    "type": "SetKnobValue",
-                    "node": "86f50ae8-f964-46c9-beaa-4f0a3f283a51",
-                    "knob": 0,
-                    "value": 0.28905391693115237
+                    "type": "Disconnect",
+                    "node": "f5fcb7ce-af59-4fc5-bd4c-52c4d7cc7bb8",
+                    "input": 0
                 }
             }
         ],

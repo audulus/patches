@@ -1,0 +1,200 @@
+{
+    "version": 1,
+    "author": "Bimini Road",
+    "tags": [
+        "Utilities"
+    ],
+    "description": "This is a via tab.  Use it in finished designs where you want to prevent accidental movement.\n\nVias are connection tabs that are useful for prototyping and clarifying connections in very large patches or designs.\n\nThey are good for prototyping because you can use a knob to tune a patch and then easily swap it for a value expression - effectively using it as an internal trim pot.\n\nThey are good for clarifying connections because they can route one node’s output across a patch and then hook up to, say, a mux node, rather than having 8 long connections run all the way across the patch adding visual clutter.\n",
+    "patch": {
+        "id": "21988e47-a595-4fc7-9fee-84c2eb6bc679",
+        "pan": {
+            "x": 57.88433837890625,
+            "y": 10.279568672180176
+        },
+        "zoom": 4.47881555557251,
+        "nodes": [
+            {
+                "type": "Patch",
+                "id": "a4ee26b5-af06-4d6e-a676-8388798b3e7e",
+                "position": {
+                    "x": 0.0,
+                    "y": 0.0
+                },
+                "subPatch": {
+                    "id": "ca4bc506-54d0-4131-b83e-e92020914529",
+                    "pan": {
+                        "x": 43.031524658203128,
+                        "y": 78.99638366699219
+                    },
+                    "zoom": 1.886091947555542,
+                    "nodes": [
+                        {
+                            "type": "Input",
+                            "id": "0107e6ae-32f1-4d08-a347-a6c303d36689",
+                            "position": {
+                                "x": -138.01345825195313,
+                                "y": -29.970726013183595
+                            },
+                            "name": "",
+                            "exposedPosition": {
+                                "x": 20.0,
+                                "y": -10.0
+                            }
+                        },
+                        {
+                            "type": "Output",
+                            "id": "e7c84f00-8e60-4e7f-911c-719299be5d5b",
+                            "position": {
+                                "x": -43.023704528808597,
+                                "y": -28.490507125854493
+                            },
+                            "name": "",
+                            "exposedPosition": {
+                                "x": -25.0,
+                                "y": -10.0
+                            }
+                        },
+                        {
+                            "type": "Text",
+                            "id": "16c9975d-b879-4e01-a1c1-0ff10cdb6696",
+                            "position": {
+                                "x": -95.54811096191406,
+                                "y": -50.281463623046878
+                            },
+                            "exposedPosition": {
+                                "x": -30.0,
+                                "y": -10.0
+                            },
+                            "text": "<",
+                            "width": 256.0
+                        },
+                        {
+                            "type": "Text",
+                            "id": "41db89b5-8f4f-4b64-9913-f32b27252cf2",
+                            "position": {
+                                "x": -3.858123779296875,
+                                "y": -44.65729522705078
+                            },
+                            "exposedPosition": {
+                                "x": 15.0,
+                                "y": -10.0
+                            },
+                            "text": "<",
+                            "width": 256.0
+                        }
+                    ],
+                    "wires": [
+                        {
+                            "from": "0107e6ae-32f1-4d08-a347-a6c303d36689",
+                            "output": 0,
+                            "to": "e7c84f00-8e60-4e7f-911c-719299be5d5b",
+                            "input": 0
+                        }
+                    ]
+                }
+            },
+            {
+                "type": "Patch",
+                "id": "4e9a53e4-8e57-4c20-8b99-6e588c56e583",
+                "position": {
+                    "x": -110.76866912841797,
+                    "y": -0.559138298034668
+                },
+                "subPatch": {
+                    "id": "9c93bf52-4810-4714-ba07-387a4400fa9a",
+                    "pan": {
+                        "x": 43.031524658203128,
+                        "y": 78.99638366699219
+                    },
+                    "zoom": 1.886091947555542,
+                    "nodes": [
+                        {
+                            "type": "Input",
+                            "id": "6028a2c1-7e45-4cb4-bcae-fa43b68d4ee3",
+                            "position": {
+                                "x": -138.01345825195313,
+                                "y": -29.970726013183595
+                            },
+                            "name": "",
+                            "exposedPosition": {
+                                "x": 20.0,
+                                "y": -10.0
+                            }
+                        },
+                        {
+                            "type": "Output",
+                            "id": "3f3f11ca-279e-4dd5-bcc5-5e976ebca6c9",
+                            "position": {
+                                "x": -43.023704528808597,
+                                "y": -28.490507125854493
+                            },
+                            "name": "",
+                            "exposedPosition": {
+                                "x": -25.0,
+                                "y": -10.0
+                            }
+                        },
+                        {
+                            "type": "Text",
+                            "id": "32da23dc-ab01-403b-9d77-3d209695cbf1",
+                            "position": {
+                                "x": -95.54811096191406,
+                                "y": -50.281463623046878
+                            },
+                            "exposedPosition": {
+                                "x": -30.0,
+                                "y": -10.0
+                            },
+                            "text": "<",
+                            "width": 256.0
+                        },
+                        {
+                            "type": "Text",
+                            "id": "deac0d92-224c-4291-bf89-2029ff841a0b",
+                            "position": {
+                                "x": -3.858123779296875,
+                                "y": -44.65729522705078
+                            },
+                            "exposedPosition": {
+                                "x": 15.0,
+                                "y": -10.0
+                            },
+                            "text": "<",
+                            "width": 256.0
+                        }
+                    ],
+                    "wires": [
+                        {
+                            "from": "6028a2c1-7e45-4cb4-bcae-fa43b68d4ee3",
+                            "output": 0,
+                            "to": "3f3f11ca-279e-4dd5-bcc5-5e976ebca6c9",
+                            "input": 0
+                        }
+                    ]
+                }
+            }
+        ],
+        "wires": [
+            {
+                "from": "a4ee26b5-af06-4d6e-a676-8388798b3e7e",
+                "output": 0,
+                "to": "4e9a53e4-8e57-4c20-8b99-6e588c56e583",
+                "input": 0
+            }
+        ]
+    },
+    "history": {
+        "states": [
+            {
+                "id": "4326854d-6f68-4fa8-bebc-8e9cde3172d6"
+            }
+        ],
+        "current": "4326854d-6f68-4fa8-bebc-8e9cde3172d6"
+    },
+    "undoStack": {
+        "stack": [
+            "4326854d-6f68-4fa8-bebc-8e9cde3172d6"
+        ],
+        "current": 0
+    }
+}

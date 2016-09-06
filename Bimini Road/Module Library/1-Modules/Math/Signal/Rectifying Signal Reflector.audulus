@@ -2,11 +2,7 @@
     "version": 1,
     "author": "Bimini Road",
     "tags": [
-        "Math",
-        "Signal",
-        "Rectifier",
-        "Gate",
-        "Modulation"
+        "Math"
     ],
     "description": "This module determines which signal is greater than the other and rectifies and returns that signal.  There are also some interesting feedback options to create wild modulation signals from two normal LFOs.",
     "patch": {
@@ -1010,31 +1006,32 @@
     "history": {
         "states": [
             {
-                "id": "c469ede4-5f24-487b-a44a-b0dfc538e457",
-                "parent": "89bfe706-1bc8-4f52-b1be-aa6173b489ab",
+                "id": "7dc6448e-99dc-4459-b987-3e06a6e658b8",
+                "parent": "a0eccae8-c015-4a3d-85d6-220ea15161ee",
+                "undo": {
+                    "type": "Unexpose",
+                    "node": "73b7f546-40ef-4302-897c-2edd591d348d"
+                }
+            },
+            {
+                "id": "85719de4-20ae-406a-98b1-292c871a1581",
+                "parent": "558670ba-f452-4dcc-a41e-bc092d5c0100",
                 "undo": {
                     "type": "SetNodePosition",
                     "position": {
-                        "x": -87.6587142944336,
-                        "y": -1121.7396240234375
+                        "x": 589.1654052734375,
+                        "y": -135.81985473632813
                     },
-                    "node": "1450ff7c-8b5d-4363-979b-e7217cad314f"
+                    "node": "73b7f546-40ef-4302-897c-2edd591d348d"
                 }
             },
             {
-                "id": "558670ba-f452-4dcc-a41e-bc092d5c0100",
-                "parent": "c469ede4-5f24-487b-a44a-b0dfc538e457",
+                "id": "be8c9d0a-5f07-4a8b-9e6b-61be1291c841",
+                "parent": "802932bb-8f56-4610-b810-3dd47d5fd0a4",
                 "undo": {
-                    "type": "SetExposedPosition",
-                    "node": "73b7f546-40ef-4302-897c-2edd591d348d",
-                    "position": {
-                        "x": 0.0,
-                        "y": 0.0
-                    }
+                    "type": "RemoveNode",
+                    "node": "73b7f546-40ef-4302-897c-2edd591d348d"
                 }
-            },
-            {
-                "id": "89bfe706-1bc8-4f52-b1be-aa6173b489ab"
             },
             {
                 "id": "588ba8d5-aba9-49a4-bc27-2e463df1fb1f",
@@ -1049,11 +1046,30 @@
                 }
             },
             {
-                "id": "be8c9d0a-5f07-4a8b-9e6b-61be1291c841",
-                "parent": "802932bb-8f56-4610-b810-3dd47d5fd0a4",
+                "id": "802932bb-8f56-4610-b810-3dd47d5fd0a4",
+                "parent": "7dc6448e-99dc-4459-b987-3e06a6e658b8",
                 "undo": {
-                    "type": "RemoveNode",
+                    "type": "SetNodePosition",
+                    "position": {
+                        "x": 0.0,
+                        "y": 0.0
+                    },
                     "node": "73b7f546-40ef-4302-897c-2edd591d348d"
+                }
+            },
+            {
+                "id": "89bfe706-1bc8-4f52-b1be-aa6173b489ab"
+            },
+            {
+                "id": "558670ba-f452-4dcc-a41e-bc092d5c0100",
+                "parent": "c469ede4-5f24-487b-a44a-b0dfc538e457",
+                "undo": {
+                    "type": "SetExposedPosition",
+                    "node": "73b7f546-40ef-4302-897c-2edd591d348d",
+                    "position": {
+                        "x": 0.0,
+                        "y": 0.0
+                    }
                 }
             },
             {
@@ -1079,35 +1095,15 @@
                 }
             },
             {
-                "id": "85719de4-20ae-406a-98b1-292c871a1581",
-                "parent": "558670ba-f452-4dcc-a41e-bc092d5c0100",
+                "id": "c469ede4-5f24-487b-a44a-b0dfc538e457",
+                "parent": "89bfe706-1bc8-4f52-b1be-aa6173b489ab",
                 "undo": {
                     "type": "SetNodePosition",
                     "position": {
-                        "x": 589.1654052734375,
-                        "y": -135.81985473632813
+                        "x": -87.6587142944336,
+                        "y": -1121.7396240234375
                     },
-                    "node": "73b7f546-40ef-4302-897c-2edd591d348d"
-                }
-            },
-            {
-                "id": "7dc6448e-99dc-4459-b987-3e06a6e658b8",
-                "parent": "a0eccae8-c015-4a3d-85d6-220ea15161ee",
-                "undo": {
-                    "type": "Unexpose",
-                    "node": "73b7f546-40ef-4302-897c-2edd591d348d"
-                }
-            },
-            {
-                "id": "802932bb-8f56-4610-b810-3dd47d5fd0a4",
-                "parent": "7dc6448e-99dc-4459-b987-3e06a6e658b8",
-                "undo": {
-                    "type": "SetNodePosition",
-                    "position": {
-                        "x": 0.0,
-                        "y": 0.0
-                    },
-                    "node": "73b7f546-40ef-4302-897c-2edd591d348d"
+                    "node": "1450ff7c-8b5d-4363-979b-e7217cad314f"
                 }
             }
         ],

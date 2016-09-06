@@ -1,0 +1,141 @@
+{
+    "version": 1,
+    "tags": [
+        "Utilities"
+    ],
+    "description": "Translates an radian signal to an degree signal.",
+    "patch": {
+        "id": "70d259d0-54d5-41e7-85c5-07f9879e977b",
+        "pan": {
+            "x": 37.88500213623047,
+            "y": -201.763427734375
+        },
+        "zoom": 14.399999618530274,
+        "nodes": [
+            {
+                "type": "Patch",
+                "id": "1492a926-21cf-43c0-96f8-6f70beeaa209",
+                "position": {
+                    "x": -12.885000228881836,
+                    "y": -28.236572265625
+                },
+                "subPatch": {
+                    "id": "5510ea70-f3cd-4add-aaf8-912181a83f37",
+                    "pan": {
+                        "x": -160.34579467773438,
+                        "y": 17.07540512084961
+                    },
+                    "zoom": 1.301244854927063,
+                    "nodes": [
+                        {
+                            "type": "Input",
+                            "id": "e085bb76-1f67-4346-9459-cb12abc67fc2",
+                            "position": {
+                                "x": -91.99029541015625,
+                                "y": 45.6376953125
+                            },
+                            "name": "",
+                            "exposedPosition": {
+                                "x": -65.0,
+                                "y": 230.0
+                            }
+                        },
+                        {
+                            "type": "Output",
+                            "id": "71de53ef-6902-4cd1-9582-c3a83d6625b8",
+                            "position": {
+                                "x": 273.9879150390625,
+                                "y": 46.3670654296875
+                            },
+                            "name": "",
+                            "exposedPosition": {
+                                "x": 15.0,
+                                "y": 230.0
+                            }
+                        },
+                        {
+                            "type": "Expr",
+                            "id": "2b5ac902-a38b-4cca-83b9-4a7f9c1ff6cd",
+                            "position": {
+                                "x": 2.70245361328125,
+                                "y": 46.39385986328125
+                            },
+                            "expr": "(Radians*180)/pi"
+                        },
+                        {
+                            "type": "Text",
+                            "id": "5b86f8d9-390f-4ea2-bcb9-b013458d329c",
+                            "position": {
+                                "x": 69.3001708984375,
+                                "y": 126.63612365722656
+                            },
+                            "exposedPosition": {
+                                "x": -50.0,
+                                "y": 230.0
+                            },
+                            "text": "Rad2Deg",
+                            "width": 256.0
+                        },
+                        {
+                            "type": "Text",
+                            "id": "366c1692-cb54-4d83-a175-e03bd1bca6a0",
+                            "position": {
+                                "x": -121.72183227539063,
+                                "y": 69.37126159667969
+                            },
+                            "exposedPosition": {
+                                "x": -70.0,
+                                "y": 230.0
+                            },
+                            "text": "r",
+                            "width": 256.0
+                        },
+                        {
+                            "type": "Text",
+                            "id": "396e7d16-8435-40a0-8e3c-a80a32eb8847",
+                            "position": {
+                                "x": 377.5048522949219,
+                                "y": 68.60801696777344
+                            },
+                            "exposedPosition": {
+                                "x": 10.0,
+                                "y": 230.0
+                            },
+                            "text": "d",
+                            "width": 256.0
+                        }
+                    ],
+                    "wires": [
+                        {
+                            "from": "2b5ac902-a38b-4cca-83b9-4a7f9c1ff6cd",
+                            "output": 0,
+                            "to": "71de53ef-6902-4cd1-9582-c3a83d6625b8",
+                            "input": 0
+                        },
+                        {
+                            "from": "e085bb76-1f67-4346-9459-cb12abc67fc2",
+                            "output": 0,
+                            "to": "2b5ac902-a38b-4cca-83b9-4a7f9c1ff6cd",
+                            "input": 0
+                        }
+                    ]
+                }
+            }
+        ],
+        "wires": []
+    },
+    "history": {
+        "states": [
+            {
+                "id": "3ec548e3-fbdd-4af8-90f4-e15833136f2a"
+            }
+        ],
+        "current": "3ec548e3-fbdd-4af8-90f4-e15833136f2a"
+    },
+    "undoStack": {
+        "stack": [
+            "3ec548e3-fbdd-4af8-90f4-e15833136f2a"
+        ],
+        "current": 0
+    }
+}
