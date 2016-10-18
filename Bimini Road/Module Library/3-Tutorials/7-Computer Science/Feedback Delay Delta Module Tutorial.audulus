@@ -1,0 +1,642 @@
+{
+    "version": 1,
+    "author": "Bimini Road",
+    "tags": [
+        "Tutorial"
+    ],
+    "description": "This is a tutorial that shows you how to use the feedback delay node - hint: it’s not made for delay effects!  Contains an extensive node-by-node tutorial.",
+    "patch": {
+        "id": "f2eb8ba5-0edf-42cf-a9f4-42d91b4de427",
+        "pan": {
+            "x": -127.63603210449219,
+            "y": -98.52882385253906
+        },
+        "zoom": 2.975515842437744,
+        "nodes": [
+            {
+                "type": "Patch",
+                "id": "0cc8e0b9-ff31-4223-9ad0-7c0118199607",
+                "position": {
+                    "x": 79.18550109863281,
+                    "y": 11.45703125
+                },
+                "subPatch": {
+                    "id": "918585f7-ebc3-4b26-99ee-c3e820ba831b",
+                    "pan": {
+                        "x": -537.0032348632813,
+                        "y": 281.3090515136719
+                    },
+                    "zoom": 0.6724919676780701,
+                    "nodes": [
+                        {
+                            "type": "Output",
+                            "id": "3f6434e1-f969-49d6-b06d-c6d664a7b54e",
+                            "position": {
+                                "x": 347.2571716308594,
+                                "y": -20.2073917388916
+                            },
+                            "name": "",
+                            "exposedPosition": {
+                                "x": -60.0,
+                                "y": 40.0
+                            }
+                        },
+                        {
+                            "type": "Text",
+                            "id": "dd680095-3a05-445e-bf91-8cd765ceb9c1",
+                            "position": {
+                                "x": 541.4174194335938,
+                                "y": 425.39404296875
+                            },
+                            "exposedPosition": {
+                                "x": -90.0,
+                                "y": 60.0
+                            },
+                            "text": "Delta",
+                            "width": 256.0
+                        },
+                        {
+                            "type": "Sample & Hold",
+                            "id": "66df681f-6f8b-4bad-af34-84ac51770984",
+                            "position": {
+                                "x": 121.846923828125,
+                                "y": 88.98870086669922
+                            }
+                        },
+                        {
+                            "type": "Expr",
+                            "id": "03247dda-94d0-49cf-8cb9-116f5669e062",
+                            "position": {
+                                "x": 110.85676574707031,
+                                "y": -34.82048416137695
+                            },
+                            "expr": "Signal!=Sample"
+                        },
+                        {
+                            "type": "Light",
+                            "id": "fa0eb61a-33dd-4928-b72e-a410b9fc4816",
+                            "position": {
+                                "x": 350.2259216308594,
+                                "y": 21.318906784057618
+                            },
+                            "exposedPosition": {
+                                "x": -60.0,
+                                "y": 40.0
+                            }
+                        },
+                        {
+                            "type": "FeedbackDelay",
+                            "id": "0fcf61c9-fdec-436a-aa64-b17b103891dc",
+                            "position": {
+                                "x": 122.384521484375,
+                                "y": 42.794639587402347
+                            }
+                        },
+                        {
+                            "type": "Sample & Hold",
+                            "id": "1c259bbf-914a-4396-9f17-c3b0936e3bb8",
+                            "position": {
+                                "x": 847.5321044921875,
+                                "y": 76.46444702148438
+                            }
+                        },
+                        {
+                            "type": "Expr",
+                            "id": "0599ea9c-4a9e-4ccf-bed2-c1ef49737b6d",
+                            "position": {
+                                "x": 821.1436157226563,
+                                "y": -13.916046142578125
+                            },
+                            "expr": "Signal!=Sample"
+                        },
+                        {
+                            "type": "FeedbackDelay",
+                            "id": "ad009353-97a9-47c0-879a-b92faea5a9ed",
+                            "position": {
+                                "x": 640.8444213867188,
+                                "y": 16.574462890625
+                            }
+                        },
+                        {
+                            "type": "Light",
+                            "id": "19db7f3c-9769-490e-b20b-dc896ec069fc",
+                            "position": {
+                                "x": 1049.996337890625,
+                                "y": 0.337493896484375
+                            }
+                        },
+                        {
+                            "type": "Value",
+                            "id": "a4c2b56a-7af4-454d-a48a-1b7f25e60ea9",
+                            "position": {
+                                "x": 1044.958251953125,
+                                "y": 104.23361206054688
+                            }
+                        },
+                        {
+                            "type": "Value",
+                            "id": "61d34433-b20b-432c-86d6-d23197e1f82b",
+                            "position": {
+                                "x": 347.22723388671877,
+                                "y": 108.98129272460938
+                            }
+                        },
+                        {
+                            "type": "Value",
+                            "id": "9ff51642-581a-4a3c-8c71-320cc06afbfe",
+                            "position": {
+                                "x": 348.1781921386719,
+                                "y": 66.02920532226563
+                            }
+                        },
+                        {
+                            "type": "Text",
+                            "id": "78f6893e-fa80-4075-9ab7-46e0bc322727",
+                            "position": {
+                                "x": 465.8338317871094,
+                                "y": 131.40460205078126
+                            },
+                            "text": "Sample",
+                            "width": 301.38079833984377
+                        },
+                        {
+                            "type": "Text",
+                            "id": "90c07775-2473-4404-a197-9594059272ec",
+                            "position": {
+                                "x": 471.40899658203127,
+                                "y": 89.3753662109375
+                            },
+                            "text": "Signal",
+                            "width": 301.38079833984377
+                        },
+                        {
+                            "type": "Add",
+                            "id": "8673165b-5852-46d2-b07a-5f2c23e0e551",
+                            "position": {
+                                "x": 46.88035583496094,
+                                "y": 86.06086730957031
+                            }
+                        },
+                        {
+                            "type": "Constant",
+                            "id": "9cacd4cb-5496-49c3-ba96-e7a86c61f440",
+                            "position": {
+                                "x": -119.82696533203125,
+                                "y": 26.604522705078126
+                            },
+                            "knob": {
+                                "value": 0.5,
+                                "min": 0.0,
+                                "max": 1.0
+                            }
+                        },
+                        {
+                            "type": "Text",
+                            "id": "c618b776-baaf-41ce-b4e3-eb9e2cf8f2ad",
+                            "position": {
+                                "x": -144.2477569580078,
+                                "y": 4.3458099365234379
+                            },
+                            "text": "Constant nodes aren't exposed on the front panel like knobs are.  This is here so that you can test the module without having to go back out to the front panel.",
+                            "width": 170.26263427734376
+                        },
+                        {
+                            "type": "Constant",
+                            "id": "44027a67-d3da-42d8-b74a-2d427a1be5d3",
+                            "position": {
+                                "x": 686.7821044921875,
+                                "y": -30.302978515625
+                            },
+                            "knob": {
+                                "value": 0.5,
+                                "min": 0.0,
+                                "max": 1.0
+                            }
+                        },
+                        {
+                            "type": "Text",
+                            "id": "feae1cd9-fbcc-4f67-bdaa-4f045a1dfbb5",
+                            "position": {
+                                "x": 1178.831298828125,
+                                "y": 81.66798400878906
+                            },
+                            "text": "Signal",
+                            "width": 301.38079833984377
+                        },
+                        {
+                            "type": "Text",
+                            "id": "7e7949f2-f28c-462e-a731-2b6cc1197604",
+                            "position": {
+                                "x": 1178.07568359375,
+                                "y": 124.61952209472656
+                            },
+                            "text": "Sample",
+                            "width": 301.38079833984377
+                        },
+                        {
+                            "type": "Text",
+                            "id": "fbf60c55-96b6-4b76-be71-b60584516800",
+                            "position": {
+                                "x": 437.34906005859377,
+                                "y": 376.7039794921875
+                            },
+                            "text": "Unless Audulus is in single-sample mode, it processes data in chunks.  Each chunk represents a certain number of samples.  During each chunk, a node will perform a calculation based on its input and send that input to its output.  On the left is the correct design and on the right is the incorrect design.  The description of what's happening chunk-by-chunk might be a little tedious.  If you understand it, though, you'll see why the Feedback Delay node needs to be where it is.",
+                            "width": 323.03411865234377
+                        },
+                        {
+                            "type": "Value",
+                            "id": "4af55e77-2a64-47cf-8ce5-eb8e027dc179",
+                            "position": {
+                                "x": 1046.06640625,
+                                "y": 57.79949188232422
+                            }
+                        },
+                        {
+                            "type": "Text",
+                            "id": "998240ae-61f8-4a7b-8cb2-235c41b415af",
+                            "position": {
+                                "x": 74.40228271484375,
+                                "y": -95.76824951171875
+                            },
+                            "text": "1st chunk: The Signal input changes from 0 to 1.  Audulus calculates the inequality between the Signal and Sample inputs.  The values are different so the output is 1.  The Feedback Delay node is between the output and the Sample & Hold trigger.  It prevents the inequality from triggering the node during this chunk.",
+                            "width": 334.3481750488281
+                        },
+                        {
+                            "type": "Text",
+                            "id": "97969acf-35ac-4d70-ab2f-905dc5916d73",
+                            "position": {
+                                "x": 130.4023895263672,
+                                "y": -211.562255859375
+                            },
+                            "text": "Chunk 1 Module Output: 1",
+                            "width": 334.3481750488281
+                        },
+                        {
+                            "type": "Text",
+                            "id": "5ff70faa-94e9-4b61-93af-a45e7b626e47",
+                            "position": {
+                                "x": 130.4370880126953,
+                                "y": -412.1902770996094
+                            },
+                            "text": "Chunk 2 Module Output: 0",
+                            "width": 334.3481750488281
+                        },
+                        {
+                            "type": "Text",
+                            "id": "4e1fe032-6905-40fc-abe1-357f5d02d466",
+                            "position": {
+                                "x": 73.69282531738281,
+                                "y": -253.52188110351563
+                            },
+                            "text": "2nd chunk: The Signal input changes from 1 to 2.  The feedback delay node releases the signal from the inequality.  The output of the inequality from the last chunk triggers the Sample & Hold node.  The Sample & Hold node captures the signal input and holds the value at its output.  Audulus calculates the inequality between the Signal and Sample inputs again.  Both the Signal and Sample match, so the inequality outputs a 0.  Again, the Feedback Delay node halts the value until the next chunk.",
+                            "width": 334.3481750488281
+                        },
+                        {
+                            "type": "Text",
+                            "id": "515fea95-ceea-4b4a-ab0a-a3e79e403240",
+                            "position": {
+                                "x": 133.03672790527345,
+                                "y": -750.64013671875
+                            },
+                            "text": "Chunk 4 Module Output: 0",
+                            "width": 334.3481750488281
+                        },
+                        {
+                            "type": "Text",
+                            "id": "af691776-b9e2-424a-a1e4-10ba6817a792",
+                            "position": {
+                                "x": 78.53401184082031,
+                                "y": -618.3889770507813
+                            },
+                            "text": "4th chunk: The Signal input stays at 3.  The Feedback Delay node releases the 1 and the trigger of the Sample & Hold node goes high.  The Sample & Hold captures the signal input and holds the value at its output.  Audulus calculates the inequality again.  The Signal and Sample match, so the inequality outputs a 0.  The Feedback Delay node halts the value until the next chunk.",
+                            "width": 334.3481750488281
+                        },
+                        {
+                            "type": "Text",
+                            "id": "c79bae0c-1eb8-49a0-9628-4f1e3a6aba1c",
+                            "position": {
+                                "x": 130.06080627441407,
+                                "y": -572.6322021484375
+                            },
+                            "text": "Chunk 3 Module Output: 1",
+                            "width": 334.3481750488281
+                        },
+                        {
+                            "type": "Text",
+                            "id": "81c006ee-d0e6-4bd1-a6a9-1d3412e2aed5",
+                            "position": {
+                                "x": 73.30961608886719,
+                                "y": -452.0395812988281
+                            },
+                            "text": "3rd chunk: The Signal input changes from 2 to 3.  The Feedback Delay node releases the 0 signal and the trigger of the Sample & Hold node goes low.  Audulus calculates the inequality again.  The sampled value from chunk 2 doesn't match the Signal input from chunk 3.  The inequality outputs a 1.  The Feedback Delay node halts the value until the next chunk.",
+                            "width": 334.3481750488281
+                        },
+                        {
+                            "type": "Text",
+                            "id": "75450846-e50f-45b1-b30d-597d8dde0a07",
+                            "position": {
+                                "x": 132.35568237304688,
+                                "y": -890.2592163085938
+                            },
+                            "text": "Chunk 5 Module Output: 0",
+                            "width": 334.3481750488281
+                        },
+                        {
+                            "type": "Text",
+                            "id": "4306f80a-76a1-47d1-a4e5-c0d91301d33d",
+                            "position": {
+                                "x": 78.94049072265625,
+                                "y": -799.6591796875
+                            },
+                            "text": "5th Chunk: The Signal input stays at 3.  The Feedback Delay node releases the 0 and the trigger of the Sample & Hold node goes low.  Audulus calculates the inequality again.  The Signal and Sample match, so the inequality outputs a 0.",
+                            "width": 334.3481750488281
+                        },
+                        {
+                            "type": "Text",
+                            "id": "28c873cb-4aaf-4440-95f3-3c03a118809b",
+                            "position": {
+                                "x": 157.10313415527345,
+                                "y": -988.0121459960938
+                            },
+                            "text": "etc., etc., ...",
+                            "width": 334.3481750488281
+                        },
+                        {
+                            "type": "Text",
+                            "id": "45184e4c-be26-4366-803b-5ea871c792a9",
+                            "position": {
+                                "x": 765.6084594726563,
+                                "y": -85.17765808105469
+                            },
+                            "text": "1st chunk: The Signal input changes from 0 to 1.  Audulus calculates the inequality between the Signal and Sample inputs.  The values are different so the output is 1.  The output triggers the Sample & Hold node.  The Sample & Hold node captures the Signal input value and holds it at its output.  The Feedback Delay node halts the value until the next chunk.",
+                            "width": 334.3481750488281
+                        },
+                        {
+                            "type": "Text",
+                            "id": "5d1e4b4f-deda-4a27-998a-123ab8517f2a",
+                            "position": {
+                                "x": 830.3509521484375,
+                                "y": -192.72462463378907
+                            },
+                            "text": "Chunk 1 Module Output: 1",
+                            "width": 334.3481750488281
+                        },
+                        {
+                            "type": "Text",
+                            "id": "6e6a3084-64aa-414f-9ef1-489fbcfa980c",
+                            "position": {
+                                "x": 825.7537841796875,
+                                "y": -350.2566833496094
+                            },
+                            "text": "Chunk 2 Module Output: 1",
+                            "width": 334.3481750488281
+                        },
+                        {
+                            "type": "Text",
+                            "id": "ac0457b0-de7f-44bc-b4ff-81b6c05d5f95",
+                            "position": {
+                                "x": 768.0735473632813,
+                                "y": -232.260986328125
+                            },
+                            "text": "2nd Chunk: The Signal input changes from 1 to 2.  The Feedback Delay node releases the Sample signal.  Audulus calculates the inequality.  The inequality is still true because the Sample (1) and the Signal (2) are still different.  The Sample & Hold node retains the same sample.  The Feedback Delay node halts the output value until the next chunk.",
+                            "width": 334.3481750488281
+                        },
+                        {
+                            "type": "Text",
+                            "id": "37b72f1a-94f2-4a2f-a2c9-dfebdd3e282e",
+                            "position": {
+                                "x": 828.3325805664063,
+                                "y": -522.9782104492188
+                            },
+                            "text": "Chunk 3 Module Output: 1",
+                            "width": 334.3481750488281
+                        },
+                        {
+                            "type": "Text",
+                            "id": "b69ee39a-344f-4a9f-b8b0-d093cec19ce5",
+                            "position": {
+                                "x": 772.213623046875,
+                                "y": -396.2160949707031
+                            },
+                            "text": "3rd Chunk: The Signal input changes from 2 to 3.  The Feedback Delay node releases the Sample signal. Audulus calculates the inequality.  The inequality is still true because the Sample (1) and the Signal (3) are still different.  The Sample & Hold node retains the same sample.  The Feedback Delay node halts the output value until the next chunk.",
+                            "width": 334.3481750488281
+                        },
+                        {
+                            "type": "Text",
+                            "id": "f153ef78-e6d3-4d69-9d0d-f32ab18f2d93",
+                            "position": {
+                                "x": 869.5230102539063,
+                                "y": -590.9932861328125
+                            },
+                            "text": "etc., etc., ...",
+                            "width": 334.3481750488281
+                        },
+                        {
+                            "type": "Text",
+                            "id": "4ed348e8-e27e-4ff2-ad69-a6e216c95686",
+                            "position": {
+                                "x": 437.21038818359377,
+                                "y": 228.9072723388672
+                            },
+                            "text": "For this module to be useful, it needs to output both an on and an off signal.  If the signal just goes on an stays on, it only detected the first change, but no subsequent changes.",
+                            "width": 323.03411865234377
+                        },
+                        {
+                            "type": "Input",
+                            "id": "01b65b1e-9225-41a0-8415-eeeac81db942",
+                            "position": {
+                                "x": -90.42621612548828,
+                                "y": 88.44134521484375
+                            },
+                            "name": "",
+                            "exposedPosition": {
+                                "x": -85.0,
+                                "y": 40.0
+                            }
+                        }
+                    ],
+                    "wires": [
+                        {
+                            "from": "03247dda-94d0-49cf-8cb9-116f5669e062",
+                            "output": 0,
+                            "to": "3f6434e1-f969-49d6-b06d-c6d664a7b54e",
+                            "input": 0
+                        },
+                        {
+                            "from": "8673165b-5852-46d2-b07a-5f2c23e0e551",
+                            "output": 0,
+                            "to": "66df681f-6f8b-4bad-af34-84ac51770984",
+                            "input": 0
+                        },
+                        {
+                            "from": "0fcf61c9-fdec-436a-aa64-b17b103891dc",
+                            "output": 0,
+                            "to": "66df681f-6f8b-4bad-af34-84ac51770984",
+                            "input": 1
+                        },
+                        {
+                            "from": "8673165b-5852-46d2-b07a-5f2c23e0e551",
+                            "output": 0,
+                            "to": "03247dda-94d0-49cf-8cb9-116f5669e062",
+                            "input": 0
+                        },
+                        {
+                            "from": "66df681f-6f8b-4bad-af34-84ac51770984",
+                            "output": 0,
+                            "to": "03247dda-94d0-49cf-8cb9-116f5669e062",
+                            "input": 1
+                        },
+                        {
+                            "from": "03247dda-94d0-49cf-8cb9-116f5669e062",
+                            "output": 0,
+                            "to": "fa0eb61a-33dd-4928-b72e-a410b9fc4816",
+                            "input": 0
+                        },
+                        {
+                            "from": "03247dda-94d0-49cf-8cb9-116f5669e062",
+                            "output": 0,
+                            "to": "0fcf61c9-fdec-436a-aa64-b17b103891dc",
+                            "input": 0
+                        },
+                        {
+                            "from": "44027a67-d3da-42d8-b74a-2d427a1be5d3",
+                            "output": 0,
+                            "to": "1c259bbf-914a-4396-9f17-c3b0936e3bb8",
+                            "input": 0
+                        },
+                        {
+                            "from": "0599ea9c-4a9e-4ccf-bed2-c1ef49737b6d",
+                            "output": 0,
+                            "to": "1c259bbf-914a-4396-9f17-c3b0936e3bb8",
+                            "input": 1
+                        },
+                        {
+                            "from": "44027a67-d3da-42d8-b74a-2d427a1be5d3",
+                            "output": 0,
+                            "to": "0599ea9c-4a9e-4ccf-bed2-c1ef49737b6d",
+                            "input": 0
+                        },
+                        {
+                            "from": "ad009353-97a9-47c0-879a-b92faea5a9ed",
+                            "output": 0,
+                            "to": "0599ea9c-4a9e-4ccf-bed2-c1ef49737b6d",
+                            "input": 1
+                        },
+                        {
+                            "from": "1c259bbf-914a-4396-9f17-c3b0936e3bb8",
+                            "output": 0,
+                            "to": "ad009353-97a9-47c0-879a-b92faea5a9ed",
+                            "input": 0
+                        },
+                        {
+                            "from": "0599ea9c-4a9e-4ccf-bed2-c1ef49737b6d",
+                            "output": 0,
+                            "to": "19db7f3c-9769-490e-b20b-dc896ec069fc",
+                            "input": 0
+                        },
+                        {
+                            "from": "1c259bbf-914a-4396-9f17-c3b0936e3bb8",
+                            "output": 0,
+                            "to": "a4c2b56a-7af4-454d-a48a-1b7f25e60ea9",
+                            "input": 0
+                        },
+                        {
+                            "from": "66df681f-6f8b-4bad-af34-84ac51770984",
+                            "output": 0,
+                            "to": "61d34433-b20b-432c-86d6-d23197e1f82b",
+                            "input": 0
+                        },
+                        {
+                            "from": "8673165b-5852-46d2-b07a-5f2c23e0e551",
+                            "output": 0,
+                            "to": "9ff51642-581a-4a3c-8c71-320cc06afbfe",
+                            "input": 0
+                        },
+                        {
+                            "from": "01b65b1e-9225-41a0-8415-eeeac81db942",
+                            "output": 0,
+                            "to": "8673165b-5852-46d2-b07a-5f2c23e0e551",
+                            "input": 0
+                        },
+                        {
+                            "from": "9cacd4cb-5496-49c3-ba96-e7a86c61f440",
+                            "output": 0,
+                            "to": "8673165b-5852-46d2-b07a-5f2c23e0e551",
+                            "input": 1
+                        },
+                        {
+                            "from": "44027a67-d3da-42d8-b74a-2d427a1be5d3",
+                            "output": 0,
+                            "to": "4af55e77-2a64-47cf-8ce5-eb8e027dc179",
+                            "input": 0
+                        }
+                    ]
+                }
+            },
+            {
+                "type": "Knob",
+                "id": "37816c69-2050-484a-8a7e-206c3523000f",
+                "position": {
+                    "x": -106.99609375,
+                    "y": 52.3671875
+                },
+                "name": "",
+                "knob": {
+                    "value": 0.0,
+                    "min": 0.0,
+                    "max": 1.0
+                },
+                "exposedPosition": {
+                    "x": 0.0,
+                    "y": 0.0
+                }
+            },
+            {
+                "type": "Waveform",
+                "id": "e2965162-f0f9-4264-9d93-0b6536fc4ca3",
+                "position": {
+                    "x": 68.00582885742188,
+                    "y": -22.96367645263672
+                }
+            },
+            {
+                "type": "Text",
+                "id": "f8e0d11f-d381-4c8d-82a7-c4a54bdf2cbc",
+                "position": {
+                    "x": -152.10484313964845,
+                    "y": 204.04652404785157
+                },
+                "text": "The Delta module detects change from one moment to the next.  It outputs a 1 when the incoming signal is changing, and a 0 when the incoming signal is not changing.  This module needs a Feedback Delay node to work properly - look inside to see why.",
+                "width": 225.52734375
+            }
+        ],
+        "wires": [
+            {
+                "from": "37816c69-2050-484a-8a7e-206c3523000f",
+                "output": 0,
+                "to": "0cc8e0b9-ff31-4223-9ad0-7c0118199607",
+                "input": 0
+            },
+            {
+                "from": "0cc8e0b9-ff31-4223-9ad0-7c0118199607",
+                "output": 0,
+                "to": "e2965162-f0f9-4264-9d93-0b6536fc4ca3",
+                "input": 0
+            }
+        ]
+    },
+    "history": {
+        "states": [
+            {
+                "id": "fb41989e-322c-4b42-9b4b-caf925afaa04"
+            }
+        ],
+        "current": "fb41989e-322c-4b42-9b4b-caf925afaa04"
+    },
+    "undoStack": {
+        "stack": [
+            "fb41989e-322c-4b42-9b4b-caf925afaa04"
+        ],
+        "current": 0
+    }
+}
