@@ -1,0 +1,1560 @@
+{
+    "version": 1,
+    "tags": [
+        "Utilities"
+    ],
+    "description": "This module outputs a mono a signal (combination of L+R signals), or a stereo output.",
+    "patch": {
+        "id": "90e73699-5a8a-4164-9c65-3ca9b62caf3f",
+        "pan": {
+            "x": 9.762496948242188,
+            "y": -4.115261077880859
+        },
+        "zoom": 9.720000267028809,
+        "nodes": [
+            {
+                "type": "Patch",
+                "id": "2f02ef48-d4d0-4f5c-b642-e7892a1039e3",
+                "position": {
+                    "x": -14.762500762939454,
+                    "y": 19.115264892578126
+                },
+                "subPatch": {
+                    "id": "709f0ff1-b521-4f19-b5ac-f57e6456cfb2",
+                    "pan": {
+                        "x": -147.86766052246095,
+                        "y": -46.18310546875
+                    },
+                    "zoom": 1.5910215377807618,
+                    "nodes": [
+                        {
+                            "type": "Mic",
+                            "id": "cc650d57-a036-4b68-a94c-a916751459dc",
+                            "position": {
+                                "x": -357.3948059082031,
+                                "y": 6.87071418762207
+                            }
+                        },
+                        {
+                            "type": "Output",
+                            "id": "dd793408-a4d7-4d3e-ac5c-ab94429799a8",
+                            "position": {
+                                "x": 423.7765808105469,
+                                "y": 35.214656829833987
+                            },
+                            "name": "",
+                            "exposedPosition": {
+                                "x": 40.0,
+                                "y": 15.0
+                            }
+                        },
+                        {
+                            "type": "Add",
+                            "id": "597d8baa-9380-42a1-96fc-9ae2a489bf12",
+                            "position": {
+                                "x": -211.59788513183595,
+                                "y": 38.44700622558594
+                            }
+                        },
+                        {
+                            "type": "Knob",
+                            "id": "e53ae0fa-314c-45b6-af4a-7c0ac5d5b82a",
+                            "position": {
+                                "x": -178.4835205078125,
+                                "y": 169.79103088378907
+                            },
+                            "name": "",
+                            "knob": {
+                                "value": 0.5,
+                                "min": 0.0,
+                                "max": 1.0
+                            },
+                            "exposedPosition": {
+                                "x": 0.0,
+                                "y": 5.0
+                            }
+                        },
+                        {
+                            "type": "Text",
+                            "id": "2d29c8b7-bc0b-4848-805e-6fab5530c887",
+                            "position": {
+                                "x": -384.55078125,
+                                "y": 50.31079864501953
+                            },
+                            "exposedPosition": {
+                                "x": -40.0,
+                                "y": 10.0
+                            },
+                            "text": "I   N   P   U   T",
+                            "width": 40.0
+                        },
+                        {
+                            "type": "Text",
+                            "id": "e5e51cf8-0e36-49f4-a5dc-cd73b0b39c8c",
+                            "position": {
+                                "x": -184.35018920898438,
+                                "y": 225.42723083496095
+                            },
+                            "exposedPosition": {
+                                "x": -10.0,
+                                "y": 5.0
+                            },
+                            "text": "gain",
+                            "width": 154.56884765625
+                        },
+                        {
+                            "type": "Output",
+                            "id": "babbae7c-4777-45be-b689-0760cf70a0e5",
+                            "position": {
+                                "x": 425.8023681640625,
+                                "y": -63.31127166748047
+                            },
+                            "name": "",
+                            "exposedPosition": {
+                                "x": 40.0,
+                                "y": -10.0
+                            }
+                        },
+                        {
+                            "type": "Output",
+                            "id": "dce1c75e-ef11-484a-aec7-9385675abf8d",
+                            "position": {
+                                "x": 426.70196533203127,
+                                "y": -105.95377349853516
+                            },
+                            "name": "",
+                            "exposedPosition": {
+                                "x": 40.0,
+                                "y": -35.0
+                            }
+                        },
+                        {
+                            "type": "Expr",
+                            "id": "e8d7df94-7a59-4716-a98b-3311da749047",
+                            "position": {
+                                "x": -150.04763793945313,
+                                "y": 17.825300216674806
+                            },
+                            "expr": "Mono*Knob*2"
+                        },
+                        {
+                            "type": "Expr",
+                            "id": "00de0a23-ff50-47e1-ba54-bdfd562b2cb2",
+                            "position": {
+                                "x": -151.24395751953126,
+                                "y": -54.65850830078125
+                            },
+                            "expr": "Left*Knob*2"
+                        },
+                        {
+                            "type": "Expr",
+                            "id": "c19dc609-e0de-40bd-aa27-83f2d46621ec",
+                            "position": {
+                                "x": -152.35696411132813,
+                                "y": -128.35467529296876
+                            },
+                            "expr": "Right*Knob*2"
+                        },
+                        {
+                            "type": "Patch",
+                            "id": "9fd9c5b0-8824-4d8c-a958-f5e2469e1e01",
+                            "position": {
+                                "x": 148.11923217773438,
+                                "y": 68.90123748779297
+                            },
+                            "subPatch": {
+                                "id": "5d2dba31-f342-40a2-8b87-855fd292c7e3",
+                                "pan": {
+                                    "x": -118.10675048828125,
+                                    "y": 430.1773986816406
+                                },
+                                "zoom": 2.0400710105895998,
+                                "nodes": [
+                                    {
+                                        "type": "Expr",
+                                        "id": "2a75f2e6-ae6a-4711-a7f1-98c9c817ea61",
+                                        "position": {
+                                            "x": 23.958999633789064,
+                                            "y": -544.306884765625
+                                        },
+                                        "expr": "sin(x)"
+                                    },
+                                    {
+                                        "type": "Knob",
+                                        "id": "61bee60d-fa06-45b2-9135-e4ab77653f07",
+                                        "position": {
+                                            "x": -256.331298828125,
+                                            "y": -453.29461669921877
+                                        },
+                                        "name": "",
+                                        "knob": {
+                                            "value": 1.0,
+                                            "min": 0.0,
+                                            "max": 1.0
+                                        },
+                                        "exposedPosition": {
+                                            "x": -15.0,
+                                            "y": -115.0
+                                        }
+                                    },
+                                    {
+                                        "type": "Expr",
+                                        "id": "2737adba-2f71-4386-8ca9-b61b75d1a260",
+                                        "position": {
+                                            "x": 18.183761596679689,
+                                            "y": -412.2567443847656
+                                        },
+                                        "expr": "cos(x)"
+                                    },
+                                    {
+                                        "type": "Level",
+                                        "id": "10156186-ab7f-4f14-876f-8d579928d11e",
+                                        "position": {
+                                            "x": 164.26023864746095,
+                                            "y": -412.3372802734375
+                                        },
+                                        "level": {
+                                            "value": 0.5,
+                                            "min": 0.0,
+                                            "max": 1.0
+                                        }
+                                    },
+                                    {
+                                        "type": "Level",
+                                        "id": "ced08296-f387-4f5f-b535-799da1dd4278",
+                                        "position": {
+                                            "x": 169.4169464111328,
+                                            "y": -543.9378662109375
+                                        },
+                                        "level": {
+                                            "value": 0.5,
+                                            "min": 0.0,
+                                            "max": 1.0
+                                        }
+                                    },
+                                    {
+                                        "type": "Input",
+                                        "id": "be86fcd5-5724-42a3-8aa7-6ea5954b48c5",
+                                        "position": {
+                                            "x": -273.84954833984377,
+                                            "y": -552.32861328125
+                                        },
+                                        "name": "",
+                                        "exposedPosition": {
+                                            "x": -25.0,
+                                            "y": -60.0
+                                        }
+                                    },
+                                    {
+                                        "type": "Expr",
+                                        "id": "5bb75555-38ee-41fb-8f01-97cd02cec8d3",
+                                        "position": {
+                                            "x": -176.510009765625,
+                                            "y": -471.6747131347656
+                                        },
+                                        "expr": "Knob*(pi/2)"
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "id": "7333a2c6-fb30-4425-bd3e-a2ce388abb2d",
+                                        "position": {
+                                            "x": -291.44805908203127,
+                                            "y": -530.700439453125
+                                        },
+                                        "exposedPosition": {
+                                            "x": -30.0,
+                                            "y": -60.0
+                                        },
+                                        "text": "A",
+                                        "width": 256.0
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "id": "5f097da8-6d08-410d-b87b-f25b80727604",
+                                        "position": {
+                                            "x": -247.9395294189453,
+                                            "y": -370.93499755859377
+                                        },
+                                        "exposedPosition": {
+                                            "x": -25.0,
+                                            "y": -115.0
+                                        },
+                                        "text": "A/B",
+                                        "width": 256.0
+                                    },
+                                    {
+                                        "type": "Output",
+                                        "id": "2823c17d-7948-46ba-a96f-82989fab62d9",
+                                        "position": {
+                                            "x": 423.3884582519531,
+                                            "y": -474.4096374511719
+                                        },
+                                        "name": "",
+                                        "exposedPosition": {
+                                            "x": -5.0,
+                                            "y": -70.0
+                                        }
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "id": "8eac2fb9-ccb1-4cc7-94be-8c0585f50521",
+                                        "position": {
+                                            "x": 523.13134765625,
+                                            "y": -453.1878356933594
+                                        },
+                                        "exposedPosition": {
+                                            "x": -10.0,
+                                            "y": -70.0
+                                        },
+                                        "text": ">",
+                                        "width": 256.0
+                                    },
+                                    {
+                                        "type": "Expr",
+                                        "id": "14ced37b-a3fd-4d1e-8000-673d2399c68e",
+                                        "position": {
+                                            "x": 295.3267822265625,
+                                            "y": -487.7934875488281
+                                        },
+                                        "expr": "R+L"
+                                    },
+                                    {
+                                        "type": "Input",
+                                        "id": "c8435c0d-2a8b-44a3-8185-5bdad92a4f8f",
+                                        "position": {
+                                            "x": -272.1507263183594,
+                                            "y": -609.2041015625
+                                        },
+                                        "name": "",
+                                        "exposedPosition": {
+                                            "x": -25.0,
+                                            "y": -80.0
+                                        }
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "id": "42954631-6f95-439d-a5ac-5888fe08cd04",
+                                        "position": {
+                                            "x": -294.4647216796875,
+                                            "y": -589.5010986328125
+                                        },
+                                        "exposedPosition": {
+                                            "x": -30.0,
+                                            "y": -80.0
+                                        },
+                                        "text": "B",
+                                        "width": 256.0
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "id": "9b332aee-dffa-48fc-990d-3d76fbc27e23",
+                                        "position": {
+                                            "x": 60.49168395996094,
+                                            "y": -267.1416931152344
+                                        },
+                                        "exposedPosition": {
+                                            "x": -35.0,
+                                            "y": -40.0
+                                        },
+                                        "text": "AXfade",
+                                        "width": 256.0
+                                    }
+                                ],
+                                "wires": [
+                                    {
+                                        "from": "5bb75555-38ee-41fb-8f01-97cd02cec8d3",
+                                        "output": 0,
+                                        "to": "2a75f2e6-ae6a-4711-a7f1-98c9c817ea61",
+                                        "input": 0
+                                    },
+                                    {
+                                        "from": "5bb75555-38ee-41fb-8f01-97cd02cec8d3",
+                                        "output": 0,
+                                        "to": "2737adba-2f71-4386-8ca9-b61b75d1a260",
+                                        "input": 0
+                                    },
+                                    {
+                                        "from": "be86fcd5-5724-42a3-8aa7-6ea5954b48c5",
+                                        "output": 0,
+                                        "to": "10156186-ab7f-4f14-876f-8d579928d11e",
+                                        "input": 0
+                                    },
+                                    {
+                                        "from": "2737adba-2f71-4386-8ca9-b61b75d1a260",
+                                        "output": 0,
+                                        "to": "10156186-ab7f-4f14-876f-8d579928d11e",
+                                        "input": 1
+                                    },
+                                    {
+                                        "from": "c8435c0d-2a8b-44a3-8185-5bdad92a4f8f",
+                                        "output": 0,
+                                        "to": "ced08296-f387-4f5f-b535-799da1dd4278",
+                                        "input": 0
+                                    },
+                                    {
+                                        "from": "2a75f2e6-ae6a-4711-a7f1-98c9c817ea61",
+                                        "output": 0,
+                                        "to": "ced08296-f387-4f5f-b535-799da1dd4278",
+                                        "input": 1
+                                    },
+                                    {
+                                        "from": "61bee60d-fa06-45b2-9135-e4ab77653f07",
+                                        "output": 0,
+                                        "to": "5bb75555-38ee-41fb-8f01-97cd02cec8d3",
+                                        "input": 0
+                                    },
+                                    {
+                                        "from": "14ced37b-a3fd-4d1e-8000-673d2399c68e",
+                                        "output": 0,
+                                        "to": "2823c17d-7948-46ba-a96f-82989fab62d9",
+                                        "input": 0
+                                    },
+                                    {
+                                        "from": "ced08296-f387-4f5f-b535-799da1dd4278",
+                                        "output": 0,
+                                        "to": "14ced37b-a3fd-4d1e-8000-673d2399c68e",
+                                        "input": 0
+                                    },
+                                    {
+                                        "from": "10156186-ab7f-4f14-876f-8d579928d11e",
+                                        "output": 0,
+                                        "to": "14ced37b-a3fd-4d1e-8000-673d2399c68e",
+                                        "input": 1
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "type": "Patch",
+                            "id": "eed4e3dc-ee5a-4a7e-8648-0796d811e7bd",
+                            "position": {
+                                "x": 148.19680786132813,
+                                "y": -52.12909698486328
+                            },
+                            "subPatch": {
+                                "id": "d95cdf46-9749-4ea1-ae44-b047c263f93b",
+                                "pan": {
+                                    "x": -118.10675048828125,
+                                    "y": 430.1773986816406
+                                },
+                                "zoom": 2.0400710105895998,
+                                "nodes": [
+                                    {
+                                        "type": "Expr",
+                                        "id": "1a079210-df3d-4bf9-b9bb-e3714011fc4b",
+                                        "position": {
+                                            "x": 23.958999633789064,
+                                            "y": -544.306884765625
+                                        },
+                                        "expr": "sin(x)"
+                                    },
+                                    {
+                                        "type": "Knob",
+                                        "id": "e5509b96-248c-45f9-8d01-6e4b939d1d4a",
+                                        "position": {
+                                            "x": -256.331298828125,
+                                            "y": -453.29461669921877
+                                        },
+                                        "name": "",
+                                        "knob": {
+                                            "value": 0.0,
+                                            "min": 0.0,
+                                            "max": 1.0
+                                        },
+                                        "exposedPosition": {
+                                            "x": -15.0,
+                                            "y": -115.0
+                                        }
+                                    },
+                                    {
+                                        "type": "Expr",
+                                        "id": "98d239b5-9b10-41b8-869a-29c6794d81b4",
+                                        "position": {
+                                            "x": 18.183761596679689,
+                                            "y": -412.2567443847656
+                                        },
+                                        "expr": "cos(x)"
+                                    },
+                                    {
+                                        "type": "Level",
+                                        "id": "49117e25-44f5-485d-98a2-ee05576f37f1",
+                                        "position": {
+                                            "x": 164.26023864746095,
+                                            "y": -412.3372802734375
+                                        },
+                                        "level": {
+                                            "value": 0.5,
+                                            "min": 0.0,
+                                            "max": 1.0
+                                        }
+                                    },
+                                    {
+                                        "type": "Level",
+                                        "id": "17ba4240-46ff-488a-b244-0326ae82f1a6",
+                                        "position": {
+                                            "x": 169.4169464111328,
+                                            "y": -543.9378662109375
+                                        },
+                                        "level": {
+                                            "value": 0.5,
+                                            "min": 0.0,
+                                            "max": 1.0
+                                        }
+                                    },
+                                    {
+                                        "type": "Input",
+                                        "id": "98b342f7-0d6e-4a01-82ce-c80517e52a90",
+                                        "position": {
+                                            "x": -273.84954833984377,
+                                            "y": -552.32861328125
+                                        },
+                                        "name": "",
+                                        "exposedPosition": {
+                                            "x": -25.0,
+                                            "y": -60.0
+                                        }
+                                    },
+                                    {
+                                        "type": "Expr",
+                                        "id": "16d742dd-478c-4c4d-93bb-cd835f4fa4f7",
+                                        "position": {
+                                            "x": -176.510009765625,
+                                            "y": -471.6747131347656
+                                        },
+                                        "expr": "Knob*(pi/2)"
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "id": "7428fe78-d6b2-4e4e-8a5e-eb3cf4020deb",
+                                        "position": {
+                                            "x": -291.44805908203127,
+                                            "y": -530.700439453125
+                                        },
+                                        "exposedPosition": {
+                                            "x": -30.0,
+                                            "y": -60.0
+                                        },
+                                        "text": "A",
+                                        "width": 256.0
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "id": "e46657df-c5e0-4cdc-967f-4fc27728498f",
+                                        "position": {
+                                            "x": -247.9395294189453,
+                                            "y": -370.93499755859377
+                                        },
+                                        "exposedPosition": {
+                                            "x": -25.0,
+                                            "y": -115.0
+                                        },
+                                        "text": "A/B",
+                                        "width": 256.0
+                                    },
+                                    {
+                                        "type": "Output",
+                                        "id": "d5614a62-10f4-4083-80d8-4a3110e1faeb",
+                                        "position": {
+                                            "x": 423.3884582519531,
+                                            "y": -474.4096374511719
+                                        },
+                                        "name": "",
+                                        "exposedPosition": {
+                                            "x": -5.0,
+                                            "y": -70.0
+                                        }
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "id": "e66df45b-994f-4b12-80fc-66abcd93c523",
+                                        "position": {
+                                            "x": 523.13134765625,
+                                            "y": -453.1878356933594
+                                        },
+                                        "exposedPosition": {
+                                            "x": -10.0,
+                                            "y": -70.0
+                                        },
+                                        "text": ">",
+                                        "width": 256.0
+                                    },
+                                    {
+                                        "type": "Expr",
+                                        "id": "91bf1d59-b78f-40b0-bae5-584124910db6",
+                                        "position": {
+                                            "x": 295.3267822265625,
+                                            "y": -487.7934875488281
+                                        },
+                                        "expr": "R+L"
+                                    },
+                                    {
+                                        "type": "Input",
+                                        "id": "ed1e9127-a8da-4bc8-8e4a-38512784f590",
+                                        "position": {
+                                            "x": -272.1507263183594,
+                                            "y": -609.2041015625
+                                        },
+                                        "name": "",
+                                        "exposedPosition": {
+                                            "x": -25.0,
+                                            "y": -80.0
+                                        }
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "id": "9bb94e5b-9d5c-478f-a178-a33e450f67ba",
+                                        "position": {
+                                            "x": -294.4647216796875,
+                                            "y": -589.5010986328125
+                                        },
+                                        "exposedPosition": {
+                                            "x": -30.0,
+                                            "y": -80.0
+                                        },
+                                        "text": "B",
+                                        "width": 256.0
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "id": "8af4f977-0b0e-47e0-ac7b-0eadf06f405a",
+                                        "position": {
+                                            "x": 60.49168395996094,
+                                            "y": -267.1416931152344
+                                        },
+                                        "exposedPosition": {
+                                            "x": -35.0,
+                                            "y": -40.0
+                                        },
+                                        "text": "AXfade",
+                                        "width": 256.0
+                                    }
+                                ],
+                                "wires": [
+                                    {
+                                        "from": "16d742dd-478c-4c4d-93bb-cd835f4fa4f7",
+                                        "output": 0,
+                                        "to": "1a079210-df3d-4bf9-b9bb-e3714011fc4b",
+                                        "input": 0
+                                    },
+                                    {
+                                        "from": "16d742dd-478c-4c4d-93bb-cd835f4fa4f7",
+                                        "output": 0,
+                                        "to": "98d239b5-9b10-41b8-869a-29c6794d81b4",
+                                        "input": 0
+                                    },
+                                    {
+                                        "from": "98b342f7-0d6e-4a01-82ce-c80517e52a90",
+                                        "output": 0,
+                                        "to": "49117e25-44f5-485d-98a2-ee05576f37f1",
+                                        "input": 0
+                                    },
+                                    {
+                                        "from": "98d239b5-9b10-41b8-869a-29c6794d81b4",
+                                        "output": 0,
+                                        "to": "49117e25-44f5-485d-98a2-ee05576f37f1",
+                                        "input": 1
+                                    },
+                                    {
+                                        "from": "ed1e9127-a8da-4bc8-8e4a-38512784f590",
+                                        "output": 0,
+                                        "to": "17ba4240-46ff-488a-b244-0326ae82f1a6",
+                                        "input": 0
+                                    },
+                                    {
+                                        "from": "1a079210-df3d-4bf9-b9bb-e3714011fc4b",
+                                        "output": 0,
+                                        "to": "17ba4240-46ff-488a-b244-0326ae82f1a6",
+                                        "input": 1
+                                    },
+                                    {
+                                        "from": "e5509b96-248c-45f9-8d01-6e4b939d1d4a",
+                                        "output": 0,
+                                        "to": "16d742dd-478c-4c4d-93bb-cd835f4fa4f7",
+                                        "input": 0
+                                    },
+                                    {
+                                        "from": "91bf1d59-b78f-40b0-bae5-584124910db6",
+                                        "output": 0,
+                                        "to": "d5614a62-10f4-4083-80d8-4a3110e1faeb",
+                                        "input": 0
+                                    },
+                                    {
+                                        "from": "17ba4240-46ff-488a-b244-0326ae82f1a6",
+                                        "output": 0,
+                                        "to": "91bf1d59-b78f-40b0-bae5-584124910db6",
+                                        "input": 0
+                                    },
+                                    {
+                                        "from": "49117e25-44f5-485d-98a2-ee05576f37f1",
+                                        "output": 0,
+                                        "to": "91bf1d59-b78f-40b0-bae5-584124910db6",
+                                        "input": 1
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "type": "Text",
+                            "id": "ebdc5500-6e51-4e15-bb68-5348e4efd61b",
+                            "position": {
+                                "x": -74.46212768554688,
+                                "y": 286.86676025390627
+                            },
+                            "exposedPosition": {
+                                "x": -15.0,
+                                "y": -35.0
+                            },
+                            "text": "width",
+                            "width": 154.56884765625
+                        },
+                        {
+                            "type": "Knob",
+                            "id": "fcd10086-6886-4144-ae3a-e1f1edabf2c8",
+                            "position": {
+                                "x": -61.917388916015628,
+                                "y": 229.17083740234376
+                            },
+                            "name": "",
+                            "knob": {
+                                "value": 1.0,
+                                "min": 0.0,
+                                "max": 1.0
+                            },
+                            "exposedPosition": {
+                                "x": 0.0,
+                                "y": -35.0
+                            }
+                        },
+                        {
+                            "type": "Expr",
+                            "id": "ca76f482-96f8-4960-bcc4-7b5ab4198ce1",
+                            "position": {
+                                "x": -35.542236328125,
+                                "y": 138.8814697265625
+                            },
+                            "expr": "(1-Knob)*.5"
+                        },
+                        {
+                            "type": "Expr",
+                            "id": "bd009309-213f-48ef-860a-721c9e442c54",
+                            "position": {
+                                "x": -30.397735595703126,
+                                "y": 94.94219207763672
+                            },
+                            "expr": "Knob*.5+.5"
+                        },
+                        {
+                            "type": "RGBLight",
+                            "id": "1423ebeb-6eeb-4b5c-b620-a3ea0bef50a3",
+                            "position": {
+                                "x": 610.1948852539063,
+                                "y": -210.47540283203126
+                            },
+                            "exposedPosition": {
+                                "x": 40.0,
+                                "y": -35.0
+                            }
+                        },
+                        {
+                            "type": "Patch",
+                            "id": "9519e68b-f051-451b-81f0-3edffb036763",
+                            "position": {
+                                "x": 412.79241943359377,
+                                "y": -159.82546997070313
+                            },
+                            "subPatch": {
+                                "id": "3ae58118-1593-4c34-968c-5aa38a8fa788",
+                                "pan": {
+                                    "x": -68.19869995117188,
+                                    "y": -35.582374572753909
+                                },
+                                "zoom": 1.8593974113464356,
+                                "nodes": [
+                                    {
+                                        "type": "Input",
+                                        "id": "6f1a93e5-b35b-46db-8a2f-73d23de64e09",
+                                        "position": {
+                                            "x": -396.4682312011719,
+                                            "y": -26.163375854492189
+                                        },
+                                        "name": "",
+                                        "exposedPosition": {
+                                            "x": 35.0,
+                                            "y": 30.0
+                                        }
+                                    },
+                                    {
+                                        "type": "Output",
+                                        "id": "59771c9e-dc84-427e-80ba-942b98727a52",
+                                        "position": {
+                                            "x": 447.8656005859375,
+                                            "y": -23.519168853759767
+                                        },
+                                        "name": "",
+                                        "exposedPosition": {
+                                            "x": 155.0,
+                                            "y": 30.0
+                                        }
+                                    },
+                                    {
+                                        "type": "Mapper",
+                                        "id": "67f411d5-3b9d-458f-8b01-5a762b99801b",
+                                        "position": {
+                                            "x": 223.44439697265626,
+                                            "y": -87.89596557617188
+                                        },
+                                        "c0": 0.0,
+                                        "c1": 0.215412437915802,
+                                        "c2": 1.0
+                                    },
+                                    {
+                                        "type": "Expr",
+                                        "id": "f66bf897-258b-4648-9631-b0ec8676771c",
+                                        "position": {
+                                            "x": 1.8670654296875,
+                                            "y": -24.9561767578125
+                                        },
+                                        "expr": "1+(Timer*-1)"
+                                    },
+                                    {
+                                        "type": "Timer",
+                                        "id": "e0a87774-16d9-4665-8fd3-bee290537f98",
+                                        "position": {
+                                            "x": -93.7574462890625,
+                                            "y": -25.454666137695314
+                                        }
+                                    },
+                                    {
+                                        "type": "Expr",
+                                        "id": "06629452-3c24-4ede-b961-1928bd8ffe8e",
+                                        "position": {
+                                            "x": -299.4834899902344,
+                                            "y": -25.20281410217285
+                                        },
+                                        "expr": "abs(Input)>1"
+                                    },
+                                    {
+                                        "type": "RGBLight",
+                                        "id": "cec4c6d2-9a1c-478c-8f20-ffd4374d25fe",
+                                        "position": {
+                                            "x": 451.3034362792969,
+                                            "y": 24.83037567138672
+                                        },
+                                        "exposedPosition": {
+                                            "x": 155.0,
+                                            "y": 30.0
+                                        }
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "id": "ac8ecb43-4f8f-46c9-af9a-a1986450d1ab",
+                                        "position": {
+                                            "x": 477.0819396972656,
+                                            "y": 143.09072875976563
+                                        },
+                                        "exposedPosition": {
+                                            "x": 150.0,
+                                            "y": 30.0
+                                        },
+                                        "text": "m",
+                                        "width": 256.0
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "id": "3097dd2b-13ba-4ae9-8d79-917ff4789167",
+                                        "position": {
+                                            "x": -356.71966552734377,
+                                            "y": 36.53216552734375
+                                        },
+                                        "exposedPosition": {
+                                            "x": 30.0,
+                                            "y": 30.0
+                                        },
+                                        "text": "a",
+                                        "width": 256.0
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "id": "39aac123-2d30-44e8-84f1-357326a63468",
+                                        "position": {
+                                            "x": -57.352882385253909,
+                                            "y": 122.5103759765625
+                                        },
+                                        "exposedPosition": {
+                                            "x": 55.0,
+                                            "y": 30.0
+                                        },
+                                        "text": "Peak Detector",
+                                        "width": 256.0
+                                    }
+                                ],
+                                "wires": [
+                                    {
+                                        "from": "67f411d5-3b9d-458f-8b01-5a762b99801b",
+                                        "output": 0,
+                                        "to": "59771c9e-dc84-427e-80ba-942b98727a52",
+                                        "input": 0
+                                    },
+                                    {
+                                        "from": "f66bf897-258b-4648-9631-b0ec8676771c",
+                                        "output": 0,
+                                        "to": "67f411d5-3b9d-458f-8b01-5a762b99801b",
+                                        "input": 0
+                                    },
+                                    {
+                                        "from": "e0a87774-16d9-4665-8fd3-bee290537f98",
+                                        "output": 0,
+                                        "to": "f66bf897-258b-4648-9631-b0ec8676771c",
+                                        "input": 0
+                                    },
+                                    {
+                                        "from": "06629452-3c24-4ede-b961-1928bd8ffe8e",
+                                        "output": 0,
+                                        "to": "e0a87774-16d9-4665-8fd3-bee290537f98",
+                                        "input": 0
+                                    },
+                                    {
+                                        "from": "6f1a93e5-b35b-46db-8a2f-73d23de64e09",
+                                        "output": 0,
+                                        "to": "06629452-3c24-4ede-b961-1928bd8ffe8e",
+                                        "input": 0
+                                    },
+                                    {
+                                        "from": "67f411d5-3b9d-458f-8b01-5a762b99801b",
+                                        "output": 0,
+                                        "to": "cec4c6d2-9a1c-478c-8f20-ffd4374d25fe",
+                                        "input": 0
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "type": "Patch",
+                            "id": "cc5f5d15-12c9-4a41-a3ff-0b5e2d20baf5",
+                            "position": {
+                                "x": 410.345703125,
+                                "y": -28.57433319091797
+                            },
+                            "subPatch": {
+                                "id": "dc2778a6-fa24-4541-ba25-a4a07dd5303f",
+                                "pan": {
+                                    "x": -68.19869995117188,
+                                    "y": -35.582374572753909
+                                },
+                                "zoom": 1.8593974113464356,
+                                "nodes": [
+                                    {
+                                        "type": "Input",
+                                        "id": "da12dd84-a319-41e2-b59c-69df54c60e31",
+                                        "position": {
+                                            "x": -396.4682312011719,
+                                            "y": -26.163375854492189
+                                        },
+                                        "name": "",
+                                        "exposedPosition": {
+                                            "x": 35.0,
+                                            "y": 30.0
+                                        }
+                                    },
+                                    {
+                                        "type": "Output",
+                                        "id": "d2b5bfa8-f0fb-4d51-b2a5-d5ac88ad7c31",
+                                        "position": {
+                                            "x": 447.8656005859375,
+                                            "y": -23.519168853759767
+                                        },
+                                        "name": "",
+                                        "exposedPosition": {
+                                            "x": 155.0,
+                                            "y": 30.0
+                                        }
+                                    },
+                                    {
+                                        "type": "Mapper",
+                                        "id": "37503ee5-4fb9-4934-b539-09c95edcb4a8",
+                                        "position": {
+                                            "x": 223.44439697265626,
+                                            "y": -87.89596557617188
+                                        },
+                                        "c0": 0.0,
+                                        "c1": 0.215412437915802,
+                                        "c2": 1.0
+                                    },
+                                    {
+                                        "type": "Expr",
+                                        "id": "07118bd2-cbc5-4d27-a514-1706dfe628fb",
+                                        "position": {
+                                            "x": 1.8670654296875,
+                                            "y": -24.9561767578125
+                                        },
+                                        "expr": "1+(Timer*-1)"
+                                    },
+                                    {
+                                        "type": "Timer",
+                                        "id": "315e32bf-6747-40a2-a111-4612d41ee6fb",
+                                        "position": {
+                                            "x": -93.7574462890625,
+                                            "y": -25.454666137695314
+                                        }
+                                    },
+                                    {
+                                        "type": "Expr",
+                                        "id": "4761329b-c0a8-40b1-8bf1-69e7aa70f22f",
+                                        "position": {
+                                            "x": -299.4834899902344,
+                                            "y": -25.20281410217285
+                                        },
+                                        "expr": "abs(Input)>1"
+                                    },
+                                    {
+                                        "type": "RGBLight",
+                                        "id": "b309c591-0940-4feb-8032-e81ea5735916",
+                                        "position": {
+                                            "x": 451.3034362792969,
+                                            "y": 24.83037567138672
+                                        },
+                                        "exposedPosition": {
+                                            "x": 155.0,
+                                            "y": 30.0
+                                        }
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "id": "bfad6916-b520-49c9-aaad-2b8b2e5f0df8",
+                                        "position": {
+                                            "x": 477.0819396972656,
+                                            "y": 143.09072875976563
+                                        },
+                                        "exposedPosition": {
+                                            "x": 150.0,
+                                            "y": 30.0
+                                        },
+                                        "text": "m",
+                                        "width": 256.0
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "id": "0e0a79f5-78d0-4858-a667-746b0cf4adf5",
+                                        "position": {
+                                            "x": -356.71966552734377,
+                                            "y": 36.53216552734375
+                                        },
+                                        "exposedPosition": {
+                                            "x": 30.0,
+                                            "y": 30.0
+                                        },
+                                        "text": "a",
+                                        "width": 256.0
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "id": "fdd0c2b8-ac81-4960-8918-20a2f57ea462",
+                                        "position": {
+                                            "x": -57.352882385253909,
+                                            "y": 122.5103759765625
+                                        },
+                                        "exposedPosition": {
+                                            "x": 55.0,
+                                            "y": 30.0
+                                        },
+                                        "text": "Peak Detector",
+                                        "width": 256.0
+                                    }
+                                ],
+                                "wires": [
+                                    {
+                                        "from": "37503ee5-4fb9-4934-b539-09c95edcb4a8",
+                                        "output": 0,
+                                        "to": "d2b5bfa8-f0fb-4d51-b2a5-d5ac88ad7c31",
+                                        "input": 0
+                                    },
+                                    {
+                                        "from": "07118bd2-cbc5-4d27-a514-1706dfe628fb",
+                                        "output": 0,
+                                        "to": "37503ee5-4fb9-4934-b539-09c95edcb4a8",
+                                        "input": 0
+                                    },
+                                    {
+                                        "from": "315e32bf-6747-40a2-a111-4612d41ee6fb",
+                                        "output": 0,
+                                        "to": "07118bd2-cbc5-4d27-a514-1706dfe628fb",
+                                        "input": 0
+                                    },
+                                    {
+                                        "from": "4761329b-c0a8-40b1-8bf1-69e7aa70f22f",
+                                        "output": 0,
+                                        "to": "315e32bf-6747-40a2-a111-4612d41ee6fb",
+                                        "input": 0
+                                    },
+                                    {
+                                        "from": "da12dd84-a319-41e2-b59c-69df54c60e31",
+                                        "output": 0,
+                                        "to": "4761329b-c0a8-40b1-8bf1-69e7aa70f22f",
+                                        "input": 0
+                                    },
+                                    {
+                                        "from": "37503ee5-4fb9-4934-b539-09c95edcb4a8",
+                                        "output": 0,
+                                        "to": "b309c591-0940-4feb-8032-e81ea5735916",
+                                        "input": 0
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "type": "RGBLight",
+                            "id": "d3aaf319-013c-4bbc-aebd-8fad86486e17",
+                            "position": {
+                                "x": 610.9151000976563,
+                                "y": -80.33255767822266
+                            },
+                            "exposedPosition": {
+                                "x": 40.0,
+                                "y": -10.0
+                            }
+                        },
+                        {
+                            "type": "Patch",
+                            "id": "10151a67-8490-4ee3-abaf-e8899b808d1a",
+                            "position": {
+                                "x": 407.64837646484377,
+                                "y": 76.5946044921875
+                            },
+                            "subPatch": {
+                                "id": "98dc8176-55f4-421d-a8d4-93d16c693632",
+                                "pan": {
+                                    "x": -68.19869995117188,
+                                    "y": -35.582374572753909
+                                },
+                                "zoom": 1.8593974113464356,
+                                "nodes": [
+                                    {
+                                        "type": "Input",
+                                        "id": "865c6c13-a43b-49e2-9233-cdbd0d415e9d",
+                                        "position": {
+                                            "x": -396.4682312011719,
+                                            "y": -26.163375854492189
+                                        },
+                                        "name": "",
+                                        "exposedPosition": {
+                                            "x": 35.0,
+                                            "y": 30.0
+                                        }
+                                    },
+                                    {
+                                        "type": "Output",
+                                        "id": "f966c58c-e7f5-41ea-b6f4-de81f2051311",
+                                        "position": {
+                                            "x": 447.8656005859375,
+                                            "y": -23.519168853759767
+                                        },
+                                        "name": "",
+                                        "exposedPosition": {
+                                            "x": 155.0,
+                                            "y": 30.0
+                                        }
+                                    },
+                                    {
+                                        "type": "Mapper",
+                                        "id": "c3e52c21-0990-4303-9a9e-96583d8d9f9f",
+                                        "position": {
+                                            "x": 223.44439697265626,
+                                            "y": -87.89596557617188
+                                        },
+                                        "c0": 0.0,
+                                        "c1": 0.215412437915802,
+                                        "c2": 1.0
+                                    },
+                                    {
+                                        "type": "Expr",
+                                        "id": "6c2131bc-8ccf-4ccf-8b27-533194fd383c",
+                                        "position": {
+                                            "x": 1.8670654296875,
+                                            "y": -24.9561767578125
+                                        },
+                                        "expr": "1+(Timer*-1)"
+                                    },
+                                    {
+                                        "type": "Timer",
+                                        "id": "1e2672fb-5e24-41f8-9355-edb572f5b1f1",
+                                        "position": {
+                                            "x": -93.7574462890625,
+                                            "y": -25.454666137695314
+                                        }
+                                    },
+                                    {
+                                        "type": "Expr",
+                                        "id": "1b537a6e-8b85-417d-8df8-0c8f1b72f1f4",
+                                        "position": {
+                                            "x": -299.4834899902344,
+                                            "y": -25.20281410217285
+                                        },
+                                        "expr": "abs(Input)>1"
+                                    },
+                                    {
+                                        "type": "RGBLight",
+                                        "id": "d30a082d-d722-45b9-b834-06a312bd5a0d",
+                                        "position": {
+                                            "x": 451.3034362792969,
+                                            "y": 24.83037567138672
+                                        },
+                                        "exposedPosition": {
+                                            "x": 155.0,
+                                            "y": 30.0
+                                        }
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "id": "720bc663-c479-4c5e-9062-c28e9834c936",
+                                        "position": {
+                                            "x": 477.0819396972656,
+                                            "y": 143.09072875976563
+                                        },
+                                        "exposedPosition": {
+                                            "x": 150.0,
+                                            "y": 30.0
+                                        },
+                                        "text": "m",
+                                        "width": 256.0
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "id": "98422b29-c885-4fb1-9928-6cdf081fa4c0",
+                                        "position": {
+                                            "x": -356.71966552734377,
+                                            "y": 36.53216552734375
+                                        },
+                                        "exposedPosition": {
+                                            "x": 30.0,
+                                            "y": 30.0
+                                        },
+                                        "text": "a",
+                                        "width": 256.0
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "id": "aae09e91-ffed-4a19-9b2c-501d8db9913f",
+                                        "position": {
+                                            "x": -57.352882385253909,
+                                            "y": 122.5103759765625
+                                        },
+                                        "exposedPosition": {
+                                            "x": 55.0,
+                                            "y": 30.0
+                                        },
+                                        "text": "Peak Detector",
+                                        "width": 256.0
+                                    }
+                                ],
+                                "wires": [
+                                    {
+                                        "from": "c3e52c21-0990-4303-9a9e-96583d8d9f9f",
+                                        "output": 0,
+                                        "to": "f966c58c-e7f5-41ea-b6f4-de81f2051311",
+                                        "input": 0
+                                    },
+                                    {
+                                        "from": "6c2131bc-8ccf-4ccf-8b27-533194fd383c",
+                                        "output": 0,
+                                        "to": "c3e52c21-0990-4303-9a9e-96583d8d9f9f",
+                                        "input": 0
+                                    },
+                                    {
+                                        "from": "1e2672fb-5e24-41f8-9355-edb572f5b1f1",
+                                        "output": 0,
+                                        "to": "6c2131bc-8ccf-4ccf-8b27-533194fd383c",
+                                        "input": 0
+                                    },
+                                    {
+                                        "from": "1b537a6e-8b85-417d-8df8-0c8f1b72f1f4",
+                                        "output": 0,
+                                        "to": "1e2672fb-5e24-41f8-9355-edb572f5b1f1",
+                                        "input": 0
+                                    },
+                                    {
+                                        "from": "865c6c13-a43b-49e2-9233-cdbd0d415e9d",
+                                        "output": 0,
+                                        "to": "1b537a6e-8b85-417d-8df8-0c8f1b72f1f4",
+                                        "input": 0
+                                    },
+                                    {
+                                        "from": "c3e52c21-0990-4303-9a9e-96583d8d9f9f",
+                                        "output": 0,
+                                        "to": "d30a082d-d722-45b9-b834-06a312bd5a0d",
+                                        "input": 0
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "type": "RGBLight",
+                            "id": "462283f3-aa67-4c2c-a728-01dfc24bb535",
+                            "position": {
+                                "x": 610.543701171875,
+                                "y": 26.56884002685547
+                            },
+                            "exposedPosition": {
+                                "x": 40.0,
+                                "y": 15.0
+                            }
+                        },
+                        {
+                            "type": "Text",
+                            "id": "64b38728-f5f7-4524-9c9e-b901f31d8f1e",
+                            "position": {
+                                "x": 533.2913818359375,
+                                "y": 58.38023376464844
+                            },
+                            "exposedPosition": {
+                                "x": 35.0,
+                                "y": 15.0
+                            },
+                            "text": "a",
+                            "width": 40.0
+                        },
+                        {
+                            "type": "Text",
+                            "id": "99e8f12a-5cc7-4a7f-8eb1-68fbb0657044",
+                            "position": {
+                                "x": 533.4161376953125,
+                                "y": -85.32144927978516
+                            },
+                            "exposedPosition": {
+                                "x": 35.0,
+                                "y": -35.0
+                            },
+                            "text": "R",
+                            "width": 40.0
+                        },
+                        {
+                            "type": "Text",
+                            "id": "ea965f72-8212-496a-b413-32540c762f81",
+                            "position": {
+                                "x": 534.8062133789063,
+                                "y": -42.39619064331055
+                            },
+                            "exposedPosition": {
+                                "x": 35.0,
+                                "y": -10.0
+                            },
+                            "text": "L",
+                            "width": 40.0
+                        },
+                        {
+                            "type": "Expr",
+                            "id": "48fecab5-e422-4d73-b083-1aa4605028c4",
+                            "position": {
+                                "x": 188.9453125,
+                                "y": 34.722991943359378
+                            },
+                            "expr": "clamp(Mono,-1,1)"
+                        },
+                        {
+                            "type": "Expr",
+                            "id": "59ab1bfe-690e-44c9-92e8-1f7d93f623c3",
+                            "position": {
+                                "x": 199.74160766601563,
+                                "y": -63.66426086425781
+                            },
+                            "expr": "clamp(Left,-1,1)"
+                        },
+                        {
+                            "type": "Expr",
+                            "id": "08d4827a-b477-4142-90db-e31e43c84934",
+                            "position": {
+                                "x": 185.21438598632813,
+                                "y": -108.27407836914063
+                            },
+                            "expr": "clamp(Right,-1,1)"
+                        }
+                    ],
+                    "wires": [
+                        {
+                            "from": "48fecab5-e422-4d73-b083-1aa4605028c4",
+                            "output": 0,
+                            "to": "dd793408-a4d7-4d3e-ac5c-ab94429799a8",
+                            "input": 0
+                        },
+                        {
+                            "from": "cc650d57-a036-4b68-a94c-a916751459dc",
+                            "output": 1,
+                            "to": "597d8baa-9380-42a1-96fc-9ae2a489bf12",
+                            "input": 0
+                        },
+                        {
+                            "from": "cc650d57-a036-4b68-a94c-a916751459dc",
+                            "output": 0,
+                            "to": "597d8baa-9380-42a1-96fc-9ae2a489bf12",
+                            "input": 1
+                        },
+                        {
+                            "from": "59ab1bfe-690e-44c9-92e8-1f7d93f623c3",
+                            "output": 0,
+                            "to": "babbae7c-4777-45be-b689-0760cf70a0e5",
+                            "input": 0
+                        },
+                        {
+                            "from": "08d4827a-b477-4142-90db-e31e43c84934",
+                            "output": 0,
+                            "to": "dce1c75e-ef11-484a-aec7-9385675abf8d",
+                            "input": 0
+                        },
+                        {
+                            "from": "597d8baa-9380-42a1-96fc-9ae2a489bf12",
+                            "output": 0,
+                            "to": "e8d7df94-7a59-4716-a98b-3311da749047",
+                            "input": 0
+                        },
+                        {
+                            "from": "e53ae0fa-314c-45b6-af4a-7c0ac5d5b82a",
+                            "output": 0,
+                            "to": "e8d7df94-7a59-4716-a98b-3311da749047",
+                            "input": 1
+                        },
+                        {
+                            "from": "cc650d57-a036-4b68-a94c-a916751459dc",
+                            "output": 0,
+                            "to": "00de0a23-ff50-47e1-ba54-bdfd562b2cb2",
+                            "input": 0
+                        },
+                        {
+                            "from": "e53ae0fa-314c-45b6-af4a-7c0ac5d5b82a",
+                            "output": 0,
+                            "to": "00de0a23-ff50-47e1-ba54-bdfd562b2cb2",
+                            "input": 1
+                        },
+                        {
+                            "from": "cc650d57-a036-4b68-a94c-a916751459dc",
+                            "output": 1,
+                            "to": "c19dc609-e0de-40bd-aa27-83f2d46621ec",
+                            "input": 0
+                        },
+                        {
+                            "from": "e53ae0fa-314c-45b6-af4a-7c0ac5d5b82a",
+                            "output": 0,
+                            "to": "c19dc609-e0de-40bd-aa27-83f2d46621ec",
+                            "input": 1
+                        },
+                        {
+                            "from": "ca76f482-96f8-4960-bcc4-7b5ab4198ce1",
+                            "output": 0,
+                            "to": "9fd9c5b0-8824-4d8c-a958-f5e2469e1e01",
+                            "input": 0
+                        },
+                        {
+                            "from": "00de0a23-ff50-47e1-ba54-bdfd562b2cb2",
+                            "output": 0,
+                            "to": "9fd9c5b0-8824-4d8c-a958-f5e2469e1e01",
+                            "input": 1
+                        },
+                        {
+                            "from": "c19dc609-e0de-40bd-aa27-83f2d46621ec",
+                            "output": 0,
+                            "to": "9fd9c5b0-8824-4d8c-a958-f5e2469e1e01",
+                            "input": 2
+                        },
+                        {
+                            "from": "bd009309-213f-48ef-860a-721c9e442c54",
+                            "output": 0,
+                            "to": "eed4e3dc-ee5a-4a7e-8648-0796d811e7bd",
+                            "input": 0
+                        },
+                        {
+                            "from": "00de0a23-ff50-47e1-ba54-bdfd562b2cb2",
+                            "output": 0,
+                            "to": "eed4e3dc-ee5a-4a7e-8648-0796d811e7bd",
+                            "input": 1
+                        },
+                        {
+                            "from": "c19dc609-e0de-40bd-aa27-83f2d46621ec",
+                            "output": 0,
+                            "to": "eed4e3dc-ee5a-4a7e-8648-0796d811e7bd",
+                            "input": 2
+                        },
+                        {
+                            "from": "fcd10086-6886-4144-ae3a-e1f1edabf2c8",
+                            "output": 0,
+                            "to": "ca76f482-96f8-4960-bcc4-7b5ab4198ce1",
+                            "input": 0
+                        },
+                        {
+                            "from": "fcd10086-6886-4144-ae3a-e1f1edabf2c8",
+                            "output": 0,
+                            "to": "bd009309-213f-48ef-860a-721c9e442c54",
+                            "input": 0
+                        },
+                        {
+                            "from": "9519e68b-f051-451b-81f0-3edffb036763",
+                            "output": 0,
+                            "to": "1423ebeb-6eeb-4b5c-b620-a3ea0bef50a3",
+                            "input": 0
+                        },
+                        {
+                            "from": "eed4e3dc-ee5a-4a7e-8648-0796d811e7bd",
+                            "output": 0,
+                            "to": "9519e68b-f051-451b-81f0-3edffb036763",
+                            "input": 0
+                        },
+                        {
+                            "from": "9fd9c5b0-8824-4d8c-a958-f5e2469e1e01",
+                            "output": 0,
+                            "to": "cc5f5d15-12c9-4a41-a3ff-0b5e2d20baf5",
+                            "input": 0
+                        },
+                        {
+                            "from": "cc5f5d15-12c9-4a41-a3ff-0b5e2d20baf5",
+                            "output": 0,
+                            "to": "d3aaf319-013c-4bbc-aebd-8fad86486e17",
+                            "input": 0
+                        },
+                        {
+                            "from": "9fd9c5b0-8824-4d8c-a958-f5e2469e1e01",
+                            "output": 0,
+                            "to": "10151a67-8490-4ee3-abaf-e8899b808d1a",
+                            "input": 0
+                        },
+                        {
+                            "from": "10151a67-8490-4ee3-abaf-e8899b808d1a",
+                            "output": 0,
+                            "to": "462283f3-aa67-4c2c-a728-01dfc24bb535",
+                            "input": 0
+                        },
+                        {
+                            "from": "e8d7df94-7a59-4716-a98b-3311da749047",
+                            "output": 0,
+                            "to": "48fecab5-e422-4d73-b083-1aa4605028c4",
+                            "input": 0
+                        },
+                        {
+                            "from": "00de0a23-ff50-47e1-ba54-bdfd562b2cb2",
+                            "output": 0,
+                            "to": "59ab1bfe-690e-44c9-92e8-1f7d93f623c3",
+                            "input": 0
+                        },
+                        {
+                            "from": "c19dc609-e0de-40bd-aa27-83f2d46621ec",
+                            "output": 0,
+                            "to": "08d4827a-b477-4142-90db-e31e43c84934",
+                            "input": 0
+                        }
+                    ]
+                }
+            }
+        ],
+        "wires": []
+    },
+    "history": {
+        "states": [
+            {
+                "id": "c170c40b-6465-4c54-b503-e1eafd890cdb"
+            }
+        ],
+        "current": "c170c40b-6465-4c54-b503-e1eafd890cdb"
+    },
+    "undoStack": {
+        "stack": [
+            "c170c40b-6465-4c54-b503-e1eafd890cdb"
+        ],
+        "current": 0
+    }
+}

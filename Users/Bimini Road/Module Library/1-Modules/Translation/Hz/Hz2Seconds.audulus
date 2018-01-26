@@ -1,0 +1,141 @@
+{
+    "version": 1,
+    "tags": [
+        "Utilities"
+    ],
+    "description": "Translates an Hz signal to a seconds.",
+    "patch": {
+        "id": "7085b4b6-491f-4950-955b-ca34546c9305",
+        "pan": {
+            "x": 138.59375,
+            "y": -113.140625
+        },
+        "zoom": 11.520000457763672,
+        "nodes": [
+            {
+                "type": "Patch",
+                "id": "8f769a70-b4c4-4306-967d-9a4977f16e87",
+                "position": {
+                    "x": -48.59375,
+                    "y": 113.140625
+                },
+                "subPatch": {
+                    "id": "855b5d0c-39bb-4b4f-ae97-c62b3d19b5c4",
+                    "pan": {
+                        "x": -11.880020141601563,
+                        "y": -70.35433959960938
+                    },
+                    "zoom": 1.6060599088668824,
+                    "nodes": [
+                        {
+                            "type": "Input",
+                            "id": "1e99ddb9-7e21-4696-b5ad-86a27247b920",
+                            "position": {
+                                "x": -275.0335693359375,
+                                "y": 52.950218200683597
+                            },
+                            "name": "",
+                            "exposedPosition": {
+                                "x": -145.0,
+                                "y": 0.0
+                            }
+                        },
+                        {
+                            "type": "Output",
+                            "id": "b136b966-2529-4e23-b9c2-4ba19943f0dc",
+                            "position": {
+                                "x": 213.7935028076172,
+                                "y": 53.01457595825195
+                            },
+                            "name": "",
+                            "exposedPosition": {
+                                "x": -35.0,
+                                "y": 0.0
+                            }
+                        },
+                        {
+                            "type": "Text",
+                            "id": "5d2b6e0d-4acd-4b4a-b492-a4dc9ae7215e",
+                            "position": {
+                                "x": -22.871925354003908,
+                                "y": 116.24465942382813
+                            },
+                            "exposedPosition": {
+                                "x": -120.0,
+                                "y": 0.0
+                            },
+                            "text": "Hz2Seconds",
+                            "width": 167.84765625
+                        },
+                        {
+                            "type": "Text",
+                            "id": "688c5048-9cfc-46cf-9b93-36625d1eae36",
+                            "position": {
+                                "x": -245.10299682617188,
+                                "y": 25.554885864257814
+                            },
+                            "exposedPosition": {
+                                "x": -40.0,
+                                "y": 0.0
+                            },
+                            "text": "#",
+                            "width": 167.84765625
+                        },
+                        {
+                            "type": "Text",
+                            "id": "34a70c56-4c6b-47d7-981d-778b0af10c1a",
+                            "position": {
+                                "x": 251.23019409179688,
+                                "y": 24.464080810546876
+                            },
+                            "exposedPosition": {
+                                "x": -150.0,
+                                "y": 0.0
+                            },
+                            "text": "Hz",
+                            "width": 167.84765625
+                        },
+                        {
+                            "type": "Expr",
+                            "id": "c8a4e7dd-763f-4646-9fb1-f0137fb0233f",
+                            "position": {
+                                "x": -48.52766036987305,
+                                "y": 47.32555389404297
+                            },
+                            "expr": "1/Hz"
+                        }
+                    ],
+                    "wires": [
+                        {
+                            "from": "c8a4e7dd-763f-4646-9fb1-f0137fb0233f",
+                            "output": 0,
+                            "to": "b136b966-2529-4e23-b9c2-4ba19943f0dc",
+                            "input": 0
+                        },
+                        {
+                            "from": "1e99ddb9-7e21-4696-b5ad-86a27247b920",
+                            "output": 0,
+                            "to": "c8a4e7dd-763f-4646-9fb1-f0137fb0233f",
+                            "input": 0
+                        }
+                    ]
+                }
+            }
+        ],
+        "wires": []
+    },
+    "history": {
+        "states": [
+            {
+                "id": "83d58214-82ff-4e50-8b9b-2aa9de6ce08f"
+            }
+        ],
+        "current": "83d58214-82ff-4e50-8b9b-2aa9de6ce08f"
+    },
+    "undoStack": {
+        "stack": [
+            "83d58214-82ff-4e50-8b9b-2aa9de6ce08f"
+        ],
+        "current": 0
+    }
+}

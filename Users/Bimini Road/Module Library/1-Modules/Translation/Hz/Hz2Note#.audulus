@@ -1,0 +1,141 @@
+{
+    "version": 1,
+    "tags": [
+        "Utilities"
+    ],
+    "description": "Translates a Hz signal to a note number signal.",
+    "patch": {
+        "id": "6a08d4eb-b8dc-4915-afd1-bdc8fe0654d4",
+        "pan": {
+            "x": 94.30955505371094,
+            "y": -27.924964904785158
+        },
+        "zoom": 12.342857360839844,
+        "nodes": [
+            {
+                "type": "Patch",
+                "id": "b340e6f9-6f97-4ca9-8dfb-e146c934688e",
+                "position": {
+                    "x": 0.6904449462890625,
+                    "y": 27.92496681213379
+                },
+                "subPatch": {
+                    "id": "855b5d0c-39bb-4b4f-ae97-c62b3d19b5c4",
+                    "pan": {
+                        "x": -36.748382568359378,
+                        "y": -21.11835479736328
+                    },
+                    "zoom": 1.0208359956741334,
+                    "nodes": [
+                        {
+                            "type": "Input",
+                            "id": "76019297-5d19-491d-bc10-8710096dd16d",
+                            "position": {
+                                "x": -275.0335693359375,
+                                "y": 52.950218200683597
+                            },
+                            "name": "",
+                            "exposedPosition": {
+                                "x": -145.0,
+                                "y": 0.0
+                            }
+                        },
+                        {
+                            "type": "Output",
+                            "id": "cbe066cb-43ce-4e35-b6d6-24f27f764472",
+                            "position": {
+                                "x": 213.7935028076172,
+                                "y": 53.01457595825195
+                            },
+                            "name": "",
+                            "exposedPosition": {
+                                "x": -45.0,
+                                "y": 0.0
+                            }
+                        },
+                        {
+                            "type": "Text",
+                            "id": "20d5c787-d32f-4e57-b71f-bae4a927ee08",
+                            "position": {
+                                "x": -22.871925354003908,
+                                "y": 116.24465942382813
+                            },
+                            "exposedPosition": {
+                                "x": -120.0,
+                                "y": 0.0
+                            },
+                            "text": "Hz2Note#",
+                            "width": 167.84765625
+                        },
+                        {
+                            "type": "Text",
+                            "id": "bacddc91-7b11-48a9-858a-44df9acc9625",
+                            "position": {
+                                "x": -245.10299682617188,
+                                "y": 25.554885864257814
+                            },
+                            "exposedPosition": {
+                                "x": -50.0,
+                                "y": 0.0
+                            },
+                            "text": "#",
+                            "width": 167.84765625
+                        },
+                        {
+                            "type": "Text",
+                            "id": "f3774e68-05b6-459c-8453-196da30479f2",
+                            "position": {
+                                "x": 251.23019409179688,
+                                "y": 24.464080810546876
+                            },
+                            "exposedPosition": {
+                                "x": -150.0,
+                                "y": 0.0
+                            },
+                            "text": "Hz",
+                            "width": 167.84765625
+                        },
+                        {
+                            "type": "Expr",
+                            "id": "9a31833a-18e9-49ec-aafa-cf4a112b9622",
+                            "position": {
+                                "x": -148.19195556640626,
+                                "y": 54.01154327392578
+                            },
+                            "expr": " log2(x / 440.0) / log2(2) * 12 + 69"
+                        }
+                    ],
+                    "wires": [
+                        {
+                            "from": "9a31833a-18e9-49ec-aafa-cf4a112b9622",
+                            "output": 0,
+                            "to": "cbe066cb-43ce-4e35-b6d6-24f27f764472",
+                            "input": 0
+                        },
+                        {
+                            "from": "76019297-5d19-491d-bc10-8710096dd16d",
+                            "output": 0,
+                            "to": "9a31833a-18e9-49ec-aafa-cf4a112b9622",
+                            "input": 0
+                        }
+                    ]
+                }
+            }
+        ],
+        "wires": []
+    },
+    "history": {
+        "states": [
+            {
+                "id": "fb3703eb-34d5-416a-93d7-0d0837f1017b"
+            }
+        ],
+        "current": "fb3703eb-34d5-416a-93d7-0d0837f1017b"
+    },
+    "undoStack": {
+        "stack": [
+            "fb3703eb-34d5-416a-93d7-0d0837f1017b"
+        ],
+        "current": 0
+    }
+}

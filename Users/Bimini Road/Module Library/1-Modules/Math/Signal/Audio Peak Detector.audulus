@@ -1,0 +1,205 @@
+{
+    "version": 1,
+    "tags": [
+        "Math"
+    ],
+    "description": "This module will output a 1 shot m signal if the audio signal clips.",
+    "patch": {
+        "id": "1a9639d0-fd01-46eb-a618-665822660d99",
+        "pan": {
+            "x": -123.17880249023438,
+            "y": 6.0042877197265629
+        },
+        "zoom": 4.981621742248535,
+        "nodes": [
+            {
+                "type": "Patch",
+                "id": "fefec7f8-db19-43b2-a337-0a6d8f3e1ea4",
+                "position": {
+                    "x": 40.678794860839847,
+                    "y": -36.00428771972656
+                },
+                "subPatch": {
+                    "id": "98dc8176-55f4-421d-a8d4-93d16c693632",
+                    "pan": {
+                        "x": -71.94661712646485,
+                        "y": -13.094871520996094
+                    },
+                    "zoom": 1.3404353857040406,
+                    "nodes": [
+                        {
+                            "type": "Input",
+                            "id": "2ab8c6da-5d34-498c-8770-37f094690627",
+                            "position": {
+                                "x": -396.4682312011719,
+                                "y": -26.163375854492189
+                            },
+                            "name": "",
+                            "exposedPosition": {
+                                "x": 10.0,
+                                "y": 30.0
+                            }
+                        },
+                        {
+                            "type": "Output",
+                            "id": "e355461e-5c6e-4fa5-8194-bb86cb1c9caa",
+                            "position": {
+                                "x": 447.8656005859375,
+                                "y": -23.519168853759767
+                            },
+                            "name": "",
+                            "exposedPosition": {
+                                "x": 155.0,
+                                "y": 30.0
+                            }
+                        },
+                        {
+                            "type": "Mapper",
+                            "id": "145d906c-cb92-4f54-9a7e-d20c4963ed11",
+                            "position": {
+                                "x": 223.44439697265626,
+                                "y": -87.89596557617188
+                            },
+                            "c0": 0.0,
+                            "c1": 0.215412437915802,
+                            "c2": 1.0
+                        },
+                        {
+                            "type": "Expr",
+                            "id": "03ef1adb-f665-4a15-8d25-6e9b7fa4029f",
+                            "position": {
+                                "x": 1.8670654296875,
+                                "y": -24.9561767578125
+                            },
+                            "expr": "1+(Timer*-1)"
+                        },
+                        {
+                            "type": "Timer",
+                            "id": "d56169c8-3236-4245-a42b-00819bb1de01",
+                            "position": {
+                                "x": -93.7574462890625,
+                                "y": -25.454666137695314
+                            }
+                        },
+                        {
+                            "type": "Expr",
+                            "id": "ffa547fa-d79d-432f-8dfc-4b1c79f56b9a",
+                            "position": {
+                                "x": -299.4834899902344,
+                                "y": -25.20281410217285
+                            },
+                            "expr": "abs(Input)>1"
+                        },
+                        {
+                            "type": "RGBLight",
+                            "id": "415ee67c-071c-4166-8b15-0e9b380d63b8",
+                            "position": {
+                                "x": 451.3034362792969,
+                                "y": 24.83037567138672
+                            },
+                            "exposedPosition": {
+                                "x": 155.0,
+                                "y": 30.0
+                            }
+                        },
+                        {
+                            "type": "Text",
+                            "id": "2c90c740-b030-4d9b-8942-e1356e68a59f",
+                            "position": {
+                                "x": 477.0819396972656,
+                                "y": 143.09072875976563
+                            },
+                            "exposedPosition": {
+                                "x": 150.0,
+                                "y": 30.0
+                            },
+                            "text": "m",
+                            "width": 256.0
+                        },
+                        {
+                            "type": "Text",
+                            "id": "4062867a-e12c-4f91-b1e9-15414d5159dd",
+                            "position": {
+                                "x": -356.71966552734377,
+                                "y": 36.53216552734375
+                            },
+                            "exposedPosition": {
+                                "x": 5.0,
+                                "y": 30.0
+                            },
+                            "text": "a",
+                            "width": 256.0
+                        },
+                        {
+                            "type": "Text",
+                            "id": "2c0b189a-fc95-4c5c-8562-9f5dc5f276c7",
+                            "position": {
+                                "x": -57.352882385253909,
+                                "y": 122.5103759765625
+                            },
+                            "exposedPosition": {
+                                "x": 25.0,
+                                "y": 30.0
+                            },
+                            "text": "Audio Peak Detector",
+                            "width": 256.0
+                        }
+                    ],
+                    "wires": [
+                        {
+                            "from": "145d906c-cb92-4f54-9a7e-d20c4963ed11",
+                            "output": 0,
+                            "to": "e355461e-5c6e-4fa5-8194-bb86cb1c9caa",
+                            "input": 0
+                        },
+                        {
+                            "from": "03ef1adb-f665-4a15-8d25-6e9b7fa4029f",
+                            "output": 0,
+                            "to": "145d906c-cb92-4f54-9a7e-d20c4963ed11",
+                            "input": 0
+                        },
+                        {
+                            "from": "d56169c8-3236-4245-a42b-00819bb1de01",
+                            "output": 0,
+                            "to": "03ef1adb-f665-4a15-8d25-6e9b7fa4029f",
+                            "input": 0
+                        },
+                        {
+                            "from": "ffa547fa-d79d-432f-8dfc-4b1c79f56b9a",
+                            "output": 0,
+                            "to": "d56169c8-3236-4245-a42b-00819bb1de01",
+                            "input": 0
+                        },
+                        {
+                            "from": "2ab8c6da-5d34-498c-8770-37f094690627",
+                            "output": 0,
+                            "to": "ffa547fa-d79d-432f-8dfc-4b1c79f56b9a",
+                            "input": 0
+                        },
+                        {
+                            "from": "145d906c-cb92-4f54-9a7e-d20c4963ed11",
+                            "output": 0,
+                            "to": "415ee67c-071c-4166-8b15-0e9b380d63b8",
+                            "input": 0
+                        }
+                    ]
+                }
+            }
+        ],
+        "wires": []
+    },
+    "history": {
+        "states": [
+            {
+                "id": "90c4bae3-acb9-44f5-b35b-4fd9433cc83f"
+            }
+        ],
+        "current": "90c4bae3-acb9-44f5-b35b-4fd9433cc83f"
+    },
+    "undoStack": {
+        "stack": [
+            "90c4bae3-acb9-44f5-b35b-4fd9433cc83f"
+        ],
+        "current": 0
+    }
+}

@@ -1,0 +1,360 @@
+{
+    "version": 1,
+    "tags": [
+        "Math"
+    ],
+    "description": "This module takes 3 knob signals and uses them to create the 1’s, 10’s, and 100’s digits of a 3 digit number.",
+    "patch": {
+        "id": "9c2f796d-e457-4b76-b47f-413d0ab47367",
+        "pan": {
+            "x": -68.78840637207031,
+            "y": -71.55848693847656
+        },
+        "zoom": 10.800000190734864,
+        "nodes": [
+            {
+                "type": "Patch",
+                "id": "aae64818-f3be-489b-b84e-587886099abc",
+                "position": {
+                    "x": 68.18910217285156,
+                    "y": 44.0982666015625
+                },
+                "subPatch": {
+                    "id": "a5768f84-7a00-4479-8e97-3e9051c92e79",
+                    "pan": {
+                        "x": -123.5211181640625,
+                        "y": -333.4425964355469
+                    },
+                    "zoom": 1.3646332025527955,
+                    "nodes": [
+                        {
+                            "type": "Expr",
+                            "id": "6fbe6ecb-dc7a-4396-805a-10b37680a799",
+                            "position": {
+                                "x": 147.33131408691407,
+                                "y": 42.17156982421875
+                            },
+                            "expr": "Ones+Tens+Hundreds"
+                        },
+                        {
+                            "type": "Expr",
+                            "id": "dd7b8313-da1d-4744-84ab-94afe91dd4e5",
+                            "position": {
+                                "x": -146.68861389160157,
+                                "y": -21.731155395507814
+                            },
+                            "expr": "floor(Knob*9.999)"
+                        },
+                        {
+                            "type": "Expr",
+                            "id": "68fa267b-5dae-4b79-9975-2a7311171eed",
+                            "position": {
+                                "x": -146.51446533203126,
+                                "y": 70.812744140625
+                            },
+                            "expr": "floor(Knob*9.999)*10"
+                        },
+                        {
+                            "type": "Expr",
+                            "id": "5f9feb7d-b81e-40d5-b77c-23f49211ddfe",
+                            "position": {
+                                "x": -147.33131408691407,
+                                "y": 162.28277587890626
+                            },
+                            "expr": "floor(Knob*9.999)*100"
+                        },
+                        {
+                            "type": "Input",
+                            "id": "2d229bc0-7447-428b-9462-d2a90223f17d",
+                            "position": {
+                                "x": -245.49378967285157,
+                                "y": 161.9379119873047
+                            },
+                            "name": "",
+                            "exposedPosition": {
+                                "x": -20.0,
+                                "y": 55.0
+                            }
+                        },
+                        {
+                            "type": "Input",
+                            "id": "b86ebd67-13dd-4086-a638-dd37b7bf3262",
+                            "position": {
+                                "x": -249.9627685546875,
+                                "y": 69.55718994140625
+                            },
+                            "name": "",
+                            "exposedPosition": {
+                                "x": -20.0,
+                                "y": 30.0
+                            }
+                        },
+                        {
+                            "type": "Input",
+                            "id": "174b8cac-07c8-4098-ab7b-2f1744d04c29",
+                            "position": {
+                                "x": -244.87002563476563,
+                                "y": -22.69708251953125
+                            },
+                            "name": "",
+                            "exposedPosition": {
+                                "x": -20.0,
+                                "y": 5.0
+                            }
+                        },
+                        {
+                            "type": "Output",
+                            "id": "adf28b27-ef24-4058-9884-4915d8a00352",
+                            "position": {
+                                "x": 423.7698974609375,
+                                "y": 74.45590209960938
+                            },
+                            "name": "",
+                            "exposedPosition": {
+                                "x": 35.0,
+                                "y": 55.0
+                            }
+                        },
+                        {
+                            "type": "Text",
+                            "id": "d2288dec-a403-45c6-b2f2-7eec50b96743",
+                            "position": {
+                                "x": -277.68701171875,
+                                "y": 184.01522827148438
+                            },
+                            "exposedPosition": {
+                                "x": -25.0,
+                                "y": 55.0
+                            },
+                            "text": "k",
+                            "width": 256.0
+                        },
+                        {
+                            "type": "Text",
+                            "id": "7f2b542d-caf9-439f-b0dd-be476814a37a",
+                            "position": {
+                                "x": -286.66961669921877,
+                                "y": 89.46162414550781
+                            },
+                            "exposedPosition": {
+                                "x": -25.0,
+                                "y": 30.0
+                            },
+                            "text": "k",
+                            "width": 256.0
+                        },
+                        {
+                            "type": "Text",
+                            "id": "2d98161d-411a-4808-8159-39a3bcedbbae",
+                            "position": {
+                                "x": -279.439697265625,
+                                "y": -5.385345458984375
+                            },
+                            "exposedPosition": {
+                                "x": -25.0,
+                                "y": 5.0
+                            },
+                            "text": "k",
+                            "width": 256.0
+                        },
+                        {
+                            "type": "Text",
+                            "id": "a5522e4d-884b-46eb-be9a-6f3b2dc87f69",
+                            "position": {
+                                "x": 524.9121704101563,
+                                "y": 94.55870056152344
+                            },
+                            "exposedPosition": {
+                                "x": 30.0,
+                                "y": 55.0
+                            },
+                            "text": "#",
+                            "width": 256.0
+                        },
+                        {
+                            "type": "Text",
+                            "id": "f7feb956-7153-4abf-8c3a-cd74dee19b22",
+                            "position": {
+                                "x": 36.81463623046875,
+                                "y": 462.854736328125
+                            },
+                            "text": "How does this Brick work?",
+                            "width": 256.0
+                        },
+                        {
+                            "type": "Text",
+                            "id": "14ae79a1-9c8e-4115-91fd-0a606cd42e54",
+                            "position": {
+                                "x": -124.72955322265625,
+                                "y": 372.7584533691406
+                            },
+                            "text": "The incoming 0-1 k (knob) signal is fed into each floor(Knob*9.999)*~ expression.  The Knob*9.999 portion changes the 0-1 k signal range to 0-9.999.  The .999 is there because if it weren't, the knob would only reach 9 when it was turned up all the way.  With the .999, each integer takes up 1/10th of the total rotation of the knob.  The floor(~) operation truncates these numbers and turns them into integers 0-9.  Next, each k signal is multiplied by 1, 10, or 100.  The result is 3 numbers 0-9 in steps of 1; 0-90 in steps of 10; and 0-900 in steps of 100.",
+                            "width": 256.0
+                        },
+                        {
+                            "type": "Text",
+                            "id": "491ecb3e-9633-459c-9c6d-e8f327b3c252",
+                            "position": {
+                                "x": -33.760101318359378,
+                                "y": 409.0049133300781
+                            },
+                            "text": "Step 1",
+                            "width": 256.0
+                        },
+                        {
+                            "type": "Text",
+                            "id": "049f0651-b8ab-452f-9d6d-10a7868d265a",
+                            "position": {
+                                "x": 49.650115966796878,
+                                "y": 623.9627685546875
+                            },
+                            "text": "What is this Brick?",
+                            "width": 256.0
+                        },
+                        {
+                            "type": "Text",
+                            "id": "f0a8bbb2-1a17-4b58-8ae9-bae4af55dda8",
+                            "position": {
+                                "x": -11.445526123046875,
+                                "y": 590.343505859375
+                            },
+                            "text": "The Number Maker brick makes it easy to quickly dial in a number from 0-999 using 3 knobs - one for each digit.  Using just one knob to dial through 0-999 would make it difficult to land on a particular number.  This brick solves that problem by giving individual control over each digit as if it were a separate number.  The number maker is useful for any time you need access to integers.",
+                            "width": 256.0
+                        },
+                        {
+                            "type": "Text",
+                            "id": "017af7fc-a616-4eea-9bff-6f8df5e1ada7",
+                            "position": {
+                                "x": 49.477867126464847,
+                                "y": 673.582275390625
+                            },
+                            "text": "(Number Maker)",
+                            "width": 256.0
+                        },
+                        {
+                            "type": "Text",
+                            "id": "0e25d84c-0b55-47b5-88e5-37db565b2746",
+                            "position": {
+                                "x": 166.65704345703126,
+                                "y": 369.9625244140625
+                            },
+                            "text": "The Ones, Tens, and Hundreds numbers are then summed together into one number.  Now, instead of 1 knob with 1000 gradations, you have 3 knobs with 10 gradations each making it much easier to dial in a large integer.  The output of this expression is sent out as a # (number) signal.",
+                            "width": 256.0
+                        },
+                        {
+                            "type": "Text",
+                            "id": "cf64c4f9-3ca4-450b-96d7-ce1abaecc73a",
+                            "position": {
+                                "x": 257.6264953613281,
+                                "y": 406.208984375
+                            },
+                            "text": "Step 2",
+                            "width": 256.0
+                        },
+                        {
+                            "type": "Text",
+                            "id": "e5ffed63-17c5-4fd5-bfa4-4e1daaebb7ef",
+                            "position": {
+                                "x": -212.76380920410157,
+                                "y": 218.83099365234376
+                            },
+                            "exposedPosition": {
+                                "x": -5.0,
+                                "y": 55.0
+                            },
+                            "text": "100",
+                            "width": 256.0
+                        },
+                        {
+                            "type": "Text",
+                            "id": "3478ea54-cbe3-4842-9736-704c0b6f023f",
+                            "position": {
+                                "x": -209.78549194335938,
+                                "y": 127.48152160644531
+                            },
+                            "exposedPosition": {
+                                "x": -5.0,
+                                "y": 30.0
+                            },
+                            "text": "10",
+                            "width": 256.0
+                        },
+                        {
+                            "type": "Text",
+                            "id": "53b87b24-9c2f-486d-a7e6-c64b528882a2",
+                            "position": {
+                                "x": -206.4241180419922,
+                                "y": 35.11566162109375
+                            },
+                            "exposedPosition": {
+                                "x": -5.0,
+                                "y": 5.0
+                            },
+                            "text": "1",
+                            "width": 256.0
+                        }
+                    ],
+                    "wires": [
+                        {
+                            "from": "dd7b8313-da1d-4744-84ab-94afe91dd4e5",
+                            "output": 0,
+                            "to": "6fbe6ecb-dc7a-4396-805a-10b37680a799",
+                            "input": 0
+                        },
+                        {
+                            "from": "68fa267b-5dae-4b79-9975-2a7311171eed",
+                            "output": 0,
+                            "to": "6fbe6ecb-dc7a-4396-805a-10b37680a799",
+                            "input": 1
+                        },
+                        {
+                            "from": "5f9feb7d-b81e-40d5-b77c-23f49211ddfe",
+                            "output": 0,
+                            "to": "6fbe6ecb-dc7a-4396-805a-10b37680a799",
+                            "input": 2
+                        },
+                        {
+                            "from": "174b8cac-07c8-4098-ab7b-2f1744d04c29",
+                            "output": 0,
+                            "to": "dd7b8313-da1d-4744-84ab-94afe91dd4e5",
+                            "input": 0
+                        },
+                        {
+                            "from": "b86ebd67-13dd-4086-a638-dd37b7bf3262",
+                            "output": 0,
+                            "to": "68fa267b-5dae-4b79-9975-2a7311171eed",
+                            "input": 0
+                        },
+                        {
+                            "from": "2d229bc0-7447-428b-9462-d2a90223f17d",
+                            "output": 0,
+                            "to": "5f9feb7d-b81e-40d5-b77c-23f49211ddfe",
+                            "input": 0
+                        },
+                        {
+                            "from": "6fbe6ecb-dc7a-4396-805a-10b37680a799",
+                            "output": 0,
+                            "to": "adf28b27-ef24-4058-9884-4915d8a00352",
+                            "input": 0
+                        }
+                    ]
+                }
+            }
+        ],
+        "wires": []
+    },
+    "history": {
+        "states": [
+            {
+                "id": "c93eed6e-8d19-49dd-895d-b47b5e324a57"
+            }
+        ],
+        "current": "c93eed6e-8d19-49dd-895d-b47b5e324a57"
+    },
+    "undoStack": {
+        "stack": [
+            "c93eed6e-8d19-49dd-895d-b47b5e324a57"
+        ],
+        "current": 0
+    }
+}

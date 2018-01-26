@@ -1,0 +1,1244 @@
+{
+    "version": 1,
+    "tags": [
+        "Utilities"
+    ],
+    "description": "This module allows you to manually enter a tempo into a module.",
+    "patch": {
+        "id": "3aa2d4fc-d4a0-43c3-be8b-6134ea634bcd",
+        "pan": {
+            "x": 0.0,
+            "y": 0.0
+        },
+        "zoom": 1.0,
+        "nodes": [
+            {
+                "type": "Patch",
+                "id": "b3c8afd9-507a-44aa-9490-891f1b0db9d8",
+                "position": {
+                    "x": 0.0,
+                    "y": 0.0
+                },
+                "subPatch": {
+                    "id": "1416ca16-aca3-4e14-b3ce-22343512eff9",
+                    "pan": {
+                        "x": 197.24560546875,
+                        "y": -132.73326110839845
+                    },
+                    "zoom": 1.251527190208435,
+                    "nodes": [
+                        {
+                            "type": "ZeroCross",
+                            "id": "c981d646-3e54-4565-ba08-a65684333968",
+                            "position": {
+                                "x": -338.3034973144531,
+                                "y": -147.56915283203126
+                            }
+                        },
+                        {
+                            "type": "Trigger",
+                            "id": "b4641075-592d-4b9f-bbea-9bdc083ac5c6",
+                            "position": {
+                                "x": -714.1539306640625,
+                                "y": -133.61489868164063
+                            },
+                            "exposedPosition": {
+                                "x": -10.0,
+                                "y": 40.0
+                            },
+                            "toggle": false,
+                            "state": false
+                        },
+                        {
+                            "type": "Value",
+                            "id": "bbbb1a10-c2a8-4362-900c-14026834b065",
+                            "position": {
+                                "x": -245.5153350830078,
+                                "y": -49.7049560546875
+                            },
+                            "exposedPosition": {
+                                "x": -30.0,
+                                "y": 15.0
+                            }
+                        },
+                        {
+                            "type": "Text",
+                            "id": "66794e8c-931c-4b59-b2c4-68c028f04900",
+                            "position": {
+                                "x": -184.93020629882813,
+                                "y": 505.0588073730469
+                            },
+                            "exposedPosition": {
+                                "x": -20.0,
+                                "y": 40.0
+                            },
+                            "text": "Tap",
+                            "width": 86.45098876953125
+                        },
+                        {
+                            "type": "Text",
+                            "id": "165c7424-9720-461e-a64d-3288f1cf993d",
+                            "position": {
+                                "x": -150.58958435058595,
+                                "y": -26.821823120117189
+                            },
+                            "exposedPosition": {
+                                "x": 0.0,
+                                "y": 15.0
+                            },
+                            "text": "Hz",
+                            "width": 86.45098876953125
+                        },
+                        {
+                            "type": "Value",
+                            "id": "785b9342-598a-4959-b747-a8a5587113ff",
+                            "position": {
+                                "x": -246.5044403076172,
+                                "y": -2.7479591369628908
+                            },
+                            "exposedPosition": {
+                                "x": -20.0,
+                                "y": 75.0
+                            }
+                        },
+                        {
+                            "type": "Text",
+                            "id": "84bc537c-230e-444b-9d1b-5a3d7f6a40cd",
+                            "position": {
+                                "x": -149.8282012939453,
+                                "y": 18.87331771850586
+                            },
+                            "exposedPosition": {
+                                "x": -20.0,
+                                "y": 65.0
+                            },
+                            "text": "BPM",
+                            "width": 86.45098876953125
+                        },
+                        {
+                            "type": "Input",
+                            "id": "33f82cbd-82ff-4634-ab79-d88474f6d433",
+                            "position": {
+                                "x": -681.3047485351563,
+                                "y": -179.43045043945313
+                            },
+                            "name": "",
+                            "exposedPosition": {
+                                "x": -20.0,
+                                "y": 120.0
+                            }
+                        },
+                        {
+                            "type": "Expr",
+                            "id": "2d4d936a-665d-40fb-acf3-100ca050844f",
+                            "position": {
+                                "x": -583.8475341796875,
+                                "y": -163.18345642089845
+                            },
+                            "expr": "Gate+Button"
+                        },
+                        {
+                            "type": "Light",
+                            "id": "766540ed-7389-48c3-9d57-6fb06dd5da46",
+                            "position": {
+                                "x": -675.542724609375,
+                                "y": -221.7167510986328
+                            },
+                            "exposedPosition": {
+                                "x": -20.0,
+                                "y": 120.0
+                            }
+                        },
+                        {
+                            "type": "Text",
+                            "id": "df0d0d42-6fba-4bd7-a5c4-a6e051082f4d",
+                            "position": {
+                                "x": -643.9505615234375,
+                                "y": -239.59243774414063
+                            },
+                            "exposedPosition": {
+                                "x": -25.0,
+                                "y": 120.0
+                            },
+                            "text": "g",
+                            "width": 256.0
+                        },
+                        {
+                            "type": "Output",
+                            "id": "252e4da4-2848-406f-96ba-6c2715488820",
+                            "position": {
+                                "x": 206.13275146484376,
+                                "y": -153.18637084960938
+                            },
+                            "name": "",
+                            "exposedPosition": {
+                                "x": 5.0,
+                                "y": 120.0
+                            }
+                        },
+                        {
+                            "type": "Light",
+                            "id": "bfedeab1-b795-4cb1-b70c-fea9b58a1eca",
+                            "position": {
+                                "x": 206.8206787109375,
+                                "y": -109.4952392578125
+                            },
+                            "exposedPosition": {
+                                "x": 5.0,
+                                "y": 120.0
+                            }
+                        },
+                        {
+                            "type": "Text",
+                            "id": "f28def46-8911-4c08-99c2-61aa2689a211",
+                            "position": {
+                                "x": 303.2626037597656,
+                                "y": -90.09969329833985
+                            },
+                            "exposedPosition": {
+                                "x": 0.0,
+                                "y": 120.0
+                            },
+                            "text": "g",
+                            "width": 86.45098876953125
+                        },
+                        {
+                            "type": "Output",
+                            "id": "532654f6-df6a-42b9-acf6-4bb6be1b779b",
+                            "position": {
+                                "x": -248.9761962890625,
+                                "y": -94.87662506103516
+                            },
+                            "name": "",
+                            "exposedPosition": {
+                                "x": 5.0,
+                                "y": 95.0
+                            }
+                        },
+                        {
+                            "type": "Text",
+                            "id": "e5b0fe37-2bf5-497f-b0ab-c64cc5889a7d",
+                            "position": {
+                                "x": -147.6789093017578,
+                                "y": -71.1028823852539
+                            },
+                            "exposedPosition": {
+                                "x": 0.0,
+                                "y": 95.0
+                            },
+                            "text": "Hz",
+                            "width": 86.45098876953125
+                        },
+                        {
+                            "type": "Patch",
+                            "id": "046f3c69-1bfa-4887-98ff-1d1983c96a92",
+                            "position": {
+                                "x": 58.91489791870117,
+                                "y": -89.43094635009766
+                            },
+                            "subPatch": {
+                                "id": "7df9c71a-8441-4ffb-94ae-1270eeee6a8f",
+                                "pan": {
+                                    "x": -27.419509887695314,
+                                    "y": -336.4162292480469
+                                },
+                                "zoom": 1.436703085899353,
+                                "nodes": [
+                                    {
+                                        "type": "Phasor",
+                                        "id": "73f8f55e-3897-497b-96b5-d5ee7a9624ce",
+                                        "position": {
+                                            "x": -56.30604553222656,
+                                            "y": 0.4340362548828125
+                                        }
+                                    },
+                                    {
+                                        "type": "Input",
+                                        "id": "4200f9b3-cf1f-4b4c-bce8-f8eaab9de0f3",
+                                        "position": {
+                                            "x": -149.1992950439453,
+                                            "y": 45.126304626464847
+                                        },
+                                        "name": "",
+                                        "exposedPosition": {
+                                            "x": -30.0,
+                                            "y": -20.0
+                                        }
+                                    },
+                                    {
+                                        "type": "Input",
+                                        "id": "cc35f748-98bf-4310-81f5-22b0e21e2c5d",
+                                        "position": {
+                                            "x": -150.08767700195313,
+                                            "y": 0.07003211975097656
+                                        },
+                                        "name": "",
+                                        "exposedPosition": {
+                                            "x": -30.0,
+                                            "y": -40.0
+                                        }
+                                    },
+                                    {
+                                        "type": "Expr",
+                                        "id": "f903bf5c-b11f-453e-b320-92ec3526b5b9",
+                                        "position": {
+                                            "x": 165.37274169921876,
+                                            "y": -0.5981044769287109
+                                        },
+                                        "expr": "Phasor/(2*pi)"
+                                    },
+                                    {
+                                        "type": "Output",
+                                        "id": "e231398c-5581-43e6-a3a4-dd0602a66d54",
+                                        "position": {
+                                            "x": 433.842529296875,
+                                            "y": -1.8364105224609376
+                                        },
+                                        "name": "",
+                                        "exposedPosition": {
+                                            "x": -10.0,
+                                            "y": -30.0
+                                        }
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "id": "032a689f-b646-469f-adf2-900a619d040f",
+                                        "position": {
+                                            "x": -173.73086547851563,
+                                            "y": 19.825485229492189
+                                        },
+                                        "exposedPosition": {
+                                            "x": -35.0,
+                                            "y": -40.0
+                                        },
+                                        "text": "#",
+                                        "width": 256.0
+                                    },
+                                    {
+                                        "type": "Light",
+                                        "id": "31a9fc1e-0cef-454d-bb36-9e08d5745b57",
+                                        "position": {
+                                            "x": -147.27597045898438,
+                                            "y": 88.61792755126953
+                                        },
+                                        "exposedPosition": {
+                                            "x": -30.0,
+                                            "y": -20.0
+                                        }
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "id": "bcd5d844-4a29-4abf-8d58-17c752b45a5e",
+                                        "position": {
+                                            "x": -174.99624633789063,
+                                            "y": 67.35455322265625
+                                        },
+                                        "exposedPosition": {
+                                            "x": -35.0,
+                                            "y": -20.0
+                                        },
+                                        "text": "g",
+                                        "width": 256.0
+                                    },
+                                    {
+                                        "type": "RGBLight",
+                                        "id": "dbb01e88-52b2-4bf3-a93d-b3d23d2846dc",
+                                        "position": {
+                                            "x": 438.0077819824219,
+                                            "y": 42.86799621582031
+                                        },
+                                        "exposedPosition": {
+                                            "x": -10.0,
+                                            "y": -30.0
+                                        }
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "id": "20af5ca4-afa3-4e1d-85b2-89f58a7c5ccc",
+                                        "position": {
+                                            "x": 531.6563110351563,
+                                            "y": 19.62298583984375
+                                        },
+                                        "exposedPosition": {
+                                            "x": -15.0,
+                                            "y": -30.0
+                                        },
+                                        "text": "m",
+                                        "width": 256.0
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "id": "1e1f0e4c-9fa7-4dbc-ae39-5277073a8eab",
+                                        "position": {
+                                            "x": -132.2360076904297,
+                                            "y": 288.2219543457031
+                                        },
+                                        "text": "The Phasor node outputs a saw wave that ranges from 0-2pi.  This means once it reaches 2pi, it starts back at 0 and counts up again.  The frequency of the Phasor node is determined by whatever number appears at its frequency input.  When the sync input is pulsed, the phasor restarts from 0.",
+                                        "width": 256.0
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "id": "6e0c034a-1410-441e-b44f-997fb13a9050",
+                                        "position": {
+                                            "x": 166.75918579101563,
+                                            "y": 251.1611328125
+                                        },
+                                        "text": "This expression divides the output of the phasor by 2pi, which scales the phasor from 0-2pi to 0-1.  The maximum of the Phasor node is 2pi, and 2pi/2pi = 1.",
+                                        "width": 256.0
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "id": "e3930980-0b1c-4b04-9b2b-515c5bf67843",
+                                        "position": {
+                                            "x": -50.70274353027344,
+                                            "y": 322.8867492675781
+                                        },
+                                        "text": "Step 1",
+                                        "width": 256.0
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "id": "979bb73a-5208-49e4-a33f-4d8fd0c24bfb",
+                                        "position": {
+                                            "x": 253.30255126953126,
+                                            "y": 290.25933837890627
+                                        },
+                                        "text": "Step 2",
+                                        "width": 256.0
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "id": "f19c7d81-1ecb-425e-8597-d8f5fbdcce35",
+                                        "position": {
+                                            "x": -359.3472595214844,
+                                            "y": 248.24659729003907
+                                        },
+                                        "text": "How does this Brick work?",
+                                        "width": 256.0
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "id": "ca070dc1-3e31-41d6-9c45-38ae54d2352a",
+                                        "position": {
+                                            "x": -485.5586853027344,
+                                            "y": 418.1797180175781
+                                        },
+                                        "text": "------------------------------------------------------------------------------------------------",
+                                        "width": 1162.61181640625
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "id": "e6336ac9-2b6d-42aa-bbb3-0314b7cde2d6",
+                                        "position": {
+                                            "x": -152.20904541015626,
+                                            "y": 586.0087280273438
+                                        },
+                                        "text": "The 0-1 Saw brick is used to create m (modulation) signals.  These m signals are standardized to work in a 0-1 range so that they interface easily with 0-1 k (knob) signals.  This type of wave is referred to as a saw wave because its waveform looks like the jagged blade of a saw.",
+                                        "width": 256.0
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "id": "bf626a57-be2d-4835-b8a8-33f635b363f3",
+                                        "position": {
+                                            "x": -130.84988403320313,
+                                            "y": 659.060791015625
+                                        },
+                                        "exposedPosition": {
+                                            "x": -45.0,
+                                            "y": 0.0
+                                        },
+                                        "text": "0-1 Saw",
+                                        "width": 256.0
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "id": "f5b7cc76-7f96-4c4c-bdf0-81df46147513",
+                                        "position": {
+                                            "x": -310.2233581542969,
+                                            "y": 561.2822265625
+                                        },
+                                        "text": "What is this Brick?",
+                                        "width": 256.0
+                                    }
+                                ],
+                                "wires": [
+                                    {
+                                        "from": "cc35f748-98bf-4310-81f5-22b0e21e2c5d",
+                                        "output": 0,
+                                        "to": "73f8f55e-3897-497b-96b5-d5ee7a9624ce",
+                                        "input": 0
+                                    },
+                                    {
+                                        "from": "4200f9b3-cf1f-4b4c-bce8-f8eaab9de0f3",
+                                        "output": 0,
+                                        "to": "73f8f55e-3897-497b-96b5-d5ee7a9624ce",
+                                        "input": 1
+                                    },
+                                    {
+                                        "from": "73f8f55e-3897-497b-96b5-d5ee7a9624ce",
+                                        "output": 0,
+                                        "to": "f903bf5c-b11f-453e-b320-92ec3526b5b9",
+                                        "input": 0
+                                    },
+                                    {
+                                        "from": "f903bf5c-b11f-453e-b320-92ec3526b5b9",
+                                        "output": 0,
+                                        "to": "e231398c-5581-43e6-a3a4-dd0602a66d54",
+                                        "input": 0
+                                    },
+                                    {
+                                        "from": "4200f9b3-cf1f-4b4c-bce8-f8eaab9de0f3",
+                                        "output": 0,
+                                        "to": "31a9fc1e-0cef-454d-bb36-9e08d5745b57",
+                                        "input": 0
+                                    },
+                                    {
+                                        "from": "f903bf5c-b11f-453e-b320-92ec3526b5b9",
+                                        "output": 0,
+                                        "to": "dbb01e88-52b2-4bf3-a93d-b3d23d2846dc",
+                                        "input": 0
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "type": "Patch",
+                            "id": "01c3151a-eec8-4277-b5ca-0ac3c189c8bc",
+                            "position": {
+                                "x": 154.03213500976563,
+                                "y": -73.41470336914063
+                            },
+                            "subPatch": {
+                                "id": "03f0d61e-4844-4df5-9786-d0749fd64b87",
+                                "pan": {
+                                    "x": -104.33645629882813,
+                                    "y": -147.93251037597657
+                                },
+                                "zoom": 1.5618476867675782,
+                                "nodes": [
+                                    {
+                                        "type": "Expr",
+                                        "id": "b5dbe995-6092-486c-9966-ffd928eb03f8",
+                                        "position": {
+                                            "x": 46.46600341796875,
+                                            "y": -89.00117492675781
+                                        },
+                                        "expr": "A>=B"
+                                    },
+                                    {
+                                        "type": "Input",
+                                        "id": "9cd0e515-af08-4853-a357-85b334cf7e81",
+                                        "position": {
+                                            "x": -65.52437591552735,
+                                            "y": -12.238677978515625
+                                        },
+                                        "name": "",
+                                        "exposedPosition": {
+                                            "x": -40.0,
+                                            "y": -55.0
+                                        }
+                                    },
+                                    {
+                                        "type": "Output",
+                                        "id": "0bc75281-a5a0-4aa9-9d86-6540c44880b4",
+                                        "position": {
+                                            "x": 186.59072875976563,
+                                            "y": -93.63497924804688
+                                        },
+                                        "name": "",
+                                        "exposedPosition": {
+                                            "x": -20.0,
+                                            "y": -45.0
+                                        }
+                                    },
+                                    {
+                                        "type": "Light",
+                                        "id": "7d29f204-6134-445b-8b6f-b5d2fdca4c11",
+                                        "position": {
+                                            "x": 189.93141174316407,
+                                            "y": -49.80119323730469
+                                        },
+                                        "exposedPosition": {
+                                            "x": -20.0,
+                                            "y": -45.0
+                                        }
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "id": "3ea4ad59-5367-49ee-8c66-77c6d19d8322",
+                                        "position": {
+                                            "x": 289.6766662597656,
+                                            "y": -71.31857299804688
+                                        },
+                                        "exposedPosition": {
+                                            "x": -25.0,
+                                            "y": -45.0
+                                        },
+                                        "text": "g",
+                                        "width": 256.0
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "id": "03f92bf3-7803-4ac2-8f19-a9cd1f55923b",
+                                        "position": {
+                                            "x": 95.65880584716797,
+                                            "y": 443.152587890625
+                                        },
+                                        "exposedPosition": {
+                                            "x": -40.0,
+                                            "y": -15.0
+                                        },
+                                        "text": ">=g",
+                                        "width": 256.0
+                                    },
+                                    {
+                                        "type": "Input",
+                                        "id": "3eda744d-2551-4535-ae7f-5eba46956d6b",
+                                        "position": {
+                                            "x": -66.3927001953125,
+                                            "y": -163.24899291992188
+                                        },
+                                        "name": "",
+                                        "exposedPosition": {
+                                            "x": -40.0,
+                                            "y": -35.0
+                                        }
+                                    },
+                                    {
+                                        "type": "RGBLight",
+                                        "id": "3612fff3-f71d-443f-9d99-4cf04cdc7138",
+                                        "position": {
+                                            "x": -63.87919998168945,
+                                            "y": -116.82564544677735
+                                        },
+                                        "exposedPosition": {
+                                            "x": -40.0,
+                                            "y": -35.0
+                                        }
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "id": "c089e640-367f-48e8-a705-6433fae474a0",
+                                        "position": {
+                                            "x": -86.79595184326172,
+                                            "y": -142.8589324951172
+                                        },
+                                        "exposedPosition": {
+                                            "x": -45.0,
+                                            "y": -35.0
+                                        },
+                                        "text": "A",
+                                        "width": 256.0
+                                    },
+                                    {
+                                        "type": "RGBLight",
+                                        "id": "77210042-9eb7-4d61-a14e-58cd5087ceb2",
+                                        "position": {
+                                            "x": -64.90850067138672,
+                                            "y": 32.90470886230469
+                                        },
+                                        "exposedPosition": {
+                                            "x": -40.0,
+                                            "y": -55.0
+                                        }
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "id": "e6fd8b93-ff0e-497c-b8c6-1873466b8e4e",
+                                        "position": {
+                                            "x": -83.5673828125,
+                                            "y": 10.64859390258789
+                                        },
+                                        "exposedPosition": {
+                                            "x": -45.0,
+                                            "y": -55.0
+                                        },
+                                        "text": "B",
+                                        "width": 256.0
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "id": "2ef0a586-a933-4f38-b7a2-db79201968fe",
+                                        "position": {
+                                            "x": 5.1826629638671879,
+                                            "y": 231.13565063476563
+                                        },
+                                        "text": "This expression module compares its two inputs with the logic expression \">=.\" The semantic equivalent of this expression is \"If signal A is greater than or equal to signal B, output a 1; otherwise, output a 0.\"",
+                                        "width": 256.0
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "id": "68567628-a382-4b9d-946a-5166582355d1",
+                                        "position": {
+                                            "x": 36.1156005859375,
+                                            "y": 266.97015380859377
+                                        },
+                                        "text": "How does this Module work?",
+                                        "width": 256.0
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "id": "32bb1f12-9b2a-4016-a753-8642f8842fd4",
+                                        "position": {
+                                            "x": 59.76799774169922,
+                                            "y": 397.13250732421877
+                                        },
+                                        "text": "What is this Module?",
+                                        "width": 256.0
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "id": "b55afd46-cf23-44a5-b773-820b00cc408f",
+                                        "position": {
+                                            "x": -0.27497100830078127,
+                                            "y": 357.99639892578127
+                                        },
+                                        "text": "The >=g module (read as \"Greater than or equal to gate\") is a type of comparator that outputs a 1 when signal A is greater than or equal to B.  It is useful for creating threshold triggers.",
+                                        "width": 256.0
+                                    }
+                                ],
+                                "wires": [
+                                    {
+                                        "from": "3eda744d-2551-4535-ae7f-5eba46956d6b",
+                                        "output": 0,
+                                        "to": "b5dbe995-6092-486c-9966-ffd928eb03f8",
+                                        "input": 0
+                                    },
+                                    {
+                                        "from": "9cd0e515-af08-4853-a357-85b334cf7e81",
+                                        "output": 0,
+                                        "to": "b5dbe995-6092-486c-9966-ffd928eb03f8",
+                                        "input": 1
+                                    },
+                                    {
+                                        "from": "b5dbe995-6092-486c-9966-ffd928eb03f8",
+                                        "output": 0,
+                                        "to": "0bc75281-a5a0-4aa9-9d86-6540c44880b4",
+                                        "input": 0
+                                    },
+                                    {
+                                        "from": "b5dbe995-6092-486c-9966-ffd928eb03f8",
+                                        "output": 0,
+                                        "to": "7d29f204-6134-445b-8b6f-b5d2fdca4c11",
+                                        "input": 0
+                                    },
+                                    {
+                                        "from": "3eda744d-2551-4535-ae7f-5eba46956d6b",
+                                        "output": 0,
+                                        "to": "3612fff3-f71d-443f-9d99-4cf04cdc7138",
+                                        "input": 0
+                                    },
+                                    {
+                                        "from": "9cd0e515-af08-4853-a357-85b334cf7e81",
+                                        "output": 0,
+                                        "to": "77210042-9eb7-4d61-a14e-58cd5087ceb2",
+                                        "input": 0
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "type": "Expr",
+                            "id": "3017f2d0-a3fc-4c46-8f61-678edad337f9",
+                            "position": {
+                                "x": 83.70294952392578,
+                                "y": -70.69982147216797
+                            },
+                            "expr": ".5"
+                        },
+                        {
+                            "type": "Patch",
+                            "id": "a49366bf-9454-4355-ae4d-9b210527e98c",
+                            "position": {
+                                "x": -374.05865478515627,
+                                "y": -5.377388000488281
+                            },
+                            "subPatch": {
+                                "id": "47c99f10-11c3-463b-b21d-367914a42553",
+                                "pan": {
+                                    "x": -134.66537475585938,
+                                    "y": -200.9899139404297
+                                },
+                                "zoom": 2.418031692504883,
+                                "nodes": [
+                                    {
+                                        "type": "Expr",
+                                        "id": "3232aad1-b064-4cbc-a2da-83b1baed7796",
+                                        "position": {
+                                            "x": 0.0,
+                                            "y": 0.0
+                                        },
+                                        "expr": "(floor(Signal*100))*.01"
+                                    },
+                                    {
+                                        "type": "Input",
+                                        "id": "55688dbe-119e-4bc9-ae51-0ca00fd9a9f4",
+                                        "position": {
+                                            "x": -102.53125,
+                                            "y": 0.22265625
+                                        },
+                                        "name": "",
+                                        "exposedPosition": {
+                                            "x": -65.0,
+                                            "y": -25.0
+                                        }
+                                    },
+                                    {
+                                        "type": "Output",
+                                        "id": "09dba59d-0be7-43f2-9f93-c364a72fde7c",
+                                        "position": {
+                                            "x": 280.953125,
+                                            "y": 1.18359375
+                                        },
+                                        "name": "",
+                                        "exposedPosition": {
+                                            "x": 100.0,
+                                            "y": -25.0
+                                        }
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "id": "a92893bb-345b-4f66-b0fa-083dc5c1dad3",
+                                        "position": {
+                                            "x": -131.0390625,
+                                            "y": 21.84765625
+                                        },
+                                        "exposedPosition": {
+                                            "x": -70.0,
+                                            "y": -25.0
+                                        },
+                                        "text": "#",
+                                        "width": 256.0
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "id": "8bd3d501-af65-4086-9c5a-74a361fa648f",
+                                        "position": {
+                                            "x": 392.44921875,
+                                            "y": 20.95703125
+                                        },
+                                        "exposedPosition": {
+                                            "x": 95.0,
+                                            "y": -25.0
+                                        },
+                                        "text": "#",
+                                        "width": 256.0
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "id": "f21c6142-85d1-4377-ae4f-3996acc8580e",
+                                        "position": {
+                                            "x": 66.05583953857422,
+                                            "y": 385.98974609375
+                                        },
+                                        "exposedPosition": {
+                                            "x": -50.0,
+                                            "y": -25.0
+                                        },
+                                        "text": "Truncate to Hundredths",
+                                        "width": 256.0
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "id": "c4d459df-25c8-40c4-a1fb-4a7ebcdebef4",
+                                        "position": {
+                                            "x": 79.88785552978516,
+                                            "y": 331.7950439453125
+                                        },
+                                        "text": "What is this brick?",
+                                        "width": 256.0
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "id": "fb431762-ddc0-4aab-a6a1-ded33f1b0aab",
+                                        "position": {
+                                            "x": 23.40740203857422,
+                                            "y": 289.2030334472656
+                                        },
+                                        "text": "This brick takes a # (number) input and truncates that number to the hundredths place.  It's very useful for precise Hz readouts.",
+                                        "width": 256.0
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "id": "0027ca27-3b9d-4633-963b-4c1dbf86c0a3",
+                                        "position": {
+                                            "x": 27.77545166015625,
+                                            "y": 152.31573486328126
+                                        },
+                                        "text": "The incoming signal is first multiplied by 100, shifting the entire number to the left by 2 digits.  It is then floored, which truncates or discards the decimal portion.  This truncated number is then shifted back to the right two decimal places by multiplying by .01, returning it to its original value, but now without any digits trailing the hundredths place.",
+                                        "width": 256.0
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "id": "e9a8ea53-a7b9-4752-a8e8-0bdc53de44b4",
+                                        "position": {
+                                            "x": 70.42547607421875,
+                                            "y": 209.78631591796876
+                                        },
+                                        "text": "How does this brick work?",
+                                        "width": 256.0
+                                    }
+                                ],
+                                "wires": [
+                                    {
+                                        "from": "55688dbe-119e-4bc9-ae51-0ca00fd9a9f4",
+                                        "output": 0,
+                                        "to": "3232aad1-b064-4cbc-a2da-83b1baed7796",
+                                        "input": 0
+                                    },
+                                    {
+                                        "from": "3232aad1-b064-4cbc-a2da-83b1baed7796",
+                                        "output": 0,
+                                        "to": "09dba59d-0be7-43f2-9f93-c364a72fde7c",
+                                        "input": 0
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "type": "Patch",
+                            "id": "aee24dd3-a2b5-4f20-9878-2b0a1a6d443a",
+                            "position": {
+                                "x": -314.67333984375,
+                                "y": 42.30215072631836
+                            },
+                            "subPatch": {
+                                "id": "fe7597d2-c100-4376-8990-f4f0528cfcbe",
+                                "pan": {
+                                    "x": -111.54199981689453,
+                                    "y": -215.91578674316407
+                                },
+                                "zoom": 2.25252103805542,
+                                "nodes": [
+                                    {
+                                        "type": "Input",
+                                        "id": "784d19b0-66b5-4b43-b41b-2e15d5128c98",
+                                        "position": {
+                                            "x": -102.53125,
+                                            "y": 0.22265625
+                                        },
+                                        "name": "",
+                                        "exposedPosition": {
+                                            "x": -65.0,
+                                            "y": -25.0
+                                        }
+                                    },
+                                    {
+                                        "type": "Output",
+                                        "id": "10e5c22b-09c3-4522-8f6c-a27100ba8ba1",
+                                        "position": {
+                                            "x": 241.333251953125,
+                                            "y": 0.1575298309326172
+                                        },
+                                        "name": "",
+                                        "exposedPosition": {
+                                            "x": 25.0,
+                                            "y": -25.0
+                                        }
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "id": "1db3e6ab-b3ea-4456-87e5-56231f6e512b",
+                                        "position": {
+                                            "x": -131.0390625,
+                                            "y": 21.84765625
+                                        },
+                                        "exposedPosition": {
+                                            "x": -70.0,
+                                            "y": -25.0
+                                        },
+                                        "text": "Hz",
+                                        "width": 256.0
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "id": "5aab42e3-1e79-42c5-b9aa-c77b033aeffb",
+                                        "position": {
+                                            "x": 345.7362365722656,
+                                            "y": 19.930967330932618
+                                        },
+                                        "exposedPosition": {
+                                            "x": 20.0,
+                                            "y": -25.0
+                                        },
+                                        "text": "#",
+                                        "width": 256.0
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "id": "093c9959-2885-461a-8faf-f46ba137f0de",
+                                        "position": {
+                                            "x": 74.49632263183594,
+                                            "y": 415.7063293457031
+                                        },
+                                        "exposedPosition": {
+                                            "x": -50.0,
+                                            "y": -25.0
+                                        },
+                                        "text": "Hz to BPM",
+                                        "width": 256.0
+                                    },
+                                    {
+                                        "type": "Expr",
+                                        "id": "0dabe7f0-ae56-49dc-9361-1b6fd01b7eb4",
+                                        "position": {
+                                            "x": -8.334640502929688,
+                                            "y": 0.3764991760253906
+                                        },
+                                        "expr": "(floor(Hz*10))*.1*60"
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "id": "2c0753c1-7f2b-41fe-a60e-440d7f3c2225",
+                                        "position": {
+                                            "x": 7.4799652099609379,
+                                            "y": 169.05908203125
+                                        },
+                                        "text": "The incoming signal is first multiplied by 10, shifting the entire number to the left by 1 digit.  It is then floored, which truncates or discards the decimal portion.  This truncated number is then shifted back to the right one decimal place by multiplying by .1, returning it to its original value, but now without any digits trailing the tenths place.  It is then multiplied by 60 to convert it to beats per minute.  This gives you a BPM readout without a decimal portion.",
+                                        "width": 256.0
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "id": "66e16820-7427-4814-84b5-d361bcc05e60",
+                                        "position": {
+                                            "x": 7.1891937255859379,
+                                            "y": 288.5186767578125
+                                        },
+                                        "text": "This brick takes a Hz (frequency) input and converts it into BPM or beats per minute.",
+                                        "width": 256.0
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "id": "0a25bb4e-758d-41ac-a21e-f60648570eae",
+                                        "position": {
+                                            "x": 49.039031982421878,
+                                            "y": 205.7235107421875
+                                        },
+                                        "text": "How does this brick work?",
+                                        "width": 256.0
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "id": "f678b84e-ef75-4b05-b8ef-f178f9c7b719",
+                                        "position": {
+                                            "x": 63.669639587402347,
+                                            "y": 331.1107177734375
+                                        },
+                                        "text": "What is this brick?",
+                                        "width": 256.0
+                                    }
+                                ],
+                                "wires": [
+                                    {
+                                        "from": "0dabe7f0-ae56-49dc-9361-1b6fd01b7eb4",
+                                        "output": 0,
+                                        "to": "10e5c22b-09c3-4522-8f6c-a27100ba8ba1",
+                                        "input": 0
+                                    },
+                                    {
+                                        "from": "784d19b0-66b5-4b43-b41b-2e15d5128c98",
+                                        "output": 0,
+                                        "to": "0dabe7f0-ae56-49dc-9361-1b6fd01b7eb4",
+                                        "input": 0
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "type": "Text",
+                            "id": "61f7dc12-c1d2-4c5e-9202-f108939a2318",
+                            "position": {
+                                "x": -331.58612060546877,
+                                "y": 188.91580200195313
+                            },
+                            "text": "Step 1",
+                            "width": 256.0
+                        },
+                        {
+                            "type": "Text",
+                            "id": "6d30dec7-65c1-4e95-b909-3291c3362b75",
+                            "position": {
+                                "x": -420.6978759765625,
+                                "y": 147.84042358398438
+                            },
+                            "text": "The Zero Cross node counts the time between the rising edges of the pulses coming from the Button or g (gate) signal and outputs that time in Hz (cycles per second).  The Hz value is available as an output to connect to any other module's Hz input, and the value is displayed in Hz and BPM on the front panel.",
+                            "width": 256.0
+                        },
+                        {
+                            "type": "Text",
+                            "id": "80c2133b-ca46-41e4-ad5d-8c190ee517de",
+                            "position": {
+                                "x": -234.11209106445313,
+                                "y": 264.8150329589844
+                            },
+                            "text": "How does this module work?",
+                            "width": 256.0
+                        },
+                        {
+                            "type": "Text",
+                            "id": "6bc2875c-a973-404f-90cd-c0daaf1f5105",
+                            "position": {
+                                "x": -276.9222717285156,
+                                "y": 409.26898193359377
+                            },
+                            "text": "The Tap module allows you to tap out a tempo rather than dialing one in.  It's great for live performances where you're syncing up with a band but not too concerned about being locked in exactly.",
+                            "width": 256.0
+                        },
+                        {
+                            "type": "Text",
+                            "id": "24e9c2eb-a3c1-49c6-a34e-0b54ccc01168",
+                            "position": {
+                                "x": -215.54641723632813,
+                                "y": 451.6917419433594
+                            },
+                            "text": "What is this module?",
+                            "width": 256.0
+                        },
+                        {
+                            "type": "Text",
+                            "id": "c1fc7fca-24b8-4ad5-a63b-9270fabb7a89",
+                            "position": {
+                                "x": 3.478759765625,
+                                "y": 138.5882568359375
+                            },
+                            "text": "The 0-1 Saw brick is driven at the Hz value set by the ZeroCross node and converted into a square wave with the >=g module so that the g output can be used to sync the Tap module to a clock using the g sync input.",
+                            "width": 256.0
+                        },
+                        {
+                            "type": "Text",
+                            "id": "d9d75c1e-2da3-4c16-9c1f-7cae5d283f20",
+                            "position": {
+                                "x": 92.59051513671875,
+                                "y": 179.66363525390626
+                            },
+                            "text": "Step 2",
+                            "width": 256.0
+                        }
+                    ],
+                    "wires": [
+                        {
+                            "from": "2d4d936a-665d-40fb-acf3-100ca050844f",
+                            "output": 0,
+                            "to": "c981d646-3e54-4565-ba08-a65684333968",
+                            "input": 0
+                        },
+                        {
+                            "from": "a49366bf-9454-4355-ae4d-9b210527e98c",
+                            "output": 0,
+                            "to": "bbbb1a10-c2a8-4362-900c-14026834b065",
+                            "input": 0
+                        },
+                        {
+                            "from": "aee24dd3-a2b5-4f20-9878-2b0a1a6d443a",
+                            "output": 0,
+                            "to": "785b9342-598a-4959-b747-a8a5587113ff",
+                            "input": 0
+                        },
+                        {
+                            "from": "33f82cbd-82ff-4634-ab79-d88474f6d433",
+                            "output": 0,
+                            "to": "2d4d936a-665d-40fb-acf3-100ca050844f",
+                            "input": 0
+                        },
+                        {
+                            "from": "b4641075-592d-4b9f-bbea-9bdc083ac5c6",
+                            "output": 0,
+                            "to": "2d4d936a-665d-40fb-acf3-100ca050844f",
+                            "input": 1
+                        },
+                        {
+                            "from": "33f82cbd-82ff-4634-ab79-d88474f6d433",
+                            "output": 0,
+                            "to": "766540ed-7389-48c3-9d57-6fb06dd5da46",
+                            "input": 0
+                        },
+                        {
+                            "from": "01c3151a-eec8-4277-b5ca-0ac3c189c8bc",
+                            "output": 0,
+                            "to": "252e4da4-2848-406f-96ba-6c2715488820",
+                            "input": 0
+                        },
+                        {
+                            "from": "01c3151a-eec8-4277-b5ca-0ac3c189c8bc",
+                            "output": 0,
+                            "to": "bfedeab1-b795-4cb1-b70c-fea9b58a1eca",
+                            "input": 0
+                        },
+                        {
+                            "from": "c981d646-3e54-4565-ba08-a65684333968",
+                            "output": 0,
+                            "to": "532654f6-df6a-42b9-acf6-4bb6be1b779b",
+                            "input": 0
+                        },
+                        {
+                            "from": "c981d646-3e54-4565-ba08-a65684333968",
+                            "output": 0,
+                            "to": "046f3c69-1bfa-4887-98ff-1d1983c96a92",
+                            "input": 1
+                        },
+                        {
+                            "from": "046f3c69-1bfa-4887-98ff-1d1983c96a92",
+                            "output": 0,
+                            "to": "01c3151a-eec8-4277-b5ca-0ac3c189c8bc",
+                            "input": 0
+                        },
+                        {
+                            "from": "3017f2d0-a3fc-4c46-8f61-678edad337f9",
+                            "output": 0,
+                            "to": "01c3151a-eec8-4277-b5ca-0ac3c189c8bc",
+                            "input": 1
+                        },
+                        {
+                            "from": "c981d646-3e54-4565-ba08-a65684333968",
+                            "output": 0,
+                            "to": "a49366bf-9454-4355-ae4d-9b210527e98c",
+                            "input": 0
+                        },
+                        {
+                            "from": "c981d646-3e54-4565-ba08-a65684333968",
+                            "output": 0,
+                            "to": "aee24dd3-a2b5-4f20-9878-2b0a1a6d443a",
+                            "input": 0
+                        }
+                    ]
+                }
+            }
+        ],
+        "wires": []
+    },
+    "history": {
+        "states": [
+            {
+                "id": "1c5f758f-3b94-4139-ba3b-5eba5a01dc17"
+            },
+            {
+                "id": "a76f0612-7f46-48c7-b01b-a95e85459a26",
+                "parent": "1c5f758f-3b94-4139-ba3b-5eba5a01dc17",
+                "undo": {
+                    "type": "SetNodePosition",
+                    "position": {
+                        "x": -74.4162368774414,
+                        "y": -73.58735656738281
+                    },
+                    "node": "b3c8afd9-507a-44aa-9490-891f1b0db9d8"
+                }
+            },
+            {
+                "id": "604ddef5-4858-4fee-98ec-799bf427f4cf",
+                "parent": "a76f0612-7f46-48c7-b01b-a95e85459a26",
+                "undo": {
+                    "type": "RemoveNode",
+                    "node": "b3c8afd9-507a-44aa-9490-891f1b0db9d8"
+                }
+            }
+        ],
+        "current": "1c5f758f-3b94-4139-ba3b-5eba5a01dc17"
+    },
+    "undoStack": {
+        "stack": [
+            "604ddef5-4858-4fee-98ec-799bf427f4cf",
+            "1c5f758f-3b94-4139-ba3b-5eba5a01dc17"
+        ],
+        "current": 1
+    }
+}
