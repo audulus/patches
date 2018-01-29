@@ -1,0 +1,723 @@
+{
+    "version": 1,
+    "author": "PLU Collective",
+    "tags": [
+        "noise",
+        "generator"
+    ],
+    "description": "Generates noise via an oscillating filter output 0-1",
+    "patch": {
+        "id": "24af9442-9c57-4177-b9ab-23a09dfde1b6",
+        "pan": {
+            "x": -90.0279541015625,
+            "y": -106.45506286621094
+        },
+        "zoom": 1.52195405960083,
+        "nodes": [
+            {
+                "type": "Patch",
+                "id": "6efc96b3-b603-4ff1-acd5-d6f95a66feb4",
+                "position": {
+                    "x": -63.0,
+                    "y": 110.0
+                },
+                "subPatch": {
+                    "id": "9d2f7e1f-1d63-4eed-9b66-08979be10c14",
+                    "pan": {
+                        "x": -375.74578857421877,
+                        "y": 46.43438720703125
+                    },
+                    "zoom": 1.1545647382736207,
+                    "nodes": [
+                        {
+                            "type": "Text",
+                            "id": "3eec7edc-0af9-4478-85d4-18d5af178041",
+                            "position": {
+                                "x": 6.5651092529296879,
+                                "y": -387.803466796875
+                            },
+                            "exposedPosition": {
+                                "x": 45.0,
+                                "y": 110.0
+                            },
+                            "text": "PWR",
+                            "width": 63.54925537109375
+                        },
+                        {
+                            "type": "Trigger",
+                            "id": "9083ca3e-fde8-413d-bf43-66780da5b1c3",
+                            "position": {
+                                "x": -38.98768615722656,
+                                "y": -363.3780212402344
+                            },
+                            "exposedPosition": {
+                                "x": 25.0,
+                                "y": 110.0
+                            },
+                            "toggle": true,
+                            "state": false
+                        },
+                        {
+                            "type": "Text",
+                            "id": "8b042628-e077-41bf-af30-4317d547612b",
+                            "position": {
+                                "x": 253.5827178955078,
+                                "y": 183.79336547851563
+                            },
+                            "exposedPosition": {
+                                "x": -105.0,
+                                "y": 115.0
+                            },
+                            "text": "Osc Filter Noise",
+                            "width": 60.84748840332031
+                        },
+                        {
+                            "type": "Expr",
+                            "id": "13a465b2-7eee-4e08-bccc-bc943d1c8bd3",
+                            "position": {
+                                "x": -35.31588363647461,
+                                "y": -3.5451622009277345
+                            },
+                            "expr": "x*100+300"
+                        },
+                        {
+                            "type": "Filter",
+                            "id": "b0af8aea-2e40-476a-80a5-a4c75bc24e13",
+                            "position": {
+                                "x": 165.30552673339845,
+                                "y": 31.670047760009767
+                            },
+                            "exposedPosition": {
+                                "x": -110.0,
+                                "y": 5.0
+                            },
+                            "f": 148.00694274902345,
+                            "res": 1.0
+                        },
+                        {
+                            "type": "Expr",
+                            "id": "4cfacfc2-8490-4fa2-bcca-d7b140b5349f",
+                            "position": {
+                                "x": -121.83766174316406,
+                                "y": 93.28031158447266
+                            },
+                            "expr": "1"
+                        },
+                        {
+                            "type": "Trigger",
+                            "id": "d95c6fe7-36aa-4ebc-9d4e-0ee74fbc4f81",
+                            "position": {
+                                "x": -184.23941040039063,
+                                "y": -178.64071655273438
+                            },
+                            "exposedPosition": {
+                                "x": 25.0,
+                                "y": 70.0
+                            },
+                            "toggle": true,
+                            "state": false
+                        },
+                        {
+                            "type": "Text",
+                            "id": "045bf97a-7204-4c2f-9799-ddc2f6c70ee8",
+                            "position": {
+                                "x": -238.438232421875,
+                                "y": -145.1068115234375
+                            },
+                            "exposedPosition": {
+                                "x": 45.0,
+                                "y": 80.0
+                            },
+                            "text": "Pwr Filter Freq",
+                            "width": 59.76788330078125
+                        },
+                        {
+                            "type": "Level",
+                            "id": "9066c1a9-6c93-4d0e-9367-ca3eeffa4ce6",
+                            "position": {
+                                "x": -1.6791534423828126,
+                                "y": -304.68414306640627
+                            },
+                            "level": {
+                                "value": 0.9819303750991821,
+                                "min": 0.0,
+                                "max": 1.0
+                            }
+                        },
+                        {
+                            "type": "Trigger",
+                            "id": "60f49cc6-bf2f-408e-bc3f-eba14d191fe9",
+                            "position": {
+                                "x": -352.65301513671877,
+                                "y": 50.90516662597656
+                            },
+                            "exposedPosition": {
+                                "x": 25.0,
+                                "y": 30.0
+                            },
+                            "toggle": true,
+                            "state": false
+                        },
+                        {
+                            "type": "Level",
+                            "id": "45444d30-693f-4a74-ba36-4b9cd92bc61d",
+                            "position": {
+                                "x": -142.58944702148438,
+                                "y": -96.2032470703125
+                            },
+                            "level": {
+                                "value": 0.0,
+                                "min": 0.0,
+                                "max": 1.0
+                            }
+                        },
+                        {
+                            "type": "Text",
+                            "id": "c43e5712-4286-4c0e-baf6-bc8c21a15e2e",
+                            "position": {
+                                "x": -396.5552978515625,
+                                "y": 86.20909881591797
+                            },
+                            "exposedPosition": {
+                                "x": 45.0,
+                                "y": 40.0
+                            },
+                            "text": "Pwr Filter Amp",
+                            "width": 59.76788330078125
+                        },
+                        {
+                            "type": "Text",
+                            "id": "185cecc9-e134-4a2f-a4e3-ecb35977cecb",
+                            "position": {
+                                "x": -295.50103759765627,
+                                "y": -537.7753295898438
+                            },
+                            "exposedPosition": {
+                                "x": -50.0,
+                                "y": -105.0
+                            },
+                            "text": "Oscillator",
+                            "width": 80.8857421875
+                        },
+                        {
+                            "type": "Osc",
+                            "id": "eca066e7-65f0-41f5-89f5-987d6922d079",
+                            "position": {
+                                "x": -37.296173095703128,
+                                "y": 49.513916015625
+                            },
+                            "exposedPosition": {
+                                "x": 35.0,
+                                "y": -145.0
+                            },
+                            "wave": 1
+                        },
+                        {
+                            "type": "Level",
+                            "id": "d99a223c-de6e-49b4-b76f-58af4c731fc9",
+                            "position": {
+                                "x": -174.0486602783203,
+                                "y": 139.58929443359376
+                            },
+                            "level": {
+                                "value": 0.0,
+                                "min": 0.0,
+                                "max": 1.0
+                            }
+                        },
+                        {
+                            "type": "Text",
+                            "id": "f795803d-6d26-428c-ae74-ce2f636e1a91",
+                            "position": {
+                                "x": -2.0552825927734377,
+                                "y": 198.0205078125
+                            },
+                            "exposedPosition": {
+                                "x": 30.0,
+                                "y": -105.0
+                            },
+                            "text": "LFO Filter",
+                            "width": 106.89625549316406
+                        },
+                        {
+                            "type": "Text",
+                            "id": "90c52241-dd8f-4aec-b2e0-90ca17563ce9",
+                            "position": {
+                                "x": -313.9162902832031,
+                                "y": 259.859130859375
+                            },
+                            "text": "An osc filter noise generator created with two oscillators controlling a filter amp and freq. ",
+                            "width": 256.0
+                        },
+                        {
+                            "type": "Knob",
+                            "id": "45efe982-9180-4101-9745-5c72a7b199f2",
+                            "position": {
+                                "x": -279.90655517578127,
+                                "y": 160.8125
+                            },
+                            "name": "Fltr Amp",
+                            "knob": {
+                                "value": 14.218118667602539,
+                                "min": 0.0,
+                                "max": 100.0
+                            },
+                            "exposedPosition": {
+                                "x": 25.0,
+                                "y": -50.0
+                            }
+                        },
+                        {
+                            "type": "Mult",
+                            "id": "2beb3580-3217-48f0-bd75-614df9007019",
+                            "position": {
+                                "x": -206.3468017578125,
+                                "y": -80.37535095214844
+                            }
+                        },
+                        {
+                            "type": "Knob",
+                            "id": "63a0052c-ac5e-46b0-b1aa-14e4afaeb74d",
+                            "position": {
+                                "x": -349.58868408203127,
+                                "y": -54.92338180541992
+                            },
+                            "name": "Fltr Freq",
+                            "knob": {
+                                "value": 45.6656379699707,
+                                "min": 0.0,
+                                "max": 100.0
+                            },
+                            "exposedPosition": {
+                                "x": -30.0,
+                                "y": -50.0
+                            }
+                        },
+                        {
+                            "type": "Noise",
+                            "id": "a3c96078-3088-45b9-8406-9b196667c19d",
+                            "position": {
+                                "x": -367.58203125,
+                                "y": -147.80104064941407
+                            }
+                        },
+                        {
+                            "type": "Knob",
+                            "id": "44ed25a8-4b6d-410c-a1e1-a440aa225d4a",
+                            "position": {
+                                "x": -447.1842041015625,
+                                "y": -342.46551513671877
+                            },
+                            "name": "Speed",
+                            "knob": {
+                                "value": 2.356454372406006,
+                                "min": 0.0,
+                                "max": 10.0
+                            },
+                            "exposedPosition": {
+                                "x": -85.0,
+                                "y": -115.0
+                            }
+                        },
+                        {
+                            "type": "Osc",
+                            "id": "e244c3d3-af05-4e0e-9dd1-9cdb8e0b4327",
+                            "position": {
+                                "x": -336.95025634765627,
+                                "y": -513.6574096679688
+                            },
+                            "exposedPosition": {
+                                "x": -50.0,
+                                "y": -145.0
+                            },
+                            "wave": 3
+                        },
+                        {
+                            "type": "Text",
+                            "id": "65d40204-6aad-4656-b077-6bf81e0ab022",
+                            "position": {
+                                "x": -149.4661865234375,
+                                "y": -502.6728515625
+                            },
+                            "text": "This expression is here to prevent the waveform from going negative",
+                            "width": 256.0
+                        },
+                        {
+                            "type": "Knob",
+                            "id": "2fa99558-844b-4379-bbc8-924bbaa24d9e",
+                            "position": {
+                                "x": -445.3822021484375,
+                                "y": -437.1514892578125
+                            },
+                            "name": "Depth",
+                            "knob": {
+                                "value": 0.3710276484489441,
+                                "min": 0.0,
+                                "max": 1.0
+                            },
+                            "exposedPosition": {
+                                "x": 80.0,
+                                "y": -50.0
+                            }
+                        },
+                        {
+                            "type": "Expr",
+                            "id": "dcd3b080-3cfa-4bc9-a39d-be21667047e9",
+                            "position": {
+                                "x": -161.39215087890626,
+                                "y": -472.87042236328127
+                            },
+                            "expr": "x+1"
+                        },
+                        {
+                            "type": "Noise",
+                            "id": "7d51095d-f290-4924-914c-794e1d02b9de",
+                            "position": {
+                                "x": -401.1335754394531,
+                                "y": -296.65789794921877
+                            }
+                        },
+                        {
+                            "type": "Value",
+                            "id": "ecb93d57-86b8-4eff-ba9b-417fb5633c38",
+                            "position": {
+                                "x": 7.3279571533203129,
+                                "y": -102.5477294921875
+                            }
+                        },
+                        {
+                            "type": "Knob",
+                            "id": "ee0f10bb-39c5-4796-b035-9568aad4e1cb",
+                            "position": {
+                                "x": -375.13800048828127,
+                                "y": -196.61729431152345
+                            },
+                            "name": "VOL",
+                            "knob": {
+                                "value": 0.0,
+                                "min": 0.0,
+                                "max": 1.0
+                            },
+                            "exposedPosition": {
+                                "x": -85.0,
+                                "y": -50.0
+                            }
+                        },
+                        {
+                            "type": "Mult",
+                            "id": "58a28da1-1401-494f-8cd8-a7d263efa71c",
+                            "position": {
+                                "x": -236.810546875,
+                                "y": -253.4907989501953
+                            }
+                        },
+                        {
+                            "type": "Level",
+                            "id": "8a0c50e4-f881-4b9e-8407-f80f583eac27",
+                            "position": {
+                                "x": -145.79702758789063,
+                                "y": -299.9420166015625
+                            },
+                            "level": {
+                                "value": 0.6095575094223023,
+                                "min": 0.0,
+                                "max": 1.0
+                            }
+                        },
+                        {
+                            "type": "Mult",
+                            "id": "6e4e40c2-cc89-4d92-b702-94fa0a7f6644",
+                            "position": {
+                                "x": -2.642913818359375,
+                                "y": -188.54965209960938
+                            }
+                        },
+                        {
+                            "type": "Mult",
+                            "id": "ffad6a3e-4acc-400d-8481-976c4f0ff999",
+                            "position": {
+                                "x": -181.50088500976563,
+                                "y": 51.321327209472659
+                            }
+                        },
+                        {
+                            "type": "Mult",
+                            "id": "619fe6a7-1982-4193-aee5-6cc5e1a4de67",
+                            "position": {
+                                "x": 448.4670104980469,
+                                "y": -29.364654541015626
+                            }
+                        },
+                        {
+                            "type": "Output",
+                            "id": "cd260c2a-5e95-4b6c-bca1-d866545e0540",
+                            "position": {
+                                "x": 500.339599609375,
+                                "y": -50.60060119628906
+                            },
+                            "name": "Noise",
+                            "exposedPosition": {
+                                "x": 90.0,
+                                "y": -5.0
+                            }
+                        },
+                        {
+                            "type": "Light",
+                            "id": "41f969f6-3708-45cc-9af8-a7b3865976d6",
+                            "position": {
+                                "x": 500.107177734375,
+                                "y": -94.96112823486328
+                            },
+                            "exposedPosition": {
+                                "x": 35.0,
+                                "y": -5.0
+                            }
+                        }
+                    ],
+                    "wires": [
+                        {
+                            "from": "45444d30-693f-4a74-ba36-4b9cd92bc61d",
+                            "output": 0,
+                            "to": "13a465b2-7eee-4e08-bccc-bc943d1c8bd3",
+                            "input": 0
+                        },
+                        {
+                            "from": "9066c1a9-6c93-4d0e-9367-ca3eeffa4ce6",
+                            "output": 0,
+                            "to": "b0af8aea-2e40-476a-80a5-a4c75bc24e13",
+                            "input": 0
+                        },
+                        {
+                            "from": "13a465b2-7eee-4e08-bccc-bc943d1c8bd3",
+                            "output": 0,
+                            "to": "b0af8aea-2e40-476a-80a5-a4c75bc24e13",
+                            "input": 1
+                        },
+                        {
+                            "from": "eca066e7-65f0-41f5-89f5-987d6922d079",
+                            "output": 0,
+                            "to": "b0af8aea-2e40-476a-80a5-a4c75bc24e13",
+                            "input": 2
+                        },
+                        {
+                            "from": "8a0c50e4-f881-4b9e-8407-f80f583eac27",
+                            "output": 0,
+                            "to": "9066c1a9-6c93-4d0e-9367-ca3eeffa4ce6",
+                            "input": 0
+                        },
+                        {
+                            "from": "9083ca3e-fde8-413d-bf43-66780da5b1c3",
+                            "output": 0,
+                            "to": "9066c1a9-6c93-4d0e-9367-ca3eeffa4ce6",
+                            "input": 1
+                        },
+                        {
+                            "from": "2beb3580-3217-48f0-bd75-614df9007019",
+                            "output": 0,
+                            "to": "45444d30-693f-4a74-ba36-4b9cd92bc61d",
+                            "input": 0
+                        },
+                        {
+                            "from": "6e4e40c2-cc89-4d92-b702-94fa0a7f6644",
+                            "output": 0,
+                            "to": "45444d30-693f-4a74-ba36-4b9cd92bc61d",
+                            "input": 1
+                        },
+                        {
+                            "from": "d99a223c-de6e-49b4-b76f-58af4c731fc9",
+                            "output": 0,
+                            "to": "eca066e7-65f0-41f5-89f5-987d6922d079",
+                            "input": 0
+                        },
+                        {
+                            "from": "4cfacfc2-8490-4fa2-bcca-d7b140b5349f",
+                            "output": 0,
+                            "to": "eca066e7-65f0-41f5-89f5-987d6922d079",
+                            "input": 1
+                        },
+                        {
+                            "from": "45efe982-9180-4101-9745-5c72a7b199f2",
+                            "output": 0,
+                            "to": "d99a223c-de6e-49b4-b76f-58af4c731fc9",
+                            "input": 0
+                        },
+                        {
+                            "from": "ffad6a3e-4acc-400d-8481-976c4f0ff999",
+                            "output": 0,
+                            "to": "d99a223c-de6e-49b4-b76f-58af4c731fc9",
+                            "input": 1
+                        },
+                        {
+                            "from": "63a0052c-ac5e-46b0-b1aa-14e4afaeb74d",
+                            "output": 0,
+                            "to": "2beb3580-3217-48f0-bd75-614df9007019",
+                            "input": 0
+                        },
+                        {
+                            "from": "a3c96078-3088-45b9-8406-9b196667c19d",
+                            "output": 0,
+                            "to": "2beb3580-3217-48f0-bd75-614df9007019",
+                            "input": 1
+                        },
+                        {
+                            "from": "44ed25a8-4b6d-410c-a1e1-a440aa225d4a",
+                            "output": 0,
+                            "to": "e244c3d3-af05-4e0e-9dd1-9cdb8e0b4327",
+                            "input": 0
+                        },
+                        {
+                            "from": "2fa99558-844b-4379-bbc8-924bbaa24d9e",
+                            "output": 0,
+                            "to": "e244c3d3-af05-4e0e-9dd1-9cdb8e0b4327",
+                            "input": 1
+                        },
+                        {
+                            "from": "e244c3d3-af05-4e0e-9dd1-9cdb8e0b4327",
+                            "output": 0,
+                            "to": "dcd3b080-3cfa-4bc9-a39d-be21667047e9",
+                            "input": 0
+                        },
+                        {
+                            "from": "45444d30-693f-4a74-ba36-4b9cd92bc61d",
+                            "output": 0,
+                            "to": "ecb93d57-86b8-4eff-ba9b-417fb5633c38",
+                            "input": 0
+                        },
+                        {
+                            "from": "ee0f10bb-39c5-4796-b035-9568aad4e1cb",
+                            "output": 0,
+                            "to": "58a28da1-1401-494f-8cd8-a7d263efa71c",
+                            "input": 0
+                        },
+                        {
+                            "from": "7d51095d-f290-4924-914c-794e1d02b9de",
+                            "output": 0,
+                            "to": "58a28da1-1401-494f-8cd8-a7d263efa71c",
+                            "input": 1
+                        },
+                        {
+                            "from": "58a28da1-1401-494f-8cd8-a7d263efa71c",
+                            "output": 0,
+                            "to": "8a0c50e4-f881-4b9e-8407-f80f583eac27",
+                            "input": 0
+                        },
+                        {
+                            "from": "dcd3b080-3cfa-4bc9-a39d-be21667047e9",
+                            "output": 0,
+                            "to": "8a0c50e4-f881-4b9e-8407-f80f583eac27",
+                            "input": 1
+                        },
+                        {
+                            "from": "d95c6fe7-36aa-4ebc-9d4e-0ee74fbc4f81",
+                            "output": 0,
+                            "to": "6e4e40c2-cc89-4d92-b702-94fa0a7f6644",
+                            "input": 0
+                        },
+                        {
+                            "from": "9066c1a9-6c93-4d0e-9367-ca3eeffa4ce6",
+                            "output": 0,
+                            "to": "6e4e40c2-cc89-4d92-b702-94fa0a7f6644",
+                            "input": 1
+                        },
+                        {
+                            "from": "60f49cc6-bf2f-408e-bc3f-eba14d191fe9",
+                            "output": 0,
+                            "to": "ffad6a3e-4acc-400d-8481-976c4f0ff999",
+                            "input": 0
+                        },
+                        {
+                            "from": "9066c1a9-6c93-4d0e-9367-ca3eeffa4ce6",
+                            "output": 0,
+                            "to": "ffad6a3e-4acc-400d-8481-976c4f0ff999",
+                            "input": 1
+                        },
+                        {
+                            "from": "b0af8aea-2e40-476a-80a5-a4c75bc24e13",
+                            "output": 0,
+                            "to": "619fe6a7-1982-4193-aee5-6cc5e1a4de67",
+                            "input": 0
+                        },
+                        {
+                            "from": "9066c1a9-6c93-4d0e-9367-ca3eeffa4ce6",
+                            "output": 0,
+                            "to": "619fe6a7-1982-4193-aee5-6cc5e1a4de67",
+                            "input": 1
+                        },
+                        {
+                            "from": "619fe6a7-1982-4193-aee5-6cc5e1a4de67",
+                            "output": 0,
+                            "to": "cd260c2a-5e95-4b6c-bca1-d866545e0540",
+                            "input": 0
+                        },
+                        {
+                            "from": "619fe6a7-1982-4193-aee5-6cc5e1a4de67",
+                            "output": 0,
+                            "to": "41f969f6-3708-45cc-9af8-a7b3865976d6",
+                            "input": 0
+                        }
+                    ]
+                }
+            },
+            {
+                "type": "Speaker",
+                "id": "fbbebda0-ec04-4dee-9601-9abf7362097a",
+                "position": {
+                    "x": 59.13812255859375,
+                    "y": 110.21798706054688
+                }
+            },
+            {
+                "type": "Waveform",
+                "id": "b3159a36-781a-4d4d-b03e-25e7541edc3a",
+                "position": {
+                    "x": 55.3516845703125,
+                    "y": -41.638153076171878
+                }
+            },
+            {
+                "type": "Text",
+                "id": "cf9999ce-e9b6-4fb7-a704-976d1676d8cf",
+                "position": {
+                    "x": -135.8899688720703,
+                    "y": 285.0546875
+                },
+                "text": "Generate noise with an oscillating filter.",
+                "width": 153.57872009277345
+            }
+        ],
+        "wires": [
+            {
+                "from": "6efc96b3-b603-4ff1-acd5-d6f95a66feb4",
+                "output": 0,
+                "to": "fbbebda0-ec04-4dee-9601-9abf7362097a",
+                "input": 0
+            },
+            {
+                "from": "6efc96b3-b603-4ff1-acd5-d6f95a66feb4",
+                "output": 0,
+                "to": "fbbebda0-ec04-4dee-9601-9abf7362097a",
+                "input": 1
+            },
+            {
+                "from": "6efc96b3-b603-4ff1-acd5-d6f95a66feb4",
+                "output": 0,
+                "to": "b3159a36-781a-4d4d-b03e-25e7541edc3a",
+                "input": 0
+            }
+        ]
+    },
+    "history": {
+        "states": [
+            {
+                "id": "0ace79fa-064f-4c82-b0c3-002584fd5171"
+            }
+        ],
+        "current": "0ace79fa-064f-4c82-b0c3-002584fd5171"
+    },
+    "undoStack": {
+        "stack": [
+            "0ace79fa-064f-4c82-b0c3-002584fd5171"
+        ],
+        "current": 0
+    }
+}

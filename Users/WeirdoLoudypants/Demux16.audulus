@@ -1,0 +1,507 @@
+{
+    "version": 1,
+    "author": "WeirdoLoudypants",
+    "tags": [
+        "Switch"
+    ],
+    "description": "The Demux16 module is a 16-way demultiplexer. The sel input selects which of the 16 outputs the input is routed to.",
+    "patch": {
+        "id": "5cdf0d16-5a48-4184-a4b4-afe2ed799ea5",
+        "pan": {
+            "x": -287.6762390136719,
+            "y": 1006.6465454101563
+        },
+        "zoom": 0.6845654249191284,
+        "nodes": [
+            {
+                "type": "Patch",
+                "id": "4fd12564-6645-4722-a4e8-090e4c4c9739",
+                "position": {
+                    "x": 341.93389892578127,
+                    "y": -828.8392944335938
+                },
+                "subPatch": {
+                    "id": "16dbc8df-d9b1-4d34-92a8-e4bef7ea9456",
+                    "pan": {
+                        "x": 35.290313720703128,
+                        "y": -318.6208801269531
+                    },
+                    "zoom": 0.6172025799751282,
+                    "nodes": [
+                        {
+                            "type": "Input",
+                            "id": "e19b6e8f-2500-46e7-9e9d-653b18c73c96",
+                            "position": {
+                                "x": -442.7911376953125,
+                                "y": 80.03775024414063
+                            },
+                            "name": "sel",
+                            "exposedPosition": {
+                                "x": 15.0,
+                                "y": -225.0
+                            }
+                        },
+                        {
+                            "type": "Expr",
+                            "id": "af6952fe-9d2f-4721-b1a6-b8864007d939",
+                            "position": {
+                                "x": -23.144775390625,
+                                "y": 346.49249267578127
+                            },
+                            "expr": "x>7"
+                        },
+                        {
+                            "type": "Expr",
+                            "id": "5eb9e556-2392-412d-ac5d-ab77dc8cd6a5",
+                            "position": {
+                                "x": -24.932373046875,
+                                "y": 143.89122009277345
+                            },
+                            "expr": "x<=7"
+                        },
+                        {
+                            "type": "Demux8",
+                            "id": "76c237e6-05c5-4a4c-8a5c-277835f117c0",
+                            "position": {
+                                "x": 293.1176452636719,
+                                "y": 54.5849609375
+                            }
+                        },
+                        {
+                            "type": "Demux8",
+                            "id": "193d96d6-219d-48ee-bb36-c294b0b869b7",
+                            "position": {
+                                "x": 293.9009704589844,
+                                "y": 347.2790222167969
+                            }
+                        },
+                        {
+                            "type": "Output",
+                            "id": "cc566e6f-403b-45ca-9d4a-d406e153df3f",
+                            "position": {
+                                "x": 554.6909790039063,
+                                "y": 4.490072250366211
+                            },
+                            "name": "out1",
+                            "exposedPosition": {
+                                "x": 115.0,
+                                "y": -225.0
+                            }
+                        },
+                        {
+                            "type": "Output",
+                            "id": "f9935a58-3678-4875-b86e-f2f6072427d6",
+                            "position": {
+                                "x": 554.4461669921875,
+                                "y": 44.43180465698242
+                            },
+                            "name": "out2",
+                            "exposedPosition": {
+                                "x": 115.0,
+                                "y": -200.0
+                            }
+                        },
+                        {
+                            "type": "Output",
+                            "id": "3b8397a6-72e5-4290-9b9b-1fd1c6db032a",
+                            "position": {
+                                "x": 554.3207397460938,
+                                "y": 85.31945037841797
+                            },
+                            "name": "out3",
+                            "exposedPosition": {
+                                "x": 115.0,
+                                "y": -175.0
+                            }
+                        },
+                        {
+                            "type": "Output",
+                            "id": "b37cdcbf-dd81-4220-a89c-dfc9e9b50369",
+                            "position": {
+                                "x": 554.2337036132813,
+                                "y": 126.2083969116211
+                            },
+                            "name": "out4",
+                            "exposedPosition": {
+                                "x": 115.0,
+                                "y": -150.0
+                            }
+                        },
+                        {
+                            "type": "Output",
+                            "id": "995a8c51-6c67-42ff-81d5-282219eaa887",
+                            "position": {
+                                "x": 556.4673461914063,
+                                "y": 168.21205139160157
+                            },
+                            "name": "out5",
+                            "exposedPosition": {
+                                "x": 115.0,
+                                "y": -125.0
+                            }
+                        },
+                        {
+                            "type": "Output",
+                            "id": "4daed8ed-dc7d-48b4-8736-262afe3927bc",
+                            "position": {
+                                "x": 556.2225341796875,
+                                "y": 208.15379333496095
+                            },
+                            "name": "out6",
+                            "exposedPosition": {
+                                "x": 115.0,
+                                "y": -100.0
+                            }
+                        },
+                        {
+                            "type": "Output",
+                            "id": "06e2bc52-4575-498b-b735-a983720ea4f1",
+                            "position": {
+                                "x": 554.2492065429688,
+                                "y": 249.04144287109376
+                            },
+                            "name": "out7",
+                            "exposedPosition": {
+                                "x": 115.0,
+                                "y": -75.0
+                            }
+                        },
+                        {
+                            "type": "Output",
+                            "id": "7f965e40-c313-4863-909a-1bdc89197e5b",
+                            "position": {
+                                "x": 556.0100708007813,
+                                "y": 289.9303894042969
+                            },
+                            "name": "out8",
+                            "exposedPosition": {
+                                "x": 115.0,
+                                "y": -50.0
+                            }
+                        },
+                        {
+                            "type": "Output",
+                            "id": "d6f31307-b9f5-4fa5-8ff0-b0d9bb6a7c5d",
+                            "position": {
+                                "x": 557.3123168945313,
+                                "y": 329.9123229980469
+                            },
+                            "name": "out9",
+                            "exposedPosition": {
+                                "x": 115.0,
+                                "y": -25.0
+                            }
+                        },
+                        {
+                            "type": "Output",
+                            "id": "539f21a2-795a-4483-ac76-2269166f7edd",
+                            "position": {
+                                "x": 557.0675048828125,
+                                "y": 369.8540344238281
+                            },
+                            "name": "out10",
+                            "exposedPosition": {
+                                "x": 115.0,
+                                "y": 0.0
+                            }
+                        },
+                        {
+                            "type": "Output",
+                            "id": "e4c217ef-965f-4e72-a959-f438dd54ee67",
+                            "position": {
+                                "x": 556.9420776367188,
+                                "y": 410.74169921875
+                            },
+                            "name": "out11",
+                            "exposedPosition": {
+                                "x": 115.0,
+                                "y": 25.0
+                            }
+                        },
+                        {
+                            "type": "Output",
+                            "id": "1c545169-3afc-48d2-a4b6-3b7b8c11b4f1",
+                            "position": {
+                                "x": 556.8550415039063,
+                                "y": 451.6306457519531
+                            },
+                            "name": "out12",
+                            "exposedPosition": {
+                                "x": 115.0,
+                                "y": 50.0
+                            }
+                        },
+                        {
+                            "type": "Output",
+                            "id": "fbf67496-56e0-447e-931e-cb1e1c7846a8",
+                            "position": {
+                                "x": 559.0886840820313,
+                                "y": 493.6343078613281
+                            },
+                            "name": "out13",
+                            "exposedPosition": {
+                                "x": 115.0,
+                                "y": 75.0
+                            }
+                        },
+                        {
+                            "type": "Output",
+                            "id": "fee18290-ef27-4434-ba5d-9d1d46738ec8",
+                            "position": {
+                                "x": 558.8438720703125,
+                                "y": 533.5760498046875
+                            },
+                            "name": "out14",
+                            "exposedPosition": {
+                                "x": 115.0,
+                                "y": 100.0
+                            }
+                        },
+                        {
+                            "type": "Output",
+                            "id": "acc4b8e7-5660-49e3-b6b9-97f7d49cc9f6",
+                            "position": {
+                                "x": 558.7184448242188,
+                                "y": 574.4637451171875
+                            },
+                            "name": "out15",
+                            "exposedPosition": {
+                                "x": 115.0,
+                                "y": 125.0
+                            }
+                        },
+                        {
+                            "type": "Output",
+                            "id": "d0ff3fe2-06eb-49d3-9500-d17d257c7e16",
+                            "position": {
+                                "x": 558.6314086914063,
+                                "y": 615.3526611328125
+                            },
+                            "name": "out16",
+                            "exposedPosition": {
+                                "x": 115.0,
+                                "y": 150.0
+                            }
+                        },
+                        {
+                            "type": "Text",
+                            "id": "45893438-0f60-45b5-a579-b3d999a80ea4",
+                            "position": {
+                                "x": 28.51944351196289,
+                                "y": 612.2932739257813
+                            },
+                            "exposedPosition": {
+                                "x": 40.0,
+                                "y": 185.0
+                            },
+                            "text": "Demux16",
+                            "width": 256.0
+                        },
+                        {
+                            "type": "Input",
+                            "id": "03c452ea-3790-4a56-bc80-42210571b6a2",
+                            "position": {
+                                "x": -442.3925476074219,
+                                "y": 278.6753234863281
+                            },
+                            "name": "in",
+                            "exposedPosition": {
+                                "x": 15.0,
+                                "y": -175.0
+                            }
+                        },
+                        {
+                            "type": "Mult",
+                            "id": "75566279-048b-4a7c-ae6d-46be09ce67f9",
+                            "position": {
+                                "x": 183.57778930664063,
+                                "y": 432.16943359375
+                            }
+                        },
+                        {
+                            "type": "Mult",
+                            "id": "8fcef04c-ca3e-4cd1-b580-36a74fe70186",
+                            "position": {
+                                "x": 176.211669921875,
+                                "y": 235.3409423828125
+                            }
+                        }
+                    ],
+                    "wires": [
+                        {
+                            "from": "e19b6e8f-2500-46e7-9e9d-653b18c73c96",
+                            "output": 0,
+                            "to": "af6952fe-9d2f-4721-b1a6-b8864007d939",
+                            "input": 0
+                        },
+                        {
+                            "from": "e19b6e8f-2500-46e7-9e9d-653b18c73c96",
+                            "output": 0,
+                            "to": "5eb9e556-2392-412d-ac5d-ab77dc8cd6a5",
+                            "input": 0
+                        },
+                        {
+                            "from": "e19b6e8f-2500-46e7-9e9d-653b18c73c96",
+                            "output": 0,
+                            "to": "76c237e6-05c5-4a4c-8a5c-277835f117c0",
+                            "input": 0
+                        },
+                        {
+                            "from": "8fcef04c-ca3e-4cd1-b580-36a74fe70186",
+                            "output": 0,
+                            "to": "76c237e6-05c5-4a4c-8a5c-277835f117c0",
+                            "input": 1
+                        },
+                        {
+                            "from": "e19b6e8f-2500-46e7-9e9d-653b18c73c96",
+                            "output": 0,
+                            "to": "193d96d6-219d-48ee-bb36-c294b0b869b7",
+                            "input": 0
+                        },
+                        {
+                            "from": "75566279-048b-4a7c-ae6d-46be09ce67f9",
+                            "output": 0,
+                            "to": "193d96d6-219d-48ee-bb36-c294b0b869b7",
+                            "input": 1
+                        },
+                        {
+                            "from": "76c237e6-05c5-4a4c-8a5c-277835f117c0",
+                            "output": 0,
+                            "to": "cc566e6f-403b-45ca-9d4a-d406e153df3f",
+                            "input": 0
+                        },
+                        {
+                            "from": "76c237e6-05c5-4a4c-8a5c-277835f117c0",
+                            "output": 1,
+                            "to": "f9935a58-3678-4875-b86e-f2f6072427d6",
+                            "input": 0
+                        },
+                        {
+                            "from": "76c237e6-05c5-4a4c-8a5c-277835f117c0",
+                            "output": 2,
+                            "to": "3b8397a6-72e5-4290-9b9b-1fd1c6db032a",
+                            "input": 0
+                        },
+                        {
+                            "from": "76c237e6-05c5-4a4c-8a5c-277835f117c0",
+                            "output": 3,
+                            "to": "b37cdcbf-dd81-4220-a89c-dfc9e9b50369",
+                            "input": 0
+                        },
+                        {
+                            "from": "76c237e6-05c5-4a4c-8a5c-277835f117c0",
+                            "output": 4,
+                            "to": "995a8c51-6c67-42ff-81d5-282219eaa887",
+                            "input": 0
+                        },
+                        {
+                            "from": "76c237e6-05c5-4a4c-8a5c-277835f117c0",
+                            "output": 5,
+                            "to": "4daed8ed-dc7d-48b4-8736-262afe3927bc",
+                            "input": 0
+                        },
+                        {
+                            "from": "76c237e6-05c5-4a4c-8a5c-277835f117c0",
+                            "output": 6,
+                            "to": "06e2bc52-4575-498b-b735-a983720ea4f1",
+                            "input": 0
+                        },
+                        {
+                            "from": "76c237e6-05c5-4a4c-8a5c-277835f117c0",
+                            "output": 7,
+                            "to": "7f965e40-c313-4863-909a-1bdc89197e5b",
+                            "input": 0
+                        },
+                        {
+                            "from": "193d96d6-219d-48ee-bb36-c294b0b869b7",
+                            "output": 0,
+                            "to": "d6f31307-b9f5-4fa5-8ff0-b0d9bb6a7c5d",
+                            "input": 0
+                        },
+                        {
+                            "from": "193d96d6-219d-48ee-bb36-c294b0b869b7",
+                            "output": 1,
+                            "to": "539f21a2-795a-4483-ac76-2269166f7edd",
+                            "input": 0
+                        },
+                        {
+                            "from": "193d96d6-219d-48ee-bb36-c294b0b869b7",
+                            "output": 2,
+                            "to": "e4c217ef-965f-4e72-a959-f438dd54ee67",
+                            "input": 0
+                        },
+                        {
+                            "from": "193d96d6-219d-48ee-bb36-c294b0b869b7",
+                            "output": 3,
+                            "to": "1c545169-3afc-48d2-a4b6-3b7b8c11b4f1",
+                            "input": 0
+                        },
+                        {
+                            "from": "193d96d6-219d-48ee-bb36-c294b0b869b7",
+                            "output": 4,
+                            "to": "fbf67496-56e0-447e-931e-cb1e1c7846a8",
+                            "input": 0
+                        },
+                        {
+                            "from": "193d96d6-219d-48ee-bb36-c294b0b869b7",
+                            "output": 5,
+                            "to": "fee18290-ef27-4434-ba5d-9d1d46738ec8",
+                            "input": 0
+                        },
+                        {
+                            "from": "193d96d6-219d-48ee-bb36-c294b0b869b7",
+                            "output": 6,
+                            "to": "acc4b8e7-5660-49e3-b6b9-97f7d49cc9f6",
+                            "input": 0
+                        },
+                        {
+                            "from": "193d96d6-219d-48ee-bb36-c294b0b869b7",
+                            "output": 7,
+                            "to": "d0ff3fe2-06eb-49d3-9500-d17d257c7e16",
+                            "input": 0
+                        },
+                        {
+                            "from": "03c452ea-3790-4a56-bc80-42210571b6a2",
+                            "output": 0,
+                            "to": "75566279-048b-4a7c-ae6d-46be09ce67f9",
+                            "input": 0
+                        },
+                        {
+                            "from": "af6952fe-9d2f-4721-b1a6-b8864007d939",
+                            "output": 0,
+                            "to": "75566279-048b-4a7c-ae6d-46be09ce67f9",
+                            "input": 1
+                        },
+                        {
+                            "from": "03c452ea-3790-4a56-bc80-42210571b6a2",
+                            "output": 0,
+                            "to": "8fcef04c-ca3e-4cd1-b580-36a74fe70186",
+                            "input": 0
+                        },
+                        {
+                            "from": "5eb9e556-2392-412d-ac5d-ab77dc8cd6a5",
+                            "output": 0,
+                            "to": "8fcef04c-ca3e-4cd1-b580-36a74fe70186",
+                            "input": 1
+                        }
+                    ]
+                }
+            }
+        ],
+        "wires": []
+    },
+    "history": {
+        "states": [
+            {
+                "id": "29a75531-25bb-45b4-b832-bed2b3f0c8ee"
+            }
+        ],
+        "current": "29a75531-25bb-45b4-b832-bed2b3f0c8ee"
+    },
+    "undoStack": {
+        "stack": [
+            "29a75531-25bb-45b4-b832-bed2b3f0c8ee"
+        ],
+        "current": 0
+    }
+}
