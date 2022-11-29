@@ -1,6 +1,6 @@
 # Patches
 
-A repository of patches for Audulus 3.
+A repository of patches for Audulus.
 
 `/Examples` contains examples found on macOS, Windows, and Linux version of Audulus. These are shown in the Welcome window.
 
