@@ -2,10 +2,8 @@
 
 A repository of patches for Audulus.
 
-`/Examples` contains examples found on macOS, Windows, and Linux version of Audulus. These are shown in the Welcome window.
+`/Examples` contains examples that are shown when you create a new document.
 
-`/Examples-iOS` contains examples for iOS. These are shown when creating a new patch. We use a spearate directory because iOS can't run as complex patches as other OSes.
-
-`/Library` contains the module library for all OSes.
+`/Library` contains the module library.
 
 `/Users` contains user-contributed patches, organized by author.
