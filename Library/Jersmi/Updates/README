@@ -1,0 +1,13 @@
+VCF's
+-------------
+Update to VCF's, including 5 new filters and a couple major updates.
+
+SVF multimode 1
+SVF multimode 2
+Biquad 1 (new, now broken into two filters, first is LP, HP, BP, N)
+Biquad 2 (PK, LS, HS, AP)
+MM Transistor Ladder (was Mog MM -- that name needs to go away. Fixed the bug).
+LPF collection (update, added Sallen Key, revised 303, fixed bugs in Moog filter and 303).
+Biquad 2x (new, two biquads in series, using the DSP node to do the heavy lifting generating biquad coeffs and outputting at control rate. A significant reduction in CPU, this looks like the future.
+V-OWL (major overhaul -- also using the DSP node, which led to feeling like the vector setup with 4 vowels -- so happy with that at the time -- was getting a little boring. Spiced it up by mapping all ten vowels to the XY pad).
+Post EQ (new. Well, old for me. A basic "channel strip" type EQ, low/high shelves, two peak mids, and bass boost).
