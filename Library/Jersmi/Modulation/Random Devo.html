@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Random Devo</title>
+  <link rel="stylesheet" href="../../css/pico.min.css" />
+</head>
+<body>
+<main class="container">
+<h1 id="random-devo">Random Devo</h1>
+<h2 id="description">Description</h2>
+<p>Clocked modulation sequencer with 1–16 steps. Start with a pattern,
+then use <strong>devolve</strong> to introduce random changes as it
+repeats.</p>
+<h2 id="controls">Controls</h2>
+<ul>
+<li><strong>ptrn</strong>: selects a starting pattern.
+<strong>rdm</strong> gives random values; <strong>center</strong>,
+<strong>low</strong>, and <strong>high</strong> give constant levels;
+<strong>up</strong> and <strong>down</strong> give rising and falling
+patterns. Press <strong>regen</strong> to apply it.</li>
+<li><strong>type</strong>: selects how the sequence evolves:
+<ul>
+<li><strong>random</strong>: occasionally replaces a step with a new
+random value.</li>
+<li><strong>mutate</strong>: shifts step values gradually, allowing the
+pattern to drift.</li>
+<li><strong>walk</strong>: adds a random upward or downward change to
+each step.</li>
+</ul></li>
+<li><strong>devolve</strong>: increases the chance of replacement in
+<strong>random</strong>, the depth of change in <strong>mutate</strong>,
+or the size of changes in <strong>walk</strong>. At minimum,
+<strong>random</strong> and <strong>mutate</strong> keep the sequence
+fixed; <strong>walk</strong> still makes small changes.</li>
+<li><strong>steps</strong>: sequence length, <code>1</code> to
+<code>16</code>.</li>
+<li><strong>regen</strong>: restarts with the selected pattern. With
+<strong>rdm</strong>, creates fresh random values.</li>
+</ul>
+<h2 id="ports">Ports</h2>
+<ul>
+<li><strong>G input</strong>: connect a clock or gate sequence to
+advance the steps.</li>
+<li><strong>M outputs</strong>: stepped and smooth modulation, both
+ranging from <code>0</code> to <code>1</code>. The smooth output glides
+between values using the interval between incoming gates.</li>
+</ul>
+<h2 id="notes">Notes</h2>
+<ul>
+<li><strong>Repeating pattern</strong>: select <strong>random</strong>
+or <strong>mutate</strong>, turn <strong>devolve</strong> to minimum,
+choose <strong>ptrn</strong>, and press <strong>regen</strong>.</li>
+<li><strong>Evolving pattern</strong>: raise <strong>devolve</strong>
+and try each <strong>type</strong>. Changes accumulate over successive
+passes. Press <strong>regen</strong> to start over; <strong>rdm</strong>
+makes a new random pattern each time.</li>
+<li><strong>Stepped or smooth</strong>: use the stepped
+<strong>M</strong> output for distinct changes and the smooth
+<strong>M</strong> output for gliding modulation.</li>
+</ul>
+<h2 id="version-history">Version History</h2>
+<p>2026, Jerry Smith. Made with Lyte.</p>
+</main>
+</body>
+</html>

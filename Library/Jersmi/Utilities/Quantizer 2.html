@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Scale Quantizer</title>
+  <link rel="stylesheet" href="../../css/pico.min.css" />
+</head>
+<body>
+<main class="container">
+<header id="title-block-header">
+<h1 class="title">Scale Quantizer</h1>
+</header>
+<h1 id="scale-quantizer">Scale Quantizer</h1>
+<h2 id="description">Description</h2>
+<p>Quantizes incoming pitch signals to one of 56 musical note sets, from
+single notes and intervals through chords, pentatonic scales, modes, and
+chromatic. Supports up to 8 polyphonic voices. Pitch signals use 1 unit
+per octave.</p>
+<h2 id="controls">Controls</h2>
+<ul>
+<li>Root — Selects the root note and its displayed spelling.</li>
+<li>Scl — Selects one of the 56 note sets listed below.</li>
+<li>Oct — Shifts the octave from −3 to +3.</li>
+<li>Bias — Adjusts note emphasis from 0–100%. Higher settings make the
+stronger tones larger in the note display and increase the hold when an
+ascending pitch crosses an octave boundary.</li>
+</ul>
+<h2 id="ports">Ports</h2>
+<ul>
+<li>O input — Pitch signal to quantize, using 1 unit per octave.</li>
+<li>Scale modulation input — Modulates scale selection.</li>
+<li>Octave modulation input — Modulates the octave shift.</li>
+<li>O output — Quantized pitch signal.</li>
+</ul>
+<h2 id="notes">Notes</h2>
+<h3 id="note-display-and-bias">Note display and Bias</h3>
+<p>The note display (arranged like an octave on the piano) highlights
+the selected scale and sounding notes. As Bias increases, the stronger
+tones have taller note markers: the strongest grow most, secondary tones
+grow less, and the remaining tones keep their original size. At zero
+Bias, all markers have the same height. Note lettering stays the same
+size.</p>
+<p>Bias affects the display and the hold at an ascending octave
+boundary. It does not currently expand the pitch range assigned to
+stronger tones.</p>
+<h3 id="available-scales">Available scales</h3>
+<p>Scales appear in selector order, grouped by increasing note count
+(1–12 notes). Steps are semitones relative to the root.</p>
+<div class="overflow-auto">
+<table class="striped">
+<thead>
+<tr>
+<th scope="col">#</th>
+<th scope="col">Scale</th>
+<th scope="col">Steps</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Octave Unison</td>
+<td>0</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Minor 2nd Dyad</td>
+<td>0, 1</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Major 2nd Dyad</td>
+<td>0, 2</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Minor 3rd Dyad</td>
+<td>0, 3</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Major 3rd Dyad</td>
+<td>0, 4</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Perfect Fourth</td>
+<td>0, 5</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Tritone</td>
+<td>0, 6</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Perfect Fifth</td>
+<td>0, 7</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Minor 6th Dyad</td>
+<td>0, 8</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Major 6th Dyad</td>
+<td>0, 9</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Minor 7th Dyad</td>
+<td>0, 10</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Major 7th Dyad</td>
+<td>0, 11</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Major Triad</td>
+<td>0, 4, 7</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Minor Triad</td>
+<td>0, 3, 7</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Diminished Triad</td>
+<td>0, 3, 6</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Augmented Triad</td>
+<td>0, 4, 8</td>
+</tr>
+<tr>
+<td>17</td>
+<td>Suspended 2nd</td>
+<td>0, 2, 7</td>
+</tr>
+<tr>
+<td>18</td>
+<td>Suspended 4th</td>
+<td>0, 5, 7</td>
+</tr>
+<tr>
+<td>19</td>
+<td>Dominant 7th</td>
+<td>0, 4, 7, 10</td>
+</tr>
+<tr>
+<td>20</td>
+<td>Major 7th</td>
+<td>0, 4, 7, 11</td>
+</tr>
+<tr>
+<td>21</td>
+<td>Minor 7th</td>
+<td>0, 3, 7, 10</td>
+</tr>
+<tr>
+<td>22</td>
+<td>Half-Dim 7th</td>
+<td>0, 3, 6, 10</td>
+</tr>
+<tr>
+<td>23</td>
+<td>Diminished 7th</td>
+<td>0, 3, 6, 9</td>
+</tr>
+<tr>
+<td>24</td>
+<td>Minor-Major 7th</td>
+<td>0, 3, 7, 11</td>
+</tr>
+<tr>
+<td>25</td>
+<td>Major Pentatonic</td>
+<td>0, 2, 4, 7, 9</td>
+</tr>
+<tr>
+<td>26</td>
+<td>Minor Pentatonic</td>
+<td>0, 3, 5, 7, 10</td>
+</tr>
+<tr>
+<td>27</td>
+<td>Sus Egyptian Penta</td>
+<td>0, 2, 5, 7, 10</td>
+</tr>
+<tr>
+<td>28</td>
+<td>Minor Blues Penta</td>
+<td>0, 3, 5, 8, 10</td>
+</tr>
+<tr>
+<td>29</td>
+<td>Maj Blues/Yo Penta</td>
+<td>0, 2, 5, 7, 9</td>
+</tr>
+<tr>
+<td>30</td>
+<td>Ryukyu</td>
+<td>0, 4, 5, 7, 11</td>
+</tr>
+<tr>
+<td>31</td>
+<td>Insen Pentatonic</td>
+<td>0, 1, 5, 7, 8</td>
+</tr>
+<tr>
+<td>32</td>
+<td>Hirajoshi</td>
+<td>0, 2, 3, 7, 8</td>
+</tr>
+<tr>
+<td>33</td>
+<td>Pelog</td>
+<td>0, 1, 3, 7, 8</td>
+</tr>
+<tr>
+<td>34</td>
+<td>Whole Tone</td>
+<td>0, 2, 4, 6, 8, 10</td>
+</tr>
+<tr>
+<td>35</td>
+<td>Major Blues</td>
+<td>0, 2, 3, 4, 7, 9</td>
+</tr>
+<tr>
+<td>36</td>
+<td>Minor Blues</td>
+<td>0, 3, 5, 6, 7, 10</td>
+</tr>
+<tr>
+<td>37</td>
+<td>Messiaen Mode 5</td>
+<td>0, 1, 5, 6, 7, 11</td>
+</tr>
+<tr>
+<td>38</td>
+<td>Ionian Mode</td>
+<td>0, 2, 4, 5, 7, 9, 11</td>
+</tr>
+<tr>
+<td>39</td>
+<td>Dorian Mode</td>
+<td>0, 2, 3, 5, 7, 9, 10</td>
+</tr>
+<tr>
+<td>40</td>
+<td>Phrygian Mode</td>
+<td>0, 1, 3, 5, 7, 8, 10</td>
+</tr>
+<tr>
+<td>41</td>
+<td>Lydian Mode</td>
+<td>0, 2, 4, 6, 7, 9, 11</td>
+</tr>
+<tr>
+<td>42</td>
+<td>Mixolydian Mode</td>
+<td>0, 2, 4, 5, 7, 9, 10</td>
+</tr>
+<tr>
+<td>43</td>
+<td>Aeolian Mode</td>
+<td>0, 2, 3, 5, 7, 8, 10</td>
+</tr>
+<tr>
+<td>44</td>
+<td>Locrian Mode</td>
+<td>0, 1, 3, 5, 6, 8, 10</td>
+</tr>
+<tr>
+<td>45</td>
+<td>Half-Whole Dim</td>
+<td>0, 2, 3, 5, 6, 8, 10</td>
+</tr>
+<tr>
+<td>46</td>
+<td>Spanish Phrygian</td>
+<td>0, 1, 4, 5, 7, 8, 10</td>
+</tr>
+<tr>
+<td>47</td>
+<td>Gypsy Maj Arabic</td>
+<td>0, 1, 4, 5, 7, 8, 11</td>
+</tr>
+<tr>
+<td>48</td>
+<td>Gypsy Minor</td>
+<td>0, 2, 3, 6, 7, 8, 11</td>
+</tr>
+<tr>
+<td>49</td>
+<td>Harmonic Minor</td>
+<td>0, 2, 3, 5, 7, 8, 11</td>
+</tr>
+<tr>
+<td>50</td>
+<td>Ukrainian Dorian</td>
+<td>0, 2, 3, 6, 7, 8, 10</td>
+</tr>
+<tr>
+<td>51</td>
+<td>Octatonic</td>
+<td>0, 1, 3, 4, 6, 7, 9, 10</td>
+</tr>
+<tr>
+<td>52</td>
+<td>Messiaen Mode 4</td>
+<td>0, 1, 2, 5, 6, 7, 8, 11</td>
+</tr>
+<tr>
+<td>53</td>
+<td>Messiaen Mode 6</td>
+<td>0, 2, 4, 5, 6, 8, 10, 11</td>
+</tr>
+<tr>
+<td>54</td>
+<td>Messiaen Mode 3</td>
+<td>0, 2, 3, 4, 6, 7, 8, 10, 11</td>
+</tr>
+<tr>
+<td>55</td>
+<td>Messiaen Mode 7</td>
+<td>0, 1, 2, 3, 5, 6, 7, 8, 9, 11</td>
+</tr>
+<tr>
+<td>56</td>
+<td>Chromatic</td>
+<td>0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="version-history">Version History</h2>
+<ul>
+<li>2.2 — September 2026: Lyte version by Jerry Smith. 56 note sets, Bias control, and
+note emphasis display.</li>
+<li>2.1 — 24 February 2024: Jerry Smith and Rudiger Meyer.</li>
+<li>2.0 — 2023: Jerry Smith and Rudiger Meyer.</li>
+<li>1.0 — 2022: Jerry Smith.</li>
+</ul>
+</main>
+</body>
+</html>

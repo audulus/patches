@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stochastic Clock</title>
+  <link rel="stylesheet" href="../../css/pico.min.css" />
+</head>
+<body>
+<main class="container">
+<h1 id="stochastic-clock">Stochastic Clock</h1>
+<h2 id="description">Description</h2>
+<p>Rhythmic gate generator with a repeating velocity pattern.</p>
+<ul>
+<li><strong>Density</strong> sets how often gates fire.</li>
+<li><strong>Cluster</strong> groups gates into bursts and rests.</li>
+<li><strong>Mutation</strong> lets the pattern evolve.</li>
+</ul>
+<p>Each sounding gate takes the next radial step’s velocity and flashes
+the display. Skipped gates do not advance the pattern; quantized gates
+that merge count once. The output waveform shows three seconds of gates,
+with pulse height indicating velocity.</p>
+<h2 id="controls">Controls</h2>
+<ul>
+<li><strong>BPM</strong>: tempo, <code>20</code> to <code>300</code> in
+whole numbers.</li>
+<li><strong>Large knob around the radial display</strong>: changes the
+velocity pattern. Turn it to vary accents; the radial bars show each
+step’s strength. At minimum, all steps have equal velocity.</li>
+<li><strong>Gate-length knob</strong>: gate length, <code>2%</code> to
+<code>95%</code> of the interval. Cluster adds up to ±50% length
+variation.</li>
+<li><strong>Steps</strong>: pattern length, <code>2</code> to
+<code>16</code> beats. Does not change tempo.</li>
+<li><strong>Density</strong>: chance a step fires, without changing
+velocity. At <code>100%</code> with Cluster at <code>0%</code>, every
+step fires.</li>
+<li><strong>Cluster</strong>: gathers hits into a burst region and
+leaves a rest region.
+<ul>
+<li>Full grouping at <code>75%</code>; bursts occupy at most about half
+the pattern.</li>
+<li>Spacing stays steady up to about <code>35%</code>, then adds 2, 4,
+or 8 gates per occupied beat (8 at <code>100%</code>).</li>
+<li>Rest-step chance follows Density: <code>12%</code> at full Density,
+<code>3%</code> at half, <code>0%</code> at zero.</li>
+</ul></li>
+<li><strong>Mutation</strong>: reshuffles existing velocities at each
+pattern boundary: small changes at low settings, a full shuffle at
+<code>100%</code>, fixed order at <code>0%</code>. Also occasionally
+edits gate activity, subdivisions, and cluster placement.</li>
+<li><strong>Quantize</strong>: <code>OFF</code>, <code>1/32</code>,
+<code>1/16</code>, <code>1/8</code>, <code>1/4</code>, <code>1/2</code>.
+<ul>
+<li>Snaps gates to the nearest grid line within the beat;
+<code>1/2</code> delays to the next line. Gates on the same line
+merge.</li>
+<li><code>OFF</code> allows free spacing. Base step rate stays
+unchanged; the readout shows gate spacing.</li>
+</ul></li>
+<li><strong>Seed</strong>: creates a new pattern and restarts position,
+including when frozen.</li>
+<li><strong>Freeze</strong>: repeats stored hits and velocities, locks
+pattern length, and suspends Mutation.</li>
+<li><strong>Run</strong>: starts or stops gates; stopping clears the
+output immediately.</li>
+</ul>
+<h2 id="ports">Ports</h2>
+<ul>
+<li><strong>Gate output</strong> (pink): velocity-scaled gates,
+<code>0</code> to <code>1</code>; zero between events.</li>
+</ul>
+<h2 id="notes">Notes</h2>
+<ul>
+<li><strong>Steady clock</strong>: set the large radial knob to minimum,
+Density to <code>100%</code>, Cluster and Mutation to <code>0%</code>,
+Freeze off, and Run on. Every step fires at full velocity. If the radial
+bars remain uneven, turn the large knob up and back to minimum. Lower
+Density for gaps, raise Cluster for bursts, or raise Mutation for
+evolution.</li>
+<li><strong>Quarter notes</strong>: one beat per step; at 60 BPM, one
+gate per second. A 5-step pattern lasts five beats. Quantize
+<code>OFF</code>, <code>1/4</code>, or finer preserves steady
+pulses.</li>
+<li><strong>Burst grids</strong> (Cluster <code>100%</code>):
+<code>1/32</code> keeps 8 gates per beat; <code>1/16</code> merges to 4,
+<code>1/8</code> to 2, and <code>1/4</code> to 1.</li>
+<li><strong>Repeating a rhythm</strong>: press Seed for a new rhythm.
+Adjust Density and Cluster to reshape it, or Mutation to let it evolve.
+Turn Freeze on to repeat the current hits and velocities without
+variation.</li>
+<li><strong>Mutation and velocity</strong>: use the large radial knob to
+make the bars uneven so velocity changes are audible.</li>
+</ul>
+<h2 id="version-history">Version History</h2>
+<p>2026, Jerry Smith Made with Lyte</p>
+</main>
+</body>
+</html>
