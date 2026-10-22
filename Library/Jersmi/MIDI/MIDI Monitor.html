@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MIDI Monitor</title>
+  <link rel="stylesheet" href="../../css/pico.min.css" />
+</head>
+<body>
+<main class="container">
+<h1 id="midi-monitor">MIDI Monitor</h1>
+<p>Monitor incoming notes, controls, channels, clock, and transport. Newest messages appear first.</p>
+<h2 id="controls">Controls</h2>
+<ul>
+<li><strong>Reset:</strong> clear message history</li>
+<li><strong>Freeze:</strong> hold the display; incoming messages are not saved</li>
+</ul>
+<h2 id="columns">Columns</h2>
+<div class="overflow-auto">
+<table class="striped">
+<thead>
+<tr>
+<th scope="col">Column</th>
+<th scope="col">Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ch</td>
+<td>MIDI channel, 1–16; <code>-</code> for system messages</td>
+</tr>
+<tr>
+<td>Msg</td>
+<td>Message type, including CC or program number</td>
+</tr>
+<tr>
+<td>Val</td>
+<td>Value, note, velocity, pressure, or position</td>
+</tr>
+<tr>
+<td>ST</td>
+<td>Status number: message type and channel, where applicable</td>
+</tr>
+<tr>
+<td>D1</td>
+<td>First data number, usually note or controller; <code>-</code> if unused</td>
+</tr>
+<tr>
+<td>D2</td>
+<td>Second data number, usually velocity or value; <code>-</code> if unused</td>
+</tr>
+<tr>
+<td>Hex</td>
+<td>Message in hexadecimal, for comparison with device manuals</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>CC and program numbers use 0–127; some instruments label programs 1–128. Note 60 is C4 here; compare note numbers when octave names differ.</p>
+<h2 id="message-types">Message types</h2>
+<p>In hex codes such as <code>9n</code>, <code>n</code> = 0–15 represents channels 1–16.</p>
+<div class="overflow-auto">
+<table class="striped">
+<thead>
+<tr>
+<th scope="col">Message</th>
+<th scope="col">Status</th>
+<th scope="col">Display</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Note off</td>
+<td><code>8n</code></td>
+<td>Note name/number and release velocity</td>
+</tr>
+<tr>
+<td>Note on</td>
+<td><code>9n</code></td>
+<td>Note name/number and velocity; zero velocity shows <code>Note off (v=0)</code></td>
+</tr>
+<tr>
+<td>Polyphonic pressure</td>
+<td><code>An</code></td>
+<td>Note name/number and pressure</td>
+</tr>
+<tr>
+<td>Control change</td>
+<td><code>Bn</code></td>
+<td>Controller number in Msg; value 0–127 in Val</td>
+</tr>
+<tr>
+<td>Program change</td>
+<td><code>Cn</code></td>
+<td>Program number in Msg; Val blank</td>
+</tr>
+<tr>
+<td>Channel pressure</td>
+<td><code>Dn</code></td>
+<td>Pressure value 0–127</td>
+</tr>
+<tr>
+<td>Pitch bend</td>
+<td><code>En</code></td>
+<td>0–16383 and signed −8192–8191; center 8192 / signed 0</td>
+</tr>
+<tr>
+<td>MIDI time code quarter frame</td>
+<td><code>F1</code></td>
+<td>Raw data; not assembled into timecode</td>
+</tr>
+<tr>
+<td>Song position pointer</td>
+<td><code>F2</code></td>
+<td>Song position in sixteenth notes</td>
+</tr>
+<tr>
+<td>Song select</td>
+<td><code>F3</code></td>
+<td>Raw song number</td>
+</tr>
+<tr>
+<td>Tune request</td>
+<td><code>F6</code></td>
+<td>Message name only</td>
+</tr>
+<tr>
+<td>Timing clock</td>
+<td><code>F8</code></td>
+<td><code>Clock</code></td>
+</tr>
+<tr>
+<td>Start</td>
+<td><code>FA</code></td>
+<td>Message name only</td>
+</tr>
+<tr>
+<td>Continue</td>
+<td><code>FB</code></td>
+<td>Message name only</td>
+</tr>
+<tr>
+<td>Stop</td>
+<td><code>FC</code></td>
+<td>Message name only</td>
+</tr>
+<tr>
+<td>Active sensing</td>
+<td><code>FE</code></td>
+<td>Message name only</td>
+</tr>
+<tr>
+<td>System reset</td>
+<td><code>FF</code></td>
+<td><code>Reset</code>; does not clear the monitor</td>
+</tr>
+<tr>
+<td>Relative encoder</td>
+<td><code>Bn</code></td>
+<td>Raw CC values; direction and amount depend on the controller</td>
+</tr>
+<tr>
+<td>High-resolution CC</td>
+<td><code>Bn</code></td>
+<td>CC pairs shown separately; no combined high-resolution value</td>
+</tr>
+<tr>
+<td>RPN / NRPN</td>
+<td><code>Bn</code></td>
+<td>CC sequences shown separately; no combined parameter name or value</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="notes">Notes</h2>
+<ul>
+<li><strong>Devices and ports:</strong> Lyte <code>receive_midi()</code> supplies no source ID; the monitor cannot identify or select devices. Choose sources through Audulus, your host, or MIDI routing. Use separate channels or isolate one source. Clock and transport have no channel.</li>
+<li><strong>SysEx:</strong> Lyte <code>receive_midi()</code> does not deliver SysEx, so it does not appear in the monitor, including Hex. Use a SysEx-capable utility for preset dumps and other SysEx data.</li>
+<li><strong>Reserved statuses:</strong> <code>F4</code>, <code>F5</code>, <code>F9</code>, and <code>FD</code> are flagged as undefined if received.</li>
+</ul>
+</main>
+</body>
+</html>

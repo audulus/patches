@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MIDI CC Input</title>
+  <link rel="stylesheet" href="../../css/pico.min.css" />
+</head>
+<body>
+<main class="container">
+<h1 id="midi-cc-input">MIDI CC Input</h1>
+<p>Turn eight MIDI controls into modulation signals for an Audulus patch. Connect the outputs to parameters such as filter cutoff, effect amount, or envelope settings.</p>
+<h2 id="setup">Configure your controls</h2>
+<p>The channel, eight CC assignments, and display format are easy to change in the Lyte script’s <code>init</code> section. The display updates to match your assignments.</p>
+<ol>
+<li>Open the module, select its <strong>Lyte DSP</strong> node, and open the script editor.</li>
+<li>Find <code>init {</code> near the top. Edit these three settings, leaving the rest of the section intact:</li>
+</ol>
+<pre><code>midi_ch = 1
+cc_numbers = [1, 2, 3, 4, 5, 6, 7, 8]
+display_normalized = true</code></pre>
+<ul>
+<li><strong>midi_ch:</strong> choose your controller’s MIDI channel, <strong>1–16</strong>.</li>
+<li><strong>cc_numbers:</strong> enter eight CC numbers, each <strong>0–127</strong>. Their order matches the eight outputs from top to bottom: the first entry feeds output 1 (<code>val0</code>), the last feeds output 8 (<code>val7</code>).</li>
+<li><strong>display_normalized:</strong> use <code>true</code> to display values from <strong>0 to 1</strong>, or <code>false</code> for MIDI values <strong>0–127</strong>. This changes the display only; outputs always remain 0–1.</li>
+</ul>
+<p>For example, to receive channel 2 with CC 74 on the first output and CC 71 on the second:</p>
+<pre><code>midi_ch = 2
+cc_numbers = [74, 71, 1, 11, 7, 10, 73, 72]</code></pre>
+<p>Apply the edit and save the patch. Move each hardware or software control and check its CC number and value on the display. Use MIDI Monitor to identify a control’s channel and CC number if needed.</p>
+<h2 id="modulation">Use as modulation</h2>
+<p>Connect an output to an Audulus modulation input—for example, filter cutoff, effect amount, or an envelope parameter. Each port follows its assigned CC. Scale or offset the signal in your patch when a destination needs a different range.</p>
+<h2 id="values">Values</h2>
+<p>Each output ranges from <strong>0 to 1</strong>, corresponding to MIDI values 0–127, and holds its last received value. Outputs start at 0. The display shows the channel, controller numbers, and current values.</p>
+<h2 id="notes">Notes</h2>
+<p>Use controls that send absolute CC values. Relative encoders require a different decoder. Only the configured channel and CC numbers are received; there is no front-panel MIDI learn.</p>
+</main>
+</body>
+</html>

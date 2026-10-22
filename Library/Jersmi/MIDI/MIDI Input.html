@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MIDI Input</title>
+  <link rel="stylesheet" href="../../css/pico.min.css" />
+</head>
+<body>
+<main class="container">
+<h1 id="midi-input">MIDI Input</h1>
+<p>Play an Audulus instrument from a MIDI keyboard or sequencer. Provides pitch and velocity-sensitive gates, with selectable polyphony and pitch bend range.</p>
+<h2 id="controls">Controls</h2>
+<ul>
+<li><strong>Voice mode:</strong> Legato, Poly 2, Poly 4, Poly 8, or Poly 16. Match your instrument’s voice count to the selected mode.</li>
+<li><strong>Pitchbend:</strong> sets the bend range from ±1 to ±12 semitones. Match this to the range expected by your instrument or performance.</li>
+</ul>
+<h2 id="outputs">Outputs</h2>
+<ul>
+<li><strong>Pitch:</strong> connect to an oscillator’s octave/pitch input. Uses 1 unit per octave, with 0 at A4 (440 Hz). Pitch bend is summed with signal.</li>
+<li><strong>Gate:</strong> connect to an envelope’s gate input. Gate height follows note velocity; polyphonic modes provide a pitch and gate for each voice.</li>
+</ul>
+<h2 id="notes">Notes</h2>
+<p>Legato is for single-note playing; polyphonic modes allow chords. Route the intended MIDI source into Audulus. The pitch-bend section responds on all MIDI channels and bends every active voice together.</p>
+</main>
+</body>
+</html>
