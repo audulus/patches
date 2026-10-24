@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MIDI Message Input</title>
+  <link rel="stylesheet" href="../../css/pico.min.css" />
+</head>
+<body>
+<main class="container">
+<h1 id="midi-message-input">MIDI Message Input</h1>
+<p>Receive eight independently assigned MIDI messages as modulation signals for an Audulus instrument. Each output can follow a CC, pitch bend, channel pressure, polyphonic pressure, or note velocity. Use them for filter cutoff, level, timbre, envelope depth, or drum-pad control.</p>
+<p>Control outputs hold their latest matching value; note-velocity outputs return to zero on release. All outputs are normalized to 0–1. The first entry in each setup table controls the top output (<code>val0</code>); the eighth controls the bottom output (<code>val7</code>).</p>
+<h2 id="configure-the-tables">Configure the tables</h2>
+<ol type="1">
+<li>Route your MIDI source into Audulus or its host.</li>
+<li>Open the module, select its <strong>Lyte DSP</strong> node, and open the script editor.</li>
+<li>Find the three tables near the top of <code>init</code> in <code>midi_msg_8.lyte</code>. Edit matching entries to choose the message, channel, and number for each output.</li>
+<li>Apply the script and save the patch. Send the assigned message and check the corresponding row in the display.</li>
+</ol>
+<p>Each column describes the same output in all three tables:</p>
+<pre class="lyte"><code>//               val0 val1 val2 val3 val4 val5      val6           val7
+message_types = [CC,  CC,  CC,  CC,  BEND, PRESSURE, POLY_PRESSURE, POLY_PRESSURE]
+channels      = [1,   1,   1,   1,   1,    1,        1,             1]
+numbers       = [1,   74,  11,  7,   0,    0,        60,            64]</code></pre>
+<div class="overflow-auto">
+<table class="striped">
+<thead>
+<tr>
+<th scope="col">Type</th>
+<th scope="col">Input</th>
+<th scope="col">Number entry</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>CC</code></td>
+<td>Absolute Control Change</td>
+<td>CC number, 0–127</td>
+</tr>
+<tr>
+<td><code>BEND</code></td>
+<td>Channel pitch bend</td>
+<td>Ignored; use 0</td>
+</tr>
+<tr>
+<td><code>PRESSURE</code></td>
+<td>Channel pressure / aftertouch</td>
+<td>Ignored; use 0</td>
+</tr>
+<tr>
+<td><code>POLY_PRESSURE</code></td>
+<td>Polyphonic key pressure</td>
+<td>Note number, 0–127</td>
+</tr>
+<tr>
+<td><code>NOTE_VEL</code></td>
+<td>Note On / drum-pad strike velocity</td>
+<td>Note number, 0–127</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Channels are 1–16, independently for each output. Keep eight entries in each table. Multiple outputs can match the same message. The default CC examples are modulation wheel (1), brightness (74), expression (11), and volume (7); actual hardware assignments may differ. The last two outputs listen for polyphonic pressure on note 60 (C4) and note 64 (E4), rather than note velocity. Use <code>NOTE_VEL</code> for drum-pad strikes. Note names can differ between devices; use the MIDI note number for reference.</p>
+<p>For example, to put CC74 on channel 2 at output <code>val0</code>, change the first entries to <code>CC</code>, <code>2</code>, and <code>74</code>. To receive channel pressure there instead, change those entries to <code>PRESSURE</code>, <code>2</code>, and <code>0</code>. Save/apply the edited script; initialization clears held values.</p>
+<h2 id="drum-pads">Drum pads</h2>
+<p>Use <code>NOTE_VEL</code> to receive a pad’s strike velocity. For example, set an output’s three entries to <code>NOTE_VEL</code>, <code>10</code>, and <code>36</code> for note 36 on channel 10. Assign other outputs to other pad notes or channels. MIDI Monitor can identify the note and channel actually sent by your pads; channel 10 is only an example.</p>
+<p>The output shows strike velocity as 0–1 while the note is on and drops to zero at the matching Note Off, regardless of release velocity. MIDI 1.0 zero-velocity Note On also clears it; MIDI 2.0 zero-velocity Note On is a valid strike and updates it to zero. MIDI 2.0 strike velocity uses the upper 16-bit velocity field; note attributes do not affect it. Canvas labels show <code>Vel</code> and the assigned note number.</p>
+<p>The signal follows the note duration at the strike velocity; it does not generate a fixed-length trigger. Repeated Note On events at the same velocity need an intervening Note Off to create a new rising edge. It can drive a velocity-sensitive gate destination; for envelopes with binary gates, use a separate trigger/gate path and use this output for velocity modulation.</p>
+<h2 id="values-and-display">Values and display</h2>
+<p>Connect <code>val0</code>–<code>val7</code> to synth parameters. All outputs are <strong>0–1</strong>, regardless of display mode. Pitch bend starts at <strong>0.5</strong>, with minimum 0 and maximum 1; all other outputs start at 0. Values hold until a matching message arrives. Scale or offset the signal in the instrument when a destination needs a bipolar range or a different depth. There is no automatic smoothing.</p>
+<p><code>display_normalized = true</code> shows 0–1 with three decimal places. Set it to <code>false</code> to show familiar MIDI 1.0 units: 0–127 for CC/pressure/velocity and 0–16383 for bend, centered at 8192. This changes the Canvas text only; it does not reduce output resolution. The arcs always represent 0–1. Canvas snapshots are limited to 30 Hz and carry values to one part per million; output signals are not limited by that display transport.</p>
+<p>The <strong>Msg</strong> and <strong>Ch</strong> columns show each output’s assignment and channel, aligned with its port. <code>CC 74</code> means controller 74; <code>Poly 60</code> means pressure on note 60; <code>Vel 36</code> means strike velocity on note 36. The number above each port is the current value, and the arc shows its normalized position.</p>
+<p>The paired Canvas script is <code>midi_msg_8.lua</code>. When assembling the module yourself, connect any one Lyte output to its Canvas messages input so the script processes and supplies display updates. The supplied module already contains the display connection.</p>
+<h2 id="notes">Notes</h2>
+<p><code>receive_ump()</code> carries MIDI 1.0 and MIDI 2.0 messages through one queue. Outputs update at the event’s sample offset within each audio block. MIDI 1.0 CC and pressure use 7-bit data and bend uses 14-bit data; supported MIDI 2.0 controls use their 32-bit values and Note On uses its 16-bit velocity before conversion to the floating-point output. Floating-point precision and display rounding still apply.</p>
+<p><code>midi_group = 0</code> selects UMP group 0, shown as Gr 1 in MIDI Monitor. Use 0–15 to select another group. Audulus may supply MIDI 1.0 hardware events encoded as MIDI 2.0 packets; both encodings are supported.</p>
+<p>This receiver handles absolute controls. It does not accumulate relative encoders, assemble MIDI 1.0 high-resolution CC pairs or RPN/NRPN, or decode native MIDI 2.0 per-note controllers. Poly pressure means pressure addressed to a particular note; it is distinct from MPE channel pressure. Note Off clears matching NOTE_VEL outputs. Programs, clock, transport, and SysEx are ignored. Unsupported type/channel/number assignments receive no updates. Use MIDI Monitor to identify the channel, controller number, and message type sent by a device.</p>
+</main>
+</body>
+</html>
