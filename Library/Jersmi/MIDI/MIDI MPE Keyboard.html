@@ -120,7 +120,7 @@
 </div>
 <p>Auto keeps notes in their assigned slots; it does not pack them into lower slots as other notes end. Its reported count is therefore not necessarily the number of held keys. Changing Voices clears the current notes.</p>
 <h2 id="alloc">Alloc</h2>
-<p>Alloc selects how polyphonic modes and Auto assign notes to voice slots. A voice slot contains the pitch, gate, and any expression belonging to one assigned note. Allocation matters when notes overlap, when envelopes are still releasing, or when all voices are occupied.</p>
+<p>Alloc changes how notes are shared between voices in polyphonic modes and Auto. The musical difference is easiest to hear when voices have different sounds or when a note’s release continues after you lift the key.</p>
 <div class="overflow-auto">
 <table class="striped">
 <colgroup>
@@ -130,42 +130,44 @@
 </colgroup>
 <thead>
 <tr>
-<th scope="col">Alloc</th>
-<th scope="col">Free voices</th>
-<th scope="col">When all voices are occupied</th>
+<th scope="col">Mode</th>
+<th scope="col">Musical use</th>
+<th scope="col">When every voice is busy</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Default</td>
-<td>Reuse the same channel/note assignment when available; otherwise use the assignment whose last Note On is oldest</td>
-<td>Replace the oldest active assignment</td>
+<td>Same as the Audulus keyboard node. Repeating a released note returns to its previous voice when possible, keeping that note’s voice character consistent</td>
+<td>The earliest-played sounding note gives way to the new note</td>
 </tr>
 <tr>
 <td>Rotate</td>
-<td>Reuse a matching sounding note; otherwise use the slot that has been released longest</td>
-<td>Replace the oldest active assignment</td>
+<td>Spread successive notes across voices. Repeated staccato notes can use different voices, giving release tails more time to fade and revealing differences between voices</td>
+<td>The earliest-played sounding note gives way to the new note</td>
 </tr>
 <tr>
 <td>Reset</td>
-<td>Reuse a matching sounding note; otherwise start with the lowest-numbered free slot</td>
-<td>Replace the oldest active assignment</td>
+<td>Prefer voice 1, then voice 2, and so on as needed. Separate notes usually return to voice 1, useful for a consistent lead sound or a predictable order of voice colors</td>
+<td>The earliest-played sounding note gives way to the new note</td>
 </tr>
 <tr>
 <td>Newest</td>
-<td>Match channel/note and choose free voices as in Default</td>
-<td>Replace the newest active assignment</td>
+<td>Favor notes you have held longest. Useful for keeping an early bass note or chord tone while replacing more recently added notes</td>
+<td>The most recently played sounding note gives way to the new note</td>
 </tr>
 <tr>
 <td>No Steal</td>
-<td>Match channel/note and choose free voices as in Default</td>
-<td>Ignore the new note</td>
+<td>Keep the current chord intact. Useful when interrupting a held note would be more distracting than missing an extra note</td>
+<td>The new note is ignored until a voice becomes available</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p>Never-used slots are selected before previously used free slots, except Reset simply chooses the lowest free slot. Default, Newest, and No Steal remember released channel/note assignments; Rotate and Reset do not preserve those released matches. Oldest and newest refer to Note On order, not pitch. Repeating a sounding note keeps its slot, refreshes its order, and gives its gate a one-sample retrigger gap.</p>
-<p>Alloc does not change Mono or Legato priority. A free slot has a low gate, but its envelope or sound may still be releasing downstream; reusing it can change that release tail. Start with Default, try Rotate to spread successive notes across voices, or Reset for predictable use of the first available voice. No Steal preserves already sounding assignments when the voice limit is reached.</p>
+<p>For example, with four voices, hold C, E, G, then B, and add D. Default, Rotate, and Reset replace C; Newest replaces B; No Steal ignores D. This assumes these are distinct notes and all four voices remain held.</p>
+<p>Rotate makes its difference before voices run out: it prefers the voice that has been released longest. Reset takes the first available voice instead. Default, Newest, and No Steal first try to reuse a previous voice for the same note on the same MIDI channel; otherwise they prefer an available voice whose last note started longest ago.</p>
+<p>A voice becomes available when its gate falls to zero. The allocator does not know whether the connected envelope has finished its release, so reusing that voice can interrupt or change the tail. Rotate can help spread those tails across voices, but cannot guarantee they finish.</p>
+<p>These modes apply to polyphony and Auto. Mono and Legato always use last-note priority. Repeating a note that is still sounding keeps its voice and retriggers its gate; it does not use another voice just because Rotate is selected. Oldest and newest mean playing order, not lowest and highest pitch.</p>
 <h2 id="outputs">Outputs</h2>
 <p>Use all signals with the same voice index together. Gates are binary; velocity is a separate modulation signal.</p>
 <div class="overflow-auto">
