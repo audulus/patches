@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MIDI MPE Keyboard</title>
+  <link rel="stylesheet" href="../../css/pico.min.css" />
+</head>
+<body>
+<main class="container">
+<h1 id="midi-mpe-keyboard">MIDI MPE Keyboard</h1>
+<p>Play an expressive Audulus instrument with an MPE controller. Each allocated voice supplies pitch, gate, strike velocity, pressure, timbre, and release velocity. Pitch and expression follow the note’s MIDI channel, so different fingers can control different voices.</p>
+<h2 id="setup">Setup</h2>
+<ol type="1">
+<li>Enable MPE on the controller and route it into Audulus or its host.</li>
+<li>Select the matching <strong>Zone</strong>: Lower or Upper.</li>
+<li>Select <strong>Voices</strong> for your instrument and an <strong>Alloc</strong> mode.</li>
+<li>Connect each voice’s pitch and gate to an oscillator and envelope. Use its velocity, pressure, timbre, and release signals to control that same voice.</li>
+<li>Match the controller’s member and manager bend ranges. Defaults are ±48 semitones per member and ±2 semitones on the manager.</li>
+</ol>
+<h2 id="mpe-structure">MPE structure</h2>
+<p>An MPE zone contains one <strong>manager channel</strong> for shared expression and a set of <strong>member channels</strong> for individual notes. The controller normally assigns each simultaneous note a member channel, then sends that note’s pitch bend, channel pressure, and CC74 timbre on the same channel.</p>
+<div class="overflow-auto">
+<table class="striped">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col">Zone</th>
+<th scope="col">Manager</th>
+<th scope="col">Member channels</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lower</td>
+<td>Channel 1</td>
+<td>Start at channel 2 and extend upward; 2–16 with the default 15 members</td>
+</tr>
+<tr>
+<td>Upper</td>
+<td>Channel 16</td>
+<td>Start at channel 15 and extend downward; 15–1 with the default 15 members</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>A member channel is an incoming expression address, not a fixed Audulus output voice. Alloc chooses the output slot; the assigned note retains expression from its member channel. For example, a note received on channel 5 can occupy voice 0, and channel 5 expression follows it there.</p>
+<p>The manager affects the whole selected zone. Its pitch bend is added to member bend, its pressure is added to each voice’s pressure, and its CC74 offsets each voice’s timbre around the neutral MIDI value 64. Pressure and timbre outputs are limited to 0–1.</p>
+<p>One module processes one selected zone. Use separate instances with different Zone settings for an instrument that sends lower and upper zones together. Member ranges and manager ranges are independent; an incorrect member bend range produces incorrect finger-slide intervals even when the global bend wheel sounds right.</p>
+<h2 id="controls">Controls</h2>
+<div class="overflow-auto">
+<table class="striped">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col">Control</th>
+<th scope="col">Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Voices</td>
+<td>Mono, Legato, any fixed count from 2 through 16, or Auto</td>
+</tr>
+<tr>
+<td>Alloc</td>
+<td>Default, Rotate, Reset, Newest, or No Steal</td>
+</tr>
+<tr>
+<td>Zone</td>
+<td>Off / below 0.5 selects Lower; on / 0.5 or above selects Upper</td>
+</tr>
+<tr>
+<td>Panic</td>
+<td>Clear notes, sustain, and expression if a note or controller becomes stuck</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Changing Zone clears notes and resets expression, zone membership, and bend ranges to the script’s initial settings. Changing Voices clears notes. Panic clears expression but does not serve as a new zone selection.</p>
+<h2 id="voices">Voices</h2>
+<div class="overflow-auto">
+<table class="striped">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col">Mode</th>
+<th scope="col">Behavior</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mono</td>
+<td>One voice with last-note priority. New notes retrigger the gate, including overlapping notes. Releasing the newest note returns to an earlier held or sustained note and retriggers when the note changes</td>
+</tr>
+<tr>
+<td>Legato</td>
+<td>One voice with last-note priority. Overlapping notes change pitch while keeping the gate high. Releasing the newest note returns to an earlier held or sustained note without breaking the gate</td>
+</tr>
+<tr>
+<td>2–16</td>
+<td>A fixed number of polyphonic voices. Choose the count your instrument can process</td>
+</tr>
+<tr>
+<td>Auto</td>
+<td>Up to 16 voice slots. The output count follows the highest sounding slot plus one, with a minimum of one</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Auto keeps notes in their assigned slots; it does not pack them into lower slots as other notes end. Its reported count is therefore not necessarily the number of held keys. Changing Voices clears the current notes.</p>
+<h2 id="alloc">Alloc</h2>
+<p>Alloc selects how polyphonic modes and Auto assign notes to voice slots. A voice slot contains the pitch, gate, and any expression belonging to one assigned note. Allocation matters when notes overlap, when envelopes are still releasing, or when all voices are occupied.</p>
+<div class="overflow-auto">
+<table class="striped">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col">Alloc</th>
+<th scope="col">Free voices</th>
+<th scope="col">When all voices are occupied</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Default</td>
+<td>Reuse the same channel/note assignment when available; otherwise use the assignment whose last Note On is oldest</td>
+<td>Replace the oldest active assignment</td>
+</tr>
+<tr>
+<td>Rotate</td>
+<td>Reuse a matching sounding note; otherwise use the slot that has been released longest</td>
+<td>Replace the oldest active assignment</td>
+</tr>
+<tr>
+<td>Reset</td>
+<td>Reuse a matching sounding note; otherwise start with the lowest-numbered free slot</td>
+<td>Replace the oldest active assignment</td>
+</tr>
+<tr>
+<td>Newest</td>
+<td>Match channel/note and choose free voices as in Default</td>
+<td>Replace the newest active assignment</td>
+</tr>
+<tr>
+<td>No Steal</td>
+<td>Match channel/note and choose free voices as in Default</td>
+<td>Ignore the new note</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Never-used slots are selected before previously used free slots, except Reset simply chooses the lowest free slot. Default, Newest, and No Steal remember released channel/note assignments; Rotate and Reset do not preserve those released matches. Oldest and newest refer to Note On order, not pitch. Repeating a sounding note keeps its slot, refreshes its order, and gives its gate a one-sample retrigger gap.</p>
+<p>Alloc does not change Mono or Legato priority. A free slot has a low gate, but its envelope or sound may still be releasing downstream; reusing it can change that release tail. Start with Default, try Rotate to spread successive notes across voices, or Reset for predictable use of the first available voice. No Steal preserves already sounding assignments when the voice limit is reached.</p>
+<h2 id="outputs">Outputs</h2>
+<p>Use all signals with the same voice index together. Gates are binary; velocity is a separate modulation signal.</p>
+<div class="overflow-auto">
+<table class="striped">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col">Signal</th>
+<th scope="col">Meaning and suggested use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pitch (<code>p0</code>–<code>p15</code>)</td>
+<td>One unit per octave, with member and manager bend already added. Default pitch 0 is A4 / 440 Hz</td>
+</tr>
+<tr>
+<td>Gate (<code>g0</code>–<code>g15</code>)</td>
+<td>0 or 1; connect to an envelope gate input</td>
+</tr>
+<tr>
+<td>Velocity (<code>v0</code>–<code>v15</code>)</td>
+<td>Note On velocity, 0–1; use for strike level, brightness, or envelope depth</td>
+</tr>
+<tr>
+<td>Pressure (<code>a0</code>–<code>a15</code>)</td>
+<td>Member plus manager channel pressure, limited to 0–1; use for continuous level or tone control</td>
+</tr>
+<tr>
+<td>Timbre (<code>t0</code>–<code>t15</code>)</td>
+<td>Member CC74 plus manager CC74 offset, limited to 0–1; use for filter, waveshape, or other timbre control</td>
+</tr>
+<tr>
+<td>Release (<code>r0</code>–<code>r15</code>)</td>
+<td>Note Off velocity, 0–1; held until the slot is reused. Use for release time or release articulation</td>
+</tr>
+<tr>
+<td>Voice count (<code>ch</code>)</td>
+<td>Selected fixed count, one in Mono/Legato, or the highest sounding Auto slot plus one</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Member expression freezes when Note Off is received, including for notes still held by sustain. Later motion on that member channel therefore does not change the released note’s cached expression. Manager expression continues to affect assigned voices, including released ones. Pitch and expression have no built-in smoothing; add it in the instrument where desired.</p>
+<p>Mono and Legato retain the note history and expression needed to return to an earlier held or sustained note. In Mono, note changes retrigger; in Legato, overlapping notes keep the gate high.</p>
+<h2 id="pedals-and-configuration-messages">Pedals and configuration messages</h2>
+<p>Send zone pedals and channel controls on the manager channel. CC64 controls sustain for the zone; CC120 immediately lowers its gates; CC123 releases keys while respecting sustain; CC121 resets sustain, bend, and pressure. Member-channel pedal and zone-control messages are ignored.</p>
+<p>The MIDI 1.0 message path recognizes <strong>RPN 6</strong> for zone member count and <strong>RPN 0</strong> for integer pitch-bend sensitivity from 0 to 96 semitones. A member-channel RPN 0 updates the common range for all members of the selected zone; manager-channel RPN 0 updates the manager range. Fractional bend sensitivity is not implemented. Zone configuration clears current notes and expression, restores ±48 / ±2 bend defaults, and reduces the other zone’s membership if the zones would overlap. Send bend-range settings after zone configuration.</p>
+<h2 id="script-settings">Script settings</h2>
+<p>In <code>midi_keyboard_mpe.lyte</code>, the user settings are at the top of <code>init</code>:</p>
+<pre class="lyte"><code>let voct_center_freq = 440.0
+midi_group = 0
+initial_members = 15
+initial_member_range = 48.0
+initial_manager_range = 2.0</code></pre>
+<p><code>voct_center_freq</code> sets the frequency at pitch 0. <code>midi_group</code> selects UMP group 0–15; group 0 appears as Gr 1 in MIDI Monitor. <code>initial_members</code> sets the manually selected zone’s member count, 1–15. The two range settings are semitones on either side of center. Match these to your controller when it does not send supported configuration messages.</p>
+<h2 id="notes">Notes</h2>
+<p>Lyte’s <code>receive_ump()</code> supplies MIDI 1.0 and MIDI 2.0 channel messages through one UMP queue. The script processes their sample offsets and routes channel expression through the selected MPE zone. MIDI 1.0 MPE controllers can therefore be used even when Audulus delivers their events as MIDI 2.0 packets.</p>
+<p>MPE remains channel-based here: a member channel carries the note’s independent expression. MIDI 2.0 packet encoding does not turn this module into a native MIDI 2.0 per-note controller decoder. Native per-note messages, MIDI 2.0 registered-controller configuration, note attributes, and MIDI-CI profile negotiation are not implemented.</p>
+<p>MIDI 2.0 Note On/Off velocity uses 16-bit input, and pressure, CC74, and bend use 32-bit input before conversion into output signals. MIDI 1.0 values are normalized from their original resolution. MIDI 1.0 zero-velocity Note On releases a note and uses a default release velocity of 64/127; MIDI 2.0 zero-velocity Note On remains Note On. Use explicit Note Off when troubleshooting release velocity.</p>
+<p>Only the MIDI 1.0 channel-message path parses the RPN configuration sequences described above. For controllers or routing paths that supply other configuration encodings, use the script’s initial settings. Choose the source through Audulus, your host, or external MIDI routing; the script does not identify devices.</p>
+</main>
+</body>
+</html>

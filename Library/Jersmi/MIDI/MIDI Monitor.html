@@ -9,15 +9,22 @@
 <body>
 <main class="container">
 <h1 id="midi-monitor">MIDI Monitor</h1>
-<p>Monitor incoming notes, controls, channels, clock, and transport. Newest messages appear first.</p>
+<p>View incoming notes, controllers, channels, pitch bend, clock, and transport. Newest messages appear first. The main display provides a cross-reference for hardware settings and MIDI implementation charts.</p>
 <h2 id="controls">Controls</h2>
 <ul>
 <li><strong>Reset:</strong> clear message history</li>
-<li><strong>Freeze:</strong> hold the display; incoming messages are not saved</li>
+<li><strong>Freeze:</strong> hold the captured history; incoming messages are discarded while frozen</li>
+<li><strong>Format off — MIDI 1.0:</strong> show familiar MIDI 1.0 values and status/data bytes</li>
+<li><strong>Format on — MIDI 2.0:</strong> show full received value resolution and UMP hexadecimal words</li>
 </ul>
-<h2 id="columns">Columns</h2>
+<p>Format updates the existing history immediately, including while frozen. It changes the display, not incoming MIDI or its meaning.</p>
+<h2 id="incoming-data">Incoming data</h2>
 <div class="overflow-auto">
 <table class="striped">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
 <thead>
 <tr>
 <th scope="col">Column</th>
@@ -26,158 +33,178 @@
 </thead>
 <tbody>
 <tr>
+<td>Gr</td>
+<td>UMP group, 1–16; dash when not applicable</td>
+</tr>
+<tr>
 <td>Ch</td>
-<td>MIDI channel, 1–16; <code>-</code> for system messages</td>
+<td>MIDI channel, 1–16; dash for non-channel messages</td>
 </tr>
 <tr>
 <td>Msg</td>
-<td>Message type, including CC or program number</td>
+<td>Message type, including controller or program number</td>
 </tr>
 <tr>
 <td>Val</td>
-<td>Value, note, velocity, pressure, or position</td>
-</tr>
-<tr>
-<td>ST</td>
-<td>Status number: message type and channel, where applicable</td>
-</tr>
-<tr>
-<td>D1</td>
-<td>First data number, usually note or controller; <code>-</code> if unused</td>
-</tr>
-<tr>
-<td>D2</td>
-<td>Second data number, usually velocity or value; <code>-</code> if unused</td>
+<td>Note, velocity, pressure, controller value, pitch bend, or position</td>
 </tr>
 <tr>
 <td>Hex</td>
-<td>Message in hexadecimal, for comparison with device manuals</td>
+<td>MIDI 1.0 status/data bytes with Format off; received UMP words with Format on</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p>CC and program numbers use 0–127; some instruments label programs 1–128. Note 60 is C4 here; compare note numbers when octave names differ.</p>
-<h2 id="message-types">Message types</h2>
-<p>In hex codes such as <code>9n</code>, <code>n</code> = 0–15 represents channels 1–16.</p>
+<p>There are 26 visible rows, with up to 128 messages retained. Long entries are shortened to fit. Invalid packets are highlighted with an error message.</p>
+<h3 id="midi-1.0-values">MIDI 1.0 values</h3>
+<ul>
+<li>Notes, velocity, CC, and pressure: <strong>0–127</strong></li>
+<li>Pitch bend: <strong>0–16383</strong>, centered at <strong>8192</strong></li>
+<li>Program numbers: <strong>0–127</strong>; hardware may label them 1–128</li>
+<li>Note <strong>60 = C4</strong>; compare note numbers when hardware uses different octave names</li>
+</ul>
+<p>Pitch bend shows one unsigned value. At the endpoints and center it adds <code>(min)</code>, <code>(center)</code>, or <code>(max)</code>. It does not infer semitones, since bend range depends on the receiving instrument.</p>
+<p>For MIDI 2.0 packets, MIDI 1.0 display values use the upper 7 bits of velocity, pressure, CC, and absolute controller values; bend uses the upper 14 bits. Notes, programs, attributes, flags, and relative controller deltas are unchanged. Incoming MIDI 1.0 values remain unchanged in either display mode.</p>
+<h3 id="hex-for-hardware-reference">Hex for hardware reference</h3>
+<p>With Format off, Hex shows bytes such as <code>90 40 64</code>: Note On, channel 1, note 64, velocity 100. Pitch bend center on channel 1 appears as <code>E0 00 40</code>.</p>
+<p>When Audulus supplies MIDI 2.0 packets, these MIDI 1.0 bytes are reconstructed from the displayed values. They are not a recording of the original hardware bytes. Program Change shows the program message; bank information remains in Val. Messages without a supported MIDI 1.0 conversion show a dash.</p>
+<p>MIDI 1.0 zero-velocity Note On means Note Off. MIDI 2.0 zero-velocity Note On remains Note On; Hex shows a dash if conversion would incorrectly turn it into Note Off.</p>
+<h3 id="midi-2.0-values">MIDI 2.0 values</h3>
+<p>Note velocity uses <strong>0–65535</strong>. Controllers, pressure, and bend use unsigned 32-bit values; bend center is <strong>2147483648</strong>. Per-note controllers, registered/assignable controllers, note attributes, and management flags are displayed where decoded.</p>
+<h2 id="detail-table">Detail table</h2>
+<p>A full-width readable line below the history shows the newest captured message, including channel, message type, and decoded value. The compact packet table sits beneath it. Both use text size 0.8.</p>
 <div class="overflow-auto">
 <table class="striped">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col">Heading</th>
+<th scope="col">Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Format</td>
+<td>Selected display mode: MIDI 1.0 or MIDI 2.0</td>
+</tr>
+<tr>
+<td>Word 1 / Word 2</td>
+<td>Actual received UMP words, each eight hexadecimal digits</td>
+</tr>
+<tr>
+<td>Offset</td>
+<td>Sample position within the audio processing block; not an absolute timestamp</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The detail words always preserve the received packet, regardless of Format. A missing word shows a dash. Additional word columns appear for longer packets.</p>
+<p>MIDI 1.0 hardware can arrive through Audulus encoded as MIDI 2.0 UMP. Two received words therefore do not establish that the hardware itself uses MIDI 2.0. UMP groups provide an additional routing layer, with 16 MIDI channels per group.</p>
+<h2 id="message-reference">Message reference</h2>
+<p>In status bytes such as <code>9n</code>, <code>n</code> is channel 0–15, corresponding to displayed channels 1–16. This table gives the MIDI 1.0 cross-reference; MIDI 2.0 channel messages retain their higher-resolution values when that display mode is selected.</p>
+<div class="overflow-auto">
+<table class="striped">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
 <thead>
 <tr>
 <th scope="col">Message</th>
-<th scope="col">Status</th>
+<th scope="col">MIDI 1.0 status</th>
 <th scope="col">Display</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Note off</td>
+<td>Note Off</td>
 <td><code>8n</code></td>
 <td>Note name/number and release velocity</td>
 </tr>
 <tr>
-<td>Note on</td>
+<td>Note On</td>
 <td><code>9n</code></td>
-<td>Note name/number and velocity; zero velocity shows <code>Note off (v=0)</code></td>
+<td>Note name/number and strike velocity; zero velocity means Note Off only for incoming MIDI 1.0</td>
 </tr>
 <tr>
 <td>Polyphonic pressure</td>
 <td><code>An</code></td>
-<td>Note name/number and pressure</td>
+<td>Note and pressure</td>
 </tr>
 <tr>
-<td>Control change</td>
+<td>Control Change</td>
 <td><code>Bn</code></td>
-<td>Controller number in Msg; value 0–127 in Val</td>
+<td>CC number in Msg and value in Val</td>
 </tr>
 <tr>
-<td>Program change</td>
+<td>Program Change</td>
 <td><code>Cn</code></td>
-<td>Program number in Msg; Val blank</td>
+<td>Program number; MIDI 2.0 bank information where present</td>
 </tr>
 <tr>
 <td>Channel pressure</td>
 <td><code>Dn</code></td>
-<td>Pressure value 0–127</td>
+<td>Pressure value</td>
 </tr>
 <tr>
 <td>Pitch bend</td>
 <td><code>En</code></td>
-<td>0–16383 and signed −8192–8191; center 8192 / signed 0</td>
+<td>Unsigned value, with min/center/max labels at those positions</td>
 </tr>
 <tr>
-<td>MIDI time code quarter frame</td>
+<td>MTC quarter frame</td>
 <td><code>F1</code></td>
 <td>Raw data; not assembled into timecode</td>
 </tr>
 <tr>
-<td>Song position pointer</td>
+<td>Song position</td>
 <td><code>F2</code></td>
-<td>Song position in sixteenth notes</td>
+<td>Position in sixteenth notes</td>
 </tr>
 <tr>
 <td>Song select</td>
 <td><code>F3</code></td>
-<td>Raw song number</td>
+<td>Song number</td>
 </tr>
 <tr>
 <td>Tune request</td>
 <td><code>F6</code></td>
-<td>Message name only</td>
+<td>Message name</td>
 </tr>
 <tr>
 <td>Timing clock</td>
 <td><code>F8</code></td>
-<td><code>Clock</code></td>
+<td>Clock</td>
 </tr>
 <tr>
-<td>Start</td>
-<td><code>FA</code></td>
-<td>Message name only</td>
+<td>Start / Continue / Stop</td>
+<td><code>FA</code> / <code>FB</code> / <code>FC</code></td>
+<td>Transport message name</td>
 </tr>
 <tr>
-<td>Continue</td>
-<td><code>FB</code></td>
-<td>Message name only</td>
-</tr>
-<tr>
-<td>Stop</td>
-<td><code>FC</code></td>
-<td>Message name only</td>
-</tr>
-<tr>
-<td>Active sensing</td>
-<td><code>FE</code></td>
-<td>Message name only</td>
-</tr>
-<tr>
-<td>System reset</td>
-<td><code>FF</code></td>
-<td><code>Reset</code>; does not clear the monitor</td>
-</tr>
-<tr>
-<td>Relative encoder</td>
-<td><code>Bn</code></td>
-<td>Raw CC values; direction and amount depend on the controller</td>
-</tr>
-<tr>
-<td>High-resolution CC</td>
-<td><code>Bn</code></td>
-<td>CC pairs shown separately; no combined high-resolution value</td>
-</tr>
-<tr>
-<td>RPN / NRPN</td>
-<td><code>Bn</code></td>
-<td>CC sequences shown separately; no combined parameter name or value</td>
+<td>Active sensing / System Reset</td>
+<td><code>FE</code> / <code>FF</code></td>
+<td>Message name</td>
 </tr>
 </tbody>
 </table>
 </div>
-<h2 id="notes">Notes</h2>
+<h2 id="capture-limits">Capture limits</h2>
 <ul>
-<li><strong>Devices and ports:</strong> Lyte <code>receive_midi()</code> supplies no source ID; the monitor cannot identify or select devices. Choose sources through Audulus, your host, or MIDI routing. Use separate channels or isolate one source. Clock and transport have no channel.</li>
-<li><strong>SysEx:</strong> Lyte <code>receive_midi()</code> does not deliver SysEx, so it does not appear in the monitor, including Hex. Use a SysEx-capable utility for preset dumps and other SysEx data.</li>
-<li><strong>Reserved statuses:</strong> <code>F4</code>, <code>F5</code>, <code>F9</code>, and <code>FD</code> are flagged as undefined if received.</li>
+<li>At most 32 events per audio block are forwarded to Canvas; a full Canvas queue can also drop display events</li>
+<li>MIDI 1.0 high-resolution CC pairs and RPN/NRPN sequences are shown separately, not assembled</li>
+<li>Utility, SysEx/data, Flex, Stream, and unsupported packets are identified where possible but are not fully decoded or assembled</li>
+<li>Unsupported packets have no MIDI 1.0 Hex conversion; use MIDI 2.0 display mode to inspect their raw words</li>
+<li>Only packets supplied by Audulus can appear; this monitor does not identify the source device</li>
 </ul>
+<h2 id="notes">Notes</h2>
+<p>Lyte receives MIDI with <code>receive_ump()</code>, which carries MIDI 1.0 and MIDI 2.0 packets through one queue. Audulus may encode MIDI 1.0 hardware input as MIDI 2.0 UMP. The monitor can identify the received encoding, but cannot recover which encoding the source hardware originally used. Format selects the display representation; the detail words always show the actual received packet.</p>
+<p>A UMP group provides an extra routing layer with 16 MIDI channels per group. Groups appear as 1–16 in the monitor, while the script API uses 0–15. Offset is supplied by the receiver as a sample position within the current audio block.</p>
+<p>Clock and transport have no MIDI channel. MIDI System Reset is an incoming message and does not clear the monitor’s history; use the Reset control to clear history. Reserved MIDI 1.0 statuses F4, F5, F9, and FD are flagged if received. Route or isolate devices in Audulus, the host, or an external MIDI utility when troubleshooting one source.</p>
 </main>
 </body>
 </html>

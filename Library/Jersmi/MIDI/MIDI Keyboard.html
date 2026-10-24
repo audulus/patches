@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MIDI Keyboard</title>
+  <link rel="stylesheet" href="../../css/pico.min.css" />
+</head>
+<body>
+<main class="container">
+<h1 id="midi-keyboard">MIDI Keyboard</h1>
+<p>Play an Audulus instrument from a MIDI keyboard, sequencer, or other note source. MIDI Keyboard converts notes into pitch and binary gate signals, with selectable polyphony, allocation, sustain, and shared pitch bend.</p>
+<h2 id="setup">Setup</h2>
+<ol type="1">
+<li>Route the intended MIDI source into Audulus or its host.</li>
+<li>Select <strong>Ch</strong>: <strong>Omni</strong> accepts notes and sustain on all 16 channels; <strong>1–16</strong> accepts one channel.</li>
+<li>Select <strong>Voices</strong> to match your instrument. Connect corresponding pitch and gate voices to its oscillators and envelopes.</li>
+<li>Set <strong>Pitchbend</strong> and its <strong>CH</strong> selection to match the controller you want to use.</li>
+</ol>
+<h2 id="controls">Controls</h2>
+<div class="overflow-auto">
+<table class="striped">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col">Control</th>
+<th scope="col">Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ch</td>
+<td>Note and sustain channel: Omni or 1–16. Changing it clears notes and sustain</td>
+</tr>
+<tr>
+<td>Voices</td>
+<td>Mono, Legato, any fixed count from 2 through 16, or Auto</td>
+</tr>
+<tr>
+<td>Alloc</td>
+<td>Default, Rotate, Reset, Newest, or No Steal; described below</td>
+</tr>
+<tr>
+<td>Pitchbend</td>
+<td>Shared bend range, ±1 through ±12 semitones</td>
+</tr>
+<tr>
+<td>Pitchbend CH</td>
+<td>Channel supplying the shared pitch bend; independent of the note channel</td>
+</tr>
+<tr>
+<td>Panic</td>
+<td>Clear notes, sustain, and held pitch bend if a note or pedal becomes stuck</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Pitch bend affects every assigned voice together. Selecting a new bend channel centers the held bend. There is no pitch-bend smoothing in the script. MIDI Keyboard is intended for ordinary channel-based playing; use MIDI MPE Keyboard for independent expression on each note.</p>
+<h2 id="voices">Voices</h2>
+<div class="overflow-auto">
+<table class="striped">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col">Mode</th>
+<th scope="col">Behavior</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mono</td>
+<td>One voice with last-note priority. New notes retrigger the gate, including overlapping notes. Releasing the newest note returns to an earlier held or sustained note and retriggers when the note changes</td>
+</tr>
+<tr>
+<td>Legato</td>
+<td>One voice with last-note priority. Overlapping notes change pitch while keeping the gate high. Releasing the newest note returns to an earlier held or sustained note without breaking the gate</td>
+</tr>
+<tr>
+<td>2–16</td>
+<td>A fixed number of polyphonic voices. Choose the count your instrument can process</td>
+</tr>
+<tr>
+<td>Auto</td>
+<td>Up to 16 voice slots. The output count follows the highest sounding slot plus one, with a minimum of one</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Auto keeps notes in their assigned slots; it does not pack them into lower slots as other notes end. Its reported count is therefore not necessarily the number of held keys. Changing Voices clears the current notes.</p>
+<h2 id="alloc">Alloc</h2>
+<p>Alloc selects how polyphonic modes and Auto assign notes to voice slots. A voice slot contains the pitch, gate, and any expression belonging to one assigned note. Allocation matters when notes overlap, when envelopes are still releasing, or when all voices are occupied.</p>
+<div class="overflow-auto">
+<table class="striped">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col">Alloc</th>
+<th scope="col">Free voices</th>
+<th scope="col">When all voices are occupied</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Default</td>
+<td>Reuse the same channel/note assignment when available; otherwise use the assignment whose last Note On is oldest</td>
+<td>Replace the oldest active assignment</td>
+</tr>
+<tr>
+<td>Rotate</td>
+<td>Reuse a matching sounding note; otherwise use the slot that has been released longest</td>
+<td>Replace the oldest active assignment</td>
+</tr>
+<tr>
+<td>Reset</td>
+<td>Reuse a matching sounding note; otherwise start with the lowest-numbered free slot</td>
+<td>Replace the oldest active assignment</td>
+</tr>
+<tr>
+<td>Newest</td>
+<td>Match channel/note and choose free voices as in Default</td>
+<td>Replace the newest active assignment</td>
+</tr>
+<tr>
+<td>No Steal</td>
+<td>Match channel/note and choose free voices as in Default</td>
+<td>Ignore the new note</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Never-used slots are selected before previously used free slots, except Reset simply chooses the lowest free slot. Default, Newest, and No Steal remember released channel/note assignments; Rotate and Reset do not preserve those released matches. Oldest and newest refer to Note On order, not pitch. Repeating a sounding note keeps its slot, refreshes its order, and gives its gate a one-sample retrigger gap.</p>
+<p>Alloc does not change Mono or Legato priority. A free slot has a low gate, but its envelope or sound may still be releasing downstream; reusing it can change that release tail. Start with Default, try Rotate to spread successive notes across voices, or Reset for predictable use of the first available voice. No Steal preserves already sounding assignments when the voice limit is reached.</p>
+<h2 id="outputs">Outputs</h2>
+<div class="overflow-auto">
+<table class="striped">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col">Signal</th>
+<th scope="col">Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pitch (<code>p0</code>–<code>p15</code>)</td>
+<td>One unit per octave; 0 is A4 / 440 Hz with the default tuning. Shared pitch bend is already added</td>
+</tr>
+<tr>
+<td>Gate (<code>g0</code>–<code>g15</code>)</td>
+<td>0 or 1. Connect to an envelope gate input. Gate height does not carry velocity</td>
+</tr>
+<tr>
+<td>Voice count (<code>ch</code>)</td>
+<td>Selected fixed count, one in Mono/Legato, or the highest sounding Auto slot plus one</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Use matching voice indices: pitch 0 and gate 0 describe the same voice. Pitch holds after release, while unused or released gates are zero. This keyboard does not output velocity, pressure, or timbre.</p>
+<h2 id="sustain-and-channel-controls">Sustain and channel controls</h2>
+<p>CC64 sustain is tracked separately for each accepted MIDI channel. Releasing a key while its pedal is down keeps the note sounding until pedal release. CC120 (All Sound Off) immediately lowers that channel’s gates; CC123 (All Notes Off) releases its keys while respecting sustain. CC121 (Reset All Controllers) clears its sustain and centers bend when received on the selected bend channel. These controls cannot silence a release tail generated independently by the connected instrument.</p>
+<h2 id="script-settings">Script settings</h2>
+<p>In <code>midi_keyboard.lyte</code>, the user settings are at the top of <code>init</code>:</p>
+<pre class="lyte"><code>let voct_center_freq = 440.0
+midi_group = 0
+pb_channel = 1</code></pre>
+<p><code>voct_center_freq</code> sets the frequency corresponding to pitch 0. <code>midi_group</code> selects the UMP group, numbered 0–15 in the script; group 0 appears as Gr 1 in MIDI Monitor. <code>pb_channel</code> is the fallback bend channel: 1–16 selects one channel, and 0 accepts bend from any channel. A positive <code>pb_ch</code> input overrides this setting; a zero input uses it. The <code>midi_ch</code> input uses integer 0 for Omni and 1–16 for a channel.</p>
+<h2 id="notes">Notes</h2>
+<p>Lyte receives MIDI through <code>receive_ump()</code>, a single queue carrying Universal MIDI Packets (UMP). The script reads MIDI 1.0 channel messages from one-word packets and MIDI 2.0 channel messages from two-word packets, and processes events at their supplied sample offsets. UMP is the packet container; using it does not mean your hardware must support MIDI 2.0.</p>
+<p>Audulus may deliver MIDI 1.0 hardware input encoded as MIDI 2.0 packets. Both paths support notes, channel pitch bend, sustain, and the channel controls described above. MIDI 1.0 zero-velocity Note On releases a note; MIDI 2.0 zero-velocity Note On remains Note On. MIDI 2.0 bend uses its 32-bit value before conversion into octave pitch.</p>
+<p>MIDI 2.0 per-note controllers, per-note pitch bend, and note attributes are not decoded by this keyboard. MIDI-CI negotiation and device selection are not performed by the script. Select the source through Audulus, your host, or external MIDI routing.</p>
+</main>
+</body>
+</html>
