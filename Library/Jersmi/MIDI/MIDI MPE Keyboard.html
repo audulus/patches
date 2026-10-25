@@ -16,7 +16,7 @@
 <li>Select the matching <strong>Zone</strong>: Lower or Upper.</li>
 <li>Select <strong>Voices</strong> for your instrument and an <strong>Alloc</strong> mode.</li>
 <li>Connect each voice’s pitch and gate to an oscillator and envelope. Use its velocity, pressure, timbre, and release signals to control that same voice.</li>
-<li>Match the controller’s member and manager bend ranges. Defaults are ±48 semitones per member and ±2 semitones on the manager.</li>
+<li>Enter the module to match its internal member and manager bend settings to the controller. Defaults are ±48 semitones per member and ±2 semitones on the manager.</li>
 </ol>
 <h2 id="mpe-structure">MPE structure</h2>
 <p>An MPE zone contains one <strong>manager channel</strong> for shared expression and a set of <strong>member channels</strong> for individual notes. The controller normally assigns each simultaneous note a member channel, then sends that note’s pitch bend, channel pressure, and CC74 timbre on the same channel.</p>
@@ -77,14 +77,10 @@
 <td>Zone</td>
 <td>Off / below 0.5 selects Lower; on / 0.5 or above selects Upper</td>
 </tr>
-<tr>
-<td>Panic</td>
-<td>Clear notes, sustain, and expression if a note or controller becomes stuck</td>
-</tr>
 </tbody>
 </table>
 </div>
-<p>Changing Zone clears notes and resets expression, zone membership, and bend ranges to the script’s initial settings. Changing Voices clears notes. Panic clears expression but does not serve as a new zone selection.</p>
+<p>Changing Zone clears notes, resets expression and zone membership, and reapplies the internal bend-range settings. Changing Voices clears notes. The internal Panic button clears notes, sustain, and expression without selecting a new zone.</p>
 <h2 id="voices">Voices</h2>
 <div class="overflow-auto">
 <table class="striped">
@@ -219,19 +215,28 @@
 <h2 id="pedals-and-configuration-messages">Pedals and configuration messages</h2>
 <p>Send zone pedals and channel controls on the manager channel. CC64 controls sustain for the zone; CC120 immediately lowers its gates; CC123 releases keys while respecting sustain; CC121 resets sustain, bend, and pressure. Member-channel pedal and zone-control messages are ignored.</p>
 <p>The MIDI 1.0 message path recognizes <strong>RPN 6</strong> for zone member count and <strong>RPN 0</strong> for integer pitch-bend sensitivity from 0 to 96 semitones. A member-channel RPN 0 updates the common range for all members of the selected zone; manager-channel RPN 0 updates the manager range. Fractional bend sensitivity is not implemented. Zone configuration clears current notes and expression, restores ±48 / ±2 bend defaults, and reduces the other zone’s membership if the zones would overlap. Send bend-range settings after zone configuration.</p>
-<h2 id="script-settings">Script settings</h2>
-<p>In <code>midi_keyboard_mpe.lyte</code>, the user settings are at the top of <code>init</code>:</p>
-<pre class="lyte"><code>let voct_center_freq = 440.0
-midi_group = 0
-initial_members = 15
-initial_member_range = 48.0
-initial_manager_range = 2.0</code></pre>
-<p><code>voct_center_freq</code> sets the frequency at pitch 0. <code>midi_group</code> selects UMP group 0–15; group 0 appears as Gr 1 in MIDI Monitor. <code>initial_members</code> sets the manually selected zone’s member count, 1–15. The two range settings are semitones on either side of center. Match these to your controller when it does not send supported configuration messages.</p>
+<h2 id="internal-settings">Internal settings</h2>
+<p>Enter the module in Audulus to access these settings. The four numeric input ports on <code>midi_keyboard_mpe_2.lyte</code> are fed by Audulus <code>Expr</code> nodes containing floats used as constants. Edit the corresponding <code>Expr</code> value inside the module to change a setting.</p>
+<div class="overflow-auto">
+<table class="striped">
+<thead><tr><th scope="col">Setting</th><th scope="col">Default</th><th scope="col">Function</th></tr></thead>
+<tbody>
+<tr><td><code>pb_range</code></td><td><code>48.0</code></td><td>Member pitch-bend range in semitones, 0–96</td></tr>
+<tr><td><code>mgr_pb_range</code></td><td><code>2.0</code></td><td>Manager pitch-bend range in semitones, 0–96</td></tr>
+<tr><td><code>ump_group</code></td><td><code>0.0</code></td><td>UMP group, 0–15; group 0 appears as Gr 1 in MIDI Monitor</td></tr>
+<tr><td><code>voct_pitch</code></td><td><code>440.0</code></td><td>Reference frequency in Hz at pitch 0; must be greater than zero</td></tr>
+<tr><td>Panic</td><td>Off</td><td>Internal button; clears notes, sustain, and expression when pressed</td></tr>
+</tbody>
+</table>
+</div>
+<p>These four numeric settings are read once per processing block. Bend ranges are semitones on either side of center. Match them to the controller when it does not send supported configuration messages. Changing a bend-range setting overrides MIDI RPN 0; a later RPN 0 remains effective until that setting changes again. Changing <code>ump_group</code> clears notes, expression, and zone configuration.</p>
+<p>Panic is accessed by entering the module. You can optionally expose its button on the front panel in Audulus.</p>
+<p>The default zone member count remains a script setting: <code>initial_members = 15</code> near the top of <code>init</code>, with a range of 1–15.</p>
 <h2 id="notes">Notes</h2>
 <p>Lyte’s <code>receive_ump()</code> supplies MIDI 1.0 and MIDI 2.0 channel messages through one UMP queue. The script processes their sample offsets and routes channel expression through the selected MPE zone. MIDI 1.0 MPE controllers can therefore be used even when Audulus delivers their events as MIDI 2.0 packets.</p>
 <p>MPE remains channel-based here: a member channel carries the note’s independent expression. MIDI 2.0 packet encoding does not turn this module into a native MIDI 2.0 per-note controller decoder. Native per-note messages, MIDI 2.0 registered-controller configuration, note attributes, and MIDI-CI profile negotiation are not implemented.</p>
 <p>MIDI 2.0 Note On/Off velocity uses 16-bit input, and pressure, CC74, and bend use 32-bit input before conversion into output signals. MIDI 1.0 values are normalized from their original resolution. MIDI 1.0 zero-velocity Note On releases a note and uses a default release velocity of 64/127; MIDI 2.0 zero-velocity Note On remains Note On. Use explicit Note Off when troubleshooting release velocity.</p>
-<p>Only the MIDI 1.0 channel-message path parses the RPN configuration sequences described above. For controllers or routing paths that supply other configuration encodings, use the script’s initial settings. Choose the source through Audulus, your host, or external MIDI routing; the script does not identify devices.</p>
+<p>Only the MIDI 1.0 channel-message path parses the RPN configuration sequences described above. For controllers or routing paths that supply other configuration encodings, use the internal bend-range settings. Choose the source through Audulus, your host, or external MIDI routing; the script does not identify devices.</p>
 </main>
 </body>
 </html>
