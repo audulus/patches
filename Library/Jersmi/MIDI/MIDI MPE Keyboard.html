@@ -15,7 +15,7 @@
 <li>Enable MPE on the controller and route it into Audulus or its host.</li>
 <li>Select the matching <strong>Zone</strong>: Lower or Upper.</li>
 <li>Select <strong>Voices</strong> for your instrument and an <strong>Alloc</strong> mode.</li>
-<li>Connect each voice’s pitch and gate to an oscillator and envelope. Use its velocity, pressure, timbre, and release signals to control that same voice.</li>
+<li>Connect <strong>VOCT</strong> and <strong>GATE</strong> to an oscillator and envelope. Use <strong>ON V</strong>, <strong>PRS</strong>, <strong>TMB</strong>, and <strong>REL V</strong> to control the corresponding voices.</li>
 <li>Enter the module to match its internal member and manager bend settings to the controller. Defaults are ±48 semitones per member and ±2 semitones on the manager.</li>
 </ol>
 <h2 id="mpe-structure">MPE structure</h2>
@@ -77,10 +77,14 @@
 <td>Zone</td>
 <td>Off / below 0.5 selects Lower; on / 0.5 or above selects Upper</td>
 </tr>
+<tr>
+<td>Panic</td>
+<td>Front-panel button; clears notes, sustain, and expression without selecting a new zone. Press to release stuck notes</td>
+</tr>
 </tbody>
 </table>
 </div>
-<p>Changing Zone clears notes, resets expression and zone membership, and reapplies the internal bend-range settings. Changing Voices clears notes. The internal Panic button clears notes, sustain, and expression without selecting a new zone.</p>
+<p>Changing Zone clears notes, resets expression and zone membership, and reapplies the internal bend-range settings. Changing Voices clears notes. The front-panel Panic button clears notes, sustain, and expression without selecting a new zone.</p>
 <h2 id="voices">Voices</h2>
 <div class="overflow-auto">
 <table class="striped">
@@ -165,7 +169,7 @@
 <p>A voice becomes available when its gate falls to zero. The allocator does not know whether the connected envelope has finished its release, so reusing that voice can interrupt or change the tail. Rotate can help spread those tails across voices, but cannot guarantee they finish.</p>
 <p>These modes apply to polyphony and Auto. Mono and Legato always use last-note priority. Repeating a note that is still sounding keeps its voice and retriggers its gate; it does not use another voice just because Rotate is selected. Oldest and newest mean playing order, not lowest and highest pitch.</p>
 <h2 id="outputs">Outputs</h2>
-<p>Use all signals with the same voice index together. Gates are binary; velocity is a separate modulation signal.</p>
+<p>The six front-panel outputs are polyphonic. Use signals with the same voice index together. <strong>GATE</strong> is binary; Note On velocity is carried separately by <strong>ON V</strong>.</p>
 <div class="overflow-auto">
 <table class="striped">
 <colgroup>
@@ -180,32 +184,28 @@
 </thead>
 <tbody>
 <tr>
-<td>Pitch (<code>p0</code>–<code>p15</code>)</td>
+<td>VOCT</td>
 <td>One unit per octave, with member and manager bend already added. Default pitch 0 is A4 / 440 Hz</td>
 </tr>
 <tr>
-<td>Gate (<code>g0</code>–<code>g15</code>)</td>
+<td>GATE</td>
 <td>0 or 1; connect to an envelope gate input</td>
 </tr>
 <tr>
-<td>Velocity (<code>v0</code>–<code>v15</code>)</td>
+<td>ON V</td>
 <td>Note On velocity, 0–1; use for strike level, brightness, or envelope depth</td>
 </tr>
 <tr>
-<td>Pressure (<code>a0</code>–<code>a15</code>)</td>
+<td>PRS</td>
 <td>Member plus manager channel pressure, limited to 0–1; use for continuous level or tone control</td>
 </tr>
 <tr>
-<td>Timbre (<code>t0</code>–<code>t15</code>)</td>
+<td>TMB</td>
 <td>Member CC74 plus manager CC74 offset, limited to 0–1; use for filter, waveshape, or other timbre control</td>
 </tr>
 <tr>
-<td>Release (<code>r0</code>–<code>r15</code>)</td>
+<td>REL V</td>
 <td>Note Off velocity, 0–1; held until the slot is reused. Use for release time or release articulation</td>
-</tr>
-<tr>
-<td>Voice count (<code>ch</code>)</td>
-<td>Selected fixed count, one in Mono/Legato, or the highest sounding Auto slot plus one</td>
 </tr>
 </tbody>
 </table>
@@ -225,12 +225,10 @@
 <tr><td><code>mgr_pb_range</code></td><td><code>2.0</code></td><td>Manager pitch-bend range in semitones, 0–96</td></tr>
 <tr><td><code>ump_group</code></td><td><code>0.0</code></td><td>UMP group, 0–15; group 0 appears as Gr 1 in MIDI Monitor</td></tr>
 <tr><td><code>voct_pitch</code></td><td><code>440.0</code></td><td>Reference frequency in Hz at pitch 0; must be greater than zero</td></tr>
-<tr><td>Panic</td><td>Off</td><td>Internal button; clears notes, sustain, and expression when pressed</td></tr>
 </tbody>
 </table>
 </div>
 <p>These four numeric settings are read once per processing block. Bend ranges are semitones on either side of center. Match them to the controller when it does not send supported configuration messages. Changing a bend-range setting overrides MIDI RPN 0; a later RPN 0 remains effective until that setting changes again. Changing <code>ump_group</code> clears notes, expression, and zone configuration.</p>
-<p>Panic is accessed by entering the module. You can optionally expose its button on the front panel in Audulus.</p>
 <p>The default zone member count remains a script setting: <code>initial_members = 15</code> near the top of <code>init</code>, with a range of 1–15.</p>
 <h2 id="notes">Notes</h2>
 <p>Lyte’s <code>receive_ump()</code> supplies MIDI 1.0 and MIDI 2.0 channel messages through one UMP queue. The script processes their sample offsets and routes channel expression through the selected MPE zone. MIDI 1.0 MPE controllers can therefore be used even when Audulus delivers their events as MIDI 2.0 packets.</p>
