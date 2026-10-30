@@ -15,7 +15,7 @@
 <li>Enable MPE on the controller and route it into Audulus or its host.</li>
 <li>Select the matching <strong>Zone</strong>: Lower or Upper.</li>
 <li>Select <strong>Voices</strong> for your instrument and an <strong>Alloc</strong> mode.</li>
-<li>Connect <strong>VOCT</strong> and <strong>GATE</strong> to an oscillator and envelope. Use <strong>ON V</strong>, <strong>PRS</strong>, <strong>TMB</strong>, and <strong>REL V</strong> to control the corresponding voices.</li>
+<li>Connect <strong>VOCT</strong> and <strong>GATE</strong> to an oscillator and envelope. Use <strong>NOTE ON VEL</strong>, <strong>PRESSURE</strong>, <strong>TIMBRE</strong>, and <strong>RELEASE VEL</strong> to control the corresponding voices.</li>
 <li>Enter the module to match its internal member and manager bend settings to the controller. Defaults are ±48 semitones per member and ±2 semitones on the manager.</li>
 </ol>
 <h2 id="mpe-structure">MPE structure</h2>
@@ -169,7 +169,7 @@
 <p>A voice becomes available when its gate falls to zero. The allocator does not know whether the connected envelope has finished its release, so reusing that voice can interrupt or change the tail. Rotate can help spread those tails across voices, but cannot guarantee they finish.</p>
 <p>These modes apply to polyphony and Auto. Mono and Legato always use last-note priority. Repeating a note that is still sounding keeps its voice and retriggers its gate; it does not use another voice just because Rotate is selected. Oldest and newest mean playing order, not lowest and highest pitch.</p>
 <h2 id="outputs">Outputs</h2>
-<p>The six front-panel outputs are polyphonic. Use signals with the same voice index together. <strong>GATE</strong> is binary; Note On velocity is carried separately by <strong>ON V</strong>.</p>
+<p>The six front-panel outputs are polyphonic. Use signals with the same voice index together. <strong>GATE</strong> is binary; Note On velocity is carried separately by <strong>NOTE ON VEL</strong>.</p>
 <div class="overflow-auto">
 <table class="striped">
 <colgroup>
@@ -192,19 +192,19 @@
 <td>0 or 1; connect to an envelope gate input</td>
 </tr>
 <tr>
-<td>ON V</td>
+<td>NOTE ON VEL</td>
 <td>Note On velocity, 0–1; use for strike level, brightness, or envelope depth</td>
 </tr>
 <tr>
-<td>PRS</td>
+<td>PRESSURE</td>
 <td>Member plus manager channel pressure, limited to 0–1; use for continuous level or tone control</td>
 </tr>
 <tr>
-<td>TMB</td>
+<td>TIMBRE</td>
 <td>Member CC74 plus manager CC74 offset, limited to 0–1; use for filter, waveshape, or other timbre control</td>
 </tr>
 <tr>
-<td>REL V</td>
+<td>RELEASE VEL</td>
 <td>Note Off velocity, 0–1; held until the slot is reused. Use for release time or release articulation</td>
 </tr>
 </tbody>
